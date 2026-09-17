@@ -1,0 +1,2278 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Repertório STF 2025.2</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=Spectral:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<style>img{max-width:100%}[hidden]{display:none!important}body{margin:0}</style>
+<style>
+:root{
+  --paper:#F3F4F1; --surface:#FBFBF9; --surface-2:#EFF1EC;
+  --ink:#1B211E; --ink-2:#4C5754; --ink-3:#79847F;
+  --rule:#DCE0D9; --rule-2:#C6CCC2;
+  --accent:#1B5E4F; --accent-2:#14463B; --accent-wash:rgba(27,94,79,.07);
+  --destaque:#8F3220; --destaque-wash:rgba(143,50,32,.06);
+  --conferida:#414CA0; --conferida-wash:rgba(65,76,160,.055);
+  --shadow:0 1px 0 rgba(27,33,30,.05);
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --display:"Newsreader",Georgia,serif;
+  --ui:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --measure:68ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#111514; --surface:#191E1C; --surface-2:#202624;
+    --ink:#E7EAE5; --ink-2:#AAB4AF; --ink-3:#7C8782;
+    --rule:#2A312E; --rule-2:#3A423E;
+    --accent:#6BC4A7; --accent-2:#8FD6BE; --accent-wash:rgba(107,196,167,.09);
+    --destaque:#E2916F; --destaque-wash:rgba(226,145,111,.08);
+    --conferida:#98A3EE; --conferida-wash:rgba(152,163,238,.09);
+    --shadow:0 1px 0 rgba(0,0,0,.3);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#111514; --surface:#191E1C; --surface-2:#202624;
+  --ink:#E7EAE5; --ink-2:#AAB4AF; --ink-3:#7C8782;
+  --rule:#2A312E; --rule-2:#3A423E;
+  --accent:#6BC4A7; --accent-2:#8FD6BE; --accent-wash:rgba(107,196,167,.09);
+  --destaque:#E2916F; --destaque-wash:rgba(226,145,111,.08);
+  --conferida:#98A3EE; --conferida-wash:rgba(152,163,238,.09);
+  --shadow:0 1px 0 rgba(0,0,0,.3);
+}
+
+html{scroll-behavior:smooth}
+*{box-sizing:border-box}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--serif); font-size:17px; line-height:1.62;
+  -webkit-font-smoothing:antialiased; font-feature-settings:"onum" 1;
+}
+h1,h2,h3,h4{margin:0; text-wrap:balance}
+p{margin:0}
+a{color:var(--accent-2); text-decoration:none}
+:focus-visible{outline:2px solid var(--accent); outline-offset:2px; border-radius:2px}
+
+/* ── masthead ── */
+.masthead{
+  border-bottom:1px solid var(--rule-2);
+  padding:56px 32px 26px; background:var(--surface);
+}
+.mwrap{max-width:1180px; margin:0 auto}
+.eyebrow{
+  font-family:var(--ui); font-size:11px; font-weight:600; letter-spacing:.16em;
+  text-transform:uppercase; color:var(--accent); margin-bottom:14px;
+}
+.masthead h1{
+  font-family:var(--display); font-weight:500; font-size:clamp(33px,4.4vw,47px);
+  line-height:1.08; letter-spacing:-.015em; max-width:25ch;
+}
+.masthead .sub{
+  font-family:var(--display); font-style:italic; font-size:19px;
+  color:var(--ink-2); margin-top:14px; max-width:62ch; line-height:1.5;
+}
+.counters{
+  display:flex; flex-wrap:wrap; gap:0; margin-top:34px;
+  border-top:1px solid var(--rule); padding-top:20px;
+}
+.counters div{padding-right:44px; margin-right:44px; border-right:1px solid var(--rule)}
+.counters div:last-child{border-right:0; padding-right:0; margin-right:0}
+.counters b{
+  display:block; font-family:var(--display); font-weight:400;
+  font-size:38px; line-height:1; font-variant-numeric:tabular-nums; color:var(--ink);
+}
+.counters span{
+  display:block; font-family:var(--ui); font-size:11px; font-weight:500;
+  letter-spacing:.12em; text-transform:uppercase; color:var(--ink-3); margin-top:8px;
+}
+
+/* ── toolbar ── */
+.toolbar{
+  position:sticky; top:0; z-index:40; background:var(--paper);
+  border-bottom:1px solid var(--rule-2); padding:10px 32px;
+  backdrop-filter:saturate(1.2) blur(6px);
+}
+.twrap{
+  max-width:1180px; margin:0 auto; display:flex; flex-wrap:wrap;
+  align-items:center; gap:10px 14px;
+}
+.search{position:relative; flex:1 1 210px; min-width:190px}
+.search input{
+  width:100%; font-family:var(--ui); font-size:14px; color:var(--ink);
+  background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
+  padding:9px 12px 9px 30px;
+}
+.search input::placeholder{color:var(--ink-3)}
+.search svg{
+  position:absolute; left:9px; top:50%; transform:translateY(-50%);
+  width:14px; height:14px; stroke:var(--ink-3); fill:none; stroke-width:1.8;
+}
+.chips{display:flex; flex-wrap:wrap; gap:6px}
+.chip{
+  font-family:var(--ui); font-size:11.5px; font-weight:500; letter-spacing:.03em;
+  color:var(--ink-2); background:transparent; border:1px solid var(--rule-2);
+  border-radius:2px; padding:7px 9px; cursor:pointer; transition:.14s; white-space:nowrap;
+}
+.chip:hover{border-color:var(--accent); color:var(--accent-2)}
+.chip[aria-pressed="true"]{
+  background:var(--accent); border-color:var(--accent); color:var(--paper);
+}
+select.status{
+  font-family:var(--ui); font-size:12px; font-weight:500; color:var(--ink-2);
+  background:var(--surface); border:1px solid var(--rule-2); border-radius:2px;
+  padding:7px 9px; cursor:pointer;
+}
+.progress{
+  display:flex; align-items:center; gap:12px; flex:1 0 100%;
+  border-top:1px solid var(--rule); padding-top:7px;
+}
+.bar{
+  flex:1 1 auto; height:4px; background:var(--rule); border-radius:99px; overflow:hidden;
+}
+.bar i{display:block; height:100%; width:0%; background:var(--conferida); transition:width .3s}
+.pcount{
+  font-family:var(--mono); font-size:11.5px; color:var(--ink-2);
+  font-variant-numeric:tabular-nums; white-space:nowrap;
+}
+.linkish{
+  font-family:var(--ui); font-size:12px; color:var(--ink-3); background:none;
+  border:0; cursor:pointer; text-decoration:underline; text-underline-offset:3px;
+}
+.linkish:hover{color:var(--destaque)}
+
+/* ── shell ── */
+.shell{
+  max-width:1180px; margin:0 auto; padding:0 32px 90px;
+  display:grid; grid-template-columns:250px minmax(0,1fr); gap:52px; align-items:start;
+}
+.index{
+  position:sticky; top:98px; max-height:calc(100vh - 128px); overflow-y:auto;
+  padding:34px 0 20px; font-family:var(--ui);
+  scrollbar-width:thin;
+}
+.idxgrupo{margin-bottom:24px}
+.idxgrupo h3{
+  font-size:10.5px; font-weight:600; letter-spacing:.14em; text-transform:uppercase;
+  color:var(--ink-3); padding-bottom:7px; border-bottom:1px solid var(--rule);
+  display:flex; gap:8px; align-items:baseline;
+}
+.idxgrupo h3 span{color:var(--accent); font-variant-numeric:tabular-nums}
+.idxgrupo[data-grupo="destaques"] h3 span{color:var(--destaque)}
+.index ol{list-style:none; margin:8px 0 0; padding:0}
+.index a{
+  display:grid; grid-template-columns:24px 1fr 12px; gap:6px; align-items:start;
+  padding:5px 0; font-size:12.5px; line-height:1.35; color:var(--ink-2);
+}
+.index a:hover{color:var(--accent-2)}
+.index a.on{color:var(--ink); font-weight:600}
+.inum{font-family:var(--mono); font-size:10.5px; color:var(--ink-3); padding-top:2px}
+.ittl{overflow:hidden; display:-webkit-box; -webkit-line-clamp:2; -webkit-box-orient:vertical}
+.imark{width:12px; height:12px}
+.index a.done .imark::after{
+  content:"✓"; color:var(--conferida); font-size:11px; line-height:1;
+}
+.index a.done .inum{color:var(--conferida)}
+
+/* ── grupos ── */
+.grupo{padding-top:44px}
+.ghead{
+  display:grid; grid-template-columns:auto 1fr auto; gap:16px; align-items:baseline;
+  padding-bottom:14px; border-bottom:2px solid var(--ink); margin-bottom:8px;
+}
+.grom{
+  font-family:var(--display); font-size:30px; line-height:1; color:var(--accent);
+  font-variant-numeric:tabular-nums;
+}
+.grupo[data-grupo="destaques"] .grom{color:var(--destaque)}
+.ghead h2{
+  font-family:var(--display); font-weight:500; font-size:26px; letter-spacing:-.01em;
+}
+.ghead p{
+  font-family:var(--ui); font-size:12.5px; color:var(--ink-3);
+  margin-top:5px; max-width:68ch; line-height:1.5;
+}
+.gcount{
+  font-family:var(--mono); font-size:12px; color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+}
+
+/* ── ficha ── */
+.ficha{
+  background:var(--surface); border:1px solid var(--rule);
+  border-left:3px solid var(--accent); border-radius:2px;
+  margin-top:22px; padding:22px 26px 18px; box-shadow:var(--shadow);
+  scroll-margin-top:102px;
+}
+.grupo[data-grupo="destaques"] .ficha{border-left-color:var(--destaque)}
+.ficha.done{
+  border-left-color:var(--conferida); background:var(--conferida-wash);
+}
+.fhead{
+  display:grid; grid-template-columns:auto 1fr auto; gap:14px; align-items:baseline;
+  padding-bottom:14px; border-bottom:1px solid var(--rule);
+}
+.fnum{
+  font-family:var(--mono); font-size:12px; font-weight:500; color:var(--ink-3);
+  font-variant-numeric:tabular-nums;
+}
+.ficha.done .fnum{color:var(--conferida)}
+.ftitle{
+  font-family:var(--display); font-weight:500; font-size:21px; line-height:1.25;
+  letter-spacing:-.005em; max-width:44ch;
+}
+.badge-conf{
+  display:none; font-family:var(--ui); font-size:9.5px; font-weight:600;
+  letter-spacing:.14em; text-transform:uppercase; color:var(--conferida);
+  border:1px solid var(--conferida); border-radius:2px; padding:3px 7px; white-space:nowrap;
+}
+.ficha.done .badge-conf{display:inline-block}
+.fbody{display:flex; flex-direction:column; gap:16px; padding-top:15px}
+.lbl{
+  font-family:var(--ui); font-size:10px; font-weight:600; letter-spacing:.15em;
+  text-transform:uppercase; color:var(--ink-3); margin-bottom:6px;
+}
+.idline{
+  display:flex; align-items:center; gap:10px; flex-wrap:wrap;
+  background:var(--surface-2); border:1px solid var(--rule);
+  border-radius:2px; padding:9px 11px; margin-bottom:5px;
+}
+.idline code{
+  font-family:var(--mono); font-size:12.5px; line-height:1.5; color:var(--ink);
+  word-break:break-word; flex:1 1 auto;
+}
+.mini{
+  font-family:var(--ui); font-size:10px; font-weight:600; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--ink-3); background:none;
+  border:1px solid var(--rule-2); border-radius:2px; padding:3px 7px; cursor:pointer;
+}
+.mini:hover{color:var(--accent-2); border-color:var(--accent)}
+.tema{
+  display:inline-block; font-family:var(--ui); font-size:11px; font-weight:600;
+  letter-spacing:.05em; color:var(--accent-2); background:var(--accent-wash);
+  border-radius:2px; padding:3px 8px; margin-top:4px;
+}
+.disc{font-family:var(--ui); font-size:13.5px; line-height:1.55; color:var(--ink-2); max-width:var(--measure)}
+.blk-tese{border-left:3px solid var(--accent); padding-left:16px}
+.grupo[data-grupo="destaques"] .blk-tese{border-left-color:var(--destaque)}
+.tese{font-size:17.5px; line-height:1.6; max-width:var(--measure); color:var(--ink)}
+.ctx{max-width:var(--measure); color:var(--ink-2); font-size:16.5px}
+.factions{
+  display:flex; gap:9px; flex-wrap:wrap; align-items:center;
+  margin-top:18px; padding-top:14px; border-top:1px solid var(--rule);
+}
+.btn{
+  display:inline-flex; align-items:center; gap:7px;
+  font-family:var(--ui); font-size:11.5px; font-weight:500; letter-spacing:.03em;
+  color:var(--ink-2); background:transparent; border:1px solid var(--rule-2);
+  border-radius:2px; padding:7px 12px; cursor:pointer; transition:.14s;
+}
+.btn:hover{border-color:var(--accent); color:var(--accent-2)}
+.tick{
+  width:12px; height:12px; border:1px solid var(--rule-2); border-radius:2px;
+  display:inline-block; position:relative;
+}
+.btn-check[aria-pressed="true"]{
+  color:var(--conferida); border-color:var(--conferida); background:var(--conferida-wash);
+}
+.btn-check[aria-pressed="true"] .tick{border-color:var(--conferida); background:var(--conferida)}
+.btn-check[aria-pressed="true"] .tick::after{
+  content:"✓"; position:absolute; inset:0; color:var(--surface);
+  font-size:9px; line-height:10px; text-align:center;
+}
+.ficha[hidden]{display:none}
+.grupo[hidden]{display:none}
+
+/* ── notas finais ── */
+.fim{padding-top:64px}
+.fim h2{
+  font-family:var(--display); font-weight:500; font-size:24px;
+  padding-bottom:12px; border-bottom:2px solid var(--ink); margin-bottom:20px;
+}
+.fim h3{
+  font-family:var(--ui); font-size:12px; font-weight:600; letter-spacing:.08em;
+  text-transform:uppercase; color:var(--ink); margin-bottom:6px;
+}
+.fim p{max-width:var(--measure); color:var(--ink-2); margin-bottom:14px; font-size:16.5px}
+.fim ul{max-width:var(--measure); color:var(--ink-2); padding-left:20px; margin:0 0 18px; font-size:16.5px}
+.fim li{margin-bottom:7px}
+.apitem{
+  border-top:1px solid var(--rule); padding:16px 0;
+  display:grid; grid-template-columns:minmax(0,1fr); gap:5px;
+}
+.apitem p{margin:0; font-size:15.5px}
+.apref{font-family:var(--mono); font-size:11.5px; color:var(--ink-3); line-height:1.7}
+.empty{
+  display:none; font-family:var(--ui); font-size:14px; color:var(--ink-3);
+  padding:40px 0; border-top:1px solid var(--rule);
+}
+.toast{
+  position:fixed; left:50%; bottom:26px; transform:translateX(-50%) translateY(14px);
+  background:var(--ink); color:var(--paper); font-family:var(--ui); font-size:12.5px;
+  padding:9px 16px; border-radius:2px; opacity:0; pointer-events:none; transition:.22s; z-index:90;
+}
+.toast.on{opacity:1; transform:translateX(-50%) translateY(0)}
+
+@media (max-width:960px){
+  .shell{grid-template-columns:1fr; gap:0; padding:0 22px 70px}
+  .index{position:static; max-height:none; border-bottom:1px solid var(--rule); padding-bottom:26px}
+  .masthead{padding:40px 22px 22px}
+  .toolbar{padding:10px 22px}
+  .bar{flex:1 1 auto}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none !important; scroll-behavior:auto !important}
+}
+@media print{
+  .toolbar,.index,.factions,.mini,.empty,.toast{display:none !important}
+  body{background:#fff; color:#000; font-size:10.5pt}
+  .shell{display:block; max-width:none; padding:0}
+  .masthead{padding:0 0 14pt; border-color:#000; background:#fff}
+  .ficha{
+    background:#fff; break-inside:avoid; page-break-inside:avoid;
+    border:1px solid #999; border-left:3pt solid #666; box-shadow:none; margin-top:12pt;
+  }
+  .ficha.done{border-left:3pt solid #000; background:#fff}
+  .ficha.done .badge-conf{display:inline-block; border-color:#000; color:#000}
+  .idline{background:#f4f4f4}
+  .grupo,.ficha{break-inside:auto}
+  a{color:#000}
+}
+</style>
+</head>
+<body>
+
+
+<header class="masthead">
+  <div class="mwrap">
+    <p class="eyebrow">Supremo Tribunal Federal &middot; Informativos 1183 a 1202</p>
+    <h1>Jurisprudência do segundo semestre de 2025 para concursos de serventias extrajudiciais</h1>
+    <p class="sub">Relatório de triagem dos julgados publicados nos informativos do Supremo Tribunal Federal
+    entre 02 de julho e 12 de dezembro de 2025, organizado para revisão periódica e transposição
+    ao caderno de estudos.</p>
+    <div class="counters">
+      <div><b>20</b><span>Informativos analisados</span></div>
+      <div><b>119</b><span>Julgados examinados</span></div>
+      <div><b>45</b><span>Julgados selecionados</span></div>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar">
+  <div class="twrap">
+    <div class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-4-4"></path></svg>
+      <input id="busca" type="search" placeholder="Buscar por tese, processo, relator ou dispositivo legal"
+             aria-label="Buscar por tese, número de processo, relator ou dispositivo legal">
+    </div>
+    <div class="chips" role="group" aria-label="Filtrar por grupo temático">
+      <button class="chip" type="button" data-grupo="todos" aria-pressed="true">Todos</button>
+      <button class="chip" type="button" data-grupo="destaques" aria-pressed="false">I &middot; Destaques</button>
+      <button class="chip" type="button" data-grupo="notarial" aria-pressed="false">II &middot; Notarial e Registral</button>
+      <button class="chip" type="button" data-grupo="outras" aria-pressed="false">III &middot; Outras Matérias</button>
+      <button class="chip" type="button" data-grupo="tangenciais" aria-pressed="false">IV &middot; Tangenciais</button>
+    </div>
+    <select class="status" id="status" aria-label="Filtrar por situação">
+      <option value="todas">Todas</option>
+      <option value="pendentes">Pendentes</option>
+      <option value="conferidas">Conferidas</option>
+    </select>
+    <div class="progress">
+      <div class="bar" role="progressbar" aria-label="Progresso da revisão"><i id="barra"></i></div>
+      <span class="pcount" id="pcount">0 / 45 conferidas</span>
+      <button class="linkish" type="button" id="limpar">limpar marcações</button>
+    </div>
+  </div>
+</div>
+
+<div class="shell">
+  <nav class="index" aria-label="Índice das fichas">
+    
+<div class="idxgrupo" data-grupo="destaques">
+  <h3><span>I</span>Destaques</h3>
+  <ol><li><a href="#f01" data-idx="01"><span class="inum">01</span><span class="ittl">Reestruturação das serventias extrajudiciais por lei estadual</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f02" data-idx="02"><span class="inum">02</span><span class="ittl">Custas judiciais e emolumentos extrajudiciais: natureza de taxa e limites da lei estadual</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f03" data-idx="03"><span class="inum">03</span><span class="ittl">Marco Legal das Garantias: constitucionalidade dos procedimentos extrajudiciais de execução</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f04" data-idx="04"><span class="inum">04</span><span class="ittl">Marco Civil da Internet: responsabilidade civil dos provedores por conteúdo de terceiros</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f05" data-idx="05"><span class="inum">05</span><span class="ittl">ITCMD com elemento de conexão no exterior antes da Emenda Constitucional n. 132/2023</span><span class="imark" aria-hidden="true"></span></a></li></ol>
+</div>
+
+<div class="idxgrupo" data-grupo="notarial">
+  <h3><span>II</span>Direito Notarial e Registral</h3>
+  <ol><li><a href="#f06" data-idx="06"><span class="inum">06</span><span class="ittl">Certidões para defesa de direitos: vedação constitucional à cobrança de taxa</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f07" data-idx="07"><span class="inum">07</span><span class="ittl">Fixação do valor da taxa segundo o tipo de atividade e princípio da referibilidade</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f08" data-idx="08"><span class="inum">08</span><span class="ittl">Poder normativo do Conselho Nacional de Justiça e observância obrigatória de suas resoluções</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f09" data-idx="09"><span class="inum">09</span><span class="ittl">Propriedade fiduciária de veículo: credor fiduciário não é contribuinte do imposto sobre a propriedade de veículos automotores</span><span class="imark" aria-hidden="true"></span></a></li></ol>
+</div>
+
+<div class="idxgrupo" data-grupo="outras">
+  <h3><span>III</span>Outras Matérias</h3>
+  <ol><li><a href="#f10" data-idx="10"><span class="inum">10</span><span class="ittl">Controle judicial do ato da comissão de heteroidentificação em concurso público</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f11" data-idx="11"><span class="inum">11</span><span class="ittl">Direito subjetivo à nomeação e extinção superveniente dos cargos por excesso de gastos com pessoal</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f12" data-idx="12"><span class="inum">12</span><span class="ittl">Realização de provas de concurso público e observância dos dias de guarda religiosos</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f13" data-idx="13"><span class="inum">13</span><span class="ittl">Nepotismo: nomeação de servidor efetivo para cargo em comissão no Poder Judiciário</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f14" data-idx="14"><span class="inum">14</span><span class="ittl">Imunidade parlamentar material como excludente da responsabilidade civil objetiva do Estado</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f15" data-idx="15"><span class="inum">15</span><span class="ittl">Teoria do risco administrativo e ônus da prova das excludentes de responsabilidade</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f16" data-idx="16"><span class="inum">16</span><span class="ittl">Fixação de multa administrativa em múltiplos do salário mínimo</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f17" data-idx="17"><span class="inum">17</span><span class="ittl">Limites da resolução do Senado Federal que suspende a execução de lei declarada inconstitucional</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f18" data-idx="18"><span class="inum">18</span><span class="ittl">Emenda da Casa revisora que altera o conteúdo do projeto e necessidade de retorno à Casa iniciadora</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f19" data-idx="19"><span class="inum">19</span><span class="ittl">Reserva de lei complementar em Constituição estadual sem correspondência na Constituição Federal</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f20" data-idx="20"><span class="inum">20</span><span class="ittl">Revogação por lei ordinária de benefício instituído por lei formalmente complementar</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f21" data-idx="21"><span class="inum">21</span><span class="ittl">Redirecionamento da execução a empresa do grupo econômico e desconsideração da personalidade jurídica</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f22" data-idx="22"><span class="inum">22</span><span class="ittl">Competência privativa da União para legislar sobre direito civil e política de crédito</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f23" data-idx="23"><span class="inum">23</span><span class="ittl">Convenção da Haia de 1980 sobre subtração internacional de crianças</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f24" data-idx="24"><span class="inum">24</span><span class="ittl">Inaplicabilidade do regime de falência e recuperação judicial às empresas estatais</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f25" data-idx="25"><span class="inum">25</span><span class="ittl">Edição da Súmula Vinculante 63: tráfico privilegiado não é crime hediondo</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f26" data-idx="26"><span class="inum">26</span><span class="ittl">Cancelamento da Súmula Vinculante 9 por incompatibilidade superveniente com a lei</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f27" data-idx="27"><span class="inum">27</span><span class="ittl">Coisa julgada inconstitucional no microssistema dos juizados especiais</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f28" data-idx="28"><span class="inum">28</span><span class="ittl">Redefinição estadual do conceito de floresta e redução da reserva legal em imóveis rurais</span><span class="imark" aria-hidden="true"></span></a></li></ol>
+</div>
+
+<div class="idxgrupo" data-grupo="tangenciais">
+  <h3><span>IV</span>Julgamentos Tangenciais</h3>
+  <ol><li><a href="#f29" data-idx="29"><span class="inum">29</span><span class="ittl">Poder normativo do Conselho Nacional de Justiça e critérios de promoção por merecimento</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f30" data-idx="30"><span class="inum">30</span><span class="ittl">Imposto sobre a propriedade de veículos automotores não incide sobre embarcações e aeronaves</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f31" data-idx="31"><span class="inum">31</span><span class="ittl">Incidência da taxa SELIC nas demandas envolvendo a Fazenda Pública</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f32" data-idx="32"><span class="inum">32</span><span class="ittl">Inclusão automática de recém-nascidos em plano de saúde e competência para legislar sobre direito civil</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f33" data-idx="33"><span class="inum">33</span><span class="ittl">Criação, incorporação, fusão e desmembramento de municípios: ausência de mora legislativa</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f34" data-idx="34"><span class="inum">34</span><span class="ittl">Prazo prescricional quinquenal para cobrança de depósitos do Fundo de Garantia por servidor temporário</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f35" data-idx="35"><span class="inum">35</span><span class="ittl">Modulação dos efeitos da declaração de inconstitucionalidade de lei criadora de cargos em comissão</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f36" data-idx="36"><span class="inum">36</span><span class="ittl">Suspensão dos efeitos financeiros de lei estadual por decreto do chefe do Poder Executivo</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f37" data-idx="37"><span class="inum">37</span><span class="ittl">Competência absoluta dos juizados especiais federais limitada ao valor da causa</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f38" data-idx="38"><span class="inum">38</span><span class="ittl">Altura mínima como requisito de investidura em cargo de segurança pública</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f39" data-idx="39"><span class="inum">39</span><span class="ittl">Vedação de ingresso de candidatos casados ou com filhos em curso de formação militar</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f40" data-idx="40"><span class="inum">40</span><span class="ittl">Contratação temporária e preterição de candidato aprovado em concurso público</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f41" data-idx="41"><span class="inum">41</span><span class="ittl">Laicidade colaborativa e acervo de bibliotecas públicas</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f42" data-idx="42"><span class="inum">42</span><span class="ittl">Incidente de assunção de competência no Supremo Tribunal Federal</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f43" data-idx="43"><span class="inum">43</span><span class="ittl">Submissão de estatal prestadora de serviço público ao regime de precatórios</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f44" data-idx="44"><span class="inum">44</span><span class="ittl">Acesso a dados de aparelho celular encontrado fortuitamente no local do crime</span><span class="imark" aria-hidden="true"></span></a></li>
+<li><a href="#f45" data-idx="45"><span class="inum">45</span><span class="ittl">Julgamento do Núcleo 1 da denominada trama golpista</span><span class="imark" aria-hidden="true"></span></a></li></ol>
+</div>
+  </nav>
+
+  <main>
+    
+<section class="grupo" id="g-destaques" data-grupo="destaques">
+  <header class="ghead">
+    <span class="grom">I</span>
+    <div>
+      <h2>Destaques</h2>
+      <p>Julgamentos de maior relevância no semestre, independentemente da disciplina.</p>
+    </div>
+    <span class="gcount">5</span>
+  </header>
+  
+<article class="ficha" id="f01" data-grupo="destaques" data-num="01">
+  <header class="fhead">
+    <span class="fnum">01</span>
+    <h3 class="ftitle">Reestruturação das serventias extrajudiciais por lei estadual</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 7352, rel. min. cristiano zanin, Pleno, j. 26/09/2025, Informativo n. 1192)</code><button class="mini" type="button" data-copy-id="(ADI n. 7352, rel. min. cristiano zanin, Pleno, j. 26/09/2025, Informativo n. 1192)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Notarial e Registral; Direito Administrativo. Organização das serventias extrajudiciais: criação, extinção, anexação e desanexação de unidades; especialização dos serviços; competência legislativa estadual.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É constitucional a lei estadual que reestrutura os serviços notariais e de registro, desde que motivada por interesse público e amparada em estudos prévios de viabilidade, ainda que disso resulte a redução do número de tabelionatos.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">A Lei n. 12511/2022 do Estado da Paraíba fixou parâmetro populacional para a existência de tabelionatos de notas nos municípios que são ou foram sede de comarca com população superior a duzentos mil habitantes, na proporção de uma unidade a cada cento e cinquenta mil habitantes ou fração superior a cem mil, e atribuiu à Corregedoria Geral da Justiça a promoção das anexações e desanexações à medida que as serventias vagarem. O Plenário julgou a ação improcedente, por unanimidade, e assentou a constitucionalidade do art. 5º, V, e § 1º, da lei impugnada. Consignou que a lei foi precedida de amplo estudo do Poder Judiciário local e que a especialização dos serviços notariais e de registro, mesmo com eventual redução do número de unidades, não ofende o princípio da eficiência (art. 37, caput, da Constituição Federal), além de conferir cumprimento ao art. 26 da Lei n. 8935/1994, que veda a acumulação das especialidades do art. 5º da mesma lei, ressalvados os municípios que não comportem, pelo volume do serviço ou pela receita, mais de uma unidade. Foi invocado como precedente a ADI 4.745. O julgado consolida os parâmetros de controle da reestruturação das serventias, matéria que se insere na organização judiciária local: interesse público demonstrado, estudo prévio de viabilidade e preservação da regra do concurso público para o provimento das unidades resultantes.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="01" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="01">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f02" data-grupo="destaques" data-num="02">
+  <header class="fhead">
+    <span class="fnum">02</span>
+    <h3 class="ftitle">Custas judiciais e emolumentos extrajudiciais: natureza de taxa e limites da lei estadual</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 5689, rel. min. nunes marques, Pleno, j. 29/08/2025, Informativo n. 1188)</code><button class="mini" type="button" data-copy-id="(ADI n. 5689, rel. min. nunes marques, Pleno, j. 29/08/2025, Informativo n. 1188)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Tributário; Direito Notarial e Registral. Taxas; custas judiciais e emolumentos extrajudiciais; remuneração de serviços públicos; competência estadual.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">As custas judiciais têm natureza jurídica de taxa de remuneração de serviços públicos, admitindo-se a cobrança em cada fase processual, mas é inconstitucional a norma estadual que institui custas destinadas ao processamento de recursos dirigidos aos tribunais superiores.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário examinou a Lei n. 1900/2023 do Estado de Roraima, que instituiu a Taxa de Serviços Judiciários, e julgou a ação parcialmente procedente, por maioria, para declarar a inconstitucionalidade do § 2º do art. 3º, do inciso I do art. 4º e do item “Admissibilidade de recursos aos tribunais superiores” do Anexo Único, sem repristinação das normas anteriores. O fundamento é a competência exclusiva do Supremo Tribunal Federal e do Superior Tribunal de Justiça quanto ao custeio do processamento dos recursos a eles dirigidos, conforme a ADI 2.211. De outro lado, a Corte reafirmou que a fixação de custas com base no valor da causa é válida quando em percentual módico e com limite máximo, nos termos da ADI 5.751, e que a cobrança pode incidir tanto na fase de conhecimento quanto na de cumprimento de sentença, porque em cada uma há prestação de serviço distinta. O julgado interessa diretamente ao regime dos emolumentos: a qualificação como taxa é a premissa de que decorrem a exigência de lei em sentido formal para a fixação dos valores, a sujeição às limitações do art. 150 da Constituição Federal e a observância das normas gerais da Lei n. 10169/2000, editada com fundamento no art. 236, § 2º, da Constituição Federal.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="02" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="02">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f03" data-grupo="destaques" data-num="03">
+  <header class="fhead">
+    <span class="fnum">03</span>
+    <h3 class="ftitle">Marco Legal das Garantias: constitucionalidade dos procedimentos extrajudiciais de execução</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 7601, rel. min. dias toffoli, Pleno, j. 30/06/2025, Informativo n. 1184)</code><button class="mini" type="button" data-copy-id="(ADI n. 7601, rel. min. dias toffoli, Pleno, j. 30/06/2025, Informativo n. 1184)" aria-label="Copiar linha de identificação">copiar</button></div><div class="idline"><code>(ADI n. 7608, rel. min. dias toffoli, Pleno, j. 30/06/2025, Informativo n. 1184)</code><button class="mini" type="button" data-copy-id="(ADI n. 7608, rel. min. dias toffoli, Pleno, j. 30/06/2025, Informativo n. 1184)" aria-label="Copiar linha de identificação">copiar</button></div><div class="idline"><code>(ADI n. 7600, rel. min. dias toffoli, Pleno, j. 30/06/2025, Informativo n. 1184)</code><button class="mini" type="button" data-copy-id="(ADI n. 7600, rel. min. dias toffoli, Pleno, j. 30/06/2025, Informativo n. 1184)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Notarial e Registral; Direito Civil; Direito Processual Civil. Desjudicialização da execução; propriedade fiduciária de bens móveis; execução extrajudicial de crédito garantido por hipoteca; execução da garantia imobiliária em concurso de credores.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“1. São constitucionais os procedimentos extrajudiciais instituídos pela Lei nº 14.711/23 de consolidação da propriedade em contratos de alienação fiduciária de bens móveis, de execução dos créditos garantidos por hipoteca e de execução da garantia imobiliária em concurso de credores. 2. Nas diligências para a localização do bem móvel dado em garantia em alienação fiduciária e em sua apreensão, previstas nos §§ 4º, 5º e 7º do art. 8º-C do Decreto-Lei nº 911/69 (redação da Lei nº 14.711/23), devem ser assegurados os direitos à vida privada, à honra e à imagem do devedor; a inviolabilidade do sigilo de dados; a vedação ao uso privado da violência; a inviolabilidade do domicílio; a dignidade da pessoa humana e a autonomia da vontade.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">A Lei n. 14711/2023, denominada Marco Legal das Garantias, instituiu três procedimentos extrajudiciais: a consolidação da propriedade em contratos de alienação fiduciária de bens móveis, mediante os arts. 8º-B a 8º-E do Decreto-Lei n. 911/1969; a execução dos créditos garantidos por hipoteca; e a execução da garantia imobiliária em concurso de credores. O Plenário, em apreciação conjunta e por maioria, julgou as ações parcialmente procedentes para conferir interpretação conforme a Constituição aos §§ 4º, 5º e 7º do art. 8º-C do Decreto-Lei n. 911/1969, este último na expressão “apreendido o bem pelo oficial da serventia extrajudicial”, impondo a observância obrigatória dos direitos fundamentais do devedor nas diligências de localização e apreensão. A Corte registrou que a lei se alinha à tendência de desjudicialização da execução e afastou as alegações de ofensa à inafastabilidade da jurisdição, ao devido processo legal, ao contraditório e à ampla defesa, porque preservados o acesso ao Poder Judiciário, a defesa prévia na esfera administrativa e a purgação da mora antes da consolidação da propriedade. Foram invocados os precedentes que validaram a execução extrajudicial no Decreto-Lei n. 70/1966 e na Lei n. 9514/1997, entre eles o RE 627.106 (Tema 249) e o RE 860.631 (Tema 982). É o pronunciamento que estabiliza o eixo da desjudicialização e reconhece expressamente a atuação do oficial da serventia extrajudicial na apreensão do bem móvel.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="03" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="03">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f04" data-grupo="destaques" data-num="04">
+  <header class="fhead">
+    <span class="fnum">04</span>
+    <h3 class="ftitle">Marco Civil da Internet: responsabilidade civil dos provedores por conteúdo de terceiros</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1037396, rel. min. dias toffoli, Pleno, j. 26/06/2025, Informativo n. 1184)</code><button class="mini" type="button" data-copy-id="(RE n. 1037396, rel. min. dias toffoli, Pleno, j. 26/06/2025, Informativo n. 1184)" aria-label="Copiar linha de identificação">copiar</button></div><div class="idline"><code>(RE n. 1057258, rel. min. luiz fux, Pleno, j. 26/06/2025, Informativo n. 1184)</code><button class="mini" type="button" data-copy-id="(RE n. 1057258, rel. min. luiz fux, Pleno, j. 26/06/2025, Informativo n. 1184)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Temas 987 e 533 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Civil. Responsabilidade civil; direitos da personalidade; liberdade de expressão; notificação extrajudicial; inconstitucionalidade parcial e progressiva do art. 19 da Lei n. 12965/2014.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“Reconhecimento da inconstitucionalidade parcial e progressiva do art. 19 do MCI: 1. O art. 19 da Lei nº 12.965/2014 (Marco Civil da Internet), que exige ordem judicial específica para a responsabilização civil de provedor de aplicações de internet por danos decorrentes de conteúdo gerado por terceiros, é parcialmente inconstitucional. Há um estado de omissão parcial que decorre do fato de que a regra geral do art. 19 não confere proteção suficiente a bens jurídicos constitucionais de alta relevância (proteção de direitos fundamentais e da democracia). Interpretação do art. 19 do MCI: 2. Enquanto não sobrevier nova legislação, o art. 19 do MCI deve ser interpretado de forma que os provedores de aplicação de internet estão sujeitos à responsabilização civil, ressalvada a aplicação das disposições específicas da legislação eleitoral e os atos normativos expedidos pelo TSE. 3. O provedor de aplicações de internet será responsabilizado civilmente, nos termos do art. 21 do MCI, pelos danos decorrentes de conteúdos gerados por terceiros em casos de crime ou atos ilícitos, sem prejuízo do dever de remoção do conteúdo. Aplica-se a mesma regra nos casos de contas denunciadas como inautênticas. 3.1. Nas hipóteses de crime contra a honra aplica-se o art. 19 do MCI, sem prejuízo da possibilidade de remoção por notificação extrajudicial. 3.2. Em se tratando de sucessivas replicações do fato ofensivo já reconhecido por decisão judicial, todos os provedores de redes sociais deverão remover as publicações com idênticos conteúdos, independentemente de novas decisões judiciais, a partir de notificação judicial ou extrajudicial. Presunção de responsabilidade: 4. Fica estabelecida a presunção de responsabilidade dos provedores em caso de conteúdos ilícitos quando se tratar de (a) anúncios e impulsionamentos pagos; ou (b) rede artificial de distribuição (chatbot ou robôs). Nestas hipóteses, a responsabilização poderá se dar independentemente de notificação. Os provedores ficarão excluídos de responsabilidade se comprovarem que atuaram diligentemente e em tempo razoável para tornar indisponível o conteúdo. Dever de cuidado em caso de circulação massiva de conteúdos ilícitos graves: 5. O provedor de aplicações de internet é responsável quando não promover a indisponibilização imediata de conteúdos que configurem as práticas de crimes graves previstas no seguinte rol taxativo: (a) condutas e atos antidemocráticos que se amoldem aos tipos previstos nos artigos 286, parágrafo único, 359-L, 359-M, 359-N, 359-P e 359-R do Código Penal; (b) crimes de terrorismo ou preparatórios de terrorismo, tipificados pela Lei nº 13.260/2016; (c) crimes de induzimento, instigação ou auxílio a suicídio ou a automutilação, nos termos do art. 122 do Código Penal; (d) incitação à discriminação em razão de raça, cor, etnia, religião, procedência nacional, sexualidade ou identidade de gênero (condutas homofóbicas e transfóbicas), passível de enquadramento nos arts. 20, 20-A, 20-B e 20-C da Lei nº 7.716, de 1989; (e) crimes praticados contra a mulher em razão da condição do sexo feminino, inclusive conteúdos que propagam ódio às mulheres (Lei nº 11.340/06; Lei nº 10.446/02; Lei nº 14.192/21; CP, art. 141, § 3º; art. 146-A; art. 147, § 1º; art. 147-A; e art. 147-B do CP); (f) crimes sexuais contra pessoas vulneráveis, pornografia infantil e crimes graves contra crianças e adolescentes, nos termos dos arts. 217-A, 218, 218-A, 218-B, 218-C, do Código Penal e dos arts. 240, 241-A, 241-C, 241-D do Estatuto da Criança e do Adolescente; g) tráfico de pessoas (CP, art. 149-A). 5.1 A responsabilidade dos provedores de aplicações de internet prevista neste item diz respeito à configuração de falha sistêmica. 5.2 Considera-se falha sistêmica, imputável ao provedor de aplicações de internet, deixar de adotar adequadas medidas de prevenção ou remoção dos conteúdos ilícitos anteriormente listados, configurando violação ao dever de atuar de forma responsável, transparente e cautelosa. 5.3. Consideram-se adequadas as medidas que, conforme o estado da técnica, forneçam os níveis mais elevados de segurança para o tipo de atividade desempenhada pelo provedor. 5.4. A existência de conteúdo ilícito de forma isolada, atomizada, não é, por si só, suficiente para ensejar a aplicação da responsabilidade civil do presente item. Contudo, nesta hipótese, incidirá o regime de responsabilidade previsto no art. 21 do MCI. 5.5. Nas hipóteses previstas neste item, o responsável pela publicação do conteúdo removido pelo provedor de aplicações de internet poderá requerer judicialmente o seu restabelecimento, mediante demonstração da ausência de ilicitude. Ainda que o conteúdo seja restaurado por ordem judicial, não haverá imposição de indenização ao provedor. Incidência do art. 19: 6. Aplica-se o art. 19 do MCI ao (a) provedor de serviços de e-mail; (b) provedor de aplicações cuja finalidade primordial seja a realização de reuniões fechadas por vídeo ou voz; (c) provedor de serviços de mensageria instantânea (também chamadas de provedores de serviços de mensageria privada), exclusivamente no que diz respeito às comunicações interpessoais, resguardadas pelo sigilo das comunicações (art. 5º, inciso XII, da CF/88). Marketplaces: 7. Os provedores de aplicações de internet que funcionarem como marketplaces respondem civilmente de acordo com o Código de Defesa do Consumidor (Lei nº 8.078/90). Deveres adicionais: 8. Os provedores de aplicações de internet deverão editar autorregulação que abranja, necessariamente, sistema de notificações, devido processo e relatórios anuais de transparência em relação a notificações extrajudiciais, anúncios e impulsionamentos. 9. Deverão, igualmente, disponibilizar a usuários e a não usuários canais específicos de atendimento, preferencialmente eletrônicos, que sejam acessíveis e amplamente divulgados nas respectivas plataformas de maneira permanente. 10. Tais regras deverão ser publicadas e revisadas periodicamente, de forma transparente e acessível ao público. 11. Os provedores de aplicações de internet com atuação no Brasil devem constituir e manter sede e representante no país, cuja identificação e informações para contato deverão ser disponibilizadas e estar facilmente acessíveis nos respectivos sítios. Essa representação deve conferir ao representante, necessariamente pessoa jurídica com sede no país, plenos poderes para (a) responder perante as esferas administrativa e judicial; (b) prestar às autoridades competentes informações relativas ao funcionamento do provedor, às regras e aos procedimentos utilizados para moderação de conteúdo e para gestão das reclamações pelos sistemas internos; aos relatórios de transparência, monitoramento e gestão dos riscos sistêmicos; às regras para o perfilamento de usuários (quando for o caso), a veiculação de publicidade e o impulsionamento remunerado de conteúdos; (c) cumprir as determinações judiciais; e (d) responder e cumprir eventuais penalizações, multas e afetações financeiras em que o representado incorrer, especialmente por descumprimento de obrigações legais e judiciais. Natureza da responsabilidade: 12. Não haverá responsabilidade objetiva na aplicação da tese aqui enunciada. Apelo ao legislador: 13. Apela-se ao Congresso Nacional para que seja elaborada legislação capaz de sanar as deficiências do atual regime quanto à proteção de direitos fundamentais. Modulação dos efeitos temporais: 14. Para preservar a segurança jurídica, ficam modulados os efeitos da presente decisão, que somente se aplicará prospectivamente, ressalvadas decisões transitadas em julgado.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário declarou a inconstitucionalidade parcial e progressiva do art. 19 da Lei n. 12965/2014, por omissão parcial do legislador na proteção de bens jurídicos constitucionais de alta relevância. Enquanto não sobrevier nova legislação, os provedores de aplicações de internet respondem civilmente na forma do art. 21 da mesma lei, inclusive mediante notificação extrajudicial, ressalvados os crimes contra a honra, aos quais continua a se aplicar o art. 19. A decisão foi modulada com eficácia prospectiva, ressalvadas as decisões transitadas em julgado. O julgado é o de maior repercussão do semestre e interessa aos concursos de delegação por três razões técnicas: fixa novo regime de responsabilidade civil por ato de terceiro, com hipóteses de presunção de responsabilidade e afastamento expresso da responsabilidade objetiva; delimita a tutela dos direitos da personalidade em face da liberdade de expressão; e atribui eficácia jurídica à notificação extrajudicial como marco da responsabilização e do dever de remoção, inclusive para replicações sucessivas de conteúdo já declarado ilícito.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="04" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="04">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f05" data-grupo="destaques" data-num="05">
+  <header class="fhead">
+    <span class="fnum">05</span>
+    <h3 class="ftitle">ITCMD com elemento de conexão no exterior antes da Emenda Constitucional n. 132/2023</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 6838, rel. min. nunes marques, red. ac. min. cristiano zanin, Pleno, j. 24/10/2025, Informativo n. 1196)</code><button class="mini" type="button" data-copy-id="(ADI n. 6838, rel. min. nunes marques, red. ac. min. cristiano zanin, Pleno, j. 24/10/2025, Informativo n. 1196)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Tributário; Direito Notarial e Registral. Imposto sobre transmissão causa mortis e doação; reserva de lei complementar; extraterritorialidade; inventário processado no exterior.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É inconstitucional a lei estadual que institui o imposto sobre transmissão causa mortis e doação nas hipóteses com elemento de conexão no exterior antes da Emenda Constitucional n. 132/2023, por ausência da lei complementar exigida pelo art. 155, § 1º, III, da Constituição Federal.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, declarou a inconstitucionalidade do art. 3º, I, “a” e “b”, e II, “a” e “b”, da Lei n. 7850/2002 do Estado de Mato Grosso, que instituiu o imposto nas hipóteses em que o doador reside ou é domiciliado no exterior e naquelas em que o de cujus possuía bens, era residente ou teve o inventário processado fora do País. Reafirmou o entendimento do RE 851.108 (Tema 825) e assentou que a Emenda Constitucional n. 132/2023, embora tenha conferido competência plena aos Estados e ao Distrito Federal por meio de seu art. 16, não convalida as leis estaduais editadas em desacordo com o parâmetro constitucional anterior, pois não se admite constitucionalidade superveniente. A decisão recebeu eficácia prospectiva a contar da publicação do acórdão do RE 851.108, em 20/04/2021, ressalvadas as ações judiciais pendentes de conclusão até esse marco em que se discuta a bitributação ou a validade da cobrança não recolhida. A matéria é de aplicação cotidiana nas serventias: o tabelião de notas e o oficial de registro de imóveis devem exigir a comprovação do recolhimento do imposto ou do reconhecimento de sua desoneração como condição para a lavratura da escritura de doação, para a escritura de inventário e partilha e para o registro do título, dever que decorre do art. 30, XI, da Lei n. 8935/1994 e das normas do Código Nacional de Normas da Corregedoria Nacional de Justiça do Conselho Nacional de Justiça — Foro Extrajudicial.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="05" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="05">Copiar ficha</button>
+  </footer>
+</article>
+</section>
+
+<section class="grupo" id="g-notarial" data-grupo="notarial">
+  <header class="ghead">
+    <span class="grom">II</span>
+    <div>
+      <h2>Direito Notarial e Registral</h2>
+      <p>Julgamentos com repercussão objetiva ou subjetiva sobre a atividade notarial e registral, sobre as serventias extrajudiciais e sobre a vida funcional de seus delegatários.</p>
+    </div>
+    <span class="gcount">4</span>
+  </header>
+  
+<article class="ficha" id="f06" data-grupo="notarial" data-num="06">
+  <header class="fhead">
+    <span class="fnum">06</span>
+    <h3 class="ftitle">Certidões para defesa de direitos: vedação constitucional à cobrança de taxa</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 3717, rel. min. nunes marques, Pleno, j. 30/06/2025, Informativo n. 1184)</code><button class="mini" type="button" data-copy-id="(ADI n. 3717, rel. min. nunes marques, Pleno, j. 30/06/2025, Informativo n. 1184)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Tributário; Direito Constitucional. Taxas; serviços específicos e divisíveis; direito de certidão; art. 5º, XXXIV, “b”, da Constituição Federal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É constitucional a taxa cobrada por órgãos de segurança pública pela emissão de certidões e atestados, desde que estes não se destinem à defesa de direitos ou ao esclarecimento de situações de interesse pessoal.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário examinou a tabela anexa à Lei n. 10236/1992 do Estado do Paraná e julgou a ação parcialmente procedente, por unanimidade. Declarou a inconstitucionalidade dos itens relativos à segurança preventiva genérica e conferiu interpretação conforme aos itens referentes a certidões e atestados, para impossibilitar a cobrança quando o documento for solicitado com o propósito de defender direitos ou esclarecer situações de interesse pessoal, nos termos do art. 5º, XXXIV, “b”, da Constituição Federal. Distinguiu os serviços gerais e indivisíveis de segurança pública, remunerados por impostos, das prestações atipicamente oferecidas e usufruídas de modo particular, que admitem custeio por taxa. O julgado reforça o parâmetro constitucional aplicável ao direito de certidão, cuja densificação, no âmbito registral, se dá pela publicidade registral e pelo dever de expedição de certidões a qualquer solicitante, previsto nos arts. 16 a 21 da LRP, bem como pelas hipóteses de gratuidade legalmente estabelecidas, entre elas a da Lei n. 9534/1997 quanto ao registro civil das pessoas naturais.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="06" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="06">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f07" data-grupo="notarial" data-num="07">
+  <header class="fhead">
+    <span class="fnum">07</span>
+    <h3 class="ftitle">Fixação do valor da taxa segundo o tipo de atividade e princípio da referibilidade</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ARE n. 990094, rel. min. gilmar mendes, Pleno, j. 18/08/2025, Informativo n. 1186)</code><button class="mini" type="button" data-copy-id="(ARE n. 990094, rel. min. gilmar mendes, Pleno, j. 18/08/2025, Informativo n. 1186)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1035 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Tributário. Taxas; poder de polícia; critérios de fixação do valor; base de cálculo; princípio da referibilidade.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“É constitucional considerar o tipo de atividade exercida pelo contribuinte como um dos critérios para fixação do valor de taxa de fiscalização do estabelecimento.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, deu parcial provimento ao recurso para assentar a constitucionalidade do art. 14 da Lei n. 13477/2002 do Município de São Paulo, que calcula a taxa de fiscalização em função do tipo de atividade exercida no estabelecimento, conforme tabela com mais de cem atividades. Consignou que são válidas as taxas que adotam parâmetros objetivos, refletem os custos do exercício do poder de polícia e não empregam base de cálculo própria de imposto, e que não é necessária a correspondência exata entre o valor cobrado e o custo individual de cada atuação estatal, sob pena de inviabilizar a arrecadação. O precedente é parâmetro relevante para os emolumentos, que possuem natureza de taxa e são fixados em tabelas escalonadas por espécie de ato e por faixas de valor, na forma do art. 236, § 2º, da Constituição Federal e dos arts. 1º a 3º da Lei n. 10169/2000: a decisão confirma a legitimidade de critérios objetivos de graduação vinculados ao custo do serviço, sem exigir equivalência aritmética entre valor e custo.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="07" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="07">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f08" data-grupo="notarial" data-num="08">
+  <header class="fhead">
+    <span class="fnum">08</span>
+    <h3 class="ftitle">Poder normativo do Conselho Nacional de Justiça e observância obrigatória de suas resoluções</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ARE n. 1553607, rel. min. presidente, Pleno, j. 19/09/2025, Informativo n. 1191)</code><button class="mini" type="button" data-copy-id="(ARE n. 1553607, rel. min. presidente, Pleno, j. 19/09/2025, Informativo n. 1191)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1428 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Processual Civil. Conselho Nacional de Justiça; poder normativo; gestão judiciária; princípio da eficiência; execução fiscal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“1. As providências da Resolução CNJ nº 547/2024 não usurpam nem interferem na competência tributária dos entes federativos e devem ser observadas para o processamento e a extinção de execuções fiscais com base no princípio constitucional da eficiência; 2. É infraconstitucional e fática a controvérsia sobre o atendimento das exigências da Resolução CNJ nº 547/2024 para extinção da execução fiscal por falta de interesse de agir.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário reconheceu a repercussão geral e, por maioria, reafirmou a jurisprudência dominante para assentar que a Resolução n. 547/2024 do Conselho Nacional de Justiça deve ser observada no processamento e na extinção das execuções fiscais, ainda que exista lei local com critérios diversos, sem que isso configure usurpação da competência tributária dos entes federativos ou ofensa à separação de Poderes. O fundamento é a competência constitucional do Conselho para formular políticas públicas de aprimoramento da gestão do Poder Judiciário. O julgado interessa à disciplina notarial e registral porque confirma, em sede de repercussão geral, a densidade normativa dos atos do Conselho Nacional de Justiça e sua aptidão para vincular a atuação de órgãos jurisdicionais e administrativos, premissa que sustenta a força obrigatória do Código Nacional de Normas da Corregedoria Nacional de Justiça do Conselho Nacional de Justiça — Foro Extrajudicial, instituído pelo Provimento n. 149, de 30/08/2023, e dos demais provimentos editados pela Corregedoria Nacional de Justiça no exercício da fiscalização prevista no art. 103-B, § 4º, da Constituição Federal.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="08" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="08">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f09" data-grupo="notarial" data-num="09">
+  <header class="fhead">
+    <span class="fnum">09</span>
+    <h3 class="ftitle">Propriedade fiduciária de veículo: credor fiduciário não é contribuinte do imposto sobre a propriedade de veículos automotores</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1355870, rel. min. luiz fux, Pleno, j. 03/10/2025, Informativo n. 1193)</code><button class="mini" type="button" data-copy-id="(RE n. 1355870, rel. min. luiz fux, Pleno, j. 03/10/2025, Informativo n. 1193)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1153 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Civil; Direito Tributário. Propriedade fiduciária; direito real de garantia; consolidação da propriedade plena; sujeição passiva tributária.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“É inconstitucional a eleição do credor fiduciário como contribuinte ou responsável tributário do Imposto sobre a Propriedade de Veículos Automotores (IPVA) incidente sobre veículo alienado fiduciariamente, ressalvada a hipótese da consolidação de sua propriedade plena sobre o bem.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, deu provimento ao recurso e fixou a tese, com eficácia prospectiva a contar da publicação da ata do julgamento de mérito, ressalvadas as ações judiciais e os processos administrativos pendentes de conclusão. O fundamento central é de direito civil: o credor fiduciário titulariza propriedade resolúvel em função de garantia e não exerce os poderes de uso, gozo e fruição, que permanecem com o devedor fiduciante, detentor da posse direta e do direito real de aquisição. A imputação da sujeição passiva ao credor desvirtuaria a finalidade da propriedade fiduciária, disciplinada nos arts. 1361 a 1368-B do Código Civil. A ressalva reproduz a regra do parágrafo único do art. 1368-B do Código Civil, segundo a qual o credor fiduciário que se torna proprietário pleno, por consolidação, adjudicação, dação ou outra forma de transmissão, passa a responder pelos tributos sobre a propriedade e a posse, taxas, despesas condominiais e demais encargos a partir da imissão na posse direta. O julgado é diretamente aplicável à alienação fiduciária de coisa imóvel, em que a consolidação da propriedade se opera perante o oficial de registro de imóveis na forma do art. 26 da Lei n. 9514/1997.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="09" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="09">Copiar ficha</button>
+  </footer>
+</article>
+</section>
+
+<section class="grupo" id="g-outras" data-grupo="outras">
+  <header class="ghead">
+    <span class="grom">III</span>
+    <div>
+      <h2>Outras Matérias</h2>
+      <p>Julgamentos de outras disciplinas com relevância direta para os editais dos concursos de delegação.</p>
+    </div>
+    <span class="gcount">19</span>
+  </header>
+  
+<article class="ficha" id="f10" data-grupo="outras" data-num="10">
+  <header class="fhead">
+    <span class="fnum">10</span>
+    <h3 class="ftitle">Controle judicial do ato da comissão de heteroidentificação em concurso público</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ARE n. 1553243, rel. min. presidente, Pleno, j. 05/09/2025, Informativo n. 1189)</code><button class="mini" type="button" data-copy-id="(ARE n. 1553243, rel. min. presidente, Pleno, j. 05/09/2025, Informativo n. 1189)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1420 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo; Direito Constitucional. Concurso público; reserva de vagas para pessoas pretas e pardas; heteroidentificação; controle jurisdicional do ato administrativo.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“1. O Poder Judiciário pode controlar o ato administrativo de heteroidentificação de candidatos que concorrem às vagas reservadas a pessoas pretas e pardas em concurso público, para garantia de contraditório e ampla defesa; 2. É fática e pressupõe a análise de cláusulas do edital do concurso a controvérsia sobre a adequação de critérios e de fundamentos do ato de exclusão de candidato por comissão de heteroidentificação.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário reconheceu a repercussão geral e reafirmou a jurisprudência dominante, por unanimidade, conhecendo parcialmente do recurso para negar-lhe provimento. Delimitou dois planos: o controle judicial é admissível para assegurar o contraditório e a ampla defesa no procedimento, mas o reexame dos critérios editalícios e dos fundamentos do ato de exclusão esbarra nas Súmulas 279 e 454 do Supremo Tribunal Federal, por demandar análise de fatos, provas e cláusulas de edital. Foram invocados, entre outros, a ADC 41 e o RE 632.853 (Tema 485). O julgado importa aos concursos de outorga de delegação, que adotam reserva de vagas por força da regulamentação do Conselho Nacional de Justiça, e integra o tema clássico dos limites do controle jurisdicional sobre bancas e comissões examinadoras.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="10" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="10">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f11" data-grupo="outras" data-num="11">
+  <header class="fhead">
+    <span class="fnum">11</span>
+    <h3 class="ftitle">Direito subjetivo à nomeação e extinção superveniente dos cargos por excesso de gastos com pessoal</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1316010, rel. min. flávio dino, Pleno, j. 10/10/2025, Informativo n. 1194)</code><button class="mini" type="button" data-copy-id="(RE n. 1316010, rel. min. flávio dino, Pleno, j. 10/10/2025, Informativo n. 1194)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1164 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo. Concurso público; aprovação dentro do número de vagas; direito subjetivo à nomeação; limite prudencial de despesa com pessoal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“A superveniente extinção dos cargos oferecidos em edital de concurso público em razão da superação do limite prudencial de gastos com pessoal, previsto em lei complementar regulamentadora do art. 169 da Constituição Federal, desde que anterior ao término do prazo de validade do concurso e devidamente motivada, justifica a mitigação do direito subjetivo à nomeação de candidato aprovado dentro do número de vagas.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, negou provimento ao recurso e fixou a tese. Reafirmou que o candidato aprovado dentro do número de vagas tem direito subjetivo à nomeação, mas que esse direito pode ser relativizado em situações excepcionais caracterizadas por superveniência, imprevisibilidade, gravidade e necessidade, sempre sujeitas a controle jurisdicional, conforme o RE 598.099 (Tema 161). Exigiu que a extinção dos cargos ou a superação do limite prudencial previsto nos arts. 19 e 20 da Lei Complementar n. 101/2000 seja motivada e ocorra antes do término da validade do certame, de modo que o corte de gastos não sirva de pretexto para a contratação de pessoal temporário. É julgado de referência obrigatória no capítulo de concurso público.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="11" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="11">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f12" data-grupo="outras" data-num="12">
+  <header class="fhead">
+    <span class="fnum">12</span>
+    <h3 class="ftitle">Realização de provas de concurso público e observância dos dias de guarda religiosos</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 3901, rel. min. edson fachin, Pleno, j. 19/09/2025, Informativo n. 1191)</code><button class="mini" type="button" data-copy-id="(ADI n. 3901, rel. min. edson fachin, Pleno, j. 19/09/2025, Informativo n. 1191)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Administrativo. Liberdade de crença; escusa de consciência; concurso público; repartição de competências legislativas.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É constitucional a lei estadual, de iniciativa parlamentar, que determina a realização de provas de concursos públicos e de exames vestibulares no período compreendido entre as dezoito horas de sábado e as dezoito horas da sexta-feira seguinte, em respeito aos dias de guarda de determinadas religiões.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, julgou improcedente a ação e assentou a constitucionalidade da Lei n. 6140/1998 do Estado do Pará. Consignou que a definição do período de realização de concurso público não integra a iniciativa privativa do chefe do Poder Executivo prevista no art. 61, § 1º, II, “c”, da Constituição Federal, por não se relacionar diretamente ao provimento de cargos públicos, e que a matéria não é alcançada pela competência privativa da União para legislar sobre diretrizes e bases da educação. Registrou, contudo, que a superveniência da Lei n. 13796/2019, que disciplina prestações alternativas por escusa de consciência religiosa, suspendeu a eficácia do art. 2º da lei estadual no que lhe for contrário, na forma do art. 24, § 4º, da Constituição Federal. O julgado tem aplicação concreta aos certames de outorga de delegação, cujas provas costumam ser designadas para sábados e domingos, e integra o tema da liberdade religiosa em face do princípio da isonomia entre candidatos.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="12" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="12">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f13" data-grupo="outras" data-num="13">
+  <header class="fhead">
+    <span class="fnum">13</span>
+    <h3 class="ftitle">Nepotismo: nomeação de servidor efetivo para cargo em comissão no Poder Judiciário</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 3496, rel. min. nunes marques, Pleno, j. 10/10/2025, Informativo n. 1194)</code><button class="mini" type="button" data-copy-id="(ADI n. 3496, rel. min. nunes marques, Pleno, j. 10/10/2025, Informativo n. 1194)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo; Direito Constitucional. Vedação ao nepotismo; cargo em comissão; servidor efetivo concursado; princípios da moralidade e da impessoalidade.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É constitucional a nomeação de servidor efetivo de carreira judiciária, admitido por concurso público, para cargo em comissão de assistente jurídico de desembargador, ainda que parente de integrante do órgão, desde que inexista subordinação direta ao magistrado e sejam observadas a compatibilidade de escolaridade, a qualificação profissional e a complexidade do cargo.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, julgou procedente a ação para declarar a inconstitucionalidade parcial, sem redução de texto, do parágrafo único do art. 4º da Lei n. 7451/1991 do Estado de São Paulo, excluindo de seu âmbito normativo o servidor ocupante de cargo de provimento efetivo admitido por concurso público, com as ressalvas indicadas e a vedação absoluta quando o cargo for subordinado ao membro do Poder Judiciário determinante da incompatibilidade. Registrou que a vedação ao nepotismo decorre diretamente da Constituição Federal, nos termos da Súmula Vinculante 13, mas que a proibição absoluta restringiria indevidamente o acesso de profissionais qualificados a cargos comissionados. Foi lembrada a exceção já prevista na Resolução n. 7/2005 do Conselho Nacional de Justiça em favor dos servidores efetivos das carreiras judiciárias. A matéria é cobrada nos concursos de delegação tanto no capítulo de princípios da Administração Pública quanto na disciplina das vedações aplicáveis à contratação de prepostos e escreventes nas serventias extrajudiciais.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="13" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="13">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f14" data-grupo="outras" data-num="14">
+  <header class="fhead">
+    <span class="fnum">14</span>
+    <h3 class="ftitle">Imunidade parlamentar material como excludente da responsabilidade civil objetiva do Estado</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 632115, rel. min. luís roberto barroso, Pleno, j. 26/09/2025, Informativo n. 1192)</code><button class="mini" type="button" data-copy-id="(RE n. 632115, rel. min. luís roberto barroso, Pleno, j. 26/09/2025, Informativo n. 1192)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 950 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Administrativo. Responsabilidade civil do Estado; art. 37, § 6º, da Constituição Federal; imunidade parlamentar material; responsabilidade subjetiva do agente.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“1. A imunidade material parlamentar (art. 53, caput, c/c art. 27, § 1º, e art. 29, VIII, CF/1988) configura excludente da responsabilidade civil objetiva do Estado (art. 37, § 6º, CF/1988), afastando qualquer pretensão indenizatória em face do ente público por opiniões, palavras e votos cobertos por essa garantia. 2. Nas hipóteses em que a conduta do parlamentar extrapolar os limites da imunidade material, eventual responsabilização recairá de forma pessoal, direta e exclusiva sobre o próprio parlamentar, sob o regime de responsabilidade civil subjetiva.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, deu provimento ao recurso e fixou a tese. Assentou que responsabilizar o Estado por atos integralmente cobertos pela imunidade material comprometeria a separação de Poderes e a liberdade de expressão parlamentar, e que o abuso da prerrogativa gera responsabilidade pessoal e subjetiva do parlamentar, na forma dos arts. 186, 187 e 927 do Código Civil. O julgado é relevante para os concursos de delegação porque delimita o alcance do art. 37, § 6º, da Constituição Federal, dispositivo que constitui o fundamento da responsabilidade civil do Estado por danos causados por notários e registradores, tema fixado no RE 842.846 (Tema 777), no qual se reconheceu a responsabilidade civil direta do Estado e a responsabilidade subjetiva e regressiva do delegatário.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="14" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="14">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f15" data-grupo="outras" data-num="15">
+  <header class="fhead">
+    <span class="fnum">15</span>
+    <h3 class="ftitle">Teoria do risco administrativo e ônus da prova das excludentes de responsabilidade</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1467145, rel. min. flávio dino, Pleno, j. 29/10/2025, Informativo n. 1197)</code><button class="mini" type="button" data-copy-id="(RE n. 1467145, rel. min. flávio dino, Pleno, j. 29/10/2025, Informativo n. 1197)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo; Direito Processual Civil. Responsabilidade civil objetiva do Estado; teoria do risco administrativo; excludentes; ônus da prova.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“I) O Estado do Paraná, em conformidade com postulados adotados pelo Supremo Tribunal Federal na fixação da tese no Tema nº 1.055 da Repercussão Geral, responde objetivamente pelos danos concretos diretamente causados por ação de policiais durante a &#x27;Operação Centro Cívico&#x27;, ocorrida em 29 de abril de 2015. Cabe ao ente público demonstrar, em cada caso, os fatos que comprovem eventual excludente da responsabilidade civil, não havendo coisa julgada criminal a ser observada; II) Não se presume o reconhecimento da excludente de culpa exclusiva da vítima unicamente pelo fato desta estar presente na manifestação.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, deu provimento ao recurso e fixou a tese. Reafirmou que a responsabilidade civil estatal por danos decorrentes de atuação policial é objetiva e fundada na teoria do risco administrativo, incumbindo ao ente público demonstrar, em cada caso concreto, a ocorrência de culpa exclusiva da vítima, fato de terceiro ou caso fortuito ou força maior. O julgado importa à disciplina notarial e registral porque explicita a distribuição do ônus da prova das excludentes no regime do art. 37, § 6º, da Constituição Federal, parâmetro aplicável às ações de responsabilidade por atos praticados nas serventias extrajudiciais, e porque reafirma que a existência de decisão criminal não vincula necessariamente o juízo cível.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="15" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="15">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f16" data-grupo="outras" data-num="16">
+  <header class="fhead">
+    <span class="fnum">16</span>
+    <h3 class="ftitle">Fixação de multa administrativa em múltiplos do salário mínimo</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ARE n. 1409059, rel. min. gilmar mendes, Pleno, j. 04/11/2025, Informativo n. 1197)</code><button class="mini" type="button" data-copy-id="(ARE n. 1409059, rel. min. gilmar mendes, Pleno, j. 04/11/2025, Informativo n. 1197)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1244 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Administrativo. Vedação à vinculação ao salário mínimo (art. 7º, IV, da Constituição Federal); sanções administrativas.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“A fixação de multa administrativa em múltiplos do salário mínimo não viola o disposto no art. 7º, IV, da Constituição Federal.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, deu provimento ao recurso e fixou a tese. Consignou que o emprego do salário mínimo como mera referência não configura sua utilização como indexador econômico, porque a multa é prestação eventual, desvinculada do poder de compra dos trabalhadores e sem aptidão para servir de base a reajustes periódicos. O precedente é útil no estudo da vedação constitucional à vinculação ao salário mínimo, matéria que, no plano notarial e registral, se apresenta no exame das tabelas de emolumentos e das penalidades pecuniárias previstas na legislação estadual e nos códigos de normas das corregedorias, cuja indexação encontra limite no art. 7º, IV, da Constituição Federal e nos arts. 1º a 3º da Lei n. 10169/2000.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="16" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="16">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f17" data-grupo="outras" data-num="17">
+  <header class="fhead">
+    <span class="fnum">17</span>
+    <h3 class="ftitle">Limites da resolução do Senado Federal que suspende a execução de lei declarada inconstitucional</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 3929, rel. min. nunes marques, Pleno, j. 05/09/2025, Informativo n. 1189)</code><button class="mini" type="button" data-copy-id="(ADI n. 3929, rel. min. nunes marques, Pleno, j. 05/09/2025, Informativo n. 1189)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Controle difuso de constitucionalidade; art. 52, X, da Constituição Federal; competência do Senado Federal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É inconstitucional a resolução do Senado Federal que suspende a execução de dispositivos legais estaduais não declarados inconstitucionais pelo Supremo Tribunal Federal.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, confirmou a medida cautelar e julgou procedente o pedido para declarar a inconstitucionalidade da Resolução n. 7/2007 do Senado Federal na parte em que suspendeu a execução de dispositivos de leis paulistas cuja compatibilidade com a Constituição Federal sequer havia sido examinada. Assentou que a suspensão prevista no art. 52, X, da Constituição Federal é ato político que retira o preceito do ordenamento de forma definitiva, mas que só pode ser exercido após decisão definitiva da Corte e nos estritos limites do julgado, sem competência do Senado para examinar o mérito, interpretar, ampliar ou restringir a decisão judicial. É julgado central no capítulo de controle de constitucionalidade, tema recorrente nas provas objetivas e dissertativas desses certames.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="17" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="17">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f18" data-grupo="outras" data-num="18">
+  <header class="fhead">
+    <span class="fnum">18</span>
+    <h3 class="ftitle">Emenda da Casa revisora que altera o conteúdo do projeto e necessidade de retorno à Casa iniciadora</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 6085, rel. min. cristiano zanin, red. ac. min. gilmar mendes, Pleno, j. 18/08/2025, Informativo n. 1186)</code><button class="mini" type="button" data-copy-id="(ADI n. 6085, rel. min. cristiano zanin, red. ac. min. gilmar mendes, Pleno, j. 18/08/2025, Informativo n. 1186)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Processo legislativo; bicameralismo; art. 65 da Constituição Federal; declaração de inconstitucionalidade sem pronúncia de nulidade.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É formalmente inconstitucional o dispositivo oriundo de emenda proposta pela Casa revisora que altera o conteúdo original da proposição sem o retorno à Casa iniciadora para nova deliberação.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, conheceu parcialmente da ação e a julgou procedente para declarar a inconstitucionalidade, sem pronúncia de nulidade, do art. 2º da Lei n. 13714/2018, mantendo sua vigência pelo prazo de dezoito meses para que o legislador reaprecie o tema. Consignou que a emenda que implique alteração, supressão ou complementação de conteúdo obriga o retorno da proposição à Casa iniciadora, sendo inconstitucionalidade incontornável o encaminhamento direto à sanção presidencial, ainda que a emenda vise a concretizar mandamento constitucional. O julgado reúne dois pontos de alta incidência em prova: a regra do art. 65, parágrafo único, da Constituição Federal e a técnica de decisão consistente na declaração de inconstitucionalidade sem pronúncia de nulidade com manutenção temporária da vigência.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="18" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="18">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f19" data-grupo="outras" data-num="19">
+  <header class="fhead">
+    <span class="fnum">19</span>
+    <h3 class="ftitle">Reserva de lei complementar em Constituição estadual sem correspondência na Constituição Federal</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 7436, rel. min. andré mendonça, Pleno, j. 15/10/2025, Informativo n. 1195)</code><button class="mini" type="button" data-copy-id="(ADI n. 7436, rel. min. andré mendonça, Pleno, j. 15/10/2025, Informativo n. 1195)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Processo legislativo; princípio da simetria; poder constituinte decorrente; reserva de lei complementar.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É inconstitucional a norma de Constituição estadual que institui hipóteses de reserva de lei complementar sem correspondência no texto da Constituição Federal.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, conheceu em parte da ação e a julgou parcialmente procedente para declarar formalmente inconstitucionais doze itens do parágrafo único do art. 23 da Constituição do Estado de São Paulo. Assentou que as constituições estaduais devem observar o princípio da simetria quanto ao conjunto normativo que regula o processo legislativo, sendo de reprodução obrigatória as hipóteses em que a Constituição Federal exige lei complementar, e que a criação de reservas adicionais configura óbice procedimental que restringe indevidamente o arranjo democrático-representativo. Interessa ao estudo do poder constituinte decorrente e, indiretamente, à delimitação das matérias que a legislação estadual pode disciplinar quanto aos serviços notariais e de registro no âmbito da organização judiciária.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="19" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="19">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f20" data-grupo="outras" data-num="20">
+  <header class="fhead">
+    <span class="fnum">20</span>
+    <h3 class="ftitle">Revogação por lei ordinária de benefício instituído por lei formalmente complementar</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ARE n. 1521802, rel. min. edson fachin, Pleno, j. 12/09/2025, Informativo n. 1190)</code><button class="mini" type="button" data-copy-id="(ARE n. 1521802, rel. min. edson fachin, Pleno, j. 12/09/2025, Informativo n. 1190)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1352 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Processo legislativo; hierarquia entre lei complementar e lei ordinária; lei complementar materialmente ordinária.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“É possível a revogação ou alteração por lei ordinária de benefício instituído a servidor público por lei complementar quando materialmente ordinária, observado o princípio da simetria.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, deu provimento ao recurso e fixou a tese. Reafirmou que a Constituição Federal não exige lei complementar para disciplinar matéria relativa a servidor público, de modo que a aprovação por quórum mais rigoroso do que o exigido não confere à norma o status de lei complementar em sentido material. O tema é clássico na teoria das fontes: inexiste hierarquia entre lei complementar e lei ordinária, sendo o critério de distinção o material, definido pela reserva constitucional. A questão tem aplicação direta em direito notarial e registral, pois diversos diplomas estaduais que tratam de serventias e emolumentos adotam a forma complementar sem que a matéria esteja constitucionalmente reservada.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="20" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="20">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f21" data-grupo="outras" data-num="21">
+  <header class="fhead">
+    <span class="fnum">21</span>
+    <h3 class="ftitle">Redirecionamento da execução a empresa do grupo econômico e desconsideração da personalidade jurídica</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1387795, rel. min. dias toffoli, Pleno, j. 10/10/2025, Informativo n. 1194)</code><button class="mini" type="button" data-copy-id="(RE n. 1387795, rel. min. dias toffoli, Pleno, j. 10/10/2025, Informativo n. 1194)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1232 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Civil; Direito Processual Civil. Personalidade jurídica; grupo econômico; sucessão empresarial; incidente de desconsideração da personalidade jurídica.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“1 - O cumprimento da sentença trabalhista não poderá ser promovido em face de empresa que não tiver participado da fase de conhecimento do processo, devendo o reclamante indicar na petição inicial as pessoas jurídicas corresponsáveis solidárias contra as quais pretende direcionar a execução de eventual título judicial, inclusive nas hipóteses de grupo econômico (art. 2°, §§ 2° e 3°, da CLT), demonstrando concretamente, nesta hipótese, a presença dos requisitos legais; 2 - Admite-se, excepcionalmente, o redirecionamento da execução trabalhista ao terceiro que não participou do processo de conhecimento nas hipóteses de sucessão empresarial (art. 448-A da CLT) e abuso da personalidade jurídica (art. 50 do CC), observado o procedimento previsto no art. 855-A da CLT e nos arts. 133 a 137 do CPC; 3 - Aplica-se tal procedimento mesmo aos redirecionamentos operados antes da Reforma Trabalhista de 2017, ressalvada a indiscutibilidade relativa aos casos já transitados em julgado, aos créditos já satisfeitos e às execuções findas ou definitivamente arquivadas.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade quanto ao provimento e por maioria quanto à tese, deu provimento ao recurso para excluir a recorrente do polo passivo da execução. Assentou que a inclusão tardia de parte na fase executiva desrespeita o núcleo das garantias do devido processo legal, do contraditório e da ampla defesa, previstas no art. 5º, LIV e LV, da Constituição Federal. O julgado consolida, em sede constitucional, a exigência do incidente de desconsideração da personalidade jurídica dos arts. 133 a 137 do CPC e reafirma a autonomia patrimonial como regra, superável apenas nas hipóteses de abuso previstas no art. 50 do Código Civil, matéria de incidência frequente em direito civil e empresarial nesses concursos.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="21" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="21">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f22" data-grupo="outras" data-num="22">
+  <header class="fhead">
+    <span class="fnum">22</span>
+    <h3 class="ftitle">Competência privativa da União para legislar sobre direito civil e política de crédito</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 5022, rel. min. nunes marques, Pleno, j. 04/11/2025, Informativo n. 1197)</code><button class="mini" type="button" data-copy-id="(ADI n. 5022, rel. min. nunes marques, Pleno, j. 04/11/2025, Informativo n. 1197)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Civil. Repartição de competências legislativas; art. 22, I e VII, da Constituição Federal; contratos de mútuo; consignação em folha de pagamento.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É inconstitucional a lei estadual que impõe o cancelamento de consignações em folha de pagamento relativas a empréstimos ou financiamentos, a pedido do servidor e sem anuência da entidade consignatária em liquidação extrajudicial, por usurpar a competência privativa da União para legislar sobre direito civil e política de crédito.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, julgou procedente a ação para declarar a inconstitucionalidade da Lei Complementar n. 717/2013 do Estado de Rondônia. Consignou que a norma impugnada regulou aspectos econômicos do contrato de empréstimo bancário e que o cancelamento unilateral elimina a garantia do mútuo, interferindo diretamente no pacto entre o tomador do crédito e a entidade consignatária. O julgado reitera o entendimento consolidado sobre os limites da competência suplementar dos Estados em matéria contratual, parâmetro que se projeta sobre a legislação estadual em matéria notarial e registral, que não pode dispor sobre direito civil nem sobre requisitos de validade dos negócios jurídicos.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="22" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="22">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f23" data-grupo="outras" data-num="23">
+  <header class="fhead">
+    <span class="fnum">23</span>
+    <h3 class="ftitle">Convenção da Haia de 1980 sobre subtração internacional de crianças</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 4245, rel. min. luís roberto barroso, Pleno, j. 27/08/2025, Informativo n. 1188)</code><button class="mini" type="button" data-copy-id="(ADI n. 4245, rel. min. luís roberto barroso, Pleno, j. 27/08/2025, Informativo n. 1188)" aria-label="Copiar linha de identificação">copiar</button></div><div class="idline"><code>(ADI n. 7686, rel. min. luís roberto barroso, Pleno, j. 27/08/2025, Informativo n. 1188)</code><button class="mini" type="button" data-copy-id="(ADI n. 7686, rel. min. luís roberto barroso, Pleno, j. 27/08/2025, Informativo n. 1188)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Internacional Privado; Direito de Família. Tratados internacionais de direitos humanos; supralegalidade; melhor interesse da criança; interpretação com perspectiva de gênero.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“1. A Convenção da Haia de 1980 sobre os aspectos civis da subtração internacional de crianças é compatível com a Constituição Federal, possuindo status supralegal no ordenamento jurídico brasileiro, por sua natureza de tratado internacional de proteção de direitos da criança. 2. A aplicação da Convenção no Brasil, à luz do princípio do melhor interesse da criança (art. 227, CF), exige a adoção de medidas estruturais e procedimentais para garantir a tramitação célere e eficaz das ações sobre restituição internacional de crianças. 3. A exceção de risco grave à criança, prevista no art. 13 (1) (b) da Convenção da Haia de 1980, deve ser interpretada de forma compatível com o princípio do melhor interesse da criança (art. 227, CF) e com perspectiva de gênero, de modo a admitir sua aplicação quando houver indícios objetivos e concretos de violência doméstica, ainda que a criança não seja vítima direta.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, em apreciação conjunta, julgou parcialmente procedentes as ações para conferir interpretação conforme a Constituição ao art. 13, item 1, alínea “b”, da Convenção, promulgada pelo Decreto n. 3413/2000, determinar medidas estruturais e procedimentais de combate à morosidade nesses processos e fixar a tese. O julgado consolida a tese da supralegalidade dos tratados internacionais de direitos humanos não aprovados pelo rito do art. 5º, § 3º, da Constituição Federal e é relevante ao direito notarial e registral em razão de sua conexão com o direito de família e com o direito internacional privado, disciplinas que informam o registro civil das pessoas naturais, o reconhecimento de guarda e o exercício do poder familiar em situações com elemento de estraneidade.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="23" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="23">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f24" data-grupo="outras" data-num="24">
+  <header class="fhead">
+    <span class="fnum">24</span>
+    <h3 class="ftitle">Inaplicabilidade do regime de falência e recuperação judicial às empresas estatais</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1249945, rel. min. flávio dino, Pleno, j. 17/10/2025, Informativo n. 1195)</code><button class="mini" type="button" data-copy-id="(RE n. 1249945, rel. min. flávio dino, Pleno, j. 17/10/2025, Informativo n. 1195)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1101 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Empresarial; Direito Administrativo. Empresa pública e sociedade de economia mista; regime falimentar; princípio do paralelismo das formas.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“É constitucional o art. 2º, I, da Lei nº 11.101/2005 quanto à inaplicabilidade do regime falimentar às empresas públicas e sociedades de economia mista, ainda que desempenhem atividades em regime de concorrência com a iniciativa privada, em razão do eminente interesse público/coletivo na sua criação e da necessidade de observância do princípio do paralelismo das formas.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, negou provimento ao recurso e fixou a tese. Assentou que a extinção das empresas estatais depende de lei específica, por simetria com o ato que autorizou sua criação, na forma dos arts. 37, XIX, e 173, caput, da Constituição Federal, o que afasta a decretação judicial de insolvência. O julgado é relevante para o estudo do art. 2º da Lei n. 11101/2005 e, no plano registral, para a qualificação dos atos societários levados a registro no registro civil das pessoas jurídicas e nas juntas comerciais, bem como para o exame dos efeitos da falência sobre os registros públicos.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="24" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="24">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f25" data-grupo="outras" data-num="25">
+  <header class="fhead">
+    <span class="fnum">25</span>
+    <h3 class="ftitle">Edição da Súmula Vinculante 63: tráfico privilegiado não é crime hediondo</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(PSV n. 125, rel. min. presidente, Pleno, j. 25/09/2025, Informativo n. 1193)</code><button class="mini" type="button" data-copy-id="(PSV n. 125, rel. min. presidente, Pleno, j. 25/09/2025, Informativo n. 1193)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Penal. Súmula vinculante; edição de enunciado; tráfico privilegiado; progressão de regime e livramento condicional.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“O tráfico privilegiado (art. 33, § 4º, da Lei nº 11.343/2006) não configura crime hediondo, afastando-se a aplicação dos parâmetros mais rigorosos de progressão de regime e de livramento condicional”.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, acolheu a proposta de edição de súmula vinculante, com ajuste de redação para adequá-la ao quadro normativo vigente, dando origem à Súmula Vinculante 63. Consignou que os parâmetros mais rigorosos do art. 112, V, da Lei n. 7210/1984 e do parágrafo único do art. 44 da Lei n. 11343/2006 não se aplicam ao tráfico privilegiado, invocando, entre outros, o HC 118.533 e o RE 1.542.482 (Tema 1400). Além do conteúdo penal, o julgado interessa ao estudo do instituto da súmula vinculante, previsto no art. 103-A da Constituição Federal e na Lei n. 11417/2006, cujo procedimento de edição, revisão e cancelamento é matéria de direito constitucional recorrente nesses certames.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="25" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="25">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f26" data-grupo="outras" data-num="26">
+  <header class="fhead">
+    <span class="fnum">26</span>
+    <h3 class="ftitle">Cancelamento da Súmula Vinculante 9 por incompatibilidade superveniente com a lei</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(PSV n. 60, rel. min. presidente, Pleno, j. 25/09/2025, Informativo n. 1193)</code><button class="mini" type="button" data-copy-id="(PSV n. 60, rel. min. presidente, Pleno, j. 25/09/2025, Informativo n. 1193)" aria-label="Copiar linha de identificação">copiar</button></div><div class="idline"><code>(PSV n. 64, rel. min. presidente, Pleno, j. 25/09/2025, Informativo n. 1193)</code><button class="mini" type="button" data-copy-id="(PSV n. 64, rel. min. presidente, Pleno, j. 25/09/2025, Informativo n. 1193)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Processual Penal. Súmula vinculante; cancelamento; alteração legislativa superveniente; execução penal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">A Súmula Vinculante 9, que admitia a perda integral dos dias remidos em caso de falta grave, é incompatível com a atual redação do art. 127 da Lei n. 7210/1984 e deve ser cancelada, sendo desnecessária a edição de novo enunciado diante da existência de precedente vinculante sobre a matéria.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, em apreciação conjunta e por unanimidade, acolheu a proposta formulada na PSV 60 e deixou de acolher o pedido da PSV 64, cancelando a Súmula Vinculante 9. Registrou que a constitucionalidade do limite de um terço para a perda dos dias remidos, introduzido pela Lei n. 12433/2011 no art. 127 da Lei n. 7210/1984, já havia sido apreciada em repercussão geral, de modo que a finalidade de uniformização estava atendida e não havia utilidade em nova redação do enunciado. O julgado é o exemplo mais recente e didático de cancelamento de súmula vinculante por alteração legislativa superveniente, hipótese prevista no art. 103-A, § 2º, da Constituição Federal e no art. 5º da Lei n. 11417/2006.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="26" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="26">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f27" data-grupo="outras" data-num="27">
+  <header class="fhead">
+    <span class="fnum">27</span>
+    <h3 class="ftitle">Coisa julgada inconstitucional no microssistema dos juizados especiais</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADPF n. 615, rel. min. luís roberto barroso, red. ac. min. alexandre de moraes, Pleno, j. 14/11/2025, Informativo n. 1199)</code><button class="mini" type="button" data-copy-id="(ADPF n. 615, rel. min. luís roberto barroso, red. ac. min. alexandre de moraes, Pleno, j. 14/11/2025, Informativo n. 1199)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Processual Civil; Direito Constitucional. Coisa julgada inconstitucional; inexigibilidade do título judicial; juizados especiais; modulação de precedentes.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“1. É possível aplicar o artigo 741, parágrafo único, do CPC/1973, atual art. 535, § 5º, do CPC/2015, aos feitos submetidos ao procedimento sumaríssimo, desde que o trânsito em julgado da fase de conhecimento seja posterior a 27.08.2001; 2. É admissível a invocação como fundamento da inexigibilidade de ser o título judicial fundado em aplicação ou interpretação tida como incompatível com a Constituição quando houver pronunciamento jurisdicional, contrário ao decidido pelo Plenário do Supremo Tribunal Federal, seja no controle difuso, seja no controle concentrado de constitucionalidade; 3. O art. 59 da Lei 9.099/1995 não impede a desconstituição da coisa julgada quando o título executivo judicial estiver em contrariedade à interpretação ou sentido da norma conferida pela Suprema Corte, sendo admissível o manejo de simples petição, a ser apresentada em prazo equivalente ao da ação rescisória; 3.1. Em cada caso, o Supremo Tribunal Federal poderá definir os efeitos temporais de seus precedentes vinculantes e sua repercussão sobre a coisa julgada, estabelecendo inclusive a extensão da retroação para fins da simples petição acima referida ou mesmo o seu não cabimento diante do grave risco de lesão à segurança jurídica ou ao interesse social; 3.2. Na ausência de manifestação expressa, os efeitos retroativos de eventual desconstituição da coisa julgada não excederão cinco anos da data da apresentação simples da petição acima referida, a qual deverá ser proposta no prazo decadencial de dois anos contados do trânsito em julgado da decisão do STF; 4. O art. 59 da Lei 9.099/1995 também não impede a arguição de inexigibilidade quando o título executivo judicial estiver em contrariedade à interpretação ou sentido da norma conferida pela Suprema Corte, seja a decisão do Supremo Tribunal Federal anterior ou posterior ao trânsito em julgado da decisão exequenda, salvo preclusão (CPC, arts. 525, caput e 535, caput).”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por maioria, declarou incidentalmente a inconstitucionalidade do art. 525, § 14, e do art. 535, § 7º, do CPC, julgou procedente a arguição, fixou as teses e modificou a tese firmada no RE 611.503 (Tema 360). Assentou que a proteção à coisa julgada, expressão da segurança jurídica, não é absoluta e cede diante da supremacia da Constituição, e que o art. 59 da Lei n. 9099/1995 não impede a arguição de inexigibilidade do título por simples petição, em prazo equivalente ao da ação rescisória. O julgado é de leitura obrigatória no capítulo de coisa julgada e de eficácia temporal dos precedentes vinculantes.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="27" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="27">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f28" data-grupo="outras" data-num="28">
+  <header class="fhead">
+    <span class="fnum">28</span>
+    <h3 class="ftitle">Redefinição estadual do conceito de floresta e redução da reserva legal em imóveis rurais</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 7841, rel. min. dias toffoli, Pleno, j. 01/12/2025, Informativo n. 1201)</code><button class="mini" type="button" data-copy-id="(ADI n. 7841, rel. min. dias toffoli, Pleno, j. 01/12/2025, Informativo n. 1201)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Ambiental; Direito Constitucional. Competência para normas gerais em matéria ambiental; vedação do retrocesso ambiental; reserva legal em imóvel rural.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">São formal e materialmente inconstitucionais as normas estaduais que redefinem o conceito de floresta e reduzem as áreas de reserva legal em imóveis rurais, pois a legislação suplementar dos Estados somente pode ampliar a proteção ambiental.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário, por unanimidade, julgou procedente a ação para declarar a inconstitucionalidade do art. 5º, XII, e do art. 14, caput, I, II e § 3º, da Lei n. 11269/2020 do Estado do Maranhão, que instituíam conceito restrito de floresta e reserva legal correspondente a cinquenta por cento do imóvel ou posse rural, em desacordo com os parâmetros da Lei n. 12651/2012. Assentou que a instituição, por lei estadual, de disciplina que se afaste das diretrizes federais ou altere seu sentido e alcance viola a competência da União para editar normas gerais em matéria ambiental. O julgado tem reflexo direto no registro de imóveis rurais, uma vez que a extensão da reserva legal condiciona o registro e as averbações relativas à área de reserva, hoje objeto de inscrição no Cadastro Ambiental Rural, na forma do art. 18 da Lei n. 12651/2012, e integra a qualificação registral dos títulos de desmembramento e de alienação de imóveis rurais.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="28" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="28">Copiar ficha</button>
+  </footer>
+</article>
+</section>
+
+<section class="grupo" id="g-tangenciais" data-grupo="tangenciais">
+  <header class="ghead">
+    <span class="grom">IV</span>
+    <div>
+      <h2>Julgamentos Tangenciais</h2>
+      <p>Julgamentos de relevância indireta, registrados de forma sumária.</p>
+    </div>
+    <span class="gcount">17</span>
+  </header>
+  
+<article class="ficha" id="f29" data-grupo="tangenciais" data-num="29">
+  <header class="fhead">
+    <span class="fnum">29</span>
+    <h3 class="ftitle">Poder normativo do Conselho Nacional de Justiça e critérios de promoção por merecimento</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 4510, rel. min. cármen lúcia, Pleno, j. 17/10/2025, Informativo n. 1195)</code><button class="mini" type="button" data-copy-id="(ADI n. 4510, rel. min. cármen lúcia, Pleno, j. 17/10/2025, Informativo n. 1195)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo; Direito Constitucional. Conselho Nacional de Justiça; poder normativo; magistratura; promoção por merecimento.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">São constitucionais os critérios do Conselho Nacional de Justiça para a promoção de magistrados por merecimento, exceto o que vincula a avaliação do mérito a fato dependente da vontade das partes e alheio à capacidade de trabalho do juiz.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário declarou a inconstitucionalidade da parte final do parágrafo único do art. 6º da Resolução n. 106/2010 do Conselho Nacional de Justiça, que privilegiava os magistrados com índice de conciliação proporcionalmente superior ao de sentenças. Manteve os critérios de qualidade das decisões, disciplina judiciária e produtividade. Interessa como referência sobre os limites materiais do poder normativo do Conselho Nacional de Justiça.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="29" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="29">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f30" data-grupo="tangenciais" data-num="30">
+  <header class="fhead">
+    <span class="fnum">30</span>
+    <h3 class="ftitle">Imposto sobre a propriedade de veículos automotores não incide sobre embarcações e aeronaves</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 5654, rel. min. nunes marques, Pleno, j. 05/12/2025, Informativo n. 1202)</code><button class="mini" type="button" data-copy-id="(ADI n. 5654, rel. min. nunes marques, Pleno, j. 05/12/2025, Informativo n. 1202)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Tributário. Campo de incidência do imposto; legalidade tributária; alíquotas diferenciadas.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É inconstitucional a norma estadual anterior à Emenda Constitucional n. 132/2023 que prevê a incidência do imposto sobre a propriedade de veículos automotores sobre embarcações e aeronaves, admitida, porém, a diferenciação de alíquotas em razão da cilindrada do motor.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário reafirmou que a redação originária do art. 155, III, da Constituição Federal restringe o campo de incidência aos veículos automotores terrestres. Julgou parcialmente procedente a ação quanto a dispositivos das Leis n. 12023/1992, n. 14559/2009 e n. 15893/2015 do Estado do Ceará. A distinção entre propriedade de bens móveis sujeitos a registro administrativo e o campo de incidência tributária é útil ao estudo dos regimes de publicidade desses bens.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="30" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="30">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f31" data-grupo="tangenciais" data-num="31">
+  <header class="fhead">
+    <span class="fnum">31</span>
+    <h3 class="ftitle">Incidência da taxa SELIC nas demandas envolvendo a Fazenda Pública</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ARE n. 1557312, rel. min. presidente, Pleno, j. 29/08/2025, Informativo n. 1188)</code><button class="mini" type="button" data-copy-id="(ARE n. 1557312, rel. min. presidente, Pleno, j. 29/08/2025, Informativo n. 1188)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1419 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Tributário; Direito Financeiro. Atualização monetária e juros de mora; art. 3º da Emenda Constitucional n. 113/2021.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“A taxa SELIC, prevista no art. 3º da EC 113/2021, é aplicável para a atualização de valores em qualquer discussão ou condenação da Fazenda Pública, inclusive na cobrança judicial de créditos tributários.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário reconheceu a repercussão geral e reafirmou a jurisprudência dominante. A taxa incide de forma imediata e indistinta, como índice único de correção monetária e juros de mora, em todas as causas com a Fazenda Pública, seja ela autora ou ré. Referência útil para o cálculo de débitos fiscais discutidos em execuções e em ações que envolvam emolumentos e custas.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="31" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="31">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f32" data-grupo="tangenciais" data-num="32">
+  <header class="fhead">
+    <span class="fnum">32</span>
+    <h3 class="ftitle">Inclusão automática de recém-nascidos em plano de saúde e competência para legislar sobre direito civil</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 7428, rel. min. andré mendonça, Pleno, j. 29/08/2025, Informativo n. 1188)</code><button class="mini" type="button" data-copy-id="(ADI n. 7428, rel. min. andré mendonça, Pleno, j. 29/08/2025, Informativo n. 1188)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Civil. Repartição de competências; direito civil e política de seguros; competência suplementar em direito do consumidor.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É inconstitucional a norma estadual que determina a inclusão automática de recém-nascidos como dependentes em planos de saúde, independentemente da manifestação de vontade do titular.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário declarou a inconstitucionalidade do art. 1º da Lei n. 5980/2022 do Estado de Mato Grosso do Sul. Assentou que a competência suplementar estadual em direito do consumidor não alcança a disciplina das relações contratuais entre operadoras e beneficiários, embora possa dispor sobre o dever de informação. Reforça o critério de distinção entre direito civil e direito do consumidor na repartição de competências.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="32" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="32">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f33" data-grupo="tangenciais" data-num="33">
+  <header class="fhead">
+    <span class="fnum">33</span>
+    <h3 class="ftitle">Criação, incorporação, fusão e desmembramento de municípios: ausência de mora legislativa</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADO n. 70, rel. min. dias toffoli, Pleno, j. 26/09/2025, Informativo n. 1192)</code><button class="mini" type="button" data-copy-id="(ADO n. 70, rel. min. dias toffoli, Pleno, j. 26/09/2025, Informativo n. 1192)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Organização político-administrativa; art. 18, § 4º, da Constituição Federal; omissão inconstitucional.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">Não há mora do Congresso Nacional na edição da lei complementar sobre criação, incorporação, fusão e desmembramento de municípios quando a atuação legislativa resultou em projetos de lei integralmente vetados.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário registrou que já foram aprovados e enviados à sanção três projetos de lei complementar sobre a matéria, todos integralmente vetados, o que afasta a inércia deliberativa. O tema interessa indiretamente à disciplina registral pela relação entre a criação de municípios, a delimitação das comarcas e a definição das circunscrições imobiliárias.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="33" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="33">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f34" data-grupo="tangenciais" data-num="34">
+  <header class="fhead">
+    <span class="fnum">34</span>
+    <h3 class="ftitle">Prazo prescricional quinquenal para cobrança de depósitos do Fundo de Garantia por servidor temporário</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1336848, rel. min. gilmar mendes, Pleno, j. 29/08/2025, Informativo n. 1188)</code><button class="mini" type="button" data-copy-id="(RE n. 1336848, rel. min. gilmar mendes, Pleno, j. 29/08/2025, Informativo n. 1188)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1189 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo. Contratação temporária; vínculo jurídico-administrativo; prescrição quinquenal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“O prazo bienal para ajuizamento de ação, previsto na parte final do art. 7º, XXIX, da Constituição Federal, não se aplica aos servidores temporários que tiveram seus contratos declarados nulos, por se tratarem de ocupantes de cargos públicos regidos por vínculo de natureza jurídico-administrativa. Nesses casos, incide o prazo prescricional quinquenal, nos termos do art. 1º do Decreto nº 20.910/1932.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário reafirmou que a contratação prevista no art. 37, IX, da Constituição Federal gera vínculo jurídico-administrativo, e não celetista, incidindo a prescrição quinquenal do Decreto n. 20910/1932. Referência para o estudo da prescrição nas relações com a Administração Pública.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="34" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="34">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f35" data-grupo="tangenciais" data-num="35">
+  <header class="fhead">
+    <span class="fnum">35</span>
+    <h3 class="ftitle">Modulação dos efeitos da declaração de inconstitucionalidade de lei criadora de cargos em comissão</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 6918, rel. min. edson fachin, Pleno, j. 07/08/2025, Informativo n. 1185)</code><button class="mini" type="button" data-copy-id="(ADI n. 6918, rel. min. edson fachin, Pleno, j. 07/08/2025, Informativo n. 1185)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Controle abstrato de constitucionalidade; modulação temporal dos efeitos; segurança jurídica.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">Os cargos em comissão previstos em lei já declarada inconstitucional devem ser extintos após a aposentadoria dos atuais ocupantes e não podem ser recriados.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário modulou os efeitos da decisão de mérito para manter o provimento dos cargos ocupados antes da edição da lei impugnada, obrigar à aposentadoria os que já preencheram os requisitos, extinguir automaticamente os cargos com a vacância e vedar novo regime de transição ou a recriação dos cargos. É exemplo didático da técnica de modulação prevista no art. 27 da Lei n. 9868/1999.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="35" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="35">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f36" data-grupo="tangenciais" data-num="36">
+  <header class="fhead">
+    <span class="fnum">36</span>
+    <h3 class="ftitle">Suspensão dos efeitos financeiros de lei estadual por decreto do chefe do Poder Executivo</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 5297, rel. min. luiz fux, Pleno, j. 14/08/2025, Informativo n. 1186)</code><button class="mini" type="button" data-copy-id="(ADI n. 5297, rel. min. luiz fux, Pleno, j. 14/08/2025, Informativo n. 1186)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Separação de Poderes; controle de constitucionalidade pelo Poder Executivo; responsabilidade fiscal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É inconstitucional a suspensão dos efeitos financeiros de lei estadual mediante decreto do governador sob o fundamento de que a norma seria inconstitucional.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário assentou que o chefe do Poder Executivo não pode suspender os efeitos de lei por decreto sem provocar o Poder Judiciário. No caso, a lei estadual elevara subsídios sem dotação orçamentária, indicação da fonte de custeio e estudo de impacto, em desacordo com o art. 169, § 1º, I, da Constituição Federal e com os arts. 16, 17 e 21 da Lei Complementar n. 101/2000. Tema recorrente no capítulo de separação de Poderes.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="36" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="36">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f37" data-grupo="tangenciais" data-num="37">
+  <header class="fhead">
+    <span class="fnum">37</span>
+    <h3 class="ftitle">Competência absoluta dos juizados especiais federais limitada ao valor da causa</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1426083, rel. min. alexandre de moraes, Pleno, j. 22/08/2025, Informativo n. 1187)</code><button class="mini" type="button" data-copy-id="(RE n. 1426083, rel. min. alexandre de moraes, Pleno, j. 22/08/2025, Informativo n. 1187)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1277 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Processual Civil. Jurisdição e competência; competência absoluta e territorial; art. 109, § 2º, da Constituição Federal.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“O art. 3º, § 3º, da Lei 10.259/2001, é compatível com a Constituição Federal, devendo ser interpretado no sentido de que a competência absoluta dos juizados especiais federais se restringe ao valor da causa, havendo a faculdade de escolha do foro pelo demandante na forma do art. 109, §2º, da CF/88.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário assentou que o autor pode eleger o foro com base no critério territorial, mas que, havendo juizado especial federal no foro escolhido, as causas de até sessenta salários mínimos devem ser ali propostas, em razão da competência absoluta pelo valor. Distinção útil entre competência absoluta e competência territorial.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="37" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="37">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f38" data-grupo="tangenciais" data-num="38">
+  <header class="fhead">
+    <span class="fnum">38</span>
+    <h3 class="ftitle">Altura mínima como requisito de investidura em cargo de segurança pública</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1469887, rel. min. presidente, Pleno, j. 12/09/2025, Informativo n. 1190)</code><button class="mini" type="button" data-copy-id="(RE n. 1469887, rel. min. presidente, Pleno, j. 12/09/2025, Informativo n. 1190)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1424 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo. Concurso público; requisitos de investidura; razoabilidade e proporcionalidade.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“A exigência de altura mínima para ingresso em cargo do Sistema Único de Segurança Pública pressupõe a existência de lei e da observância dos parâmetros fixados para a carreira do exército (Lei federal nº 12.705/2012, 1,60m para homens e 1,55m para mulheres).”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário assentou a inconstitucionalidade da lei estadual que exigia altura superior à prevista para o Exército, sem justificativa relacionada às atribuições do cargo. Integra o tema dos requisitos de investidura e do controle de razoabilidade das exigências editalícias.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="38" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="38">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f39" data-grupo="tangenciais" data-num="39">
+  <header class="fhead">
+    <span class="fnum">39</span>
+    <h3 class="ftitle">Vedação de ingresso de candidatos casados ou com filhos em curso de formação militar</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(RE n. 1530083, rel. min. luiz fux, Pleno, j. 27/08/2025, Informativo n. 1188)</code><button class="mini" type="button" data-copy-id="(RE n. 1530083, rel. min. luiz fux, Pleno, j. 27/08/2025, Informativo n. 1188)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 1388 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo; Direito Constitucional. Concurso público; discriminação em razão do estado civil; proteção à família.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Tese fixada</h4>
+      <p class="tese">“É inconstitucional o artigo 144-A da Lei n. 6.880/1980 (Estatuto dos Militares), ao condicionar o ingresso e a permanência nos órgãos de formação ou graduação de oficiais e de praças, ainda que em regime de internato, de dedicação exclusiva e/ou de disponibilidade permanente peculiar à carreira militar à inexistência de vínculos conjugal, de união estável, de maternidade, de paternidade e de dependência socioafetiva.”</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário assentou a ofensa aos princípios da igualdade, da liberdade de escolha de profissão, da não discriminação em razão do estado civil e da proteção à família e ao livre planejamento familiar. Reafirma a vedação de exigências sem relação direta com a função a ser exercida.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="39" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="39">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f40" data-grupo="tangenciais" data-num="40">
+  <header class="fhead">
+    <span class="fnum">40</span>
+    <h3 class="ftitle">Contratação temporária e preterição de candidato aprovado em concurso público</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(Rcl n. 57848, rel. min. luiz fux, T1, j. 23/09/2025, Informativo n. 1192)</code><button class="mini" type="button" data-copy-id="(Rcl n. 57848, rel. min. luiz fux, T1, j. 23/09/2025, Informativo n. 1192)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Administrativo. Concurso público; direito subjetivo à nomeação; preterição arbitrária e imotivada.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">A contratação temporária não configura, por si só, preterição arbitrária e imotivada de candidato aprovado em concurso público.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">A Primeira Turma reafirmou as três hipóteses de direito subjetivo à nomeação: aprovação dentro do número de vagas do edital, preterição por inobservância da ordem de classificação e surgimento de novas vagas ou novo concurso na validade do certame anterior com preterição arbitrária e imotivada. Complementa o estudo do direito à nomeação.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="40" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="40">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f41" data-grupo="tangenciais" data-num="41">
+  <header class="fhead">
+    <span class="fnum">41</span>
+    <h3 class="ftitle">Laicidade colaborativa e acervo de bibliotecas públicas</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADI n. 5255, rel. min. nunes marques, red. ac. min. cristiano zanin, Pleno, j. 26/09/2025, Informativo n. 1192)</code><button class="mini" type="button" data-copy-id="(ADI n. 5255, rel. min. nunes marques, red. ac. min. cristiano zanin, Pleno, j. 26/09/2025, Informativo n. 1192)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional. Liberdade religiosa; laicidade estatal; neutralidade axiológica do Estado.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">É constitucional a norma estadual que permite a aquisição e a manutenção de exemplares da Bíblia Sagrada no acervo de bibliotecas públicas, sendo vedado, porém, tornar obrigatória a presença de livros religiosos em espaços públicos.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário distinguiu a permissão da obrigatoriedade e reafirmou o modelo de laicidade colaborativa adotado pela Constituição Federal, sem hostilidade às confissões religiosas. Referência para o estudo do art. 19, I, da Constituição Federal.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="41" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="41">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f42" data-grupo="tangenciais" data-num="42">
+  <header class="fhead">
+    <span class="fnum">42</span>
+    <h3 class="ftitle">Incidente de assunção de competência no Supremo Tribunal Federal</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(Rcl n. 73295, rel. min. gilmar mendes, Pleno, j. 19/11/2025, Informativo n. 1200)</code><button class="mini" type="button" data-copy-id="(Rcl n. 73295, rel. min. gilmar mendes, Pleno, j. 19/11/2025, Informativo n. 1200)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Processual Civil. Sistema de precedentes; incidente de assunção de competência; competência originária e recursal ordinária.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">O incidente de assunção de competência pode ser excepcionalmente instaurado nos processos de competência originária e nas hipóteses de competência recursal ordinária do Supremo Tribunal Federal, mediante proposição do relator, sendo incabível recurso caso o incidente não seja proposto.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário assentou a compatibilidade do art. 947 do CPC com o Regimento Interno do Tribunal e a incompatibilidade do incidente com os processos que chegam pela via recursal extraordinária, para preservar as fronteiras conceituais entre o incidente e a repercussão geral. Interessa ao estudo do sistema de precedentes do CPC.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="42" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="42">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f43" data-grupo="tangenciais" data-num="43">
+  <header class="fhead">
+    <span class="fnum">43</span>
+    <h3 class="ftitle">Submissão de estatal prestadora de serviço público ao regime de precatórios</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ADPF n. 1278, rel. min. gilmar mendes, Pleno, j. 01/12/2025, Informativo n. 1201)</code><button class="mini" type="button" data-copy-id="(ADPF n. 1278, rel. min. gilmar mendes, Pleno, j. 01/12/2025, Informativo n. 1201)" aria-label="Copiar linha de identificação">copiar</button></div><div class="idline"><code>(ADPF n. 1193, rel. min. cristiano zanin, Pleno, j. 05/12/2025, Informativo n. 1202)</code><button class="mini" type="button" data-copy-id="(ADPF n. 1193, rel. min. cristiano zanin, Pleno, j. 05/12/2025, Informativo n. 1202)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Constitucional; Direito Processual Civil. Regime de precatórios; sociedade de economia mista e empresa pública prestadoras de serviço público em regime não concorrencial.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">As empresas estatais que prestam serviço público em regime não concorrencial e sem intuito lucrativo primário submetem-se ao regime de precatórios, sendo inconstitucional o bloqueio e a penhora de valores de suas contas.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">Nos dois julgamentos o Plenário aplicou o art. 100 da Constituição Federal a estatais prestadoras de serviço público: a companhia estadual de habitação de Pernambuco e a imprensa oficial do Estado do Rio de Janeiro, esta responsável pela publicação do Diário Oficial. Complementa o estudo do regime de execução contra a Fazenda Pública.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="43" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="43">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f44" data-grupo="tangenciais" data-num="44">
+  <header class="fhead">
+    <span class="fnum">44</span>
+    <h3 class="ftitle">Acesso a dados de aparelho celular encontrado fortuitamente no local do crime</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(ARE n. 1042075, rel. min. dias toffoli, Pleno, j. 25/06/2025, Informativo n. 1184)</code><button class="mini" type="button" data-copy-id="(ARE n. 1042075, rel. min. dias toffoli, Pleno, j. 25/06/2025, Informativo n. 1184)" aria-label="Copiar linha de identificação">copiar</button></div>
+      <span class="tema">Tema 977 da repercussão geral</span>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Processual Penal; Direito Constitucional. Reserva de jurisdição; proteção de dados pessoais; autodeterminação informacional.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">A apreensão de aparelho celular não se sujeita à reserva de jurisdição, mas o acesso aos dados nele contidos depende de consentimento do titular ou de decisão judicial, salvo na hipótese de encontro fortuito, em que se admite o acesso para esclarecer a autoria ou identificar o proprietário, com justificação posterior.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O Plenário fixou tese com eficácia prospectiva, distinguindo a apreensão do acesso aos dados e invocando os arts. 5º, X e LXXIX, da Constituição Federal e os arts. 7º, III, e 10, § 2º, da Lei n. 12965/2014. Interessa ao estudo da proteção de dados pessoais e da autodeterminação informacional, matéria conexa à Lei n. 13709/2018 e ao tratamento de dados nas serventias extrajudiciais.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="44" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="44">Copiar ficha</button>
+  </footer>
+</article>
+
+<article class="ficha" id="f45" data-grupo="tangenciais" data-num="45">
+  <header class="fhead">
+    <span class="fnum">45</span>
+    <h3 class="ftitle">Julgamento do Núcleo 1 da denominada trama golpista</h3>
+    <span class="badge-conf" aria-hidden="true">conferida</span>
+  </header>
+  <div class="fbody">
+    <section class="blk blk-id">
+      <h4 class="lbl">Identificação</h4>
+      <div class="idline"><code>(AP n. 2668, rel. min. alexandre de moraes, T1, j. 11/09/2025, Informativo n. 1190)</code><button class="mini" type="button" data-copy-id="(AP n. 2668, rel. min. alexandre de moraes, T1, j. 11/09/2025, Informativo n. 1190)" aria-label="Copiar linha de identificação">copiar</button></div>
+      
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Disciplina e assunto</h4>
+      <p class="disc">Direito Penal; Direito Processual Penal. Crimes contra o Estado Democrático de Direito; competência das Turmas do Supremo Tribunal Federal; foro por prerrogativa de função.</p>
+    </section>
+    <section class="blk blk-tese">
+      <h4 class="lbl">Síntese</h4>
+      <p class="tese">A Primeira Turma é competente para processar e julgar as investigações, os inquéritos e as ações penais referentes aos atos antidemocráticos e à tentativa de golpe, inclusive os fatos ocorridos em 08/01/2023.</p>
+    </section>
+    <section class="blk">
+      <h4 class="lbl">Contexto</h4>
+      <p class="ctx">O julgamento de maior repercussão nacional do semestre. A Turma assentou a competência decorrente da Emenda Regimental n. 59/2023, que transferiu parte da competência penal do Plenário para as Turmas e extinguiu a figura do revisor na ação penal originária. Registro pela relevância institucional, com baixa incidência direta nos editais de delegação.</p>
+    </section>
+  </div>
+  <footer class="factions">
+    <button class="btn btn-check" type="button" data-check="45" aria-pressed="false">
+      <span class="tick" aria-hidden="true"></span><span class="btxt">Marcar como conferida</span>
+    </button>
+    <button class="btn" type="button" data-copy-full="45">Copiar ficha</button>
+  </footer>
+</article>
+</section>
+
+    <p class="empty" id="vazio">Nenhuma ficha corresponde aos filtros aplicados.</p>
+
+    <section class="fim">
+      <h2>Nota metodológica</h2>
+      <p>O relatório cobre os Informativos de Jurisprudência do Supremo Tribunal Federal n. 1183 a 1202,
+      divulgados entre 02 de julho e 12 de dezembro de 2025. O critério temporal adotado é o da publicação
+      no informativo, e não o da data de julgamento: por essa razão, integram o relatório julgamentos
+      concluídos em junho de 2025 e publicados no Informativo n. 1183 ou posteriores.</p>
+      <p>Foram examinados 119 julgados, correspondentes à totalidade dos casos com resumo
+      publicado nas vinte edições do período, incluídos os julgamentos das Turmas. Desses,
+      45 foram selecionados por pertinência aos editais dos concursos de outorga de delegação
+      de serventias extrajudiciais e distribuídos nos quatro grupos acima. Os julgados examinados e
+      descartados estão relacionados por temas no apêndice.</p>
+      <p>A identificação dos julgados reproduz os dados constantes do próprio informativo. Nos julgamentos
+      de reafirmação de jurisprudência em Plenário Virtual e nas propostas de súmula vinculante, o
+      informativo indica como relator o Ministro Presidente, cargo ocupado, em todo o período abrangido
+      por esses julgados, pelo min. Luís Roberto Barroso, cuja gestão se encerrou em 29/09/2025. Nos casos
+      em que houve redator do acórdão diverso do relator, ambos foram indicados. As teses de repercussão
+      geral e as súmulas vinculantes foram transcritas literalmente; as demais sínteses são redação
+      própria a partir do resumo oficial.</p>
+      <h3>Temas sem julgados no período</h3>
+      <p>Não houve, nos informativos do período, julgamento do Supremo Tribunal Federal sobre os seguintes
+      temas nucleares da disciplina:</p>
+      <ul><li>Registro de imóveis: usucapião extrajudicial, retificação de registro, georreferenciamento, adjudicação compulsória extrajudicial, incorporação imobiliária, loteamento e regularização fundiária urbana.</li>
+<li>Registro civil das pessoas naturais: assento de nascimento, casamento e óbito, reconhecimento extrajudicial de filiação socioafetiva, alteração de nome e de gênero.</li>
+<li>Tabelionato de protesto de títulos: regime da Lei n. 9492/1997, protesto de certidão de dívida ativa, cancelamento e sustação.</li>
+<li>Tabelionato de notas: escrituras públicas, procurações, atas notariais, testamentos e os procedimentos de divórcio, inventário e partilha extrajudiciais.</li>
+<li>Registro de títulos e documentos e registro civil das pessoas jurídicas.</li>
+<li>Regime jurídico dos delegatários: natureza da delegação prevista no art. 236 da Constituição Federal, responsabilidade civil e disciplinar, remoção, permuta, teto remuneratório, aposentadoria e tributação da atividade.</li>
+<li>Concurso público de outorga de delegação: critérios de ingresso e de remoção e regulamentação do Conselho Nacional de Justiça.</li>
+<li>Registro eletrônico, Sistema Eletrônico dos Registros Públicos e Lei n. 14382/2022.</li></ul>
+
+      <h2 style="margin-top:52px">Apêndice &middot; Matérias examinadas e descartadas</h2>
+      <p>Relacionam-se abaixo, por agrupamento temático, as matérias examinadas e descartadas por
+      impertinência com os editais dos concursos de outorga de delegação.</p>
+      
+<div class="apitem">
+  <h3>Organização e controle externo</h3>
+  <p>Composição, poder sancionador e seletividade processual dos tribunais de contas; apreciação das contas do chefe do Poder Executivo.</p>
+  <p class="apref">ADI n. 7459, ADI n. 7053, ADPF n. 434, ADI n. 7082</p>
+</div>
+
+<div class="apitem">
+  <h3>Direito eleitoral e partidário</h3>
+  <p>Federações partidárias, blocos parlamentares, prestação de contas eleitoral, eleição de mesa diretora, candidaturas avulsas e reeleição a terceiro mandato.</p>
+  <p class="apref">ADI n. 7021, ADI n. 7649, ADI n. 7415, ADI n. 7756, RE n. 1238853, RE n. 1355228</p>
+</div>
+
+<div class="apitem">
+  <h3>Regulação setorial e serviços públicos</h3>
+  <p>Energia elétrica, biocombustíveis, biodiesel, loterias, transporte intermunicipal e individual de passageiros, recursos hídricos e minerais e financiamento de infraestrutura.</p>
+  <p class="apref">ADI n. 7324, ADI n. 7332, ADI n. 7656, ADI n. 7640, ADI n. 3465, ADI n. 7617, ADI n. 7596, ADI n. 4763, ADI n. 7852, ADI n. 5335, RE n. 1536640</p>
+</div>
+
+<div class="apitem">
+  <h3>Direito tributário setorial</h3>
+  <p>Contribuição de intervenção no domínio econômico, imposto sobre produtos industrializados, regimes especiais e benefícios do imposto sobre circulação de mercadorias e serviços, diferencial de alíquota, Simples Nacional, declaração de benefícios fiscais e certificação de entidade beneficente.</p>
+  <p class="apref">RE n. 928943, ADI n. 7135, ADI n. 4854, ADI n. 6250, RE n. 1426271, ADI n. 6319, ADI n. 7379, ADI n. 7765, ADI n. 5319</p>
+</div>
+
+<div class="apitem">
+  <h3>Direito previdenciário</h3>
+  <p>Fator previdenciário, alta programada do auxílio-doença, revisão da vida toda, previdência complementar dos servidores federais e requisito temporal para aposentadoria estadual.</p>
+  <p class="apref">RE n. 639856, RE n. 1347526, RE n. 1276977, ADI n. 4946, ADI n. 4893, ADI n. 4885, ADI n. 4863, ADI n. 7676</p>
+</div>
+
+<div class="apitem">
+  <h3>Regime remuneratório de servidores públicos</h3>
+  <p>Reestruturação de carreiras, subsídio, gratificações, incorporação de vantagens, vinculação e equiparação salarial e emendas parlamentares com aumento de despesa.</p>
+  <p class="apref">ADI n. 7578, ADI n. 5622, ADI n. 4921, ADI n. 4746, ADI n. 4285, ARE n. 1524795, ADI n. 7145, ADI n. 7746, ARE n. 1539801, ADPF n. 1095, ADI n. 7505, RE n. 1551780</p>
+</div>
+
+<div class="apitem">
+  <h3>Educação e relações de trabalho</h3>
+  <p>Formação mínima para o magistério, política municipal de ensino, jornada do professor, transcendência do recurso de revista, contribuição assistencial e destinação de verbas de ações civis públicas.</p>
+  <p class="apref">ADI n. 4871, ADPF n. 466, ADPF n. 522, ADPF n. 1058, ADI n. 2527, ARE n. 1018459, ADPF n. 944</p>
+</div>
+
+<div class="apitem">
+  <h3>Direito penal e processual penal</h3>
+  <p>Código Penal Militar, Lei Geral do Esporte, programa estadual de recuperação fiscal com efeitos despenalizadores, busca e apreensão em Casas Legislativas e cooperação jurídica internacional.</p>
+  <p class="apref">ADI n. 7555, RHC n. 238757, ADI n. 2957, ADPF n. 424, HC n. 209854</p>
+</div>
+
+<div class="apitem">
+  <h3>Saúde, consumo e ordem econômica</h3>
+  <p>Rol da agência reguladora de saúde suplementar, planos de saúde, fornecimento gratuito de embalagens, transporte de animais de assistência, gratuidade de transporte, regulamentação de profissões e controle de armas.</p>
+  <p class="apref">ADI n. 7265, ADI n. 7719, ADI n. 7754, ADI n. 7215, ADI n. 4268, ADC n. 85</p>
+</div>
+
+<div class="apitem">
+  <h3>Omissões legislativas e temas institucionais diversos</h3>
+  <p>Assistência a vítimas de crimes dolosos, proteção do trabalhador em face da automação, regulamentação da polícia penal, imposto sobre grandes fortunas, autonomia e prerrogativas da Defensoria Pública, indenização por política de segregação de hansenianos e planos econômicos.</p>
+  <p class="apref">ADO n. 62, ADO n. 73, ADO n. 88, ADO n. 55, ADI n. 5603, ADI n. 6061, ADI n. 5662, ADPF n. 1060, RE n. 631363</p>
+</div>
+    </section>
+  </main>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  var KEY='stf-2s2025-conferidas';
+  var fichas=[].slice.call(document.querySelectorAll('.ficha'));
+  var grupos=[].slice.call(document.querySelectorAll('.grupo'));
+  var idxLinks=[].slice.call(document.querySelectorAll('.index a'));
+  var busca=document.getElementById('busca');
+  var status=document.getElementById('status');
+  var chips=[].slice.call(document.querySelectorAll('.chip'));
+  var barra=document.getElementById('barra');
+  var pcount=document.getElementById('pcount');
+  var vazio=document.getElementById('vazio');
+  var toast=document.getElementById('toast');
+  var total=fichas.length;
+  var marcadas={};
+
+  function ler(){
+    try{ var s=localStorage.getItem(KEY); marcadas=s?JSON.parse(s):{}; }
+    catch(e){ marcadas={}; }
+    if(!marcadas || typeof marcadas!=='object'){ marcadas={}; }
+  }
+  function gravar(){
+    try{ localStorage.setItem(KEY, JSON.stringify(marcadas)); }catch(e){}
+  }
+  function aviso(t){
+    toast.textContent=t; toast.classList.add('on');
+    clearTimeout(aviso._t); aviso._t=setTimeout(function(){toast.classList.remove('on');},1600);
+  }
+
+  function pintar(){
+    var feitas=0;
+    fichas.forEach(function(f){
+      var n=f.dataset.num, on=!!marcadas[n];
+      if(on) feitas++;
+      f.classList.toggle('done',on);
+      var b=f.querySelector('.btn-check');
+      b.setAttribute('aria-pressed', on?'true':'false');
+      b.querySelector('.btxt').textContent = on?'Conferida':'Marcar como conferida';
+    });
+    idxLinks.forEach(function(a){
+      a.classList.toggle('done', !!marcadas[a.dataset.idx]);
+    });
+    var pct = total? Math.round(feitas/total*100):0;
+    barra.style.width=pct+'%';
+    pcount.textContent=feitas+' / '+total+' conferidas';
+  }
+
+  function normalizar(s){
+    return s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'');
+  }
+
+  function filtrar(){
+    var q=normalizar(busca.value.trim());
+    var g=document.querySelector('.chip[aria-pressed="true"]').dataset.grupo;
+    var st=status.value;
+    var visiveis=0;
+    fichas.forEach(function(f){
+      var okG = (g==='todos') || (f.dataset.grupo===g);
+      var done=!!marcadas[f.dataset.num];
+      var okS = st==='todas' || (st==='pendentes'&&!done) || (st==='conferidas'&&done);
+      var okQ = !q || normalizar(f.textContent).indexOf(q)>-1;
+      var mostra = okG&&okS&&okQ;
+      f.hidden=!mostra;
+      if(mostra) visiveis++;
+      var link=document.querySelector('.index a[data-idx="'+f.dataset.num+'"]');
+      if(link) link.parentNode.hidden=!mostra;
+    });
+    grupos.forEach(function(sec){
+      var algum=sec.querySelector('.ficha:not([hidden])');
+      sec.hidden=!algum;
+    });
+    document.querySelectorAll('.idxgrupo').forEach(function(d){
+      d.hidden = !d.querySelector('li:not([hidden])');
+    });
+    vazio.style.display = visiveis? 'none':'block';
+  }
+
+  function textoLimpo(f){
+    var out=[];
+    out.push(f.querySelector('.ftitle').textContent.trim());
+    out.push('');
+    [].forEach.call(f.querySelectorAll('.fbody .blk'), function(b){
+      var lbl=b.querySelector('.lbl').textContent.trim();
+      var partes=[];
+      [].forEach.call(b.querySelectorAll('code'), function(c){partes.push(c.textContent.trim());});
+      [].forEach.call(b.querySelectorAll('.tema'), function(c){partes.push(c.textContent.trim());});
+      [].forEach.call(b.querySelectorAll('p'), function(p){partes.push(p.textContent.trim());});
+      out.push(lbl.toUpperCase()); out.push(partes.join('\n')); out.push('');
+    });
+    return out.join('\n').replace(/\n{3,}/g,'\n\n').trim();
+  }
+
+  function copiar(txt,msg){
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(txt).then(function(){aviso(msg);},function(){fallback(txt,msg);});
+    } else { fallback(txt,msg); }
+  }
+  function fallback(txt,msg){
+    var ta=document.createElement('textarea');
+    ta.value=txt; ta.setAttribute('readonly','');
+    ta.style.position='fixed'; ta.style.opacity='0';
+    document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); aviso(msg); }
+    catch(e){ aviso('Não foi possível copiar. Selecione o texto manualmente.'); }
+    document.body.removeChild(ta);
+  }
+
+  document.addEventListener('click', function(e){
+    if(!e.target || !e.target.closest) return;
+    var b=e.target.closest('[data-copy-id]');
+    if(b){ copiar(b.dataset.copyId,'Identificação copiada'); return; }
+    var c=e.target.closest('[data-copy-full]');
+    if(c){ copiar(textoLimpo(c.closest('.ficha')),'Ficha copiada'); return; }
+    var k=e.target.closest('[data-check]');
+    if(k){
+      var n=k.dataset.check;
+      if(marcadas[n]) delete marcadas[n]; else marcadas[n]=1;
+      gravar(); pintar(); filtrar(); return;
+    }
+    var lim=e.target.closest('#limpar');
+    if(lim){
+      marcadas={}; gravar(); pintar(); filtrar(); aviso('Marcações removidas');
+      return;
+    }
+  });
+
+  chips.forEach(function(ch){
+    ch.addEventListener('click', function(){
+      chips.forEach(function(o){o.setAttribute('aria-pressed','false');});
+      ch.setAttribute('aria-pressed','true');
+      filtrar();
+    });
+  });
+  busca.addEventListener('input', filtrar);
+  status.addEventListener('change', filtrar);
+
+  if('IntersectionObserver' in window){
+    var io=new IntersectionObserver(function(ents){
+      ents.forEach(function(en){
+        if(en.isIntersecting){
+          idxLinks.forEach(function(a){a.classList.remove('on');});
+          var a=document.querySelector('.index a[data-idx="'+en.target.dataset.num+'"]');
+          if(a) a.classList.add('on');
+        }
+      });
+    },{rootMargin:'-90px 0px -70% 0px'});
+    fichas.forEach(function(f){io.observe(f);});
+  }
+
+  ler(); pintar(); filtrar();
+})();
+</script>
+
+<!-- radar:inicio -->
+<script type="application/json" id="radar-meta">{"slug": "stf-2025-s2", "titulo": "Jurisprudência do STF — 2º semestre de 2025", "orgao": "STF", "tipo": "jurisprudencia", "inicio": "2025-07", "fim": "2025-12", "periodo": "2º semestre de 2025", "fonte": "Informativos 1183 a 1202", "fichas": 45, "produzido": "2026-08-29"}</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice.
+   Nao interfere na marcacao propria do relatorio: apenas conta no DOM
+   quantas fichas existem e quantas estao marcadas, e grava o resumo. */
+(function(){
+  var SLUG = "stf-2025-s2";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+<!-- radar:fim -->
+</body>
+</html>

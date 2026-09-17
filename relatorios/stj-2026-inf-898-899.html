@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>Caderno STJ 898–899</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap">
+<style>
+/* ============================ TOKENS ============================ */
+:root{
+  --paper:#eff0f3;
+  --surface:#fbfbfc;
+  --surface-2:#e5e7ec;
+  --surface-3:#dcdee5;
+  --ink:#15171e;
+  --ink-2:#3a3f4d;
+  --muted:#6a7083;
+  --rule:#d3d6de;
+  --rule-strong:#b9bdc9;
+  --accent:#2f4470;
+  --accent-2:#4a6199;
+  --accent-soft:#e3e7f1;
+  --dest:#7a2b38;
+  --dest-soft:#f3e6e8;
+  --ok:#4a6b33;
+  --ok-soft:#e8efdf;
+  --shadow:0 1px 2px rgba(21,23,30,.05),0 8px 24px -18px rgba(21,23,30,.35);
+
+  --serif:"Source Serif 4",Charter,"Bitstream Charter","Iowan Old Style",Georgia,serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --measure:68ch;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --paper:#131519;
+    --surface:#1a1d23;
+    --surface-2:#232730;
+    --surface-3:#2c313b;
+    --ink:#e6e8ee;
+    --ink-2:#c0c5d1;
+    --muted:#8b91a2;
+    --rule:#2c313b;
+    --rule-strong:#3c424f;
+    --accent:#93a9d9;
+    --accent-2:#7f97cc;
+    --accent-soft:#1e2534;
+    --dest:#d9909a;
+    --dest-soft:#2b1d21;
+    --ok:#a1c07c;
+    --ok-soft:#1c2318;
+    --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -18px rgba(0,0,0,.8);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#131519;
+  --surface:#1a1d23;
+  --surface-2:#232730;
+  --surface-3:#2c313b;
+  --ink:#e6e8ee;
+  --ink-2:#c0c5d1;
+  --muted:#8b91a2;
+  --rule:#2c313b;
+  --rule-strong:#3c424f;
+  --accent:#93a9d9;
+  --accent-2:#7f97cc;
+  --accent-soft:#1e2534;
+  --dest:#d9909a;
+  --dest-soft:#2b1d21;
+  --ok:#a1c07c;
+  --ok-soft:#1c2318;
+  --shadow:0 1px 2px rgba(0,0,0,.4),0 8px 24px -18px rgba(0,0,0,.8);
+}
+
+/* ============================ BASE ============================ */
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+img{max-width:100%}
+body{
+  margin:0;background:var(--paper);color:var(--ink);
+  font-family:var(--serif);font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+p{margin:0}
+a{color:var(--accent);text-underline-offset:2px}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+.eyebrow{
+  font-family:var(--sans);font-size:10.5px;font-weight:600;
+  letter-spacing:.14em;text-transform:uppercase;color:var(--muted);
+}
+
+/* ============================ CABEÇALHO ============================ */
+.masthead{
+  border-bottom:1px solid var(--rule);
+  background:linear-gradient(180deg,var(--surface),var(--paper));
+}
+.masthead-in{
+  max-width:1180px;margin:0 auto;padding:52px 32px 34px;
+  display:flex;flex-direction:column;gap:22px;
+}
+.mh-top{display:flex;flex-wrap:wrap;align-items:baseline;gap:14px;justify-content:space-between}
+.mh-org{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.mh-date{font-family:var(--mono);font-size:11.5px;color:var(--muted)}
+h1{
+  font-family:var(--serif);font-weight:700;font-size:clamp(29px,4.2vw,43px);
+  line-height:1.1;letter-spacing:-.018em;max-width:27ch;
+}
+.mh-sub{max-width:60ch;color:var(--ink-2);font-size:17px}
+.counters{display:flex;flex-wrap:wrap;gap:0;border-top:1px solid var(--rule);padding-top:20px;margin-top:2px}
+.counter{padding-right:38px;margin-right:38px;border-right:1px solid var(--rule)}
+.counter:last-child{border-right:0;margin-right:0;padding-right:0}
+.counter b{
+  display:block;font-family:var(--sans);font-weight:700;font-size:30px;
+  line-height:1;letter-spacing:-.02em;font-variant-numeric:tabular-nums;color:var(--ink);
+}
+.counter span{display:block;margin-top:6px;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+
+/* ============================ BARRA DE FERRAMENTAS ============================ */
+.toolbar{
+  position:sticky;top:0;z-index:40;
+  background:color-mix(in srgb,var(--surface) 92%,transparent);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--rule);
+}
+.toolbar-in{
+  max-width:1180px;margin:0 auto;padding:11px 32px;
+  display:flex;flex-wrap:wrap;align-items:center;gap:10px 16px;
+}
+.search{position:relative;flex:1 1 250px;min-width:200px}
+.search input{
+  width:100%;font-family:var(--sans);font-size:13.5px;color:var(--ink);
+  background:var(--paper);border:1px solid var(--rule-strong);border-radius:3px;
+  padding:8px 30px 8px 11px;
+}
+.search input::placeholder{color:var(--muted)}
+.search .clear{
+  position:absolute;right:4px;top:50%;transform:translateY(-50%);
+  border:0;background:none;color:var(--muted);cursor:pointer;font-size:16px;line-height:1;padding:4px 6px;
+}
+.chipset{display:flex;flex-wrap:wrap;gap:5px;align-items:center}
+.chipset-label{font-family:var(--sans);font-size:10px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.chip{
+  font-family:var(--sans);font-size:12px;font-weight:500;
+  padding:5px 10px;border-radius:2px;cursor:pointer;
+  border:1px solid var(--rule-strong);background:transparent;color:var(--ink-2);
+}
+.chip:hover{border-color:var(--accent);color:var(--accent)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+.chip[aria-pressed="true"].chip-dest{background:var(--dest);border-color:var(--dest)}
+.chip[aria-pressed="true"].chip-ok{background:var(--ok);border-color:var(--ok)}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+:root[data-theme="dark"] .chip[aria-pressed="true"].chip-dest,
+:root[data-theme="dark"] .chip[aria-pressed="true"].chip-ok{color:#131519}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"],
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"].chip-dest,
+  :root:not([data-theme="light"]) .chip[aria-pressed="true"].chip-ok{color:#131519}
+}
+.progress{display:flex;align-items:center;gap:9px;margin-left:auto}
+.progress-bar{width:104px;height:5px;background:var(--surface-3);border-radius:99px;overflow:hidden}
+.progress-fill{height:100%;width:0;background:var(--ok);border-radius:99px;transition:width .28s ease}
+.progress-txt{font-family:var(--mono);font-size:11.5px;color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap}
+
+/* ============================ ESTRUTURA ============================ */
+.wrap{max-width:1180px;margin:0 auto;padding:0 32px;display:grid;grid-template-columns:236px minmax(0,1fr);gap:48px;align-items:start}
+@media (max-width:1000px){.wrap{grid-template-columns:1fr;gap:0}}
+
+/* ---- ÍNDICE ---- */
+.index{position:sticky;top:62px;max-height:calc(100vh - 78px);overflow-y:auto;padding:30px 0 40px;border-right:1px solid var(--rule);padding-right:20px}
+@media (max-width:1000px){.index{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--rule);padding-right:0;margin-bottom:8px}}
+.index h2{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:14px}
+.index-group{font-family:var(--sans);font-size:10.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:20px 0 7px;padding-top:12px;border-top:1px solid var(--rule)}
+.index-group:first-of-type{margin-top:0;border-top:0;padding-top:0}
+.index-group.g-destaques{color:var(--dest)}
+.index a{
+  display:flex;gap:9px;align-items:baseline;text-decoration:none;color:var(--ink-2);
+  font-family:var(--sans);font-size:12.5px;line-height:1.36;padding:4px 0;border-bottom:1px dotted transparent;
+}
+.index a:hover{color:var(--accent)}
+.index a.done{color:var(--muted)}
+.index a .num{font-family:var(--mono);font-size:11px;color:var(--muted);min-width:16px;font-variant-numeric:tabular-nums}
+.index a.done .num{color:var(--ok);font-weight:500}
+.index a .tick{color:var(--ok);font-size:11px;margin-left:auto;opacity:0}
+.index a.done .tick{opacity:1}
+.index-actions{margin-top:20px;padding-top:14px;border-top:1px solid var(--rule)}
+.linkbtn{
+  font-family:var(--sans);font-size:11.5px;font-weight:500;color:var(--muted);
+  background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px;text-align:left;
+}
+.linkbtn:hover{color:var(--dest)}
+
+/* ---- COLUNA DE LEITURA ---- */
+.main{padding:34px 0 80px;min-width:0}
+.reading{max-width:var(--measure)}
+
+.group-head{max-width:var(--measure);margin:52px 0 22px;padding-bottom:12px;border-bottom:2px solid var(--ink)}
+.group-head:first-child{margin-top:0}
+.group-head .gh-tag{display:flex;align-items:baseline;gap:10px;justify-content:space-between}
+.group-head h2{font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;line-height:1.25}
+.group-head .gh-n{font-family:var(--mono);font-size:11.5px;color:var(--muted);white-space:nowrap}
+.group-head p{margin-top:9px;font-size:14.5px;color:var(--muted);line-height:1.55;max-width:62ch}
+.group-head.g-destaques{border-bottom-color:var(--dest)}
+.group-head.g-destaques h2{color:var(--dest)}
+
+/* ---- FICHA ---- */
+.ficha{
+  max-width:var(--measure);margin:0 0 12px;padding:22px 22px 18px 24px;
+  background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--rule-strong);
+  border-radius:2px;scroll-margin-top:78px;
+}
+.ficha.g-destaques{border-left-color:var(--dest)}
+.ficha.g-notarial{border-left-color:var(--accent)}
+.ficha.done{border-left-color:var(--ok);background:var(--ok-soft)}
+.ficha[hidden]{display:none}
+
+.f-head{display:flex;align-items:baseline;gap:12px;margin-bottom:13px}
+.f-num{font-family:var(--mono);font-size:12px;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:2px}
+.ficha.done .f-num{color:var(--ok)}
+.f-title{font-family:var(--serif);font-weight:700;font-size:20px;line-height:1.26;letter-spacing:-.01em;flex:1}
+.f-badges{display:flex;flex-direction:column;align-items:flex-end;gap:5px;flex:0 0 auto}
+.badge{
+  font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  padding:3px 7px;border-radius:2px;white-space:nowrap;
+}
+.badge-tema{background:var(--accent-soft);color:var(--accent)}
+.badge-afet{background:var(--surface-2);color:var(--muted)}
+.badge-done{background:var(--ok);color:var(--surface)}
+:root[data-theme="dark"] .badge-done{color:#131519}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .badge-done{color:#131519}}
+
+.f-block{margin-top:14px}
+.f-label{font-family:var(--sans);font-size:9.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+
+/* identificação */
+.ident-wrap{margin-top:2px}
+.ident{
+  font-family:var(--mono);font-size:12.5px;line-height:1.55;
+  background:var(--surface-2);border:1px solid var(--rule);border-radius:2px;
+  padding:10px 12px;color:var(--ink);overflow-x:auto;white-space:pre-wrap;word-break:break-word;
+}
+.ident .idline+.idline{display:block;margin-top:5px}
+.ident-tools{display:flex;flex-wrap:wrap;align-items:center;gap:14px;margin-top:7px}
+.switch{display:inline-flex;align-items:center;gap:7px;cursor:pointer;font-family:var(--sans);font-size:11px;color:var(--muted);user-select:none}
+.switch input{position:absolute;opacity:0;width:0;height:0}
+.switch .track{width:26px;height:14px;border-radius:99px;background:var(--surface-3);border:1px solid var(--rule-strong);position:relative;transition:background .18s ease}
+.switch .track::after{content:"";position:absolute;top:1px;left:1px;width:10px;height:10px;border-radius:99px;background:var(--muted);transition:transform .18s ease,background .18s ease}
+.switch input:checked+.track{background:var(--accent);border-color:var(--accent)}
+.switch input:checked+.track::after{transform:translateX(12px);background:var(--surface)}
+.switch input:focus-visible+.track{outline:2px solid var(--accent);outline-offset:2px}
+.btn{
+  font-family:var(--sans);font-size:11.5px;font-weight:500;color:var(--ink-2);
+  background:transparent;border:1px solid var(--rule-strong);border-radius:2px;
+  padding:4px 9px;cursor:pointer;
+}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.copied{border-color:var(--ok);color:var(--ok)}
+
+/* síntese / tese */
+.tese{
+  border-left:3px solid var(--accent);padding:2px 0 2px 15px;
+  font-size:17px;line-height:1.55;color:var(--ink);
+}
+.ficha.g-destaques .tese{border-left-color:var(--dest)}
+.tese.literal{font-style:italic}
+.f-disc{font-family:var(--sans);font-size:13px;color:var(--ink-2);line-height:1.5}
+.f-ctx p{font-size:16px;line-height:1.62;color:var(--ink-2)}
+.f-ctx p+p{margin-top:10px}
+
+.f-foot{display:flex;flex-wrap:wrap;align-items:center;gap:9px;margin-top:20px;padding-top:13px;border-top:1px solid var(--rule)}
+.btn-check{
+  font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.02em;
+  border:1px solid var(--ok);color:var(--ok);background:transparent;
+  border-radius:2px;padding:6px 13px;cursor:pointer;
+}
+.btn-check:hover{background:var(--ok-soft)}
+.ficha.done .btn-check{background:var(--ok);color:var(--surface);border-color:var(--ok)}
+:root[data-theme="dark"] .ficha.done .btn-check{color:#131519}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .ficha.done .btn-check{color:#131519}}
+.f-foot .spacer{margin-left:auto}
+
+.empty{max-width:var(--measure);padding:34px 0;color:var(--muted);font-size:15px;display:none}
+.empty.show{display:block}
+
+/* ---- NOTAS FINAIS ---- */
+.notes{max-width:var(--measure);margin-top:64px;padding-top:26px;border-top:2px solid var(--ink)}
+.notes h2{font-family:var(--sans);font-size:15px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;margin-bottom:16px}
+.notes h3{font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:26px 0 8px}
+.notes p{font-size:15.5px;color:var(--ink-2);line-height:1.6}
+.notes p+p{margin-top:10px}
+.notes ul{margin:8px 0 0;padding-left:18px;font-size:15.5px;color:var(--ink-2);line-height:1.55}
+.notes li+li{margin-top:5px}
+.notes .kv{display:grid;grid-template-columns:auto 1fr;gap:6px 18px;font-size:15px;margin-top:6px}
+.notes .kv dt{font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.09em;text-transform:uppercase;color:var(--muted);padding-top:4px}
+.notes .kv dd{margin:0;color:var(--ink-2)}
+.colophon{max-width:var(--measure);margin-top:40px;padding-top:16px;border-top:1px solid var(--rule);font-family:var(--sans);font-size:11.5px;color:var(--muted);line-height:1.6}
+
+/* ============================ IMPRESSÃO ============================ */
+@media print{
+  .toolbar,.index,.index-actions,.ident-tools,.f-foot .btn,.btn-check,.search{display:none!important}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .wrap{display:block;max-width:none;padding:0}
+  .main{padding:0}
+  .masthead{border-bottom:1pt solid #000}
+  .masthead-in{padding:0 0 14pt}
+  .ficha{
+    max-width:none;break-inside:avoid;background:#fff;border:0;
+    border-left:2.5pt solid #999;border-bottom:.5pt solid #ccc;border-radius:0;
+    padding:10pt 0 10pt 10pt;margin-bottom:10pt;
+    -webkit-print-color-adjust:exact;print-color-adjust:exact;
+  }
+  .ficha.done{border-left-color:#4a6b33;background:#f2f7ec;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .ficha.g-destaques{border-left-color:#7a2b38}
+  .badge-done{background:#4a6b33;color:#fff;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .badge-tema,.badge-afet{border:.5pt solid #999;background:#fff;color:#333}
+  .ident{background:#f4f4f4;border:.5pt solid #ccc}
+  .f-foot{border-top:.5pt solid #ddd;padding-top:5pt;margin-top:9pt;min-height:0}
+  .reading,.notes,.colophon{max-width:none}
+  .group-head{break-after:avoid;max-width:none}
+  a{color:#000;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<header class="masthead">
+  <div class="masthead-in">
+    <div class="mh-top">
+      <div class="mh-org">Superior Tribunal de Justiça · Informativos de Jurisprudência</div>
+      <div class="mh-date">n. 898 · 25/08/2026 &nbsp;|&nbsp; n. 899 · 01/09/2026</div>
+    </div>
+    <h1>Caderno de jurisprudência para concursos de serventias extrajudiciais</h1>
+    <p class="mh-sub">Triagem dos julgados publicados nos informativos n. 898 e n. 899 do Superior Tribunal de Justiça, organizada por grau de pertinência aos editais de outorga de delegação de serviços notariais e de registro. O critério temporal é o da publicação no informativo, não o da data do julgamento.</p>
+    <div class="counters">
+      <div class="counter"><b>2</b><span>Informativos analisados</span></div>
+      <div class="counter"><b>36</b><span>Julgados examinados</span></div>
+      <div class="counter"><b>21</b><span>Julgados selecionados</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toolbar" aria-label="Ferramentas do caderno">
+  <div class="toolbar-in">
+    <div class="search">
+      <input id="q" type="search" placeholder="Buscar tese, processo, relator, dispositivo" aria-label="Buscar nas fichas" autocomplete="off">
+      <button class="clear" id="q-clear" type="button" aria-label="Limpar busca" hidden>&times;</button>
+    </div>
+    <div class="chipset" id="grupos" role="group" aria-label="Filtro por grupo">
+      <span class="chipset-label">Grupo</span>
+      <button class="chip" type="button" data-g="all" aria-pressed="true">Todos</button>
+      <button class="chip chip-dest" type="button" data-g="destaques" aria-pressed="false">Destaques</button>
+      <button class="chip" type="button" data-g="notarial" aria-pressed="false">Notarial e registral</button>
+      <button class="chip" type="button" data-g="outras" aria-pressed="false">Outras matérias</button>
+      <button class="chip" type="button" data-g="tangenciais" aria-pressed="false">Tangenciais</button>
+    </div>
+    <div class="chipset" id="status" role="group" aria-label="Filtro por situação">
+      <span class="chipset-label">Situação</span>
+      <button class="chip" type="button" data-s="all" aria-pressed="true">Todas</button>
+      <button class="chip" type="button" data-s="pend" aria-pressed="false">Pendentes</button>
+      <button class="chip chip-ok" type="button" data-s="done" aria-pressed="false">Conferidas</button>
+    </div>
+    <div class="progress">
+      <div class="progress-bar" role="progressbar" aria-label="Progresso de conferência" aria-valuemin="0" aria-valuemax="21" aria-valuenow="0"><div class="progress-fill" id="pfill"></div></div>
+      <span class="progress-txt" id="ptxt">0/21 conferidas</span>
+    </div>
+  </div>
+</nav>
+
+<div class="wrap">
+  <aside class="index" aria-label="Índice das fichas">
+    <h2>Índice</h2>
+    <div id="idx"></div>
+    <div class="index-actions"><button class="linkbtn" id="reset" type="button">Limpar todas as marcações</button></div>
+  </aside>
+
+  <main class="main">
+    <div class="reading" id="fichas"></div>
+    <p class="empty" id="empty">Nenhuma ficha corresponde aos filtros aplicados.</p>
+
+    <section class="notes" id="nota">
+      <h2>Nota metodológica</h2>
+      <dl class="kv">
+        <dt>Período</dt>
+        <dd>Informativos de Jurisprudência do Superior Tribunal de Justiça n. 898, de 25 de agosto de 2026, e n. 899, de 1º de setembro de 2026.</dd>
+        <dt>Critério</dt>
+        <dd>Adotou-se a data de publicação no informativo, e não a data do julgamento. Por isso o caderno abrange acórdãos julgados entre 16 de dezembro de 2025 e 25 de agosto de 2026, publicados apenas agora.</dd>
+        <dt>Universo</dt>
+        <dd>Foram examinadas 36 entradas: 25 julgados de mérito (12 no informativo n. 898 e 13 no informativo n. 899) e 11 propostas de afetação ao rito dos recursos repetitivos (Temas 1463 a 1473), todas no informativo n. 899. O informativo n. 898 não veiculou propostas de afetação.</dd>
+        <dt>Seleção</dt>
+        <dd>Foram selecionadas 21 fichas, assim distribuídas: 3 destaques, 2 em direito notarial e registral, 6 em outras matérias e 10 tangenciais.</dd>
+      </dl>
+
+      <h3>Temas sem julgados no período</h3>
+      <p>A triagem não localizou, nos dois informativos, julgado algum sobre os seguintes temas centrais da disciplina de Direito Notarial e Registral:</p>
+      <ul>
+        <li>Registro civil das pessoas naturais: nome, filiação, reconhecimento de paternidade, casamento, óbito e retificações administrativas.</li>
+        <li>Registro de imóveis: usucapião extrajudicial, retificação de registro, adjudicação compulsória extrajudicial, alienação fiduciária de bem imóvel, incorporação imobiliária, loteamento e princípios registrais.</li>
+        <li>Tabelionato de notas: escritura pública, inventário e divórcio extrajudiciais, testamento, ata notarial e procuração.</li>
+        <li>Registro de títulos e documentos e registro civil das pessoas jurídicas.</li>
+        <li>Protesto de títulos e outros documentos de dívida: não houve julgado de mérito, apenas a afetação do Tema 1470/STJ, adiante fichada.</li>
+        <li>Responsabilidade civil dos notários e registradores e responsabilidade do Estado por atos delegados.</li>
+        <li>Concurso público de ingresso e remoção, emolumentos, selo de fiscalização e regime da Lei n. 8935/1994, ressalvado o Tema 1228/STJ.</li>
+      </ul>
+
+      <h3>Apêndice — matérias examinadas e descartadas por impertinência</h3>
+      <p>As matérias abaixo foram lidas integralmente e descartadas por ausência de pertinência com os editais de outorga de delegação.</p>
+      <ul>
+        <li><b>Direito Processual Penal.</b> Tema 1260/STJ, sobre pronúncia fundada exclusivamente em elementos do inquérito e sobre o testemunho indireto; fixação de valor mínimo indenizatório por injúria racial na sentença penal condenatória (art. 387, IV, do CPP); competência originária de órgão fracionário de tribunal de justiça para julgar membro do Ministério Público estadual; desnecessidade de autorização judicial prévia para a investigação de autoridade com foro por prerrogativa de função.</li>
+        <li><b>Execução Penal.</b> Tema 1383/STJ, sobre a penhora de até um quarto do pecúlio do condenado para pagamento de pena de multa; falta disciplinar grave por tentativa de ingresso de entorpecente em estabelecimento prisional por visitante cadastrada.</li>
+        <li><b>Afetações não selecionadas.</b> Tema 1463 (custeio de musicoterapia por operadora de plano de saúde); Tema 1467 (demora na autorização de tratamento e equiparação à recusa de cobertura); Tema 1468 (execução fiscal de mútuo de programa de microcrédito); Tema 1469 (exceções da Lei de Responsabilidade Fiscal às transferências voluntárias); Tema 1471 (termo inicial da prescrição de revisão de empréstimo em entidade fechada de previdência complementar); Tema 1472 (indenização por demora na análise de aposentadoria); Tema 1473 (gorjetas na base de cálculo do SIMPLES Nacional).</li>
+      </ul>
+    </section>
+
+    <p class="colophon">Caderno gerado a partir da leitura integral dos informativos n. 898 e n. 899. As sínteses de teses de recursos repetitivos são transcrições literais; as demais sínteses reproduzem o enunciado do campo &ldquo;destaque&rdquo; do informativo, com adaptação redacional. As marcações de conferência ficam gravadas apenas neste navegador.</p>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var GRUPOS = [
+  {id:"destaques", rot:"I. Destaques",
+   desc:"Julgados de maior relevância para os editais de outorga de delegação, independentemente da disciplina a que se vinculam."},
+  {id:"notarial", rot:"II. Direito Notarial e Registral",
+   desc:"Julgados com repercussão sobre a atividade notarial e de registro em si ou sobre a vida funcional dos delegatários e de suas serventias."},
+  {id:"outras", rot:"III. Outras Matérias",
+   desc:"Julgados de outras disciplinas com relevância direta para os editais de concursos de serventias extrajudiciais."},
+  {id:"tangenciais", rot:"IV. Julgamentos Tangenciais",
+   desc:"Julgados de relevância indireta, fichados de forma sumária para registro e eventual consulta."}
+];
+
+var F = [
+/* ============================== I. DESTAQUES ============================== */
+{
+ g:"destaques",
+ t:"Salário-educação não é exigível do titular de serventia extrajudicial",
+ tema:"Tema 1228/STJ",
+ ids:[{tipo:"REsp",num:"2068273",rel:"rel. min. teodoro silva santos",turma:"S1",data:"20/08/2026",inf:"899"}],
+ disc:"Direito Tributário e Direito Notarial e Registral — natureza jurídica da atividade delegada e sujeição passiva tributária.",
+ tlabel:"Tese fixada",
+ literal:true,
+ tese:"A contribuição social do salário-educação, prevista no § 5º do art. 212 da Constituição Federal de 1988 e instituída pelo art. 15 da Lei n. 9.424/96, não é exigível da pessoa física que exerce serviço notarial ou registral, a qual não se enquadra na definição de contribuinte trazida na legislação que rege o tributo.",
+ ctx:[
+  "O julgamento é o mais importante do período para a disciplina porque as premissas adotadas ultrapassam a discussão tributária e fixam, em precedente qualificado, a natureza jurídica da atividade. A Primeira Seção reafirmou que os serviços notariais e de registro têm fundamento de validade no art. 236 da Constituição Federal e consistem em atividade pública, própria do Estado, exercida por particulares mediante delegação, de natureza técnica e administrativa destinada a garantir publicidade, autenticidade, segurança e eficácia dos atos jurídicos, nos termos do art. 1º da Lei n. 8935/1994.",
+  "Daí a conclusão de que, embora a organização da prestação do serviço se assemelhe à atividade empresarial, o delegatário não se amolda à definição de empresário do art. 966 do Código Civil nem ao conceito de empresa fixado pelo Decreto n. 6003/2006 para fins de salário-educação. O acórdão consignou, ainda, que a atribuição obrigatória de CNPJ à serventia extrajudicial não modifica a natureza jurídica do titular, pessoa física, não dá origem a firma ou empresa individual e não cria pessoa jurídica autônoma para a serventia.",
+  "Afastou-se a equiparação prevista no art. 15, parágrafo único, da Lei n. 8212/1991, própria das contribuições previdenciárias, e vedou-se o emprego da analogia, na forma do art. 108, caput e § 1º, do Código Tributário Nacional, por inexistir lacuna na matriz de incidência. Julgado com os REsp n. 2068698 e n. 2068695."
+ ]
+},
+{
+ g:"destaques",
+ t:"Renúncia à indenização por benfeitorias, na locação, abrange as acessões",
+ ids:[{tipo:"REsp",num:"1899963",rel:"rel. p/ acórdão min. maria isabel gallotti",turma:"T4",data:"04/08/2026",inf:"898"}],
+ disc:"Direito Civil — locação urbana; benfeitorias e acessões; interpretação do negócio jurídico.",
+ tlabel:"Síntese",
+ tese:"A Lei n. 8245/1991 emprega a expressão “benfeitorias” em sentido genérico, de modo que a cláusula de renúncia à indenização por benfeitorias, em locação comercial, alcança também as acessões realizadas pelo locatário.",
+ ctx:[
+  "A distinção entre benfeitorias e acessões é matéria clássica do direito das coisas e repercute na qualificação registral das construções, cuja existência é levada ao fólio real por averbação. O acórdão não desfaz a distinção dogmática: reconhece que o art. 35 da Lei n. 8245/1991 se refere exclusivamente a benfeitorias, sem mencionar as acessões, e conclui que o legislador utilizou o termo em sentido amplo, abrangente de todas as modificações e construções realizadas no imóvel locado. Anotou-se que a Súmula 335/STJ seguiu o mesmo raciocínio ao validar a cláusula de renúncia sem ressalva quanto às acessões.",
+  "A fundamentação apoia-se nos arts. 113 e 114 do Código Civil: os negócios jurídicos interpretam-se conforme a boa-fé e os usos do lugar de sua celebração, e a vedação à interpretação extensiva das cláusulas de renúncia não autoriza, no contexto locatício, a distinção rigorosa entre as duas categorias. Pesou a circunstância concreta de que o locatário contratou ciente de que alugava terreno vazio e de que precisaria edificar para exercer sua atividade empresarial. Julgado por maioria, sendo relator originário o min. Antonio Carlos Ferreira."
+ ]
+},
+{
+ g:"destaques",
+ t:"Comunhão universal: penhora de valores em conta do cônjuge não executado",
+ ids:[{tipo:"REsp",num:"2145365",rel:"rel. min. joão otávio de noronha",turma:"T4",data:"22/06/2026",inf:"899"}],
+ disc:"Direito Civil e Direito Processual Civil — regime de bens do casamento; responsabilidade patrimonial.",
+ tlabel:"Síntese",
+ tese:"No regime da comunhão universal é possível a penhora de valores depositados em conta bancária do cônjuge que não integra o polo passivo, resguardada a meação, porque a constrição recai sobre patrimônio comunicável do próprio executado.",
+ ctx:[
+  "O julgado explicita o efeito patrimonial do regime da comunhão universal: forma-se um único patrimônio entre os consortes, que engloba créditos e débitos de cada um, ressalvadas as exclusões do art. 1668 do Código Civil, conforme o art. 1667 do mesmo diploma. Com base no art. 790, IV, do CPC, a Quarta Turma afastou a compreensão de que a responsabilidade patrimonial se limitaria à pessoa formalmente executada, esclarecendo que não há responsabilização de terceiro, mas constrição de bem do próprio devedor.",
+  "O acórdão também fixa o instrumento de defesa e o ônus correspondente: a demonstração da exclusividade ou da incomunicabilidade do bem cabe ao cônjuge pela via dos embargos de terceiro, nos termos do art. 674, § 2º, I, do CPC, presumindo-se a comunicabilidade até prova em contrário; na alienação de coisa indivisível observa-se o art. 843 do CPC. O tema interessa ao exame do regime de bens na qualificação de títulos que envolvam pessoas casadas e à aferição da necessidade de outorga conjugal."
+ ]
+},
+
+/* ====================== II. DIREITO NOTARIAL E REGISTRAL ====================== */
+{
+ g:"notarial",
+ t:"Continuidade delitiva não se aplica à infração administrativa sem previsão expressa",
+ ids:[{tipo:"AgInt no AREsp",num:"2937639",rel:"rel. min. teodoro silva santos",turma:"T2",data:"04/08/2026",inf:"898"}],
+ disc:"Direito Administrativo — direito administrativo sancionador; dosimetria da sanção.",
+ tlabel:"Síntese",
+ tese:"É vedada a aplicação do art. 71 do Código Penal, que disciplina a continuidade delitiva, às infrações administrativas quando ausente disposição normativa expressa que a autorize.",
+ ctx:[
+  "A Segunda Turma firmou que o direito administrativo sancionador é ramo desvinculado do direito penal, na linha do que o Supremo Tribunal Federal assentou no Tema 1199/STF, de modo que a conduta, o processo e a sanção devem estar previstos em lei específica. As lacunas do sistema sancionador não podem ser supridas por institutos penais sem previsão expressa da norma administrativa. No caso concreto a fiscalização se dava sob a Lei n. 9933/1999, que nada dispõe sobre continuidade delitiva.",
+  "A ratio decidendi é geral e alcança o regime disciplinar dos delegatários. As infrações e as penas dos notários e registradores estão previstas nos arts. 31 a 36 da Lei n. 8935/1994, diploma que não contempla a continuidade delitiva para a dosimetria das penalidades, tampouco o CNN/CN/CNJ. O precedente é, portanto, argumento de defesa e de fundamentação em processos administrativos disciplinares instaurados perante as corregedorias permanentes."
+ ]
+},
+{
+ g:"notarial",
+ t:"Afetação: protesto extrajudicial como causa interruptiva da prescrição",
+ tema:"Tema 1470/STJ",
+ afet:true,
+ ids:[{tipo:"ProAfR no REsp",num:"2273410",rel:"rel. min. sérgio kukina",turma:"S1",data:"18/08/2026",inf:"899"}],
+ disc:"Direito Notarial e Registral e Direito Processual Civil — protesto de títulos e outros documentos de dívida; prescrição.",
+ tlabel:"Síntese",
+ tese:"A Primeira Seção acolheu proposta de afetação ao rito dos recursos repetitivos para definir se o protesto extrajudicial é causa interruptiva do prazo prescricional da pretensão da Fazenda Pública de reaver crédito não tributário fundado em contrato de mútuo, no âmbito de programa de microcrédito operado por entidade autárquica estadual. Tese ainda não fixada.",
+ ctx:[
+  "A controvérsia versa sobre o efeito material do protesto lavrado nos tabelionatos de protesto de títulos, disciplinado pela Lei n. 9492/1997, em cotejo com o art. 202, III, do Código Civil, que arrola o protesto cambial entre as causas interruptivas da prescrição. A discussão ganha alcance porque o art. 1º, parágrafo único, da Lei n. 9492/1997 admite o protesto de certidões de dívida ativa e de outros documentos de dívida, ampliando o rol de títulos protestáveis para além dos cambiais.",
+  "É a única controvérsia diretamente notarial ou registral veiculada nos dois informativos, razão pela qual convém acompanhar a fixação da tese. Afetado com o REsp n. 2216186."
+ ]
+},
+
+/* ========================== III. OUTRAS MATÉRIAS ========================== */
+{
+ g:"outras",
+ t:"Consumidor por equiparação e prescrição quinquenal no desastre ambiental",
+ tema:"Tema 1280/STJ",
+ ids:[{tipo:"REsp",num:"2124713",rel:"rel. min. moura ribeiro",turma:"S2",data:"19/08/2026",inf:"898"}],
+ disc:"Direito Civil, Direito do Consumidor e Direito Processual Civil — prescrição da pretensão de reparação civil.",
+ tlabel:"Tese fixada",
+ literal:true,
+ tese:"É aplicável o instituto jurídico do consumidor, por equiparação, às ações indenizatórias decorrentes do desastre ambiental ocorrido em Brumadinho e, consequentemente, o cômputo do prazo prescricional de cinco anos previsto no artigo 27 do Código de Defesa do Consumidor.",
+ ctx:[
+  "O julgamento afasta o prazo trienal do art. 206, § 3º, V, do Código Civil, próprio da reparação por danos extracontratuais, e adota o prazo quinquenal do art. 27 do Código de Defesa do Consumidor. O fundamento é a figura do consumidor por equiparação, ou bystander, prevista no art. 17 do Código de Defesa do Consumidor, cuja incidência independe da caracterização de relação-base de consumo quando se trate de empreendimento potencialmente poluidor.",
+  "A Segunda Seção invocou o diálogo das fontes, o art. 225 da Constituição Federal e o art. 14, § 1º, da Lei n. 6938/1981, que impõe ao poluidor a reparação independentemente de culpa. Interessa ao estudo da prescrição civil e da responsabilidade civil objetiva, matérias recorrentes na parte geral dos editais. Julgado com o REsp n. 2124717."
+ ]
+},
+{
+ g:"outras",
+ t:"Cooperativas de trabalho médico: seleção de cooperados e limitação de vagas",
+ tema:"Tema 1212/STJ",
+ ids:[{tipo:"REsp",num:"2033484",rel:"rel. min. raul araújo",turma:"S2",data:"19/08/2026",inf:"898"}],
+ disc:"Direito Civil e Direito Empresarial — sociedades cooperativas; princípio da livre adesão.",
+ tlabel:"Tese fixada",
+ literal:true,
+ tese:"Nas cooperativas de trabalho médico é válida a previsão estatutária de processo seletivo público, impessoal e objetivo para admissão de novos cooperados, assim como a limitação do número de vagas fundada em estudos técnicos sobre mercado e equilíbrio econômico-financeiro.",
+ ctx:[
+  "A tese delimita o alcance do princípio da porta aberta, decorrente da livre adesão prevista no art. 4º, I, da Lei n. 5764/1971, que passa a ser lido em conjunto com o art. 29 do mesmo diploma e com a ressalva legal da impossibilidade técnica de prestação de serviços. A adesão permanece livre, porém condicionada ao atendimento das normas legais e estatutárias, admitindo-se a recusa de novos associados quando demonstrado, por parâmetros objetivos, o esgotamento da capacidade de prestação.",
+  "O julgado interessa ao estudo do regime das sociedades cooperativas, sociedades simples por força do art. 982, parágrafo único, do Código Civil, cuja personalidade jurídica se adquire com o arquivamento dos atos constitutivos na Junta Comercial, na forma do art. 18, § 6º, da Lei n. 5764/1971. Julgado com o REsp n. 2033992."
+ ]
+},
+{
+ g:"outras",
+ t:"Fiador não tem legitimidade para revisar o contrato principal",
+ ids:[{tipo:"REsp",num:"1977431",rel:"rel. min. joão otávio de noronha",turma:"T4",data:"22/06/2026",inf:"898"}],
+ disc:"Direito Civil e Direito Processual Civil — fiança; legitimidade ativa e substituição processual.",
+ tlabel:"Síntese",
+ tese:"O fiador não possui legitimidade ativa para revisar, em nome próprio, cláusulas do contrato principal, dada a natureza acessória da fiança, sendo irrelevantes a qualificação como principal pagador ou devedor solidário e a renúncia ao benefício de ordem.",
+ ctx:[
+  "O acórdão distingue interesse econômico de legitimidade para a causa. Reafirma a acessoriedade como característica central da fiança, contrato secundário que pressupõe a existência do contrato principal cujo adimplemento visa garantir, e conclui que a titularidade do direito material discutido é do afiançado, não do garante, que não está autorizado por lei a atuar como substituto processual.",
+  "A distinção é relevante porque as cláusulas de solidariedade e de renúncia ao benefício de ordem são de uso corrente nos instrumentos de fiança, inclusive nos contratos de locação levados a registro. A qualificação do fiador como principal pagador amplia sua responsabilidade patrimonial, mas não altera a natureza acessória da garantia nem lhe confere legitimidade ativa para discutir a obrigação principal."
+ ]
+},
+{
+ g:"outras",
+ t:"Assédio sexual deixou de constituir ato de improbidade administrativa",
+ ids:[{tipo:null,num:null,segredo:true,rel:"rel. min. francisco falcão",turma:"T2",data:"18/08/2026",inf:"898"}],
+ disc:"Direito Administrativo — improbidade administrativa; taxatividade do rol do art. 11.",
+ tlabel:"Síntese",
+ tese:"Com o advento da Lei n. 14230/2021, a prática do crime de assédio sexual deixou de constituir ato de improbidade administrativa, em razão da revogação do rol exemplificativo previsto no art. 11, caput e incisos I e II, da Lei n. 8429/1992.",
+ ctx:[
+  "O julgado confirma a taxatividade do rol do art. 11 da Lei n. 8429/1992 após a reforma de 2021. A supressão do vocábulo “notadamente” eliminou a cláusula geral de abertura que permitia enquadrar condutas ilícitas previstas na legislação penal, restando admissível apenas o enquadramento nas condutas dos incisos I a IX ou em legislação esparsa que tipifique atos ímprobos, como o art. 73, § 7º, da Lei n. 9504/1997 e o art. 12 da Lei n. 12813/2013.",
+  "Registrou-se, como reforço interpretativo, que a Emenda 18 ao Projeto de Lei n. 2505/2021, destinada a inserir o assédio sexual no art. 11, foi expressamente rejeitada pelo Congresso Nacional, tratando-se de opção política insuscetível de correção judicial. A matéria interessa aos delegatários, alcançados pela Lei n. 8429/1992 na qualidade de agentes públicos, sem prejuízo do regime disciplinar próprio da Lei n. 8935/1994."
+ ]
+},
+{
+ g:"outras",
+ t:"Prescrição intercorrente no processo administrativo sancionador",
+ ids:[{tipo:"REsp",num:"2223324",rel:"rel. p/ acórdão min. gurgel de faria",turma:"T1",data:"16/12/2025",inf:"899"}],
+ disc:"Direito Administrativo — processo administrativo sancionador; prescrição punitiva e intercorrente.",
+ tlabel:"Síntese",
+ tese:"Para afastar a prescrição intercorrente do art. 1º, § 1º, da Lei n. 9873/1999 basta a prática de despachos de impulsionamento previstos em lei e voltados à decisão final, não se exigindo atos de conteúdo apuratório.",
+ ctx:[
+  "O acórdão separa dois institutos frequentemente confundidos. A interrupção da prescrição punitiva quinquenal exige ato inequívoco que importe apuração do fato, na forma do art. 2º, II, da Lei n. 9873/1999. A prescrição intercorrente trienal, ao contrário, pressupõe apenas a ausência de despachos ou de julgamento, de modo que despachos de encaminhamento à procuradoria para parecer ou relatórios de instrução exigidos em norma afastam a paralisação.",
+  "Configura paralisação processual somente a ausência de despachos ou de julgamentos, ou a prática de atos sem previsão legal e sem aptidão para impulsionar o procedimento. A distinção entre interrupção da prescrição punitiva e prescrição intercorrente é recorrente no exame dos processos administrativos disciplinares em geral. Julgado por maioria, sendo relator originário o min. Paulo Sérgio Domingues."
+ ]
+},
+{
+ g:"outras",
+ t:"Rancho de pesca em área de preservação permanente não é ecoturismo",
+ ids:[{tipo:"AgInt no AREsp",num:"2749205",rel:"rel. min. gurgel de faria",turma:"S1",data:"12/08/2026",inf:"898"}],
+ disc:"Direito Ambiental — área de preservação permanente; limitações administrativas ao direito de propriedade.",
+ tlabel:"Síntese",
+ tese:"A edificação de rancho de pesca com destinação exclusiva de lazer não se enquadra na exceção do art. 61-A, § 12, da Lei n. 12651/2012, que tolera a permanência de edificações consolidadas em área de preservação permanente associadas a atividades agrossilvipastoris, de ecoturismo e de turismo rural.",
+ ctx:[
+  "A Primeira Seção fixou três elementos estruturantes do conceito de ecoturismo: abertura ao público em geral como atividade turística própria, finalidade conservacionista e educativa e sustentabilidade como requisito operacional verificável. Ausentes esses elementos, a exceção não incide, pois se trata de ressalva a regra protetiva, insuscetível de interpretação extensiva.",
+  "Reafirmou-se que a manutenção de edificações em área de preservação permanente é admitida de forma excepcional, apenas nas hipóteses de utilidade pública, interesse social ou baixo impacto ambiental previstas no Código Florestal, o que exclui casas de veraneio destinadas ao deleite individual. A matéria interessa ao registro de imóveis pelo regime das restrições ambientais que gravam o imóvel, especialmente rural."
+ ]
+},
+
+/* ======================== IV. JULGAMENTOS TANGENCIAIS ======================== */
+{
+ g:"tangenciais",
+ t:"Prazo do art. 308 do CPC quando pendente liquidação de sentença",
+ ids:[{tipo:"AREsp",num:"2708782",rel:"rel. min. raul araújo",turma:"T4",data:"09/06/2026",inf:"898"}],
+ disc:"Direito Processual Civil — tutela cautelar antecedente; arresto.",
+ tlabel:"Síntese",
+ tese:"O prazo de trinta dias para a formulação do pedido principal, previsto no art. 308 do CPC, pressupõe a viabilidade jurídica do exercício da pretensão; havendo impedimento legal, como a necessidade de prévia liquidação para apuração do quantum debeatur, o termo inicial desloca-se para o momento em que cessa o óbice.",
+ ctx:[
+  "O acórdão preserva a eficácia do arresto enquanto ilíquida a sentença condenatória, adotando como termo inicial do trintídio o trânsito em julgado da decisão que resolve o mérito da liquidação, sob o fundamento de que o prazo não pode funcionar como sanção pela omissão de ato que a própria ordem jurídica impede."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"Suspeição de perito judicial: preclusão e nulidade de algibeira",
+ ids:[{tipo:"REsp",num:"1579704",rel:"rel. min. joão otávio de noronha",turma:"T4",data:"16/06/2026",inf:"899"}],
+ disc:"Direito Processual Civil — prova pericial; preclusão; boa-fé objetiva no processo.",
+ tlabel:"Síntese",
+ tese:"A suspeição do perito judicial deve ser arguida na primeira oportunidade em que couber à parte falar nos autos, sob pena de preclusão, e a anulação da perícia por vício procedimental não reabre o prazo para arguição fundada em fato pretérito e conhecido.",
+ ctx:[
+  "O caso foi decidido sob o art. 138, III e § 1º, do CPC de 1973, com invocação da vedação à chamada nulidade de algibeira, expressão da boa-fé objetiva no processo. Disciplina equivalente consta hoje do art. 148, II e §§ 1º e 2º, do CPC."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"Exceção de pré-executividade parcialmente acolhida não gera sucumbência recíproca",
+ ids:[{tipo:"REsp",num:"2243944",rel:"rel. min. maria thereza de assis moura",turma:"T2",data:"10/03/2026",inf:"899"}],
+ disc:"Direito Processual Civil e Direito Tributário — execução fiscal; honorários advocatícios.",
+ tlabel:"Síntese",
+ tese:"Não cabe sucumbência recíproca na exceção de pré-executividade parcialmente acolhida, pois condenar o excipiente em honorários tanto na exceção quanto na continuação da execução principal caracterizaria bis in idem.",
+ ctx:[
+  "O acolhimento parcial acarreta a condenação apenas do exequente. Na parcela rejeitada a execução prossegue e nela poderá haver condenação própria em honorários, calculada sobre o montante remanescente."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"Pedido administrativo não interrompe a prescrição da repetição de indébito",
+ ids:[{tipo:"REsp",num:"2176108",rel:"rel. min. maria thereza de assis moura",turma:"T2",data:"07/04/2026",inf:"899"}],
+ disc:"Direito Tributário — prescrição; repetição de indébito.",
+ tlabel:"Síntese",
+ tese:"O pedido ou a impugnação administrativa, qualquer que seja sua forma ou fundamento, não interrompe o prazo prescricional da ação de repetição de indébito tributário, nos termos da Súmula 625/STJ.",
+ ctx:[
+  "Reafirma-se a legalidade estrita em matéria de prescrição tributária: não há no Código Tributário Nacional regra que atribua efeito interruptivo ao requerimento administrativo, sendo autônomos o prazo do art. 168 e a discussão sobre o lançamento."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"União não paga honorários em ação civil pública, salvo má-fé",
+ tema:"Tema 1177/STJ",
+ ids:[{tipo:"REsp",num:"1991439",rel:"rel. min. benedito gonçalves",turma:"S1",data:"20/08/2026",inf:"899"}],
+ disc:"Direito Processual Civil — ação civil pública; honorários de sucumbência.",
+ tlabel:"Tese fixada",
+ literal:true,
+ tese:"À luz do princípio da simetria, a isenção prevista no art. 18 da Lei n. 7.347/1985 (LACP) impede a condenação da União, quando vencida em ação civil pública, ao pagamento de honorários advocatícios de sucumbência, salvo comprovada má-fé.",
+ ctx:[
+  "A Primeira Seção não estendeu aos sindicatos a orientação que a Corte Especial firmara para associações e fundações privadas no polo ativo, por ausência de suporte jurisprudencial específico. Julgado com o REsp n. 1981398."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"ICMS-DIFAL não compõe a base de cálculo do PIS e da COFINS",
+ tema:"Tema 1372/STJ",
+ ids:[{tipo:"REsp",num:"2174178",rel:"rel. min. gurgel de faria",turma:"S1",data:"20/08/2026",inf:"899"}],
+ disc:"Direito Tributário — contribuições sociais; base de cálculo.",
+ tlabel:"Tese fixada",
+ literal:true,
+ tese:"O ICMS-DIFAL (Diferencial de Alíquotas do Imposto sobre a Circulação de Mercadorias e Serviços) não compõe a base de cálculo da Contribuição ao PIS e da COFINS.",
+ ctx:[
+  "Aplicação do Tema 69/STF e do Tema 1125/STJ: o diferencial de alíquotas é mero acréscimo ao ICMS próprio para repartição entre Estados, e os valores correspondentes não ingressam no patrimônio do contribuinte. Efeitos modulados a partir de 15/03/2017, ressalvadas as ações judiciais e os procedimentos administrativos em curso naquela data. Julgado com os REsp n. 2191532 e n. 2181166."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"Associação genérica não tem legitimidade para mandado de segurança coletivo",
+ ids:[{tipo:"REsp",num:"2280900",rel:"rel. min. sérgio kukina",turma:"T1",data:"18/08/2026",inf:"899"}],
+ disc:"Direito Processual Civil e Direito Constitucional — mandado de segurança coletivo; substituição processual.",
+ tlabel:"Síntese",
+ tese:"Associações genéricas, sem delimitação de categoria específica e sem demonstração mínima de associados atingidos pela autoridade coatora, não detêm legitimidade ativa para impetrar mandado de segurança coletivo, sendo inaplicável o Tema 1119/STF.",
+ ctx:[
+  "A substituição processual no mandado de segurança coletivo exige pertinência temática entre as finalidades estatutárias da entidade e os direitos tutelados, além da existência de associados na circunscrição da autoridade coatora."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"ISS sobre a impressão e a personalização de cartões bancários",
+ ids:[{tipo:"REsp",num:"2247088",rel:"rel. min. paulo sérgio domingues",turma:"T1",data:"04/08/2026",inf:"898"}],
+ disc:"Direito Tributário — conflito entre ISS e ICMS em operações mistas.",
+ tlabel:"Síntese",
+ tese:"Incide o Imposto Sobre Serviços de Qualquer Natureza, e não o ICMS, sobre a impressão e a personalização dos cartões bancários de débito e crédito.",
+ ctx:[
+  "Aplicação do Tema 91/STJ às operações de composição gráfica personalizada e sob encomenda, enquadradas no item 13.05 da lista anexa à Lei Complementar n. 116/2003. Afastou-se a exceção relativa a impressos destinados a integrar processo subsequente de industrialização ou de circulação de mercadoria, por serem os cartões produto final."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"Sentença penal estrangeira absolutória não é homologável",
+ ids:[{tipo:"AgRg na HDE",num:"13803",rel:"rel. min. herman benjamin",turma:"CE",data:"19/08/2026",inf:"898"}],
+ disc:"Direito Internacional e Direito Penal — homologação de decisão estrangeira.",
+ tlabel:"Síntese",
+ tese:"Não é possível homologar sentença penal absolutória estrangeira para extinguir a punibilidade no Brasil, por inexistir previsão legal para o reconhecimento da absolvição proferida por autoridade jurisdicional estrangeira.",
+ ctx:[
+  "O art. 9º do Código Penal admite a homologação apenas para obrigar à reparação civil do dano e para sujeitar o condenado a medida de segurança; a Lei n. 13445/2017 acrescentou a transferência de execução da pena. O julgado cuida de matéria penal e não se confunde com a homologação de sentenças estrangeiras cíveis, pressuposto de averbações no registro civil das pessoas naturais."
+ ]
+},
+{
+ g:"tangenciais",
+ t:"Afetações sobre distrato de compra e venda de imóveis",
+ tema:"Temas 1464, 1465 e 1466/STJ",
+ afet:true,
+ ids:[
+  {tipo:"ProAfR no REsp",num:"2255394",rel:"rel. min. ricardo villas bôas cueva",turma:"S2",data:"30/06/2026",inf:"899"},
+  {tipo:"ProAfR no REsp",num:"2255393",rel:"rel. min. ricardo villas bôas cueva",turma:"S2",data:"30/06/2026",inf:"899"},
+  {tipo:"ProAfR no REsp",num:"2258565",rel:"rel. min. ricardo villas bôas cueva",turma:"S2",data:"30/06/2026",inf:"899"}
+ ],
+ disc:"Direito Civil e Direito Imobiliário — resolução do contrato por culpa do comprador; patrimônio de afetação.",
+ tlabel:"Síntese",
+ tese:"A Segunda Seção acolheu três propostas de afetação para definir o percentual e a base de cálculo dos valores que o vendedor poderá reter na rescisão por culpa do comprador: em contratos de imóvel não edificado firmados após a Lei n. 13786/2018 (Tema 1464); em contratos firmados antes dela (Tema 1465); e, nos contratos submetidos a regime de patrimônio de afetação firmados após aquela lei, se a retenção pode alcançar cinquenta por cento das quantias pagas, nos termos do art. 67-A, § 5º, da Lei n. 4591/1964 (Tema 1466). Teses ainda não fixadas.",
+ ctx:[
+  "As três controvérsias incidem sobre a incorporação imobiliária e o loteamento, matérias com interface direta com o registro de imóveis, inclusive quanto à averbação do termo de afetação prevista nos arts. 31-A e seguintes da Lei n. 4591/1964 e ao registro do contrato de promessa de compra e venda. Cada tema foi afetado em conjunto com outros recursos: o Tema 1464 com o REsp n. 2255370; o Tema 1465 com o REsp n. 2255054; e o Tema 1466 com os REsp n. 2259135 e n. 2258822."
+ ]
+}
+];
+
+/* ============================ RENDER ============================ */
+var KEY="caderno-stj-898-899:v1";
+var state={};
+try{ state=JSON.parse(localStorage.getItem(KEY)||"{}")||{}; }catch(e){ state={}; }
+function save(){ try{ localStorage.setItem(KEY,JSON.stringify(state)); }catch(e){} }
+
+function idLine(o,withTurma){
+  var head = o.segredo ? "em segredo de justiça" : (o.tipo+" n. "+o.num);
+  var parts=[head,o.rel];
+  if(withTurma) parts.push(o.turma);
+  parts.push("j. "+o.data);
+  parts.push("Informativo n. "+o.inf);
+  return "("+parts.join(", ")+")";
+}
+function idText(f,withTurma){
+  return f.ids.map(function(o){return idLine(o,withTurma);}).join("\n");
+}
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+
+function copy(text,btn,label){
+  var done=function(){
+    var old=btn.textContent; btn.textContent="copiado"; btn.classList.add("copied");
+    setTimeout(function(){ btn.textContent=old||label; btn.classList.remove("copied"); },1400);
+  };
+  if(navigator.clipboard&&navigator.clipboard.writeText){
+    navigator.clipboard.writeText(text).then(done,function(){fallback(text,done);});
+  } else { fallback(text,done); }
+}
+function fallback(text,cb){
+  var ta=document.createElement("textarea");
+  ta.value=text; ta.setAttribute("readonly","");
+  ta.style.cssText="position:fixed;top:-1000px;left:-1000px;opacity:0";
+  document.body.appendChild(ta); ta.select();
+  try{ document.execCommand("copy"); cb(); }catch(e){}
+  document.body.removeChild(ta);
+}
+
+function fichaText(f,n,withTurma){
+  var L=[];
+  L.push(n+". "+f.t);
+  L.push("");
+  L.push(idText(f,withTurma));
+  L.push("");
+  L.push("Disciplina e assunto: "+f.disc);
+  L.push("");
+  L.push(f.tlabel+(f.tema?" ("+f.tema+")":"")+": "+f.tese);
+  L.push("");
+  L.push("Contexto: "+f.ctx.join(" "));
+  return L.join("\n");
+}
+
+var host=document.getElementById("fichas");
+var idx=document.getElementById("idx");
+var htmlF=[], htmlI=[];
+
+GRUPOS.forEach(function(G){
+  var itens=F.map(function(f,i){return {f:f,i:i};}).filter(function(x){return x.f.g===G.id;});
+  htmlF.push(
+    '<section class="group-head g-'+G.id+'" id="grupo-'+G.id+'">'+
+      '<div class="gh-tag"><h2>'+esc(G.rot)+'</h2><span class="gh-n">'+itens.length+(itens.length===1?" ficha":" fichas")+'</span></div>'+
+      '<p>'+esc(G.desc)+'</p>'+
+    '</section>'
+  );
+  htmlI.push('<div class="index-group g-'+G.id+'">'+esc(G.rot)+'</div>');
+
+  itens.forEach(function(x){
+    var f=x.f, n=x.i+1, key="f"+n, done=!!state[key];
+    var badges='';
+    if(f.tema) badges+='<span class="badge badge-tema">'+esc(f.tema)+'</span>';
+    if(f.afet) badges+='<span class="badge badge-afet">Afetação</span>';
+    badges+='<span class="badge badge-done" data-role="badge-done"'+(done?'':' hidden')+'>Conferida</span>';
+
+    htmlF.push(
+    '<article class="ficha g-'+f.g+(done?" done":"")+'" id="f'+n+'" data-n="'+n+'" data-g="'+f.g+'">'+
+      '<header class="f-head">'+
+        '<span class="f-num">'+(n<10?"0"+n:n)+'</span>'+
+        '<h3 class="f-title">'+esc(f.t)+'</h3>'+
+        '<span class="f-badges">'+badges+'</span>'+
+      '</header>'+
+
+      '<div class="f-block ident-wrap">'+
+        '<div class="f-label">Identificação</div>'+
+        '<div class="ident" data-role="ident">'+esc(idText(f,true)).replace(/\n/g,'<br>')+'</div>'+
+        '<div class="ident-tools">'+
+          '<label class="switch"><input type="checkbox" data-role="turma" checked><span class="track"></span>exibir órgão julgador</label>'+
+          '<button class="btn" type="button" data-role="copy-id">copiar identificação</button>'+
+        '</div>'+
+      '</div>'+
+
+      '<div class="f-block">'+
+        '<div class="f-label">Disciplina e assunto</div>'+
+        '<p class="f-disc">'+esc(f.disc)+'</p>'+
+      '</div>'+
+
+      '<div class="f-block">'+
+        '<div class="f-label">'+esc(f.tlabel)+(f.tema&&f.tlabel==="Tese fixada"?' &middot; '+esc(f.tema):'')+'</div>'+
+        '<p class="tese'+(f.literal?" literal":"")+'">'+(f.literal?"&ldquo;":"")+esc(f.tese)+(f.literal?"&rdquo;":"")+'</p>'+
+      '</div>'+
+
+      '<div class="f-block f-ctx">'+
+        '<div class="f-label">Contexto</div>'+
+        f.ctx.map(function(p){return '<p>'+esc(p)+'</p>';}).join('')+
+      '</div>'+
+
+      '<footer class="f-foot">'+
+        '<button class="btn-check" type="button" data-role="check">'+(done?"Conferida":"Marcar como conferida")+'</button>'+
+        '<span class="spacer"></span>'+
+        '<button class="btn" type="button" data-role="copy-ficha">copiar ficha</button>'+
+      '</footer>'+
+    '</article>');
+
+    htmlI.push('<a href="#f'+n+'" data-i="'+n+'" class="'+(done?"done":"")+'"><span class="num">'+(n<10?"0"+n:n)+'</span><span>'+esc(f.t)+'</span><span class="tick">&#10003;</span></a>');
+  });
+});
+
+host.innerHTML=htmlF.join("");
+idx.innerHTML=htmlI.join("");
+
+/* ---- interações por ficha ---- */
+var arts=Array.prototype.slice.call(host.querySelectorAll(".ficha"));
+arts.forEach(function(art){
+  var n=+art.dataset.n, f=F[n-1], key="f"+n;
+  var sw=art.querySelector('[data-role="turma"]');
+  var identEl=art.querySelector('[data-role="ident"]');
+
+  sw.addEventListener("change",function(){
+    identEl.innerHTML=esc(idText(f,sw.checked)).replace(/\n/g,"<br>");
+  });
+  art.querySelector('[data-role="copy-id"]').addEventListener("click",function(){
+    copy(idText(f,sw.checked),this,"copiar identificação");
+  });
+  art.querySelector('[data-role="copy-ficha"]').addEventListener("click",function(){
+    copy(fichaText(f,n,sw.checked),this,"copiar ficha");
+  });
+  art.querySelector('[data-role="check"]').addEventListener("click",function(){
+    state[key]=!state[key];
+    if(!state[key]) delete state[key];
+    save(); paint(n); refresh();
+  });
+});
+
+function paint(n){
+  var art=document.getElementById("f"+n), done=!!state["f"+n];
+  art.classList.toggle("done",done);
+  art.querySelector('[data-role="check"]').textContent=done?"Conferida":"Marcar como conferida";
+  art.querySelector('[data-role="badge-done"]').hidden=!done;
+  var link=idx.querySelector('a[data-i="'+n+'"]');
+  if(link) link.classList.toggle("done",done);
+}
+
+/* ---- busca, filtros, progresso ---- */
+var hay=F.map(function(f,i){
+  return (String(i+1)+" "+f.t+" "+f.disc+" "+f.tlabel+" "+(f.tema||"")+" "+f.tese+" "+f.ctx.join(" ")+" "+
+          f.ids.map(function(o){return (o.segredo?"segredo de justiça":o.tipo+" "+o.num)+" "+o.rel+" "+o.turma+" "+o.data+" informativo "+o.inf;}).join(" "))
+         .toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"");
+});
+function norm(s){ return s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,""); }
+
+var fG="all", fS="all", q="";
+var qEl=document.getElementById("q"), qClear=document.getElementById("q-clear");
+var emptyEl=document.getElementById("empty");
+
+qEl.addEventListener("input",function(){ q=norm(qEl.value.trim()); qClear.hidden=!qEl.value; refresh(); });
+qClear.addEventListener("click",function(){ qEl.value=""; q=""; qClear.hidden=true; qEl.focus(); refresh(); });
+
+function bindChips(id,attr,setter){
+  var box=document.getElementById(id);
+  box.addEventListener("click",function(e){
+    var b=e.target.closest(".chip"); if(!b) return;
+    Array.prototype.forEach.call(box.querySelectorAll(".chip"),function(c){c.setAttribute("aria-pressed",String(c===b));});
+    setter(b.dataset[attr]); refresh();
+  });
+}
+bindChips("grupos","g",function(v){fG=v;});
+bindChips("status","s",function(v){fS=v;});
+
+function refresh(){
+  var shown=0, perGroup={};
+  arts.forEach(function(art){
+    var n=+art.dataset.n, done=!!state["f"+n];
+    var ok = (fG==="all"||art.dataset.g===fG) &&
+             (fS==="all"||(fS==="done"?done:!done)) &&
+             (!q||hay[n-1].indexOf(q)>-1);
+    art.hidden=!ok;
+    var link=idx.querySelector('a[data-i="'+n+'"]');
+    if(link) link.style.display=ok?"":"none";
+    if(ok){ shown++; perGroup[art.dataset.g]=(perGroup[art.dataset.g]||0)+1; }
+  });
+  GRUPOS.forEach(function(G){
+    var h=document.getElementById("grupo-"+G.id);
+    var c=perGroup[G.id]||0;
+    h.hidden = c===0;
+    h.querySelector(".gh-n").textContent = c + (c===1?" ficha":" fichas");
+    var ig=idx.querySelector(".index-group.g-"+G.id);
+    if(ig) ig.style.display = c===0 ? "none" : "";
+  });
+  emptyEl.classList.toggle("show",shown===0);
+
+  var total=F.length, d=0;
+  for(var i=1;i<=total;i++){ if(state["f"+i]) d++; }
+  var pct=total?Math.round(d/total*100):0;
+  document.getElementById("pfill").style.width=pct+"%";
+  document.getElementById("ptxt").textContent=d+"/"+total+" conferidas";
+  var bar=document.querySelector(".progress-bar");
+  bar.setAttribute("aria-valuenow",String(d));
+  bar.setAttribute("aria-valuemax",String(total));
+}
+
+document.getElementById("reset").addEventListener("click",function(){
+  state={}; save();
+  for(var i=1;i<=F.length;i++) paint(i);
+  refresh();
+});
+
+refresh();
+})();
+</script>
+
+<!-- radar:inicio -->
+<script type="application/json" id="radar-meta">{"slug": "stj-2026-inf-898-899", "titulo": "Jurisprudência do STJ — Informativos 898 e 899", "orgao": "STJ", "tipo": "jurisprudencia", "inicio": "2026-08", "fim": "2026-09", "periodo": "agosto e setembro de 2026", "fonte": "Informativos 898 e 899", "fichas": 21, "produzido": "2026-09-06"}</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice.
+   Nao interfere na marcacao propria do relatorio: apenas conta no DOM
+   quantas fichas existem e quantas estao marcadas, e grava o resumo. */
+(function(){
+  var SLUG = "stj-2026-inf-898-899";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+<!-- radar:fim -->
+</body>
+</html>

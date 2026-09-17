@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Índice dos relatórios de jurisprudência notarial e registral: acervo, progresso de revisão e mapa de cobertura temporal.">
+<title>Radar Extrajudicial</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Public+Sans:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&display=swap">
+<style>
+:root{
+  --paper:#F2F4F7; --sheet:#FFFFFF; --sheet-2:#F8FAFC;
+  --ink:#17202B; --ink-2:#354050; --muted:#5D6777;
+  --rule:#D6DCE4; --rule-strong:#B7C0CC;
+  --accent:#23498A; --accent-ink:#FFFFFF; --accent-soft:#E6ECF7;
+  --seal:#8A2A3A; --seal-soft:#F6E8EB;
+  --ok:#1C7A4B; --ok-soft:#E4F2EA;
+  --warn:#8A5A16; --warn-soft:#F7EEDD;
+  --shadow:0 1px 2px rgba(18,28,45,.05), 0 6px 18px rgba(18,28,45,.05);
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Public Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", "SFMono-Regular", Consolas, monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --paper:#11161D; --sheet:#171E27; --sheet-2:#1C242F;
+    --ink:#E8EDF3; --ink-2:#C2CBD6; --muted:#8E9AA8;
+    --rule:#2A3441; --rule-strong:#3C4856;
+    --accent:#7FA6E8; --accent-ink:#0E1319; --accent-soft:#1E2A3D;
+    --seal:#E08A9A; --seal-soft:#2E1E23;
+    --ok:#6FD19B; --ok-soft:#16281F;
+    --warn:#E0B871; --warn-soft:#2A2115;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --paper:#11161D; --sheet:#171E27; --sheet-2:#1C242F;
+  --ink:#E8EDF3; --ink-2:#C2CBD6; --muted:#8E9AA8;
+  --rule:#2A3441; --rule-strong:#3C4856;
+  --accent:#7FA6E8; --accent-ink:#0E1319; --accent-soft:#1E2A3D;
+  --seal:#E08A9A; --seal-soft:#2E1E23;
+  --ok:#6FD19B; --ok-soft:#16281F;
+  --warn:#E0B871; --warn-soft:#2A2115;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 18px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{
+  margin:0; background:var(--paper); color:var(--ink);
+  font-family:var(--sans); font-size:16px; line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:74rem; margin:0 auto; padding:0 16px 5rem}
+
+/* ---------- cabecalho ---------- */
+header.topo{padding:2.75rem 0 1.5rem; border-bottom:1px solid var(--rule)}
+.selo{
+  font-family:var(--mono); font-size:.7rem; letter-spacing:.14em;
+  text-transform:uppercase; color:var(--muted); margin:0 0 .6rem
+}
+h1{
+  font-family:var(--serif); font-weight:700; font-size:clamp(1.9rem,5vw,2.9rem);
+  line-height:1.1; letter-spacing:-.015em; margin:0 0 .5rem
+}
+.linha-fina{
+  font-family:var(--serif); font-size:clamp(1rem,2.3vw,1.15rem);
+  color:var(--ink-2); max-width:46rem; margin:0
+}
+.numeros{
+  display:flex; flex-wrap:wrap; gap:.4rem 2.25rem; margin:1.6rem 0 0;
+  padding:0; list-style:none
+}
+.numeros div{display:flex; flex-direction:column}
+.numeros b{
+  font-family:var(--mono); font-size:1.5rem; font-weight:600;
+  line-height:1.1; font-variant-numeric:tabular-nums
+}
+.numeros span{
+  font-size:.72rem; letter-spacing:.1em; text-transform:uppercase;
+  color:var(--muted)
+}
+
+/* ---------- barra de controles ---------- */
+.controles{
+  position:sticky; top:0; z-index:20; background:var(--paper);
+  border-bottom:1px solid var(--rule); padding:.85rem 0;
+  display:flex; flex-wrap:wrap; gap:.6rem; align-items:center
+}
+.busca{position:relative; flex:1 1 15rem; min-width:0}
+.busca input{
+  width:100%; font:inherit; font-size:.92rem; color:var(--ink);
+  background:var(--sheet); border:1px solid var(--rule-strong);
+  border-radius:7px; padding:.5rem .7rem .5rem 2rem
+}
+.busca input:focus{outline:2px solid var(--accent); outline-offset:1px}
+.busca svg{
+  position:absolute; left:.6rem; top:50%; transform:translateY(-50%);
+  width:.95rem; height:.95rem; color:var(--muted); pointer-events:none
+}
+.grupo{display:flex; gap:.25rem; flex-wrap:wrap}
+.chip{
+  font:inherit; font-size:.8rem; font-weight:500; color:var(--ink-2);
+  background:var(--sheet); border:1px solid var(--rule-strong);
+  border-radius:999px; padding:.34rem .72rem; cursor:pointer;
+  white-space:nowrap
+}
+.chip:hover{border-color:var(--accent)}
+.chip[aria-pressed="true"]{
+  background:var(--accent); border-color:var(--accent); color:var(--accent-ink)
+}
+.abas{display:flex; gap:.25rem; background:var(--sheet-2);
+  border:1px solid var(--rule); border-radius:8px; padding:.15rem}
+.abas button{
+  font:inherit; font-size:.82rem; font-weight:600; color:var(--muted);
+  background:none; border:0; border-radius:6px; padding:.3rem .8rem;
+  cursor:pointer
+}
+.abas button[aria-selected="true"]{background:var(--sheet); color:var(--ink);
+  box-shadow:var(--shadow)}
+.icone{
+  font:inherit; font-size:.8rem; color:var(--muted); background:var(--sheet);
+  border:1px solid var(--rule-strong); border-radius:7px;
+  padding:.34rem .6rem; cursor:pointer
+}
+.icone:hover{color:var(--ink); border-color:var(--accent)}
+
+/* ---------- acervo ---------- */
+.painel[hidden]{display:none}
+.grade{
+  display:grid; gap:1rem; margin:1.6rem 0 0;
+  grid-template-columns:repeat(auto-fill, minmax(min(100%, 21rem), 1fr))
+}
+article.cartao{
+  background:var(--sheet); border:1px solid var(--rule); border-radius:12px;
+  box-shadow:var(--shadow); padding:1.15rem 1.15rem 1rem;
+  display:flex; flex-direction:column; gap:.55rem
+}
+article.cartao.revisado{border-color:color-mix(in srgb, var(--ok) 45%, var(--rule))}
+article.cartao.rever{border-color:color-mix(in srgb, var(--seal) 45%, var(--rule))}
+.cab{display:flex; align-items:center; gap:.5rem; flex-wrap:wrap}
+.orgao{
+  font-family:var(--mono); font-size:.68rem; font-weight:600;
+  letter-spacing:.1em; text-transform:uppercase;
+  background:var(--accent-soft); color:var(--accent);
+  border-radius:4px; padding:.2rem .45rem
+}
+.orgao[data-tipo="normativo"]{background:var(--seal-soft); color:var(--seal)}
+.tag{
+  font-family:var(--mono); font-size:.66rem; letter-spacing:.06em;
+  text-transform:uppercase; color:var(--muted); margin-left:auto
+}
+.tag.ok{color:var(--ok)}
+.tag.rever{color:var(--seal)}
+h2.titulo{
+  font-family:var(--serif); font-size:1.12rem; font-weight:600;
+  line-height:1.25; margin:0
+}
+h2.titulo a{color:inherit; text-decoration:none}
+h2.titulo a:hover{text-decoration:underline; text-decoration-thickness:1px;
+  text-underline-offset:2px}
+.meta{
+  font-size:.82rem; color:var(--muted); margin:0;
+  display:flex; flex-direction:column; gap:.1rem
+}
+.meta b{font-weight:500; color:var(--ink-2)}
+.barra{margin-top:auto; padding-top:.5rem}
+.barra-topo{
+  display:flex; justify-content:space-between; align-items:baseline;
+  font-family:var(--mono); font-size:.74rem; color:var(--muted);
+  font-variant-numeric:tabular-nums; margin-bottom:.3rem
+}
+.barra-trilho{
+  height:6px; background:var(--sheet-2); border:1px solid var(--rule);
+  border-radius:999px; overflow:hidden
+}
+.barra-preenche{
+  height:100%; background:var(--accent); border-radius:999px;
+  transition:width .3s ease
+}
+.barra-preenche.cheia{background:var(--ok)}
+.pe{
+  display:flex; align-items:center; gap:.5rem; flex-wrap:wrap;
+  border-top:1px solid var(--rule); padding-top:.7rem; margin-top:.2rem
+}
+.pe select{
+  font:inherit; font-size:.78rem; color:var(--ink-2); background:var(--sheet-2);
+  border:1px solid var(--rule-strong); border-radius:6px; padding:.25rem .4rem
+}
+.abrir{
+  margin-left:auto; font-size:.82rem; font-weight:600; color:var(--accent);
+  text-decoration:none; white-space:nowrap
+}
+.abrir:hover{text-decoration:underline}
+.vazio{
+  grid-column:1/-1; text-align:center; color:var(--muted);
+  font-family:var(--serif); padding:3rem 1rem
+}
+
+/* ---------- cobertura ---------- */
+.intro-cob{
+  font-family:var(--serif); color:var(--ink-2); max-width:44rem;
+  margin:1.6rem 0 1.1rem
+}
+.rolo{overflow-x:auto; -webkit-overflow-scrolling:touch;
+  border:1px solid var(--rule); border-radius:12px; background:var(--sheet)}
+table.cob{border-collapse:collapse; width:100%; min-width:38rem}
+table.cob th, table.cob td{
+  border-bottom:1px solid var(--rule); border-right:1px solid var(--rule);
+  padding:.55rem .5rem; text-align:center; font-size:.8rem
+}
+table.cob tr:last-child th, table.cob tr:last-child td{border-bottom:0}
+table.cob th:last-child, table.cob td:last-child{border-right:0}
+table.cob thead th{
+  font-family:var(--mono); font-size:.7rem; font-weight:600;
+  letter-spacing:.06em; color:var(--muted); background:var(--sheet-2);
+  white-space:nowrap
+}
+table.cob tbody th{
+  font-family:var(--mono); font-size:.76rem; font-weight:600; color:var(--ink);
+  text-align:left; background:var(--sheet-2); white-space:nowrap;
+  position:sticky; left:0
+}
+td.cel{padding:.35rem}
+.marca{
+  display:block; border-radius:6px; padding:.45rem .3rem;
+  font-family:var(--mono); font-size:.72rem; font-weight:600;
+  color:var(--muted); background:var(--sheet-2);
+  border:1px dashed var(--rule-strong); text-decoration:none
+}
+.marca.cheia{
+  background:var(--ok-soft); border:1px solid transparent; color:var(--ok)
+}
+.marca.parcial{
+  background:var(--warn-soft); border:1px solid transparent; color:var(--warn)
+}
+a.marca:hover{outline:2px solid var(--accent); outline-offset:1px}
+.legenda{
+  display:flex; gap:1.1rem; flex-wrap:wrap; margin:.8rem 0 0;
+  font-size:.76rem; color:var(--muted)
+}
+.legenda i{
+  display:inline-block; width:.8rem; height:.8rem; border-radius:3px;
+  vertical-align:-1px; margin-right:.35rem
+}
+.lacunas{
+  background:var(--sheet); border:1px solid var(--rule);
+  border-left:3px solid var(--seal); border-radius:10px;
+  padding:1.1rem 1.2rem; margin:1.5rem 0 0
+}
+.lacunas h3{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--seal); margin:0 0 .6rem
+}
+.lacunas ul{margin:0; padding-left:1.1rem; font-size:.88rem; color:var(--ink-2)}
+.lacunas li{margin:.2rem 0}
+.lacunas li b{font-family:var(--mono); font-weight:600; color:var(--ink)}
+
+footer{
+  border-top:1px solid var(--rule); margin-top:2.5rem; padding-top:1.2rem;
+  font-size:.8rem; color:var(--muted)
+}
+footer p{margin:.3rem 0}
+footer code{
+  font-family:var(--mono); font-size:.9em; background:var(--sheet-2);
+  border:1px solid var(--rule); border-radius:4px; padding:.05rem .3rem
+}
+.aviso{
+  background:var(--warn-soft); border:1px solid var(--warn);
+  border-radius:10px; padding:.9rem 1.1rem; margin:1.6rem 0 0;
+  font-size:.88rem; color:var(--ink-2)
+}
+/* no celular a barra fixa comeria metade da tela: deixa rolar junto */
+@media (max-width:46rem){
+  .controles{position:static; padding:.85rem 0 1rem}
+  .chip{font-size:.78rem; padding:.3rem .62rem}
+  header.topo{padding-top:2rem}
+  .numeros{gap:.4rem 1.5rem}
+}
+@media print{
+  .controles, .abas, .pe select, .icone{display:none}
+  body{background:#fff}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header class="topo">
+  <p class="selo">Direito notarial e registral · concursos de serventias extrajudiciais</p>
+  <h1>Radar Extrajudicial</h1>
+  <p class="linha-fina">Índice dos relatórios de jurisprudência e atos normativos. Reúne o acervo já produzido, o progresso de revisão de cada ficha e o mapa das lacunas de cobertura.</p>
+  <ul class="numeros" id="numeros"></ul>
+</header>
+
+<nav class="controles">
+  <label class="busca">
+    <svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="8.5" cy="8.5" r="5.5"/><path d="M12.5 12.5 18 18"/></svg>
+    <input id="busca" type="search" placeholder="Buscar por órgão, período ou informativo" aria-label="Buscar relatórios">
+  </label>
+  <div class="grupo" id="filtro-orgao" role="group" aria-label="Filtrar por órgão"></div>
+  <div class="grupo" id="filtro-situacao" role="group" aria-label="Filtrar por situação"></div>
+  <div class="abas" role="tablist" aria-label="Modo de exibição">
+    <button type="button" role="tab" id="aba-acervo" aria-selected="true" aria-controls="painel-acervo">Acervo</button>
+    <button type="button" role="tab" id="aba-cobertura" aria-selected="false" aria-controls="painel-cobertura">Cobertura</button>
+  </div>
+  <button class="icone" type="button" id="btn-tema" title="Alternar tema claro e escuro" aria-label="Alternar tema">&#9686;</button>
+  <button class="icone" type="button" id="btn-exportar" title="Salvar o progresso em arquivo">&#8595; progresso</button>
+  <button class="icone" type="button" id="btn-importar" title="Carregar progresso de arquivo">&#8593; progresso</button>
+  <input type="file" id="arquivo-progresso" accept="application/json" hidden>
+</nav>
+
+<main>
+  <section class="painel" id="painel-acervo" role="tabpanel" aria-labelledby="aba-acervo">
+    <div class="grade" id="grade"></div>
+  </section>
+
+  <section class="painel" id="painel-cobertura" role="tabpanel" aria-labelledby="aba-cobertura" hidden>
+    <p class="intro-cob">Cada célula é um semestre. O preenchimento indica quantos meses daquele semestre têm relatório para aquele órgão — as células vazias são o que ainda falta pedir.</p>
+    <div class="rolo"><table class="cob" id="tabela-cob"></table></div>
+    <p class="legenda">
+      <span><i style="background:var(--ok-soft); border:1px solid var(--ok)"></i>semestre inteiro coberto</span>
+      <span><i style="background:var(--warn-soft); border:1px solid var(--warn)"></i>cobertura parcial</span>
+      <span><i style="background:var(--sheet-2); border:1px dashed var(--rule-strong)"></i>sem cobertura</span>
+    </p>
+    <div class="lacunas" id="lacunas"></div>
+  </section>
+</main>
+
+<footer>
+  <p>Progresso e situação ficam gravados neste navegador (<code>localStorage</code>), por dispositivo. Use <b>&#8595; progresso</b> para levar o estado a outro aparelho.</p>
+  <p>Para acrescentar um relatório: coloque o arquivo em <code>relatorios/</code>, acrescente a entrada em <code>reports.json</code> e rode <code>python ferramentas/injetar-farol.py</code>.</p>
+</footer>
+
+</div>
+
+<script src="dados/reports.js"></script>
+<script>
+(function(){
+"use strict";
+
+var RADAR = window.RADAR || { relatorios: [], orgaos: [] };
+var REG = RADAR.relatorios || [];
+var CHAVE_TEMA = "radar:tema";
+var CHAVE_SIT = "radar:situacao:";
+var CHAVE_PROG = "radar:progresso:";
+
+/* ---------- utilidades ---------- */
+function ler(chave, padrao){
+  try{ var v = localStorage.getItem(chave); return v === null ? padrao : v; }
+  catch(e){ return padrao; }
+}
+function gravar(chave, valor){
+  try{ localStorage.setItem(chave, valor); }catch(e){}
+}
+function esc(s){
+  return String(s).replace(/[&<>"]/g, function(c){
+    return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c];
+  });
+}
+function progresso(slug){
+  try{
+    var bruto = localStorage.getItem(CHAVE_PROG + slug);
+    if(!bruto) return null;
+    var p = JSON.parse(bruto);
+    if(typeof p.total !== "number" || !p.total) return null;
+    return p;
+  }catch(e){ return null; }
+}
+function situacao(r){
+  var manual = ler(CHAVE_SIT + r.slug, "auto");
+  if(manual !== "auto") return manual;
+  if(r.tipo === "normativo") return "consulta";
+  var p = progresso(r.slug);
+  if(!p || !p.feitas) return "nao-iniciado";
+  if(p.feitas >= p.total) return "revisado";
+  return "em-revisao";
+}
+var ROTULO = {
+  "nao-iniciado":"não revisado", "em-revisao":"em revisão",
+  "revisado":"revisado", "rever":"revisar de novo", "consulta":"consulta"
+};
+
+/* ---------- estado dos filtros ---------- */
+var filtros = { orgao:"todos", situacao:"todas", busca:"" };
+
+/* ---------- cabecalho com numeros ---------- */
+function pintarNumeros(){
+  var fichas = 0, feitas = 0, revisados = 0;
+  REG.forEach(function(r){
+    fichas += r.fichas || 0;
+    var p = progresso(r.slug);
+    if(p) feitas += Math.min(p.feitas, p.total);
+    if(situacao(r) === "revisado") revisados++;
+  });
+  var pct = fichas ? Math.round(feitas / fichas * 100) : 0;
+  function plural(n, um, muitos){ return n === 1 ? um : muitos; }
+  var pares = [
+    [String(REG.length), plural(REG.length, "relatório", "relatórios")],
+    [String(fichas), plural(fichas, "ficha", "fichas")],
+    [feitas + " · " + pct + "%", plural(feitas, "ficha conferida", "fichas conferidas")],
+    [String(revisados), plural(revisados, "relatório revisado", "relatórios revisados")]
+  ];
+  document.getElementById("numeros").innerHTML = pares.map(function(par){
+    return "<div><b>" + esc(par[0]) + "</b><span>" + esc(par[1]) + "</span></div>";
+  }).join("");
+}
+
+/* ---------- filtros ---------- */
+function montarFiltros(){
+  var orgaos = ["todos"].concat(REG.map(function(r){ return r.orgao; })
+    .filter(function(o, i, a){ return a.indexOf(o) === i; }));
+  document.getElementById("filtro-orgao").innerHTML = orgaos.map(function(o){
+    return '<button class="chip" type="button" data-orgao="' + esc(o) + '" aria-pressed="'
+      + (o === filtros.orgao) + '">' + esc(o === "todos" ? "Todos" : o) + "</button>";
+  }).join("");
+  var sits = [["todas","Todas"], ["nao-iniciado","Não revisados"],
+              ["em-revisao","Em revisão"], ["revisado","Revisados"],
+              ["rever","Revisar de novo"]];
+  document.getElementById("filtro-situacao").innerHTML = sits.map(function(s){
+    return '<button class="chip" type="button" data-situacao="' + s[0] + '" aria-pressed="'
+      + (s[0] === filtros.situacao) + '">' + esc(s[1]) + "</button>";
+  }).join("");
+}
+
+function passa(r){
+  if(filtros.orgao !== "todos" && r.orgao !== filtros.orgao) return false;
+  if(filtros.situacao !== "todas" && situacao(r) !== filtros.situacao) return false;
+  if(filtros.busca){
+    var alvo = [r.titulo, r.orgao, r.periodo, r.fonte, r.descricao].join(" ").toLowerCase();
+    if(alvo.indexOf(filtros.busca) === -1) return false;
+  }
+  return true;
+}
+
+/* ---------- acervo ---------- */
+function cartao(r){
+  var sit = situacao(r);
+  var p = progresso(r.slug);
+  var feitas = p ? Math.min(p.feitas, p.total) : 0;
+  var total = p ? p.total : (r.fichas || 0);
+  var pct = total ? Math.round(feitas / total * 100) : 0;
+  var manual = ler(CHAVE_SIT + r.slug, "auto");
+  var classeTag = sit === "revisado" ? "ok" : (sit === "rever" ? "rever" : "");
+  var classeCartao = sit === "revisado" ? "revisado" : (sit === "rever" ? "rever" : "");
+  var naoAberto = !p && r.tipo !== "normativo";
+
+  var progressoHTML;
+  if(r.tipo === "normativo"){
+    progressoHTML = '<div class="barra"><div class="barra-topo">'
+      + "<span>apresentação — sem fichas</span></div></div>";
+  } else {
+    progressoHTML = '<div class="barra"><div class="barra-topo"><span>'
+      + feitas + " / " + total + (naoAberto ? " fichas" : " fichas conferidas")
+      + '</span><span>' + (naoAberto ? "não aberto" : pct + "%") + "</span></div>"
+      + '<div class="barra-trilho"><div class="barra-preenche'
+      + (pct >= 100 ? " cheia" : "") + '" style="width:' + pct + '%"></div></div></div>';
+  }
+
+  var opcoes = [["auto","automático"], ["revisado","revisado"],
+                ["rever","revisar de novo"], ["nao-iniciado","não revisado"]];
+
+  return '<article class="cartao ' + classeCartao + '" data-slug="' + esc(r.slug) + '">'
+    + '<div class="cab">'
+    + '<span class="orgao" data-tipo="' + esc(r.tipo) + '">' + esc(r.orgao) + "</span>"
+    + '<span class="tag ' + classeTag + '">' + esc(ROTULO[sit] || sit) + "</span>"
+    + "</div>"
+    + '<h2 class="titulo"><a href="' + esc(r.arquivo) + '">' + esc(r.titulo) + "</a></h2>"
+    + '<p class="meta"><span><b>' + esc(r.periodo) + "</b></span><span>"
+    + esc(r.fonte) + "</span></p>"
+    + progressoHTML
+    + '<div class="pe">'
+    + '<select data-sit="' + esc(r.slug) + '" aria-label="Situação de ' + esc(r.titulo) + '">'
+    + opcoes.map(function(o){
+        return '<option value="' + o[0] + '"' + (manual === o[0] ? " selected" : "")
+          + ">" + o[1] + "</option>";
+      }).join("")
+    + "</select>"
+    + '<a class="abrir" href="' + esc(r.arquivo) + '">abrir &rarr;</a>'
+    + "</div>"
+    + "</article>";
+}
+
+function pintarAcervo(){
+  var lista = REG.filter(passa);
+  var ordem = { "STF":1, "STJ":2, "CNJ":3, "Kollemata":4 };
+  lista.sort(function(a, b){
+    var d = (ordem[a.orgao] || 9) - (ordem[b.orgao] || 9);
+    if(d) return d;
+    return b.inicio.localeCompare(a.inicio);
+  });
+  document.getElementById("grade").innerHTML = lista.length
+    ? lista.map(cartao).join("")
+    : '<p class="vazio">Nenhum relatório corresponde a esses filtros.</p>';
+}
+
+/* ---------- cobertura ---------- */
+function meses(inicio, fim){
+  var out = [];
+  var a = parseInt(inicio.slice(0, 4), 10), m = parseInt(inicio.slice(5, 7), 10);
+  var af = parseInt(fim.slice(0, 4), 10), mf = parseInt(fim.slice(5, 7), 10);
+  while(a < af || (a === af && m <= mf)){
+    out.push(a + "-" + (m < 10 ? "0" + m : String(m)));
+    m++; if(m > 12){ m = 1; a++; }
+  }
+  return out;
+}
+function semestres(){
+  var hoje = new Date();
+  var anoFim = hoje.getFullYear(), semFim = hoje.getMonth() < 6 ? 1 : 2;
+  var out = [];
+  for(var a = 2024; a <= anoFim; a++){
+    for(var s = 1; s <= 2; s++){
+      if(a === anoFim && s > semFim) break;
+      out.push({
+        rotulo: a + "·S" + s,
+        meses: meses(a + (s === 1 ? "-01" : "-07"), a + (s === 1 ? "-06" : "-12"))
+      });
+    }
+  }
+  return out;
+}
+function pintarCobertura(){
+  var cols = semestres();
+  var orgaos = (RADAR.orgaos || []).slice();
+  REG.forEach(function(r){
+    if(r.tipo === "jurisprudencia" && orgaos.indexOf(r.orgao) === -1) orgaos.push(r.orgao);
+  });
+
+  var cabeca = "<thead><tr><th>órgão</th>" + cols.map(function(c){
+    return "<th>" + esc(c.rotulo) + "</th>";
+  }).join("") + "</tr></thead>";
+
+  var buracos = [];
+  var corpo = "<tbody>" + orgaos.map(function(org){
+    var relsOrg = REG.filter(function(r){
+      return r.orgao === org && r.tipo === "jurisprudencia";
+    });
+    var vazios = [];
+    var celulas = cols.map(function(c){
+      var cobertos = c.meses.filter(function(mes){
+        return relsOrg.some(function(r){ return mes >= r.inicio && mes <= r.fim; });
+      });
+      if(!cobertos.length){
+        vazios.push(c.rotulo);
+        return '<td class="cel"><span class="marca" title="sem relatório">&mdash;</span></td>';
+      }
+      var rel = relsOrg.filter(function(r){
+        return c.meses.some(function(mes){ return mes >= r.inicio && mes <= r.fim; });
+      })[0];
+      var cheio = cobertos.length >= c.meses.length;
+      return '<td class="cel"><a class="marca ' + (cheio ? "cheia" : "parcial")
+        + '" href="' + esc(rel.arquivo) + '" title="' + esc(rel.titulo) + '">'
+        + cobertos.length + "/" + c.meses.length + "</a></td>";
+    }).join("");
+    if(vazios.length) buracos.push({ orgao:org, vazios:vazios });
+    return "<tr><th>" + esc(org) + "</th>" + celulas + "</tr>";
+  }).join("") + "</tbody>";
+
+  document.getElementById("tabela-cob").innerHTML = cabeca + corpo;
+
+  var alvo = document.getElementById("lacunas");
+  if(!buracos.length){
+    alvo.innerHTML = "<h3>Cobertura</h3>"
+      + '<p style="margin:0; font-size:.88rem">Todos os semestres do intervalo estão cobertos.</p>';
+    return;
+  }
+  alvo.innerHTML = "<h3>O que ainda falta pedir</h3><ul>" + buracos.map(function(b){
+    return "<li><b>" + esc(b.orgao) + "</b> &mdash; sem cobertura em "
+      + b.vazios.map(esc).join(", ") + "</li>";
+  }).join("") + "</ul>";
+}
+
+/* ---------- exportar / importar ---------- */
+function coletarEstado(){
+  var dados = { versao:1, gerado:new Date().toISOString(), itens:{} };
+  try{
+    for(var i = 0; i < localStorage.length; i++){
+      var k = localStorage.key(i);
+      if(k && k.indexOf("radar:") === 0 && k !== CHAVE_TEMA){
+        dados.itens[k] = localStorage.getItem(k);
+      }
+    }
+  }catch(e){}
+  return dados;
+}
+function exportar(){
+  var texto = JSON.stringify(coletarEstado(), null, 2);
+  var url = URL.createObjectURL(new Blob([texto], { type:"application/json" }));
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = "radar-progresso-" + new Date().toISOString().slice(0, 10) + ".json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
+}
+function importar(arquivo){
+  var leitor = new FileReader();
+  leitor.onload = function(){
+    try{
+      var d = JSON.parse(leitor.result);
+      if(!d || !d.itens) throw new Error("formato");
+      var n = 0;
+      Object.keys(d.itens).forEach(function(k){
+        if(k.indexOf("radar:") === 0){ gravar(k, d.itens[k]); n++; }
+      });
+      pintarTudo();
+      alert("Progresso importado: " + n + " registros.");
+    }catch(e){
+      alert("Não foi possível ler esse arquivo de progresso.");
+    }
+  };
+  leitor.readAsText(arquivo);
+}
+
+/* ---------- tema ---------- */
+function aplicarTema(){
+  var t = ler(CHAVE_TEMA, "");
+  if(t) document.documentElement.setAttribute("data-theme", t);
+  else document.documentElement.removeAttribute("data-theme");
+}
+
+/* ---------- pintura geral e eventos ---------- */
+function pintarTudo(){
+  pintarNumeros();
+  pintarAcervo();
+  pintarCobertura();
+}
+
+document.addEventListener("click", function(ev){
+  var chip = ev.target.closest(".chip");
+  if(chip){
+    if(chip.dataset.orgao) filtros.orgao = chip.dataset.orgao;
+    if(chip.dataset.situacao) filtros.situacao = chip.dataset.situacao;
+    montarFiltros();
+    pintarAcervo();
+    return;
+  }
+  var aba = ev.target.closest('[role="tab"]');
+  if(aba){
+    var acervo = aba.id === "aba-acervo";
+    document.getElementById("aba-acervo").setAttribute("aria-selected", String(acervo));
+    document.getElementById("aba-cobertura").setAttribute("aria-selected", String(!acervo));
+    document.getElementById("painel-acervo").hidden = !acervo;
+    document.getElementById("painel-cobertura").hidden = acervo;
+    return;
+  }
+  if(ev.target.id === "btn-tema"){
+    var atual = document.documentElement.getAttribute("data-theme");
+    var escuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    var proximo = atual ? (atual === "dark" ? "light" : "dark") : (escuro ? "light" : "dark");
+    gravar(CHAVE_TEMA, proximo);
+    aplicarTema();
+    return;
+  }
+  if(ev.target.id === "btn-exportar"){ exportar(); return; }
+  if(ev.target.id === "btn-importar"){
+    document.getElementById("arquivo-progresso").click();
+    return;
+  }
+});
+
+document.addEventListener("change", function(ev){
+  if(ev.target.dataset && ev.target.dataset.sit){
+    gravar(CHAVE_SIT + ev.target.dataset.sit, ev.target.value);
+    pintarNumeros();
+    pintarAcervo();
+  }
+  if(ev.target.id === "arquivo-progresso" && ev.target.files[0]){
+    importar(ev.target.files[0]);
+    ev.target.value = "";
+  }
+});
+
+document.getElementById("busca").addEventListener("input", function(ev){
+  filtros.busca = ev.target.value.trim().toLowerCase();
+  pintarAcervo();
+});
+
+/* o progresso pode mudar em outra aba: repinta ao voltar */
+window.addEventListener("storage", pintarTudo);
+document.addEventListener("visibilitychange", function(){
+  if(!document.hidden) pintarTudo();
+});
+
+aplicarTema();
+montarFiltros();
+pintarTudo();
+})();
+</script>
+</body>
+</html>

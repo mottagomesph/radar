@@ -1,0 +1,1298 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Fichas de revisão da jurisprudência notarial e registral de agosto de 2026.">
+<title>Kollemata Agosto 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Spectral:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Archivo:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+:root{
+  --ground:#EDEFEE;
+  --surface:#FBFCFB;
+  --surface-2:#E4E8E6;
+  --ink:#191D1B;
+  --ink-soft:#3B4441;
+  --muted:#5E6663;
+  --rule:#D2D8D5;
+  --rule-strong:#B8C1BD;
+  --accent:#3E3C7E;
+  --accent-soft:#EAE9F4;
+  --flag:#9C4A21;
+  --flag-soft:#F5E8E1;
+  --done:#2E6B4F;
+  --done-soft:#E4EFE9;
+  --shadow:0 1px 2px rgba(25,29,27,.06);
+  --serif:"Spectral",Georgia,"Times New Roman",serif;
+  --sans:"Archivo","Helvetica Neue",Arial,sans-serif;
+  --mono:"IBM Plex Mono","SFMono-Regular",Consolas,monospace;
+  --measure:34rem;
+  --rail:16.5rem;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --ground:#15191B;
+    --surface:#1E2427;
+    --surface-2:#282F33;
+    --ink:#E4E8E6;
+    --ink-soft:#C3CAC7;
+    --muted:#949E9A;
+    --rule:#343D41;
+    --rule-strong:#485357;
+    --accent:#9BA2E2;
+    --accent-soft:#25264A;
+    --flag:#DD9160;
+    --flag-soft:#3A2618;
+    --done:#63B792;
+    --done-soft:#17301F;
+    --shadow:0 1px 2px rgba(0,0,0,.35);
+  }
+}
+:root[data-theme="dark"]{
+  --ground:#15191B;
+  --surface:#1E2427;
+  --surface-2:#282F33;
+  --ink:#E4E8E6;
+  --ink-soft:#C3CAC7;
+  --muted:#949E9A;
+  --rule:#343D41;
+  --rule-strong:#485357;
+  --accent:#9BA2E2;
+  --accent-soft:#25264A;
+  --flag:#DD9160;
+  --flag-soft:#3A2618;
+  --done:#63B792;
+  --done-soft:#17301F;
+  --shadow:0 1px 2px rgba(0,0,0,.35);
+}
+*{box-sizing:border-box}
+body{
+  margin:0;background:var(--ground);color:var(--ink);
+  font-family:var(--serif);font-size:16.5px;line-height:1.62;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:var(--accent)}
+h1,h2,h3,h4{text-wrap:balance;margin:0}
+button{font-family:var(--sans);cursor:pointer}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px;border-radius:2px}
+
+/* ---------- masthead ---------- */
+.masthead{
+  border-bottom:1px solid var(--rule);background:var(--surface);
+}
+.masthead-in{
+  max-width:60rem;margin:0 auto;padding:2.6rem 1.5rem 1.9rem;
+  display:flex;flex-direction:column;gap:1.15rem;
+}
+.eyebrow{
+  font-family:var(--mono);font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;
+  color:var(--accent);display:flex;flex-wrap:wrap;gap:.5rem .9rem;align-items:baseline;
+}
+.eyebrow span:not(:first-child)::before{content:"·";margin-right:.9rem;color:var(--rule-strong)}
+h1{
+  font-family:var(--serif);font-weight:600;font-size:clamp(1.9rem,4.4vw,2.85rem);
+  line-height:1.12;letter-spacing:-.015em;max-width:22ch;
+}
+.deck{
+  font-size:1.02rem;color:var(--ink-soft);max-width:52ch;font-weight:300;
+}
+.counters{
+  display:flex;flex-wrap:wrap;gap:0;margin-top:.35rem;
+  border-top:1px solid var(--rule);
+}
+.counter{
+  padding:.85rem 1.6rem .1rem 0;margin-right:1.6rem;
+  display:flex;flex-direction:column;gap:.05rem;
+}
+.counter b{
+  font-family:var(--sans);font-weight:700;font-size:1.5rem;line-height:1;
+  font-variant-numeric:tabular-nums;letter-spacing:-.02em;
+}
+.counter span{
+  font-family:var(--sans);font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--muted);font-weight:500;
+}
+.counter.is-flag b{color:var(--flag)}
+
+/* ---------- toolbar ---------- */
+.toolbar{
+  position:sticky;top:0;z-index:40;background:var(--surface);
+  border-bottom:1px solid var(--rule);box-shadow:var(--shadow);
+}
+.toolbar-in{
+  max-width:60rem;margin:0 auto;padding:.7rem 1.5rem .55rem;
+  display:flex;flex-wrap:wrap;gap:.6rem .9rem;align-items:center;
+}
+.search{
+  flex:1 1 15rem;min-width:12rem;position:relative;display:flex;align-items:center;
+}
+.search input{
+  width:100%;font-family:var(--sans);font-size:.86rem;color:var(--ink);
+  background:var(--ground);border:1px solid var(--rule-strong);border-radius:3px;
+  padding:.5rem .7rem .5rem 1.9rem;
+}
+.search input::placeholder{color:var(--muted)}
+.search svg{position:absolute;left:.6rem;width:.9rem;height:.9rem;stroke:var(--muted);fill:none;stroke-width:2}
+.chips{display:flex;flex-wrap:wrap;gap:.3rem}
+.chip{
+  font-family:var(--sans);font-size:.73rem;font-weight:600;letter-spacing:.03em;
+  padding:.36rem .6rem;border:1px solid var(--rule-strong);background:transparent;
+  color:var(--muted);border-radius:2px;line-height:1;white-space:nowrap;
+}
+.chip:hover{color:var(--ink);border-color:var(--ink-soft)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--surface)}
+:root[data-theme="dark"] .chip[aria-pressed="true"],
+.chip[aria-pressed="true"]{color:var(--surface)}
+.chip .ct{font-variant-numeric:tabular-nums;opacity:.62;margin-left:.35rem;font-weight:500}
+.chip.flagchip[aria-pressed="true"]{background:var(--flag);border-color:var(--flag)}
+.seg{display:flex;border:1px solid var(--rule-strong);border-radius:2px;overflow:hidden}
+.seg button{
+  font-size:.73rem;font-weight:600;padding:.36rem .6rem;border:0;background:transparent;
+  color:var(--muted);line-height:1;
+}
+.seg button+button{border-left:1px solid var(--rule-strong)}
+.seg button[aria-pressed="true"]{background:var(--surface-2);color:var(--ink)}
+.progress{
+  display:flex;align-items:center;gap:.55rem;font-family:var(--sans);font-size:.73rem;
+  color:var(--muted);font-weight:600;font-variant-numeric:tabular-nums;margin-left:auto;
+}
+.bar{width:6.5rem;height:5px;background:var(--surface-2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;background:var(--done);width:0;transition:width .25s ease}
+.linkbtn{
+  font-family:var(--sans);font-size:.73rem;font-weight:600;background:none;border:0;
+  color:var(--muted);text-decoration:underline;text-underline-offset:2px;padding:.3rem 0;
+}
+.linkbtn:hover{color:var(--flag)}
+
+/* ---------- shell ---------- */
+.shell{
+  max-width:60rem;margin:0 auto;padding:0 1.5rem 5rem;
+  display:grid;grid-template-columns:var(--rail) minmax(0,1fr);gap:2.6rem;align-items:start;
+}
+/* ---------- index rail ---------- */
+.rail{
+  position:sticky;top:4.1rem;max-height:calc(100vh - 5.2rem);overflow-y:auto;
+  padding:1.6rem 0 1.5rem;font-family:var(--sans);
+}
+.rail h2{
+  font-size:.7rem;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);
+  font-weight:600;padding-bottom:.55rem;border-bottom:1px solid var(--rule);margin-bottom:.5rem;
+}
+.rail-group{
+  font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--accent);margin:.95rem 0 .3rem;
+}
+.rail a{
+  display:grid;grid-template-columns:1.55rem 1fr;gap:.15rem;align-items:start;
+  padding:.26rem .3rem .26rem 0;font-size:.775rem;line-height:1.34;color:var(--ink-soft);
+  text-decoration:none;border-left:2px solid transparent;padding-left:.5rem;
+}
+.rail a:hover{color:var(--ink);background:var(--surface)}
+.rail a .num{font-family:var(--mono);font-size:.7rem;color:var(--muted);padding-top:.05rem}
+.rail a.done{color:var(--muted)}
+.rail a.done .num{color:var(--done);font-weight:500}
+.rail a.done .num::after{content:"✓";margin-left:.12rem}
+.rail a.flag{border-left-color:var(--flag)}
+.rail a.done{border-left-color:var(--done)}
+.rail a[hidden]{display:none}
+
+/* ---------- fichas ---------- */
+.stream{padding-top:1.6rem;min-width:0}
+.ficha{
+  position:relative;background:var(--surface);border:1px solid var(--rule);
+  border-left:3px solid var(--rule-strong);padding:1.5rem 1.7rem 1.6rem;margin-bottom:1.05rem;
+  max-width:calc(var(--measure) + 3.4rem);scroll-margin-top:4.6rem;
+}
+.ficha.flag{border-left-color:var(--flag)}
+.ficha.done{border-left-color:var(--done);background:var(--done-soft)}
+.ficha-head{
+  display:flex;flex-wrap:wrap;gap:.45rem .7rem;align-items:baseline;margin-bottom:.55rem;
+}
+.ficha-n{
+  font-family:var(--mono);font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums;
+}
+.tag{
+  font-family:var(--sans);font-size:.66rem;font-weight:700;letter-spacing:.09em;text-transform:uppercase;
+  padding:.2rem .42rem;border-radius:2px;line-height:1.25;
+}
+.tag.org{background:var(--accent-soft);color:var(--accent)}
+.tag.dest{background:var(--flag-soft);color:var(--flag)}
+.tag.ok{background:var(--done);color:var(--surface)}
+:root[data-theme="dark"] .tag.ok{color:#10201A}
+.ficha h3{
+  font-family:var(--serif);font-weight:600;font-size:1.19rem;line-height:1.3;
+  letter-spacing:-.008em;max-width:var(--measure);margin-bottom:.6rem;
+}
+.idbox{
+  display:flex;flex-direction:column;gap:.42rem;margin-bottom:.95rem;
+  max-width:var(--measure);
+}
+.idctl{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center}
+.sw{
+  display:inline-flex;align-items:center;gap:.42rem;background:none;border:0;padding:.15rem .1rem;
+  font-family:var(--sans);font-size:.7rem;font-weight:600;letter-spacing:.06em;
+  text-transform:uppercase;color:var(--muted);
+}
+.sw .tr{
+  width:1.7rem;height:.92rem;border-radius:99px;background:var(--surface-2);
+  border:1px solid var(--rule-strong);position:relative;transition:background .15s,border-color .15s;
+  flex:0 0 auto;
+}
+.sw .kb{
+  position:absolute;top:50%;left:2px;width:.58rem;height:.58rem;border-radius:50%;
+  background:var(--muted);transform:translateY(-50%);transition:left .15s,background .15s;
+}
+.sw[aria-checked="true"]{color:var(--accent)}
+.sw[aria-checked="true"] .tr{background:var(--accent-soft);border-color:var(--accent)}
+.sw[aria-checked="true"] .kb{left:calc(100% - .58rem - 3px);background:var(--accent)}
+.sw:hover .tr{border-color:var(--ink-soft)}
+.idline{
+  font-family:var(--mono);font-size:.755rem;line-height:1.55;color:var(--ink-soft);
+  background:var(--ground);border:1px solid var(--rule);padding:.45rem .6rem;margin:0;
+  overflow-x:auto;white-space:pre-wrap;word-break:break-word;
+}
+.ficha.done .idline{background:var(--surface)}
+.orig{
+  display:inline-flex;align-items:center;gap:.3rem;white-space:nowrap;flex:0 0 auto;
+  font-family:var(--sans);font-size:.715rem;font-weight:600;letter-spacing:.02em;
+  padding:.4rem .62rem;border:1px solid var(--accent);border-radius:2px;
+  color:var(--accent);text-decoration:none;
+}
+.orig:hover{background:var(--accent);color:var(--surface)}
+.orig .arw{font-size:.85em;opacity:.75}
+.orig:hover .arw{opacity:1}
+.blk{margin-bottom:.85rem;max-width:var(--measure)}
+.blk:last-of-type{margin-bottom:0}
+.lbl{
+  font-family:var(--sans);font-size:.655rem;font-weight:700;letter-spacing:.13em;
+  text-transform:uppercase;color:var(--muted);display:block;margin-bottom:.2rem;
+}
+.blk p{margin:0 0 .5rem}
+.blk p:last-child{margin-bottom:0}
+.blk ul{margin:.15rem 0 0;padding-left:1.05rem}
+.blk li{margin-bottom:.34rem}
+.blk li::marker{color:var(--rule-strong)}
+.fontes{
+  border-top:1px solid var(--rule);padding-top:.7rem;margin-top:1rem;
+  font-size:.9rem;color:var(--ink-soft);max-width:var(--measure);
+}
+.nota{
+  font-size:.86rem;color:var(--muted);font-style:italic;margin-top:.7rem;max-width:var(--measure);
+}
+.acts{
+  display:flex;flex-wrap:wrap;gap:.4rem;margin-top:1.15rem;padding-top:.85rem;
+  border-top:1px solid var(--rule);
+}
+.act{
+  font-family:var(--sans);font-size:.715rem;font-weight:600;letter-spacing:.02em;
+  padding:.38rem .62rem;border:1px solid var(--rule-strong);background:transparent;
+  color:var(--muted);border-radius:2px;line-height:1;
+}
+.act:hover{color:var(--ink);border-color:var(--ink-soft)}
+.act.mark{border-color:var(--done);color:var(--done)}
+.act.mark[aria-pressed="true"]{background:var(--done);border-color:var(--done);color:var(--surface)}
+:root[data-theme="dark"] .act.mark[aria-pressed="true"]{color:#10201A}
+.empty{
+  padding:3rem 0;color:var(--muted);font-style:italic;max-width:var(--measure);
+}
+
+/* ---------- closing sections ---------- */
+.closing{
+  max-width:calc(var(--measure) + 3.4rem);margin-top:2.8rem;
+  border-top:2px solid var(--ink);padding-top:1.5rem;
+}
+.closing h2{
+  font-family:var(--serif);font-weight:600;font-size:1.32rem;line-height:1.25;margin-bottom:.7rem;
+}
+.closing h3{
+  font-family:var(--sans);font-size:.72rem;font-weight:700;letter-spacing:.12em;
+  text-transform:uppercase;color:var(--muted);margin:1.4rem 0 .35rem;
+}
+.closing p{margin:0 0 .75rem;max-width:var(--measure)}
+.closing ul{margin:.2rem 0 .9rem;padding-left:1.05rem;max-width:var(--measure)}
+.closing li{margin-bottom:.3rem}
+.closing li::marker{color:var(--rule-strong)}
+.tally{
+  width:100%;border-collapse:collapse;font-family:var(--sans);font-size:.82rem;
+  max-width:var(--measure);margin:.4rem 0 1rem;
+}
+.tally th,.tally td{
+  text-align:left;padding:.42rem .5rem .42rem 0;border-bottom:1px solid var(--rule);
+}
+.tally th{
+  font-size:.66rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);font-weight:700;
+}
+.tally td:last-child,.tally th:last-child{text-align:right;font-variant-numeric:tabular-nums;padding-right:0}
+.colofon{
+  margin-top:2.2rem;padding-top:1rem;border-top:1px solid var(--rule);
+  font-family:var(--mono);font-size:.72rem;color:var(--muted);line-height:1.6;
+}
+.toast{
+  position:fixed;left:50%;bottom:1.6rem;transform:translateX(-50%) translateY(1rem);
+  background:var(--ink);color:var(--ground);font-family:var(--sans);font-size:.78rem;font-weight:600;
+  padding:.55rem .95rem;border-radius:3px;opacity:0;pointer-events:none;transition:.2s ease;z-index:80;
+}
+.toast.on{opacity:1;transform:translateX(-50%) translateY(0)}
+
+@media (max-width:920px){
+  .shell{grid-template-columns:1fr;gap:0}
+  .rail{position:static;max-height:none;overflow:visible;padding-bottom:.5rem;
+    border-bottom:1px solid var(--rule);margin-bottom:.5rem}
+  .rail-scroll{max-height:14rem;overflow-y:auto}
+  .ficha{padding:1.25rem 1.1rem 1.35rem}
+  .progress{margin-left:0}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+
+@media print{
+  .toolbar,.rail,.acts,.toast,.linkbtn{display:none!important}
+  body{background:#fff;color:#000;font-size:10.5pt}
+  .shell{display:block;max-width:none;padding:0}
+  .masthead{border-bottom:1.5pt solid #000}
+  .masthead-in{padding:0 0 .6rem}
+  .ficha{
+    break-inside:avoid;border:0;border-left:3pt solid #ccc;background:#fff;
+    padding:.55rem 0 .55rem .7rem;margin-bottom:.75rem;max-width:none;
+  }
+  .ficha.flag{border-left-color:#9C4A21}
+  .ficha.done{border-left-color:#2E6B4F;background:#fff}
+  .ficha.done h3::after{content:" ✓ conferida";font-family:var(--sans);font-size:8pt;color:#2E6B4F}
+  .tag.ok{background:none;color:#2E6B4F;border:.5pt solid #2E6B4F}
+  .idline{background:#fff;border:.5pt solid #999}
+  .idbox{display:block}
+  .idctl .act,.idctl .sw{display:none!important}
+  .orig{border:0;padding:0;color:#000;font-size:8.5pt;display:block;margin-top:.15rem;white-space:normal}
+  .orig .arw{display:none}
+  .orig::after{content:" — " attr(href);font-family:var(--mono)}
+  .closing{break-before:page}
+  a{color:#000;text-decoration:none}
+}
+</style>
+<style>html{color-scheme:light dark}body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+
+<header class="masthead">
+  <div class="masthead-in">
+    <div class="eyebrow">
+      <span>Jurisprudência notarial e registral</span><span>Agosto de 2026</span><span>Caderno de revisão</span>
+    </div>
+    <h1>Fichas de agosto de 2026</h1>
+    <p class="deck">Vinte e oito decisões e atos normativos de direito notarial e registral divulgados em agosto de 2026, reduzidos a fichas de revisão: identificação padronizada, síntese da tese, caso concreto, pontos de atenção e fontes citadas.</p>
+    <div class="counters">
+      <div class="counter"><b>28</b><span>Julgados</span></div>
+      <div class="counter"><b>6</b><span>Órgãos</span></div>
+      <div class="counter is-flag"><b>7</b><span>Destaques</span></div>
+      <div class="counter"><b>8</b><span>Sobre usucapião</span></div>
+      <div class="counter"><b>2</b><span>Alterações normativas</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="toolbar" aria-label="Ferramentas do caderno">
+  <div class="toolbar-in">
+    <label class="search">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+      <input id="q" type="search" placeholder="Buscar processo, relator, dispositivo, tema…" aria-label="Buscar nas fichas" autocomplete="off">
+    </label>
+    <div class="chips" id="orgchips" role="group" aria-label="Filtrar por órgão julgador"></div>
+    <div class="seg" role="group" aria-label="Filtrar por situação de conferência">
+      <button type="button" data-state="all" aria-pressed="true">Todas</button>
+      <button type="button" data-state="todo" aria-pressed="false">Pendentes</button>
+      <button type="button" data-state="done" aria-pressed="false">Conferidas</button>
+    </div>
+    <div class="progress"><span id="ptxt">0/28</span><span class="bar"><i id="pbar"></i></span></div>
+    <button type="button" class="linkbtn" id="clearall">Limpar marcações</button>
+  </div>
+</nav>
+
+<div class="shell">
+  <aside class="rail" aria-label="Índice das fichas">
+    <h2>Índice</h2>
+    <div class="rail-scroll" id="rail"></div>
+  </aside>
+  <main class="stream">
+    <div id="fichas"></div>
+    <p class="empty" id="empty" hidden>Nenhuma ficha corresponde aos filtros aplicados.</p>
+
+    <section class="closing" id="nota-metodologica">
+      <h2>Nota metodológica</h2>
+      <p><strong>Período coberto.</strong> Agosto de 2026, de 1º a 31.</p>
+      <p><strong>Critério temporal.</strong> Adotou-se a data de divulgação da decisão no repositório de origem, e não a data da sessão de julgamento. Por isso o acervo reúne decisões proferidas em meses anteriores, mas tornadas públicas em agosto de 2026: é o caso da ação direta de inconstitucionalidade julgada pelo Supremo Tribunal Federal em sessão virtual encerrada em junho e do recurso especial julgado pela Quarta Turma do Superior Tribunal de Justiça em maio. Nas linhas de identificação prevalece sempre a data efetiva do julgamento, extraída do próprio acórdão; a data de divulgação consta da nota ao pé da ficha correspondente.</p>
+      <p><strong>Total analisado.</strong> Vinte e oito documentos, assim distribuídos:</p>
+      <table class="tally">
+        <thead><tr><th>Órgão julgador</th><th>Fichas</th></tr></thead>
+        <tbody>
+          <tr><td>Supremo Tribunal Federal</td><td>1</td></tr>
+          <tr><td>Superior Tribunal de Justiça</td><td>1</td></tr>
+          <tr><td>Conselho Nacional de Justiça</td><td>2</td></tr>
+          <tr><td>Conselho Superior da Magistratura de São Paulo</td><td>18</td></tr>
+          <tr><td>1ª Vara de Registros Públicos de São Paulo</td><td>5</td></tr>
+          <tr><td>2ª Vara de Registros Públicos de São Paulo</td><td>1</td></tr>
+        </tbody>
+      </table>
+      <p><strong>Concentração temática.</strong> O acervo é fortemente concentrado em registro de imóveis, que responde por vinte e três das vinte e oito fichas. A usucapião extrajudicial isoladamente ocupa sete fichas, às quais se soma uma sobre registro de título judicial de usucapião. A alienação fiduciária de coisa imóvel ocupa três. Recomenda-se, na revisão, tratar esses dois blocos como núcleos temáticos autônomos.</p>
+      <h3>Temas sem julgados no período</h3>
+      <p>A ausência de decisões sobre as matérias abaixo é informação relevante para o planejamento da revisão, porque delimita o que este caderno não atualiza:</p>
+      <ul>
+        <li>Regularização fundiária urbana e legitimação fundiária.</li>
+        <li>Incorporação imobiliária, patrimônio de afetação e memorial de incorporação.</li>
+        <li>Loteamento e desmembramento sob o prisma do registro do parcelamento, salvo o exame incidental do art. 26, § 6º, da Lei n. 6766/1979.</li>
+        <li>Georreferenciamento de imóveis rurais e certificação pelo Instituto Nacional de Colonização e Reforma Agrária, salvo menção incidental.</li>
+        <li>Direito real de laje, condomínio de lotes e multipropriedade.</li>
+        <li>Adjudicação compulsória extrajudicial (art. 216-B da LRP).</li>
+        <li>Registro de títulos e documentos como especialidade autônoma, inclusive registro facultativo e cessão de crédito.</li>
+        <li>Tabelionato de notas quanto a testamento público, ata notarial autônoma, procuração pública e apostilamento.</li>
+        <li>Registro civil das pessoas naturais quanto a casamento, habilitação, reconhecimento de filiação, alteração de nome e de gênero e averbações de sentença estrangeira.</li>
+        <li>Protesto de títulos em sua disciplina contenciosa, inclusive protesto de certidão de dívida ativa e cancelamento por pagamento — a única entrada do período é normativa.</li>
+        <li>Responsabilidade civil e disciplinar de notários e registradores, sindicância e processo administrativo disciplinar.</li>
+        <li>Concurso de outorga de delegação, remoção e vacância, salvo o exame constitucional da acumulação de especialidade.</li>
+      </ul>
+    </section>
+
+    <section class="closing" id="apendice">
+      <h2>Apêndice: matérias examinadas e descartadas</h2>
+      <p>Os documentos analisados contêm capítulos alheios ao direito notarial e registral. Foram examinados e deliberadamente excluídos das fichas, por impertinência com o recorte dos concursos de outorga de delegação, os seguintes pontos:</p>
+      <ul>
+        <li><strong>Direito processual civil puro.</strong> No recurso especial da Quarta Turma, toda a discussão sobre suspensão do processo por prejudicialidade externa (art. 313, V, do CPC), conexão (arts. 103 e 105 do CPC) e honorários recursais (art. 85, §§ 3º e 11, do CPC), reproduzida do acórdão do Tribunal Regional Federal da 2ª Região.</li>
+        <li><strong>Evicção.</strong> No mesmo recurso, o exame da responsabilidade do alienante pela evicção (art. 450 do Código Civil), prejudicado pelo provimento parcial.</li>
+        <li><strong>Direito sindical e trabalhista.</strong> No pedido de providências sobre ata de assembleia, a validade do processo eleitoral do sindicato, a investidura sindical perante o Ministério do Trabalho e Emprego, o mérito das ordens da Justiça do Trabalho e a legitimidade das chapas concorrentes — matérias que o próprio juízo corregedor declarou estranhas ao registro civil das pessoas jurídicas.</li>
+        <li><strong>Direito administrativo estadual.</strong> No caso da Secretaria de Estado, a disciplina da Carteira Predial do Instituto de Pagamentos Especiais de São Paulo e a delegação de competência do art. 47, XVI, da Constituição do Estado de São Paulo, retidas apenas na medida em que sustentam a distinção entre órgão e entidade.</li>
+        <li><strong>Preparo e custas em procedimento administrativo.</strong> Registrada uma única vez, na ficha 5, a orientação reiterada de que não há previsão legal de preparo nos procedimentos de dúvida e de pedido de providências, com direito à restituição do valor recolhido. A observação repete-se em outros acórdãos e não foi reproduzida em cada ficha.</li>
+        <li><strong>Intervenção de terceiros.</strong> Mantida apenas na ficha 27, por conter fundamentação própria; nas demais, a matéria não foi suscitada.</li>
+        <li><strong>Embargos de declaração sem conteúdo registral novo.</strong> A ficha 22 foi mantida por identificar o objeto do acórdão embargado e as teses rejeitadas, mas não reproduz a fundamentação processual sobre os limites do art. 1022 do CPC além do estritamente necessário.</li>
+      </ul>
+      <p>Nenhum dos vinte e oito documentos foi integralmente descartado: todos versam matéria pertinente ao edital.</p>
+      <div class="colofon">
+        Caderno de revisão · jurisprudência notarial e registral · agosto de 2026<br>
+        Fichas elaboradas a partir da íntegra dos acórdãos e decisões. Descrição sem juízo de valor.<br>
+        Marcações de conferência gravadas apenas neste navegador.
+      </div>
+    </section>
+  </main>
+</div>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<script>
+const ORGS = [
+  {k:"STF",  full:"Supremo Tribunal Federal"},
+  {k:"STJ",  full:"Superior Tribunal de Justiça"},
+  {k:"CNJ",  full:"Conselho Nacional de Justiça"},
+  {k:"CSMSP",full:"Conselho Superior da Magistratura de São Paulo"},
+  {k:"1VRPSP",full:"1ª Vara de Registros Públicos de São Paulo"},
+  {k:"2VRPSP",full:"2ª Vara de Registros Públicos de São Paulo"}
+];
+
+const FICHAS = [
+{n:1,org:"STF",flag:true,
+t:"Atribuir a especialidade de protesto a serventia já existente é reorganização administrativa, não ingresso sem concurso",
+idp:"ADI n. 7.797, rel. min. nunes marques",
+sg:"Pleno",
+idt:"j. 30/06/2026",
+u:"https://kollsys.org/xjf",
+exec:"<p>O Plenário julgou parcialmente procedente o pedido para conferir interpretação conforme à Constituição Federal ao art. 2º da Lei n. 18145/2025 do Estado de São Paulo. Assentou que a atribuição da especialidade de protesto de letras e títulos a serventia extrajudicial preexistente e regularmente provida configura reorganização administrativa dos serviços, e não ingresso ou provimento originário na atividade notarial e de registro. Preserva-se a validade da acumulação desde que o delegatário tenha ingressado por concurso público e a hipótese se enquadre nas situações excepcionais do art. 26, parágrafo único, da Lei n. 8935/1994. A interpretação conforme explicita que eventual serventia resultante de futura desacumulação deverá ser provida mediante concurso público, nos termos do art. 236, § 3º, da Constituição Federal.</p>",
+caso:"<p>Ação direta ajuizada pela Associação dos Notários e Registradores do Brasil contra o dispositivo que atribuiu a especialidade de protesto de letras e títulos ao já existente Oficial de Registro Civil das Pessoas Naturais, Interdições e Tutelas e Tabelião de Notas da Comarca de Paulínia. A requerente sustentou ofensa aos arts. 37, II, e 236, § 3º, da Constituição Federal, porque o delegatário não fora aprovado em certame específico para a atividade de protesto e porque os concursos paulistas são organizados por especialidades. A lei decorreu de projeto de iniciativa do Tribunal de Justiça de São Paulo, precedido de estudos técnicos: o Município, com 110.537 habitantes, não dispunha de tabelionato de protesto próprio e a população precisava se deslocar cerca de 20 km até Campinas.</p>",
+pts:["Preliminares rejeitadas. Admite-se controle concentrado de lei estadual que reorganiza serventias extrajudiciais ainda que a norma produza efeitos imediatos sobre unidade específica, por se tratar de ato normativo primário. A legitimidade da entidade de classe foi reconhecida, e a existência de interesses econômicos distintos entre associados não descaracteriza a natureza institucional da discussão.",
+"A distinção estruturante do voto: o provimento de serventia autônoma, vaga, desmembrada ou desacumulada pressupõe delegação própria a ser preenchida e atrai a exigência de concurso; a agregação de especialidade a unidade já instalada e provida, não. Exigir novo certame a cada ampliação de competências equipararia reorganização administrativa a investidura originária.",
+"A organização dos concursos estaduais por especialidades não converte automaticamente toda alteração posterior de atribuições em nova hipótese de provimento.",
+"Afastada a aplicação da ADI 3016: naquele precedente a norma estadual assegurava a titulares de registro civil das pessoas naturais o direito de assumir a titularidade de outras serventias; aqui não houve direito subjetivo de assunção, provimento derivado nem outorga de titularidade autônoma.",
+"População superior a 100 mil habitantes revela demanda local pelo serviço, mas não obriga, por si só, à criação imediata de tabelionato de protesto autônomo: a estrutura adequada depende do volume dos serviços, da receita, do impacto sobre as serventias de origem e da eficiência da prestação.",
+"O voto registra que a especialidade de protesto, embora dotada de autonomia funcional, guarda afinidade com a atividade notarial já desempenhada, o que reforça a razoabilidade da opção legislativa."],
+fontes:"Precedente determinante: ADI 7655 (rel. min. alexandre de moraes, Pleno, DJe 18/09/2024), caso substancialmente idêntico relativo à Comarca de Arujá, sob a Lei n. 17939/2024, cuja razão de decidir foi integralmente transposta. Também citados: ADI 4745 (rel. min. roberto barroso), com a tese de que é constitucional lei estadual, de iniciativa do Tribunal de Justiça, que reorganiza as delegações notariais e de registro, desde que haja interesse público e seja observada a regra do concurso público; ADI 3016; ADI 7352; ADI 2114; ADI 689; ADI 1757; MS 28440.",
+nota:"Julgamento em sessão virtual de 19 a 26/06/2026; acórdão de 30/06/2026; divulgação em 05/08/2026. A Advocacia-Geral da União opinou pela procedência parcial e a Procuradoria-Geral da República pela improcedência.",
+keys:"art. 236 § 3º Constituição Federal; art. 37 II; Lei n. 8935/1994 art. 5º e art. 26 parágrafo único; Lei n. 18145/2025; Lei n. 17939/2024; ADI 7655; ADI 4745; ADI 3016; protesto de letras e títulos; acumulação; desacumulação; concurso público; Paulínia; Anoreg"},
+
+{n:2,org:"STJ",flag:false,
+t:"Súmula 308 alcança lote residencial e independe do registro anterior da hipoteca, mas a inoponibilidade exige quitação do preço",
+idp:"REsp n. 2.126.309, rel. min. raul araújo",
+sg:"T4",
+idt:"j. 04/05/2026",
+u:"https://kollsys.org/xj4",
+exec:"<p>A Quarta Turma deu parcial provimento ao recurso especial e determinou o retorno dos autos à origem. Reafirmou que a hipoteca firmada entre a construtora e o agente financeiro, anterior ou posterior à celebração da promessa de compra e venda, não tem eficácia perante os adquirentes do imóvel, sendo irrelevantes a anterioridade e a regularidade do registro do gravame. A inoponibilidade, contudo, está condicionada à verificação da quitação do preço ajustado com a promitente-vendedora, dado fático não examinado pelas instâncias ordinárias. Prejudicadas as demais teses recursais.</p>",
+caso:"<p>Embargos de terceiro opostos por adquirente de imóvel residencial em loteamento contra penhora determinada em execução movida por agente financeiro sub-rogado nos créditos de instituição submetida a liquidação extrajudicial. A hipoteca fora constituída em 1997 sobre diversos lotes de terreno, para garantir cédula de crédito comercial destinada a obras de expansão de marina em Angra dos Reis; o compromisso de compra e venda foi celebrado no ano seguinte. O tribunal de origem afastou a Súmula 308 do Superior Tribunal de Justiça com fundamento na anterioridade e na regularidade do registro, invocou a sequela e os arts. 1419 e 1475 do Código Civil e consignou que bastaria ao adquirente extrair as certidões de praxe. O Superior Tribunal de Justiça reputou esse entendimento divergente de sua orientação.</p>",
+pts:["O acórdão explicita a leitura teleológica do enunciado sumular: a Súmula 308 traduz aplicação circunstanciada da boa-fé objetiva ao direito real de hipoteca e protege o adquirente de boa-fé que cumpriu sua obrigação contratual e quitou o preço. O inadimplemento da construtora perante o agente financeiro não torna a hipoteca oponível ao promitente comprador.",
+"A única exceção admitida é o imóvel comercial. No caso, tratava-se de loteamento residencial, o que atrai a incidência do enunciado.",
+"Ponto de atenção registral: o julgado relativiza expressamente o argumento da diligência documental. A existência do gravame na matrícula, e a possibilidade de conhecê-lo por certidão, não foram consideradas suficientes para afastar a proteção do adquirente quitado.",
+"O retorno dos autos não decide o mérito: o tribunal de origem deverá verificar a quitação do preço e, só então, aplicar ou afastar a inoponibilidade."],
+fontes:"Súmula 308 do Superior Tribunal de Justiça. Precedentes citados: AgInt no AREsp 2324749/SC; AgInt nos EDcl no REsp 1927672/PB; AgInt no AREsp 2210917/RS; AgInt no AREsp 1581978/PE; REsp 953510/PR, no sentido de que o entendimento não se altera pelo fato de o contrato não ser regido pelo Sistema Financeiro da Habitação; e REsp 1576164/DF (rel. min. nancy andrighi), que admitiu a aplicação analógica da Súmula 308 à alienação fiduciária firmada entre construtora e agente financeiro.",
+nota:"Sessão virtual de 28/04 a 04/05/2026; divulgação em 03/08/2026.",
+keys:"Súmula 308 STJ; hipoteca; construtora; agente financeiro; embargos de terceiro; art. 1419 Código Civil; art. 1475 Código Civil; art. 450 Código Civil; Lei n. 4864/1965 art. 22; loteamento; quitação do preço; boa-fé objetiva; alienação fiduciária analogia"},
+
+{n:3,org:"CNJ",flag:true,
+t:"Inventário e partilha extrajudicial deixam de depender do recolhimento prévio do ITCMD; mantidas as exigências sobre testamento e filhos menores",
+idp:"PP n. 0008622-24.2025.2.00.0000, rel. min. mauro campbell marques",
+sg:"Plenário",
+idt:"j. 18/08/2026",
+u:"https://kollsys.org/xl3",
+exec:"<p>Pedido de providências julgado parcialmente procedente, por unanimidade. O Plenário aprovou a inclusão de dispositivo que descondiciona a lavratura da escritura de inventário e partilha extrajudicial ao pagamento prévio do Imposto sobre Transmissão Causa Mortis e Doação, exigindo a apresentação de certidão, ainda que positiva, para fins de informação sobre débitos fiscais, e a comunicação do ato notarial ao ente federativo competente. Rejeitou os demais pedidos, mantendo a exigência de prévia decisão judicial transitada em julgado para o inventário extrajudicial havendo testamento, ainda que revogado ou caduco, e a exigência de prévia resolução judicial definitiva das questões de guarda, visitação e alimentos para a escritura de divórcio ou de dissolução de união estável com filhos menores ou incapazes. Aprovada resolução alterando o art. 15 da Resolução CNJ n. 35/2007.</p>",
+caso:"<p>Pedido de providências proposto pelo Colégio Notarial do Brasil — Conselho Federal, com três pretensões de aperfeiçoamento da Resolução CNJ n. 35/2007: dispensar a decisão judicial nos inventários com testamento revogado ou caduco; admitir divórcio e dissolução de união estável com partilha havendo filhos menores, mediante simples demonstração de ação judicial em curso; e dispensar o recolhimento prévio do imposto de transmissão. Houve sustentação oral do requerente, do interessado e do Conselho Federal da Ordem dos Advogados do Brasil.</p>",
+pts:["A tese de julgamento foi fixada em três itens. Primeiro: a lavratura de inventário extrajudicial com testamento, ainda que revogado ou caduco, depende de prévia decisão judicial transitada em julgado. Segundo: a existência de filhos menores ou incapazes exige prévia resolução judicial definitiva das questões de guarda, visitação e alimentos. Terceiro: é indevida a exigência de prévio recolhimento do imposto como condição para a lavratura, mantido o dever do notário de lançar a informação sobre o débito na escritura e de informar o ente tributante.",
+"Fundamento da procedência parcial: a exigência de recolhimento prévio configura sanção política. O ato de inventário é necessário ao exercício do direito de propriedade e do direito à herança, e o Fisco dispõe de meios próprios de cobrança. O tabelião de notas não pode ser transformado em agente arrecadador indireto.",
+"Aplicação analógica ao extrajudicial do Tema Repetitivo 1074 do Superior Tribunal de Justiça e da ADI 5894, que reconheceu a constitucionalidade do art. 659, § 2º, do CPC. O Conselho reconheceu que os precedentes se referem ao âmbito judicial, mas reputou plausível a extensão pelo caráter equivalente dos atos sob o aspecto tributário.",
+"Quanto ao testamento, manteve-se a reserva de jurisdição porque a aferição da caducidade envolve os arts. 1939, 1970 e 1971 do Código Civil e pode exigir produção de prova; há ainda disposições irrevogáveis, como o reconhecimento de filiação, ressalvado no § 1º do art. 12-B.",
+"Quanto aos filhos menores, o Conselho distinguiu expressamente o REsp 2189143/SP (rel. min. nancy andrighi), que reconheceu a autonomia entre o divórcio e as questões filiais: julgado proferido no âmbito judicial, onde o magistrado detém controle integral do processo, não submetido ao rito dos recursos repetitivos e, por isso, insuficiente para desobrigar a via extrajudicial.",
+"A minuta anexada ao voto dá ao art. 15 a seguinte estrutura: caput afastando o condicionamento; § 1º, com a declaração das partes, assistidas por advogado, quanto à ciência da obrigação tributária principal e acessória, mencionando eventuais isenções ou não incidências; e § 2º, com o dever de informar o Fisco em cinco dias, ou no prazo da legislação tributária."],
+fontes:"Legislação citada: art. 5º, XXII e XXX, e art. 227 da Constituição Federal; art. 659, § 2º, do CPC; arts. 1784, 1939, 1970 e 1971 do Código Civil; Lei n. 6830/1980; Lei n. 8069/1990; Lei n. 11441/2007; Resolução CNJ n. 35/2007, arts. 12-B, V, 15 e 34, § 2º; Resolução CNJ n. 571/2024. Jurisprudência: ADI 394, precedente paradigmático sobre sanção política, que declarou a inconstitucionalidade do art. 1º, I, III e IV, da Lei n. 7711/1988; ADI 5894; Súmulas 70, 323 e 547 do Supremo Tribunal Federal; Tema Repetitivo 1074 e REsp 2189143/SP do Superior Tribunal de Justiça; PP 0001596-43.2023.2.00.0000, PP 0001230-82.2015.2.00.0000, PCA 0010545-61.2020.2.00.0000 e PCA 0001611-12.2023.2.00.0000, do próprio Conselho.",
+nota:"",
+keys:"ITCMD; imposto de transmissão causa mortis e doação; sanção política; Resolução CNJ 35/2007; art. 12-B V; art. 34 § 2º; art. 15; inventário extrajudicial; testamento revogado; testamento caduco; divórcio extrajudicial; filhos menores; guarda visitação alimentos; Tema 1074; ADI 5894; ADI 394; Súmula 70 323 547; art. 659 § 2º CPC; art. 1784 Código Civil; Colégio Notarial do Brasil"},
+
+{n:4,org:"CNJ",flag:true,
+t:"CENPROT passa a responder consultas de protesto em três estados padronizados quando há sustação judicial",
+idp:"Provimento n. 253/2026, min. mauro campbell marques",
+sg:"Corregedoria Nacional de Justiça",
+idt:"18/08/2026",
+u:"https://kollsys.org/xl5",
+exec:"<p>Ato normativo, e não julgado. O Corregedor Nacional de Justiça acresceu a Seção III ao Capítulo V do Título II do Livro IV da Parte Geral do CNN/CN/CNJ, com os arts. 263-K e 263-L, para disciplinar, no âmbito da Central Nacional de Serviços Eletrônicos Compartilhados dos Tabeliães de Protesto, a padronização das certidões e das respostas às consultas quando houver decisão judicial de sustação do protesto. Alterou também o art. 379 e o item 1.4.4 do Anexo VIII do mesmo Código. Concedeu prazo de noventa dias para adequação dos sistemas, com vigência imediata.</p>",
+caso:"<p>Não há caso concreto. O ato invoca a necessidade de tratamento uniforme, em âmbito nacional, para a emissão de certidões de protesto quando a existência do registro e sua publicidade não coincidem, e dá sequência ao Provimento CNJ n. 225, de 20/05/2026, que já havia estabelecido a comunicação contínua, estruturada e padronizada das decisões judiciais que alterem a publicidade dos protestos, atribuindo à Central a consolidação e a disponibilização dessas informações.</p>",
+pts:["Premissa conceitual do ato: a existência formal do registro do protesto não se confunde com a subsistência de sua publicidade. A decisão judicial, transitada ou não em julgado, pode suspender ou limitar essa publicidade sem determinar o cancelamento do registro.",
+"Os três estados padronizados do art. 263-K. NADA CONSTA, quando inexistirem protestos que devam constar da resposta, inclusive quando a sustação houver sido determinada por decisão judicial definitiva. CONSTA, quando houver protesto sujeito à publicidade. CONSTA COM SUSTAÇÃO JUDICIAL PRECÁRIA, quando a sustação decorrer de decisão de caráter provisório, hipótese em que a resposta informará os dados do registro, o número da ação e o seu caráter provisório.",
+"O critério de distinção é a natureza da decisão: a provisória é precária e reversível, e por isso a resposta informa a existência do registro e da sustação; a definitiva exaure a controvérsia e a resposta equivale à de inexistência de protesto.",
+"Fórmula obrigatória a ser consignada ao final da resposta no terceiro estado: Resultado emitido em cumprimento à decisão judicial — Processo nº TJXX (Tribunal) - XXXXXXXXXXX (número do processo).",
+"Segredo de justiça. Quando a restrição decorrer de processo sob segredo, a resposta informará apenas a existência da sustação judicial e o número do processo, vedada a divulgação das partes, do conteúdo da decisão e de quaisquer dados protegidos.",
+"O § 2º do art. 263-K impõe que a existência do registro, a decisão que sobre ele incida e as alterações de seu estado sejam preservadas nas bases internas do tabelionato e da Central, com integridade e rastreabilidade, independentemente do estado divulgado a terceiros.",
+"O art. 263-L cria regra de conduta relevante: havendo dúvida objetiva quanto ao conteúdo, à extensão ou à forma de cumprimento da decisão, incompatibilidade entre comandos ou impossibilidade material ou técnica de execução, o tabelião cumprirá imediatamente a parcela inequívoca da ordem e solicitará esclarecimento ao juízo prolator quanto à parcela controvertida, sem atribuir à decisão alcance diverso do objetivamente identificável.",
+"Quatro novos campos no leiaute do Anexo VIII: codigo_resposta_padronizada, fundamento_restricao_publicidade, indicador_segredo_justica e data_cessacao_ordem, este último destinado à data da comunicação da revogação, cassação ou perda de eficácia da decisão."],
+fontes:"Base legal invocada: arts. 2º, 3º e 27, § 2º, da Lei n. 9492/1997. Antecedente normativo: Provimento CNJ n. 225, de 20/05/2026. Norma alterada: CNN/CN/CNJ, instituído pelo Provimento CNJ n. 149, de 30/08/2023.",
+nota:"Provimento de 18/08/2026, publicado em 20/08/2026.",
+keys:"Provimento 253/2026; CENPROT; protesto; sustação; certidão; art. 263-K; art. 263-L; art. 379; Anexo VIII; Lei n. 9492/1997 art. 2 art. 3 art. 27 § 2; Provimento 225/2026; Provimento 149/2023; CNN/CN/CNJ; segredo de justiça; publicidade registral"},
+
+{n:5,org:"CSMSP",flag:true,
+t:"Gratuidade da justiça deferida no processo judicial abrange os emolumentos do registro do título dela decorrente, sem nova decisão específica",
+idp:"AC n. 1009658-23.2025.8.26.0562, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjm",
+exec:"<p>Recurso não conhecido, com observação. Prejudicada a dúvida pela impugnação parcial dos óbices, o Conselho examinou a exigência efetivamente atacada para orientar futura prenotação e assentou que a gratuidade da justiça concedida em processo judicial abrange, por força do art. 98, § 1º, IX, do CPC, os emolumentos relativos ao registro do título judicial dela decorrente, independentemente de decisão judicial específica. Determinou-se ao oficial que observe, doravante, a nova orientação normativa da Corregedoria-Geral da Justiça.</p>",
+caso:"<p>Carta de sentença extraída de divórcio consensual, no qual a gratuidade fora deferida em 2013, foi apresentada a registro. A nota devolutiva formulou duas exigências: ordem judicial específica determinando o registro sem recolhimento de emolumentos e certidão atualizada de casamento com a averbação do divórcio. A interessada impugnou apenas a primeira. Provocado, o juízo do divórcio consignou que a gratuidade já fora concedida e que eventual recusa deveria ser levada ao juízo corregedor permanente.</p>",
+pts:["Primeira tese, de natureza processual. No processo de dúvida, a resolução do mérito depende da impugnação de todos os óbices da nota devolutiva. A ausência de impugnação a alguma exigência, desacompanhada de seu cumprimento, configura anuência e acarreta a perda superveniente do objeto, com prejuízo da dúvida e não conhecimento do recurso. A jurisprudência do Conselho, ainda assim, autoriza o exame dos óbices impugnados para orientação de futura prenotação.",
+"Segunda tese, de mérito. A interpretação literal do art. 9º, II, da Lei n. 11331/2002 e do item 68 do Capítulo XIII das NSCGJ, que condicionam a gratuidade à expressa determinação do Juízo, deve ser lida à luz do art. 98, § 1º, IX, do CPC: a expressa determinação corresponde à decisão que concede a gratuidade, e não a uma segunda decisão sobre cada ato notarial ou registral subsequente.",
+"O acórdão registra expressamente um overruling. A orientação restritiva anterior, firmada nos recursos administrativos n. 0004478-42.2023.8.26.0100 e n. 1001907-19.2024.8.26.0562, foi revista e superada pelo Parecer n. 464/2025-E, com fixação de diretriz normativa de caráter geral e vinculante para todos os registros de imóveis do Estado, com fundamento no art. 29, § 2º, da Lei n. 11331/2002.",
+"O Parecer n. 494/2025-E aplicou a diretriz à carta de sentença de divórcio pela máxima ubi eadem ratio, ibi eadem legis dispositio: tanto o formal de partilha quanto a carta de sentença dependem de registro para plena efetivação.",
+"Exigir nova decisão judicial específica violaria o acesso à justiça (art. 5º, XXXV) e a assistência jurídica integral aos reconhecidamente pobres (art. 5º, LXXIV, da Constituição Federal), porque limitaria a gratuidade ao provimento jurisdicional e não à efetiva tutela.",
+"Nota lateral de utilidade prática, repetida em outros acórdãos do período: não há previsão legal de preparo em procedimento administrativo de dúvida, cabendo restituição do valor recolhido diretamente à Fazenda Estadual."],
+fontes:"Doutrina: PASSOS, Josué Modesto; BENACCHIO, Marcelo. A dúvida no registro de imóveis. São Paulo: Thomson Reuters Brasil, 2022, p. 85, 95 e 158-159, quanto à necessidade de impugnação integral. Precedentes administrativos: Parecer n. 464/2025-E (RA n. 1001272-48.2024.8.26.0397) e Parecer n. 494/2025-E (RA n. 1003343-26.2025.8.26.0126), ambos aprovados pelo Corregedor-Geral Des. Francisco Loureiro; Processo CG n. 11.773/2008 e Processo CG n. 122.431/2014, que já sustentavam a orientação antes do CPC de 2015. Precedentes do Conselho sobre dúvida prejudicada: AC 1088819-13.2025.8.26.0100; AC 1000786-69.2017.8.26.0539; AC 1032247-29.2024.8.26.0405; AC 1096000-36.2023.8.26.0100. Jurisprudência das Câmaras de Direito Privado: AI 2353654-18.2025.8.26.0000; AI 2299951-46.2023.8.26.0000; AI 2064151-72.2022.8.26.0000.",
+nota:"",
+keys:"gratuidade da justiça; emolumentos; art. 98 § 1º IX CPC; art. 98 § 3º; art. 98 § 7º; art. 99 § 6º; Lei n. 11331/2002 art. 9 II e art. 29 § 2º; item 68 Capítulo XIII NSCGJ; dúvida prejudicada; impugnação parcial; art. 199 LRP; carta de sentença; divórcio; overruling; Parecer 464/2025-E; Parecer 494/2025-E"},
+
+{n:6,org:"CSMSP",flag:false,
+t:"Dúvida registrária pressupõe a guarda do título original na serventia; cópia digitalizada no processo eletrônico não supre",
+idp:"AC n. 1004110-57.2024.8.26.0366, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjl",
+exec:"<p>Recurso não provido. A guarda do título original físico na serventia imobiliária é pressuposto formal indispensável ao processamento e ao julgamento da dúvida, nos termos dos arts. 174 e 198 da LRP. A digitalização do título nos autos do processo judicial eletrônico não substitui a via original, por falta de amparo legal, porque a qualificação registral não recai sobre cópia e porque os efeitos da prenotação subsistem sob a condição de que o título permaneça prenotado e sob exame formal. Recusando-se a parte a restituir o original, a dúvida é julgada prejudicada.</p>",
+caso:"<p>Espólio suscitou dúvida inversa contra a recusa de registro de escritura de venda e compra de fração ideal, fundada em ofensa à especialidade objetiva — descrição precária, sem ponto de amarração no solo — e em indícios de parcelamento irregular do solo urbano, pela venda sucessiva de frações ideais a múltiplos adquirentes sem relação de parentesco. O advogado retirou a via original da escritura da serventia em 11/12/2024, mediante recibo, e a dúvida inversa só foi distribuída em 13/12/2024, quando o título já não estava sob custódia do registrador. Instada, a parte manifestou oposição expressa à devolução.</p>",
+pts:["Os óbices de mérito da nota devolutiva não foram impugnados em grau recursal; o acórdão trata exclusivamente da apresentação da via original.",
+"Aplicação do subitem 39.1.2 do Capítulo XX do Tomo II das NSCGJ: não havendo prenotação vigente, o oficial notificará o suscitante para apresentar o original no prazo de cinco dias, para protocolo, sob pena de arquivamento.",
+"Não há cerceamento de defesa quando a parte, embora não notificada diretamente pelo oficial no bojo do processo, tomou ciência da necessidade de restituição e manifestou oposição expressa.",
+"O acórdão vincula a exigência aos princípios da prioridade e da especialidade (arts. 182 e 186 da LRP): a manutenção provisória dos efeitos da prenotação está condicionada à permanência do documento sob exame formal da serventia.",
+"Vale registrar a peculiaridade da competência territorial: o imóvel estava matriculado no registro de imóveis de Itanhaém e a competência foi transferida para a Comarca de Mongaguá."],
+fontes:"",
+nota:"",
+keys:"dúvida inversa; título original; via física; art. 174 LRP; art. 198 LRP; art. 182 LRP; art. 186 LRP; subitem 39.1.2 Capítulo XX NSCGJ; prenotação; processo eletrônico; cópia digitalizada; dúvida prejudicada; especialidade objetiva; parcelamento irregular"},
+
+{n:7,org:"CSMSP",flag:false,
+t:"Indisponibilidade averbada na matrícula de origem replica-se obrigatoriamente nas matrículas do desdobro e impede o registro do formal de partilha",
+idp:"AC n. 1012401-33.2025.8.26.0068, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 04/08/2026",
+u:"https://kollsys.org/xjy",
+exec:"<p>Recurso não provido. Havendo averbação de indisponibilidade, o desdobro, o desmembramento ou a divisão do imóvel acarretam a replicação obrigatória da ordem em cada uma das novas matrículas abertas, nos termos do art. 320-H, § 1º, do CNN/CN/CNJ. A indisponibilidade configura bloqueio total de qualquer mutação na matrícula, sem distinção entre alienação voluntária e transmissão por partilha judicial. Títulos judiciais não gozam de ingresso automático no fólio real e submetem-se ao exame de legalidade, que não ofende a coisa julgada.</p>",
+caso:"<p>Carta de sentença com formal de partilha de divórcio e escritura de rerratificação foram apresentadas para registro. O imóvel do ex-casal, originariamente matriculado sob outro número, recebera diversas ordens de indisponibilidade em nome do ex-cônjuge, a primeira averbada em outubro de 2015. Com o desdobro realizado em março de 2025, as indisponibilidades foram transportadas para a matrícula derivada. A apelante sustentou que a titularidade exclusiva se constituíra por decisão judicial definitiva de partilha, homologada em agosto de 2022, e que as constrições contra o ex-marido não poderiam recair sobre bem que já não integrava o patrimônio dele.</p>",
+pts:["Antes da partilha decorrente do divórcio, o patrimônio do casal encontra-se em estado de mancomunhão: o bem pertence aos ex-cônjuges como um todo indivisível, de modo que a indisponibilidade decretada contra um deles onera a totalidade dos direitos sobre o bem.",
+"Prioridade e tempus regit actum. Pelo art. 186 da LRP, o número de ordem no protocolo determina a preferência dos direitos reais; na prenotação considera-se a situação jurídica atual do imóvel. Prevalecem os óbices existentes na data da apresentação do título (maio de 2025), ainda que a homologação da partilha seja anos anterior (agosto de 2022).",
+"Limite da via administrativa. Não cabe ao juízo administrativo adentrar o mérito da comunicabilidade das dívidas do ex-cônjuge, nem revogar ou levantar constrições emanadas de outros juízos — no caso, da Justiça do Trabalho. A parte deve obter, no juízo competente, título de cancelamento na forma do art. 250, I, da LRP.",
+"Ao registrador não cabe investigar a existência de outros bens do devedor nem deliberar sobre a preferência dos bens a gravar: suficiência do patrimônio e ordem de constrição são matérias estranhas ao âmbito administrativo.",
+"Ao registrador tampouco cabe juízo de liberalidade quanto a cumprir ou descumprir a ordem de indisponibilidade transmitida pela Central Nacional de Indisponibilidade de Bens.",
+"O acórdão registra divergência de citação: o art. 320-H é referido ora como do Provimento CNJ n. 149/2023, ora como do Provimento CNJ n. 188/2024, que o inseriu no Código Nacional de Normas."],
+fontes:"Doutrina: SANTOS, Flauzilino Araújo dos. Sobre a qualificação de títulos judiciais no Brasil, 2004, quanto à eficácia inter partes da decisão judicial em contraste com o fenômeno registral erga omnes, retroperante à data da apresentação do título; SALLES, Venício Antonio de Paula. Lei de Registros Públicos comentada, 2ª ed., p. 561, quanto às duas esferas distintas de direitos no ingresso tabular de ordem judicial. Precedentes: AC 1025452-21.2024.8.26.0562 (rel. des. francisco loureiro), com a tese de que a indisponibilidade impede o registro de formal de partilha mesmo homologada anteriormente; AC 1000600-21.2022.8.26.0426; AC 0000884-32.2015.8.26.0025; AC 9000017-44.2013.8.26.0577. Parecer n. 358/2025-E, no RA n. 1045310-82.2024.8.26.0224, quanto à impossibilidade de a Corregedoria ordenar o cancelamento de constrição emanada de outra autoridade.",
+nota:"",
+keys:"indisponibilidade; desdobro; art. 320-H § 1º CNN/CN/CNJ; Provimento 188/2024; CNIB; formal de partilha; carta de sentença; rerratificação; mancomunhão; prioridade; tempus regit actum; art. 186 LRP; art. 250 I LRP; art. 28 Lei n. 8935/1994; item 117 Capítulo XX NSCGJ; título judicial qualificação"},
+
+{n:8,org:"CSMSP",flag:false,
+t:"Escritura eletrônica lavrada fora da circunscrição e procuração incompatível com o contrato social justificam a recusa do registro",
+idp:"AC n. 1013885-61.2025.8.26.0625, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjr",
+exec:"<p>Recurso não provido. A qualificação registral abrange o controle formal e substancial do título, o que inclui a regularidade da representação das partes. A procuração integra o título levado a registro e submete-se ao crivo da qualificação: sua validade exige forma adequada, poderes específicos e vigência eficaz, sem interpretação ampliativa ou presunção de poderes. A Lei de Registros Públicos autoriza a recusa ou o sobrestamento diante de documentos que não se revistam das formalidades legais ou que suscitem fundada dúvida quanto à autenticidade (art. 156).</p>",
+caso:"<p>Escritura pública eletrônica de venda e compra foi lavrada em tabelionato do interior do Ceará, sem relação com o domicílio das partes — vendedora sediada em São Bernardo do Campo, procuradora residente no Rio de Janeiro e compradora em Cachoeiro de Itapemirim — nem com a situação do imóvel, em Taubaté. Após a primeira devolução, o tabelião retificou a escritura para constar que teria sido firmada presencialmente. Verificou-se, ainda, que a procuração fora lavrada em 1988, sem prazo de vigência, com substabelecimento em 2021 à irmã da compradora, quando o contrato social da vendedora exigia prazo de duração no instrumento de mandato.</p>",
+pts:["Fundamento inicial da recusa: o art. 302 do CNN/CN/CNJ atribui ao tabelião de notas da circunscrição do imóvel ou do domicílio do adquirente, de forma remota e com exclusividade, a lavratura de escrituras eletronicamente pelo e-Notariado, com videoconferência e assinaturas digitais.",
+"A rerratificação que converteu o ato de eletrônico em presencial não sanou o vício: o histórico de sucessivas retificações e as informações contraditórias sobre a forma de lavratura reforçaram a cautela da registradora.",
+"Elemento adicional de suspeição: potencial conflito de interesses, pois a procuradora da vendedora é irmã da compradora.",
+"A recusa apoiou-se também em comunicados da Corregedoria-Geral da Justiça de São Paulo e do Conselho Nacional de Justiça sobre falsificação de escrituras em serventias do Estado do Ceará, em municípios próximos ao local da lavratura.",
+"O acórdão delimita o alcance da qualificação: não se trata de incursão indevida em aspectos intrínsecos do negócio, mas de verificação da regularidade formal, especialmente quando presentes elementos concretos que fragilizam a higidez do título."],
+fontes:"Doutrina: DIP, Ricardo. Teoria geral do registro de imóveis. São Paulo: Saraiva, 2018, quanto ao controle de legalidade formal e substancial dos títulos, sob pena de conivência com fraudes e comprometimento da fé pública registral.",
+nota:"",
+keys:"escritura pública eletrônica; e-Notariado; art. 302 CNN/CN/CNJ; competência territorial do tabelião; procuração; substabelecimento; contrato social; representação de pessoa jurídica; conflito de interesses; art. 156 LRP; qualificação registral; fraude; Ceará"},
+
+{n:9,org:"CSMSP",flag:false,
+t:"Art. 26, § 6º, da Lei n. 6766/1979 restringe-se a lote em parcelamento do solo e não alcança unidade autônoma de condomínio edilício",
+idp:"AC n. 1025349-63.2025.8.26.0114, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjt",
+exec:"<p>Recurso não provido. O compromisso de compra e venda quitado vale como título para o registro da propriedade apenas quanto ao lote adquirido, conceito técnico definido pela própria Lei n. 6766/1979, não sendo possível ampliar o alcance da norma a unidades autônomas sujeitas ao regime do condomínio edilício. O art. 61, § 5º, da Lei n. 4380/1964 confere aos contratos celebrados no âmbito do Sistema Financeiro da Habitação a natureza e os efeitos de escritura pública, mas essa equiparação restringe-se à forma do título e não dispensa o modo legal de aquisição da propriedade imobiliária.</p>",
+caso:"<p>Companhia de habitação popular apresentou a registro, simultaneamente, instrumento particular de promessa de compra e venda de 1994 e instrumento particular de cessão de direitos de 1996, ambos relativos a apartamento integrante de conjunto habitacional, com requerimento de aplicação do art. 26, § 6º, da Lei n. 6766/1979. A nota devolutiva invocou o item 167.1 do Capítulo XX das NSCGJ, que define conjunto habitacional como empreendimento em que o parcelamento é feito para alienação de unidades habitacionais já edificadas — unidades habitacionais, e não meros lotes. Apontou-se, ainda, divergência entre os títulos, que indicavam o 4º andar, e a matrícula, que situa a unidade no 3º andar.</p>",
+pts:["A distinção de microssistemas é o eixo do voto: o loteamento e o desmembramento da Lei n. 6766/1979 não se confundem com o regime das incorporações imobiliárias e dos condomínios edilícios, regulado pela Lei n. 4591/1964 e pelos arts. 1331 e seguintes do Código Civil.",
+"A exceção do art. 26, § 6º, alcança apenas o compromisso de lote urbano firmado entre o loteador e o adquirente, acompanhado de prova de quitação, e sua interpretação deve se dar no contexto da legislação em que está prevista.",
+"Sistema de aquisição preservado: os arts. 108 e 1245 do Código Civil exigem título formalmente apto e registro; os arts. 1417 e 1418 revelam que o compromisso confere direito real à aquisição, não à propriedade, subsistindo a necessidade de escritura definitiva ou de adjudicação compulsória.",
+"O acórdão rejeita expressamente o Enunciado n. 87 do Centro de Estudos Judiciários do Conselho da Justiça Federal, que considera título translativo, para fins do art. 1245 do Código Civil, a promessa de compra e venda devidamente quitada.",
+"Segundo óbice mantido de forma autônoma: a divergência de pavimento afeta a perfeita identificação do imóvel e compromete a especialidade objetiva, impedindo o ingresso até prévia retificação.",
+"O exame conjunto de duas prenotações distintas com idêntica controvérsia foi admitido por economia processual e racionalidade procedimental."],
+fontes:"Doutrina: LOUREIRO, Francisco Eduardo. In: PELUSO, Cezar (coord.). Código Civil comentado, 14ª ed., São Paulo: Manole, 2020, p. 1497, que rejeita o Enunciado n. 87 e a tese de dispensa da escritura definitiva, por violação ao art. 108 do Código Civil, referindo-se à posição contrária de José Osório de Azevedo Júnior. Precedente: AC 1036475-31.2020.8.26.0100 (rel. des. ricardo anafe), com aplicação restrita do art. 26, § 6º, aos casos em que o compromisso foi celebrado pelo próprio loteador.",
+nota:"",
+keys:"art. 26 § 6º Lei n. 6766/1979; art. 61 § 5º Lei n. 4380/1964; Sistema Financeiro da Habitação; COHAB; conjunto habitacional; condomínio edilício; Lei n. 4591/1964; art. 108 Código Civil; art. 1245; art. 1417; art. 1418; art. 1331; Enunciado 87 CJF; item 167.1 Capítulo XX NSCGJ; especialidade objetiva; termo de quitação"},
+
+{n:10,org:"CSMSP",flag:true,
+t:"Cadastro Imobiliário Brasileiro mitiga a expressão “se houver” do art. 176 da LRP onde já vencido o prazo de implantação",
+idp:"AC n. 1115844-98.2025.8.26.0100, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xkk",
+exec:"<p>Recurso não provido, com observação. Embora o texto do art. 176, § 1º, II, item 3, alínea b, da LRP permaneça formalmente vigente, a eficácia prática da expressão “se houver”, relativa à designação cadastral, foi substancialmente mitigada nas jurisdições em que já se esgotaram os prazos de implementação do Cadastro Imobiliário Brasileiro. Nessas localidades o que antes era dado meramente informativo tornou-se elemento de qualificação essencial, não podendo a inércia do proprietário em regularizar o cadastro municipal servir de escusa ao descumprimento da obrigatoriedade do código identificador único.</p>",
+caso:"<p>Escritura de venda e compra transmitia uma casa e a fração ideal de um dezoito avos do terreno de servidão que constitui o pátio interno de vila residencial na Capital. O registro foi cindido: a casa ingressou em 2019; ficou pendente a fração da área comum. A recusa apoiou-se na ausência de inscrição cadastral autônoma para a área comum, cujos números de contribuinte listados na matrícula correspondem, na verdade, às dezoito casas da vila. A interessada alegou ofensa à isonomia, por registros anteriores de outras frações da mesma matrícula, e sustentou que a designação cadastral é exigida apenas se houver.</p>",
+pts:["A Lei Complementar n. 214/2025 criou o Cadastro Imobiliário Brasileiro, inventário dos bens imóveis urbanos e rurais constituído com dados enviados pelos cadastros de origem (art. 265, § 1º). O art. 266, I, b, impõe aos serviços notariais e registrais o prazo de doze meses para adequação dos sistemas; o inciso I, c, fixa doze meses para as Capitais e o Distrito Federal, e o inciso II, b, vinte e quatro meses para os demais Municípios.",
+"A Instrução Normativa RFB n. 2275, de 15/08/2025, determina no art. 5º que os serviços notariais e registrais adotem o código de identificação único no Cadastro no prazo do art. 266, I, b, devendo ele constar de sistemas e de documentos lavrados ou registrados, e no art. 6º sujeita o descumprimento às penas do art. 57 da Medida Provisória n. 2158-35/2001.",
+"Leitura de cautela relevante para a prática. O acórdão adverte que a instrução normativa deve ser lida com cautela porque cria obrigação geral sem que todas as condições legais tenham sido implementadas: cabe à prefeitura enviar os dados ao Sistema Nacional de Gestão de Informações Territoriais e, salvo a Capital, os demais Municípios paulistas ainda dispõem de prazo.",
+"A recusa não se funda na omissão do Poder Público. O voto reconhece que a inexistência de cadastro por falta de cadastramento pelo próprio Poder Público não impede o registro; aqui a irregularidade decorre da inércia do contribuinte, a quem incumbe promover a inscrição, sob pena de infração de sonegação à inscrição.",
+"Capítulo tributário autônomo. O recolhimento do imposto de transmissão sobre o valor de mercado declarado na escritura foi considerado correto, com invocação do Tema Repetitivo 1113 do Superior Tribunal de Justiça: a base de cálculo é o valor do imóvel em condições normais de mercado, não vinculada à do imposto predial; o valor declarado goza de presunção afastável apenas por processo administrativo próprio; e o Município não pode arbitrar previamente a base com respaldo em valor de referência unilateral.",
+"O dever de fiscalização tributária do registrador (art. 289 da LRP e art. 134, VI, do Código Tributário Nacional) deve pautar-se também pela observância da jurisprudência vinculante."],
+fontes:"Legislação: art. 176, § 1º, II, item 3, alínea b, e art. 202 da LRP; Lei Complementar n. 214/2025, arts. 265, § 1º, e 266; Instrução Normativa RFB n. 2275/2025, arts. 5º e 6º; Lei Municipal n. 10819/1989, art. 2º, e Lei Municipal n. 10208/1986, arts. 3º e 6º; Decreto Municipal n. 55196/2014, art. 7º; item 57, c, do Capítulo XX das NSCGJ. Jurisprudência: Tema Repetitivo 1113 (REsp 1937821/SP, rel. min. gurgel de faria, j. 24/02/2022).",
+nota:"",
+keys:"Cadastro Imobiliário Brasileiro; CIB; Lei Complementar n. 214/2025; art. 265 § 1º; art. 266; Instrução Normativa RFB 2275/2025; SINTER; art. 176 § 1º II item 3 b LRP; se houver; designação cadastral; especialidade objetiva; ITBI; Tema 1113; art. 289 LRP; art. 134 VI CTN; fração ideal; área comum; vila residencial"}
+];
+FICHAS.push(
+{n:11,org:"CSMSP",flag:false,
+t:"Secretaria de Estado é órgão sem personalidade jurídica e não pode figurar como alienante em escritura de compra e venda",
+idp:"AC n. 1007859-41.2024.8.26.0024, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xki",
+exec:"<p>Recurso não provido. As Secretarias de Estado são órgãos públicos, decorrentes da desconcentração administrativa, e não têm personalidade jurídica própria, como se extrai do rol taxativo do art. 41 do Código Civil. A ausência de personalidade implica ausência de capacidade de direito e, por isso, de aptidão para titularizar direitos reais e figurar como parte em negócios de alienação de bens imóveis. A qualificação do vendedor como o órgão, e não como a pessoa jurídica que ele integra, viola os princípios da especialidade subjetiva e da continuidade.</p>",
+caso:"<p>Escritura de compra e venda indicou como vendedora a Secretaria da Fazenda e Planejamento do Estado de São Paulo. A nota devolutiva exigiu a retificação para constar o Estado de São Paulo, com o respectivo Cadastro Nacional da Pessoa Jurídica, ou, alternativamente, o Instituto de Pagamentos Especiais de São Paulo, cuja representação, na liquidação, é atribuída à Secretaria. O apelante invocou a instrumentalidade das formas, a delegação de competência prevista na Constituição do Estado de São Paulo e no Decreto Estadual n. 64751/2020 e a existência de escrituras idênticas registradas em outras serventias.</p>",
+pts:["Leitura do decreto invocado pelo recorrente que conduz a conclusão oposta à sustentada: o art. 1º transfere a Carteira Predial do Instituto para a Secretaria, o que é reorganização administrativa interna de gestão patrimonial, e o art. 3º atribui ao Secretário — agente público — a competência para celebrar instrumentos. Há distinção entre titularidade do direito e competência para atos de gestão.",
+"Rejeição do argumento de excesso de formalismo. A instrumentalidade das formas se aplica a atos que, embora viciados na forma, atingem a finalidade; aqui a distinção ignorada entre órgão e entidade implica vício sobre a própria identificação do titular do direito, matéria de ordem pública.",
+"O acórdão registra consequência prática pouco lembrada: o registro em nome de ente despersonalizado geraria anomalia no fólio real e prejuízo ao uso do indicador pessoal, o Livro n. 5 do registro de imóveis.",
+"A existência de registros semelhantes em outras serventias não convalida o vício nem impõe a reprodução do equívoco.",
+"O voto detalha a tríplice divisão do princípio da especialidade e reafirma que a especialidade subjetiva não se limita à identificação nominal, alcançando a integral qualificação do titular na forma do art. 176, § 1º, II, item 4, e III, item 2, da LRP e dos itens 61 e 62 do Capítulo XX das NSCGJ."],
+fontes:"Doutrina: BENACCHIO, Marcelo; PASSOS, Josué Modesto. A dúvida no registro de imóveis. São Paulo: Thomson Reuters Brasil, 2022, p. 117, quanto à tríplice especialidade — objetiva, subjetiva e do fato inscritível; DI PIETRO, Maria Sylvia Zanella. Direito administrativo. Rio de Janeiro: Forense, 2020, itens 10.1.1 e 12.2, quanto à distinção entre descentralização e desconcentração e à teoria do órgão.",
+nota:"",
+keys:"Secretaria de Estado; órgão público; personalidade jurídica; art. 41 Código Civil; desconcentração; descentralização; teoria do órgão; especialidade subjetiva; continuidade; art. 176 § 1º II 4 LRP; art. 195 LRP; art. 237 LRP; itens 61 e 62 Capítulo XX NSCGJ; Decreto Estadual 64751/2020; IPESP; indicador pessoal Livro 5"},
+
+{n:12,org:"CSMSP",flag:false,
+t:"Sem pacto antenupcial por escritura pública, o casamento sob a Lei n. 6515/1977 rege-se pela comunhão parcial e o bem anterior não se partilha",
+idp:"AC n. 1000894-42.2026.8.26.0100, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xkf",
+exec:"<p>Recurso não provido. A opção por regime de bens diverso do legal deve ser feita em pacto antenupcial por escritura pública, sob pena de nulidade da convenção. Inexistente, nulo ou ineficaz o pacto, aplica-se o regime legal, que para casamento celebrado na vigência da Lei n. 6515/1977 é o da comunhão parcial. O imóvel adquirido por um dos cônjuges antes do casamento é bem particular e não integra o rol de bens a partilhar; o registro da escritura de partilha acarretaria quebra da cadeia de titularidade dominial.</p>",
+caso:"<p>Escritura de divórcio com partilha atribuía à ex-esposa a fração ideal de trinta por cento de imóvel adquirido pelo marido em 1979, quando solteiro. O casamento ocorreu em 1995, sob a égide da Lei n. 6515/1977, e a escritura afirmava o regime da comunhão universal. A nota devolutiva exigiu a certidão do registro do pacto antenupcial ou a retificação da escritura. A apelante admitiu que a escritura de pacto jamais fora lavrada e sustentou impossibilidade de cumprimento, por já extinto o casamento, além de ofensa à boa-fé objetiva e à segurança jurídica.</p>",
+pts:["A escritura de partilha se funda em premissa falsa — a submissão do casamento à comunhão universal —, de modo que seu registro acarretaria descontinuidade da cadeia de titularidades.",
+"A escolha do regime, conquanto livre (art. 1639 do Código Civil), deve ser formalizada por escritura pública (art. 1653 do Código Civil; art. 134, I, do Código Civil de 1916); a manifestação de vontade por outras formas não supre a ausência do instrumento público.",
+"O regime supletivo aplicável decorre do art. 258 do Código Civil de 1916, com a redação dada pela Lei n. 6515/1977, e o bem anterior ao casamento é particular na forma do art. 1659, I, do Código Civil.",
+"Havendo vontade de transferir o imóvel à ex-esposa, o negócio correspondente deve ser formalizado por instrumento próprio — a partilha não é o veículo adequado.",
+"O acórdão distingue com precisão os precedentes invocados pela parte: em um deles o pacto fora lavrado por escritura e apenas faltava o registro, reconhecendo-se a eficácia entre os cônjuges; no outro, o pacto existia e a controvérsia era sobre qual regime fora adotado. Nenhum se assemelha ao caso de pacto inexistente.",
+"Registrado, ainda, que o requerimento de gratuidade em procedimento de dúvida fica prejudicado, por inexistir previsão de cobrança nas Leis Estaduais n. 11331/2002 e n. 11608/2003, o que impede a aplicação do art. 207 da LRP."],
+fontes:"Precedentes: REsp 2180444/MT (rel. min. moura ribeiro, Terceira Turma, j. 05/08/2025), no sentido de que a intenção manifestada na cerimônia religiosa e na habilitação não supre o pacto antenupcial por escritura pública, aplicando-se o regime supletivo; REsp 1608590/ES (rel. min. ricardo villas bôas cueva). No próprio Conselho: AC 0001258-61.2015.8.26.0344 (rel. des. pereira calças, j. 08/04/2016), que afastou a flexibilização por esbarrar no princípio da legalidade.",
+nota:"",
+keys:"pacto antenupcial; escritura pública; nulidade; art. 1639 Código Civil; art. 1653; art. 1640; art. 1659 I; art. 258 Código Civil de 1916; Lei n. 6515/1977; comunhão universal; comunhão parcial; regime supletivo; continuidade; art. 195 LRP; art. 237 LRP; art. 244 LRP; art. 167 I item 12; itens 83 e 83.1 Capítulo XX NSCGJ; divórcio; partilha"},
+
+{n:13,org:"CSMSP",flag:false,
+t:"Divergência de estado civil entre matrícula e título exige o prévio registro da partilha da separação antes da venda",
+idp:"AC n. 1015175-30.2025.8.26.0361, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjv",
+exec:"<p>Recurso não provido. Fixou-se a tese de que a apresentação e o prévio registro de formal ou de escritura de partilha são indispensáveis ao subsequente registro de escritura de venda e compra quando o estado civil do vendedor indicado na matrícula não coincide com o indicado no título. A exigência ancora-se nos princípios da especialidade subjetiva, da continuidade e da disponibilidade, e visa à certeza registrária quanto à titularidade do bem após a cessação do regime matrimonial.</p>",
+caso:"<p>A vendedora adquirira fração de vinte por cento do imóvel por herança paterna em 1986, quando solteira. Casou-se em 1991 sob o regime da comunhão universal e separou-se em 1994, sem que houvesse notícia de partilha dos bens do casal ou de atribuição exclusiva do bem a ela. A escritura de venda e compra, lavrada em 2001, qualificou-a como separada, ao passo que a matrícula a indicava como solteira. A adquirente sustentou que o ex-marido jamais figurara como titular de direito real e que a exigência, relativa a fatos de mais de duas décadas envolvendo pessoas já falecidas, seria materialmente impossível.</p>",
+pts:["A fração ideal, adquirida por herança antes do casamento, incorporou-se ao patrimônio comum por força da comunhão universal (art. 1667 do Código Civil). Extinto o regime pela separação (art. 1576), na falta de partilha o quinhão segue pertencendo a ambos os ex-consortes em mancomunhão, permanecendo indivisível e intransmissível por apenas um deles.",
+"Realizada a partilha, importa conhecer seus termos: somente na hipótese de atribuição integral do bem à vendedora ela estaria habilitada à transmissão que praticou sozinha — é o princípio da disponibilidade.",
+"Assimetria relevante: enquanto o ingresso do bem na comunhão decorre de transmissão sabida e inequívoca, operada de pleno direito pelo regime, a extinção deste gera nova situação patrimonial que precisa ser conhecida e refletida no registro. O silêncio do fólio real quanto à transmissão matrimonial não autoriza que ela seja ignorada.",
+"Limite expresso da mitigação. O acórdão reconhece a orientação que flexibiliza exigências de especialidade subjetiva em casos de extrema dificuldade de obtenção de dados identificadores, mas afasta a flexibilização aqui: a situação patrimonial pós-separação não comporta prova alternativa e a exigência não é um fim em si mesma, mas meio insubstituível de conferência da continuidade e da disponibilidade.",
+"A nota devolutiva orientou a interessada quanto a alternativas — aditamento da escritura com anuência do ex-cônjuge ou usucapião extrajudicial —, circunstância que reforçou a rejeição do argumento de impossibilidade."],
+fontes:"Doutrina: GOMES, Orlando. Direito de família. 13ª ed. Rio de Janeiro: Forense, 2000, p. 198, quanto à permanência da indivisão após o fato extintivo da comunhão; BENACCHIO, Marcelo; PASSOS, Josué Modesto. A dúvida no registro de imóveis, p. 117, quanto ao alcance da especialidade subjetiva sobre a qualificação pessoal, inclusive o estado civil; LOUREIRO, Luiz Guilherme. Registros públicos: teoria e prática. Salvador: Juspodivm, 2019, p. 622, quanto à necessidade de averbação do divórcio e do esclarecimento sobre a partilha antes do registro do título; SERPA LOPES, Miguel Maria de. Tratado de registros públicos, v. II, 3ª ed., Rio de Janeiro: Freitas Bastos, 1955, p. 346, invocado e temperado no caso. Precedentes: AC 1009529-57.2024.8.26.0625 (rel. des. francisco loureiro, j. 23/05/2025); AC 1002800-60.2016.8.26.0539; AC 0039080-79.2011.8.26.0100.",
+nota:"",
+keys:"especialidade subjetiva; continuidade; disponibilidade; estado civil; art. 1667 Código Civil; art. 1576; comunhão universal; mancomunhão; partilha; separação consensual; art. 195 LRP; art. 237 LRP; venda e compra; usucapião extrajudicial alternativa"},
+
+{n:14,org:"CSMSP",flag:false,
+t:"Matrícula encerrada continua a integrar o histórico registral e pode ser examinada na qualificação; encerramento não é cancelamento",
+idp:"AC n. 1003788-80.2025.8.26.0405, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjn",
+exec:"<p>Recurso não provido. O encerramento da matrícula constitui mero entrave à escrituração sucessiva, impedindo que novos atos sejam nela lançados, mas não extingue os efeitos dos registros já lançados, que permanecem válidos e eficazes até eventual cancelamento. O cancelamento, em sentido próprio, pressupõe decisão judicial, por importar desconstituição do fólio real. Por isso o oficial pode e deve examinar a matrícula encerrada para aferir a data de aquisição do imóvel e a correção da partilha apresentada.</p>",
+caso:"<p>Escritura de inventário e partilha transmitia aos filhos e à companheira o imóvel de matrícula aberta em 2018, originada do encerramento de matrícula anterior. O oficial verificou, na matrícula encerrada, que o falecido adquirira a primeira fração — um terço do imóvel — em setembro de 1979, quando solteiro, ao passo que a união estável se iniciara em setembro de 1987. O interessado sustentou que a qualificação deveria limitar-se à matrícula vigente, porque o encerramento da anterior teria superado aquela realidade jurídica.</p>",
+pts:["Distinção normativa cuidadosa. Embora o art. 233 da LRP empregue a expressão cancelamento também para alienações parciais e fusão, as NSCGJ adotam distinção mais precisa: cancelamento em sentido próprio, mediante decisão judicial (art. 233, I, e item 71 do Capítulo XX); encerramento, quando a matrícula perde utilidade registral por exaurimento do objeto ou substituição por outra (arts. 233, II e III, e 234; itens 72 e 73).",
+"O art. 222 da LRP, ao determinar que em todas as escrituras e atos relativos a imóveis haja referência à matrícula ou ao registro anterior, justifica a análise da cadeia dominial.",
+"Consequência prática afirmada no voto: admitir que o encerramento apaga o conteúdo jurídico da matrícula subverteria o sistema de registro de imóveis.",
+"No mérito da partilha, o regime legal da união estável, na ausência de contrato escrito, é o da comunhão parcial (art. 1725 do Código Civil). A união estável foi declarada apenas na própria escritura de inventário, sem contrato prévio, de modo que o patrimônio anterior à formação da entidade familiar não se comunica.",
+"A fração adquirida em 1979 é bem incomunicável e não gera direito de meação à companheira sobrevivente; a partilha errou ao tratar todo o imóvel como comunicável.",
+"O recurso foi recebido como apelação, e não como recurso administrativo, por versar sobre registro em sentido estrito."],
+fontes:"",
+nota:"",
+keys:"matrícula encerrada; cancelamento; encerramento; art. 233 LRP; art. 234 LRP; art. 222 LRP; art. 195 LRP; itens 71 72 73 Capítulo XX NSCGJ; continuidade; escritura de inventário e partilha; união estável; art. 1725 Código Civil; comunhão parcial; bem particular; meação"},
+
+{n:15,org:"CSMSP",flag:true,
+t:"Condômino não usucape a fração dos demais sem atos inequívocos de oposição; sem óbice à escrituração, a usucapião é exercício abusivo do direito",
+idp:"AC n. 1032642-72.2025.8.26.0506, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xkr",
+exec:"<p>Recurso não provido. O acórdão fixa duas proposições articuladas. A primeira: não há direito à usucapião quando a posse decorre de vínculo entre o possuidor e o proprietário e inexiste óbice justificado à constituição ou ao registro de título translativo, hipótese em que se configura abuso do direito (art. 187 do Código Civil) e a transmissão deve ser regularmente escriturada e registrada. A segunda: em condomínio pro indiviso não há posse ad usucapionem de um condômino contra os demais, salvo demonstração de atos inequívocos de oposição, exigência destinada a evitar a usucapião fundada em mera tolerância e o uso do instituto como sucedâneo do registro do título translativo, inclusive da renúncia.</p>",
+caso:"<p>A apelante é proprietária de metade do imóvel e pleiteou o reconhecimento da usucapião da fração ideal remanescente, pertencente à sua própria filha, única herdeira do coproprietário falecido. No inventário houve homologação do auto de adjudicação, mas a carta de adjudicação não foi expedida por inércia da herdeira. Sobre a fração usucapienda pesa averbação de indisponibilidade decorrente de intervenção extrajudicial em seguradora. A oficiala negou seguimento por ausência de demonstração de animus domini e por falta de justificação do óbice à escrituração de negócio translativo.</p>",
+pts:["Regra e exceção formuladas com clareza. A usucapião é cabível quando não há relação entre proprietário e possuidor e este age em consequência da inércia daquele, ou quando, embora existindo essa relação, há óbice justificado à transmissão pela via derivada. Não é cabível quando a posse decorre do vínculo e inexiste óbice.",
+"A posse própria atrela-se à causa possessionis, e não a elemento volitivo. Quando o possuidor age aparentemente como dono, mas por causa de relação mantida com o proprietário, inexiste inércia do proprietário a justificar a usucapião.",
+"Potencial fraudulento da substituição do título translativo pela usucapião, enumerado no voto: a aquisição originária não é fato gerador de obrigação tributária; não lhe são aplicáveis as causas de nulidade e anulabilidade dos negócios jurídicos; não incidem limitações urbanísticas; e ela pode extinguir direitos e ônus reais pretéritos.",
+"Duas situações igualmente inadmissíveis no condomínio pro indiviso. Na primeira, o condômino usa o bem por tolerância e surpreende os demais com o pedido — sancionar com a perda da propriedade quem consentiu no uso gratuito ofende a solidariedade e a vedação à surpresa. Na segunda, os demais anuem ao pedido — a anuência revela consenso quanto à transmissão gratuita, que deve ser escriturada como renúncia (arts. 1275, II, ou 1316 do Código Civil).",
+"Observação de grande valor prático: o pagamento exclusivo de tributos, despesas de consumo e conservação pelo condômino que usa o imóvel não demonstra, por si só, posse própria, porque essas obrigações são típicas do comodato (art. 584 do Código Civil).",
+"Leitura restritiva da alternatividade. O Conselho reconhece precedentes seus admitindo alguma alternatividade entre a usucapião e as formas derivadas, mas a restringe: só há alternatividade quando houver óbice justificado ao registro.",
+"A indisponibilidade averbada não pode ser contornada pela via oblíqua da usucapião, e a inércia da própria parte em levantar o ônus não é óbice justificado, sob pena de aproveitamento da própria torpeza."],
+fontes:"Norma central: art. 410, § 2º, do CNN/CN/CNJ e subitem 419.2 do Capítulo XX do Tomo II das NSCGJ, de idêntico teor, que impõem a justificação do óbice à correta escrituração das transações. Doutrina citada, com amplitude incomum: RIBEIRO, Benedito Silvério. Tratado de usucapião. São Paulo: Juspodivm, 2026, p. 157-158 e 160-161; MIRANDA, Pontes de. Comentários ao Código de Processo Civil, v. 13, p. 349, e Tratado de direito privado X, p. 136; JHERING, Rudolf von. La voluntad en la posesión, Madrid, 1896, p. 290-291; WOLFF, Martin; RAISER, Ludwig. Sachenrecht, Tübingen: Mohr Siebeck, 1957, §§ 5º e 7º; LOUREIRO, Francisco Eduardo. Comentários ao art. 1238 do Código Civil, in PELUSO (org.), 2024, p. 1133; CARNACCHIONI, Daniel. Manual de direito civil, 2017, p. 1496 e 1499; GORDLEY, James. Foundations of private law, Oxford, 2006, p. 144; ALMEIDA, María Goñi Rodríguez. La posesión en concepto de dueño…, Revista Crítica de Derecho Inmobiliario, n. 757, 2016; ATIENZA, Manuel; RUIZ MANERO, Juan. Ilícitos atípicos, 2014, p. 50 e 62; SAN TIAGO DANTAS, F. C. Programa de direito civil: teoria geral, 2000, p. 319; JOSSERAND, Louis. De l’esprit des droits et de leur relativité, 2ª ed., 1939, p. 322 e 327; CORREIA, Rodrigo Rodrigues. Usucapião como meio de fraude à disciplina do parcelamento do solo, dissertação, USP, 2020, p. 58-59. Jurisprudência: STF, RE 91793/MG (rel. min. moreira alves, j. 08/04/1980); STJ, REsp 2172585/DF e AgInt no AREsp 1657468/SP; Enunciado n. 237 da Jornada de Direito Civil, sobre interversio possessionis; CSM/SP, AC 1035784-12.2023.8.26.0100, AC 1004046-22.2020.8.26.0161 e AC 1002214-84.2017.8.26.0281.",
+nota:"",
+keys:"usucapião extrajudicial; condomínio pro indiviso; animus domini; causa possessionis; interversio possessionis; Enunciado 237; abuso do direito; art. 187 Código Civil; fraude à lei; art. 410 § 2º CNN/CN/CNJ; subitem 419.2 Capítulo XX NSCGJ; renúncia; art. 1275 II; art. 1316; comodato art. 584; indisponibilidade; art. 1208; art. 1245; saisine; adjudicação"},
+
+{n:16,org:"CSMSP",flag:false,
+t:"Usucapião de imóvel do próprio sócio administrador carece de justa causa; dispensada, porém, a certidão negativa de débitos para a averbação da construção",
+idp:"AC n. 1008419-46.2025.8.26.0606, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xkg",
+exec:"<p>Recurso não provido, com afastamento de um dos óbices. Sendo o proprietário tabular um dos sócios administradores da sociedade requerente, a regularização dominial deve ocorrer pelos meios próprios — conferência de bens para integralização de capital social ou escritura de compra e venda —, faltando justa causa para a via da usucapião. Mantidas também as exigências relativas à notificação dos sucessores do titular falecido e à comprovação da natureza do curso d’água confrontante. Afastada, por fim, a exigência de certidão negativa de débitos para a averbação da edificação.</p>",
+caso:"<p>Sociedade pleiteou a usucapião extrajudicial da integralidade de imóvel de titularidade de seu sócio administrador e da esposa dele, mais parte de outro bem, em nome de terceiro já falecido, sem comprovação do óbito nos autos. Pretendia notificação por edital dos sucessores, uso de pesquisas de outro processo, dispensa da notificação dos titulares da margem oposta do córrego confrontante mediante simples cientificação do órgão gestor de águas, e averbação da construção de 8.646,09 m² independentemente de regularidade fiscal.</p>",
+pts:["A justificação do óbice à escrituração é filtro de admissibilidade e reflete o interesse de agir, no binômio utilidade-necessidade: se a parte possui meio lícito e direto para transferir a propriedade, carece de necessidade para movimentar procedimento excepcional. A anuência do sócio proprietário ao pedido não supre a falta de justa causa.",
+"O voto assinala razão pouco lembrada para a exigência de rigor no procedimento extrajudicial: além de se desenvolver fora da cognição jurisdicional plena, ele transcorre com publicidade de menor alcance, no interior da serventia, sem publicação no diário de justiça e sem possibilidade de expedição de certidão de distribuição.",
+"Notificação por edital tem caráter excepcional e subsidiário, admitida apenas após o esgotamento de diligências razoáveis (subitem 418.16 do Capítulo XX do Tomo II das NSCGJ). Notificar por edital o próprio titular falecido, ou usar prova emprestada de outro processo judicial, é incompatível com o rito administrativo; a identificação e a localização dos sucessores são ônus da parte.",
+"Curso d’água confrontante. O art. 440-AX, § 3º, II, a, do CNN/CN/CNJ, incluído pelo Provimento CNJ n. 195/2025, dispensa a anuência do confinante quando o imóvel confrontante for bem público consistente em águas públicas. Embora inserido na disciplina da retificação de área, o critério pode ser considerado no procedimento de usucapião, por interpretação sistemática com o art. 407, § 6º, do mesmo Código.",
+"O acórdão esclarece que a hipótese de dispensa alcança também imóvel urbano: a restrição a imóveis rurais consta apenas do inciso I do § 3º, relativo à certificação pelo Instituto Nacional de Colonização e Reforma Agrária. No caso, porém, faltou prova da natureza pública do córrego, não bastando a denominação de córrego nem a indicação de ente público para receber notificação.",
+"Acessões. A construção não averbada não impede a usucapião do todo: a acessão adere ao solo e a aquisição originária consolida a propriedade tal como o imóvel se apresenta faticamente, bastando que o requerimento e a ata notarial descrevam a edificação. O art. 417, § 3º, do CNN/CN/CNJ já dispensa o habite-se para a abertura de matrícula de imóvel edificado.",
+"Certidão negativa de débitos. Reconhece-se a tensão entre o dever de legalidade estrita do delegatário, que não pode deixar de aplicar norma vigente por vício de constitucionalidade, e a jurisprudência administrativa do Conselho Nacional de Justiça, que determinou às Corregedorias a observância da inexigibilidade. Prevaleceu a orientação administrativa, com afastamento do óbice."],
+fontes:"Doutrina: DIP, Ricardo Henry Marques. Sobre a qualificação no registro de imóveis. Revista de Direito Imobiliário, v. 15, n. 30, p. 40, 1992, que define a qualificação como juízo prudencial, positivo ou negativo, da potência de um título em ordem à sua inscrição predial; DIP, Ricardo. Registro de imóveis (princípios), t. II, p. 222, quanto à impossibilidade de controle de constitucionalidade pelo registrador; ARAÚJO, Fábio Caldas de, citado quanto à finalidade da via extrajudicial. Jurisprudência: STF, ADI 173/DF e ADI 394/DF; CNJ, ML em PCA 0004034-71.2025.2.00.0000 (rel. daniela madeira, j. 19/12/2025), PP 0001230-82.2015.2.00.0000, PCA 0010545-61.2020.2.00.0000, PCA 0001611-12.2023.2.00.0000 e PP 0004771-50.2020.2.00.0000; CSM/SP, AC 1002325-23.2024.8.26.0152 (rel. des. francisco loureiro, j. 23/01/2025); TJSP, AC 1013842-88.2014.8.26.0309, sobre delimitação perimetral por curso d’água. Parecer n. 172/2026-E, da Juíza Assessora Gisela Aguiar Wanderley, no RA n. 1001802-19.2024.8.26.0311.",
+nota:"",
+keys:"usucapião extrajudicial; sócio administrador; justa causa; art. 410 § 2º CNN/CN/CNJ; art. 399 § 2º; art. 407 § 6º; art. 417 § 3º; art. 440-AX § 3º II a; Provimento CNJ 195/2025; notificação por edital; subitem 418.16 NSCGJ; prova emprestada; curso d’água; águas públicas; terrenos reservados; acessão; habite-se; CND; art. 47 Lei n. 8212/1991; sanção política; Súmulas 70 323 547; art. 216-A LRP"},
+
+{n:17,org:"CSMSP",flag:true,
+t:"Notificação em usucapião extrajudicial não pode ser imposta por títulos e documentos quando o interessado requereu a via postal com aviso de recebimento",
+idp:"AC n. 1007690-41.2025.8.26.0405, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xko",
+exec:"<p>Recurso provido, com determinação. Requerida desde o início a notificação por carta com aviso de recebimento — modalidade admitida pelo art. 216-A, § 2º, da LRP e pelo art. 407, § 3º, do CNN/CN/CNJ —, é indevida a imposição automática da via mais onerosa por registro de títulos e documentos, sem justificativa concreta e sem que a via postal tenha sido previamente tentada e frustrada. Afastados os valores das notificações por títulos e documentos e as rubricas acessórias vinculadas, com recálculo dos emolumentos pela modalidade postal.</p>",
+caso:"<p>Em usucapião extrajudicial, exigiu-se dos requerentes o pagamento de R$ 12.437,01 a título de emolumentos e despesas de notificações. Instado a detalhar a composição, o oficial recusou-se, informando que o detalhamento só seria fornecido ao final do procedimento; a planilha só veio após intimação no curso da dúvida e revelou que cerca de R$ 10.000,00 correspondiam exclusivamente a notificações por títulos e documentos. Os recibos foram emitidos em 07/05/2025, embora as diligências datassem de março de 2025. A sentença julgara improcedente a dúvida inversa.</p>",
+pts:["Dever de transparência construído a partir do parágrafo único do art. 14 da LRP. Embora a norma se refira ao documento final, o dever que dela emana projeta-se sobre todo o procedimento: o delegatário deve informar previamente os custos, para que o usuário avalie a legalidade, a necessidade e a razoabilidade de cada ato antes de sua realização.",
+"A emissão tardia dos recibos revelou que as notificações foram executadas sem conhecimento prévio dos custos e, portanto, sem que os interessados pudessem exercer a faculdade de escolha da via menos onerosa que a norma lhes assegura.",
+"O item 243.1 do Capítulo XX das NSCGJ, invocado pelo oficial e acolhido na sentença, está inserido na disciplina própria da alienação fiduciária de bens imóveis, na subseção relativa às intimações e à consolidação da propriedade fiduciária. Não é norma específica da usucapião extrajudicial, que tem disciplina própria.",
+"Invocação do art. 1º, parágrafo único, da Lei n. 10169/2000: o valor dos emolumentos deve corresponder ao efetivo custo e à adequada e suficiente remuneração dos serviços, o que reforça a proporcionalidade e a correspondência entre o valor exigido e o ato praticado.",
+"Observação de peso disciplinar, expressa no acórdão: o registrador de imóveis era também o registrador de títulos e documentos que realizou as notificações, circunstância reputada, no mínimo, peculiar e digna de melhor investigação. Determinou-se ciência à Corregedoria-Geral da Justiça.",
+"Questão de competência resolvida no relatório: o recurso, inicialmente distribuído à Corregedoria-Geral, foi redistribuído ao Conselho Superior da Magistratura por se tratar de ato de registro em sentido estrito, nos termos do art. 16, IV, do Regimento Interno do Tribunal de Justiça de São Paulo."],
+fontes:"",
+nota:"",
+keys:"usucapião extrajudicial; emolumentos; notificação; carta com aviso de recebimento; AR; registro de títulos e documentos; RTD; art. 216-A § 2º e § 3º LRP; art. 407 § 3º CNN/CN/CNJ; item 418.3 NSCGJ; item 243.1 Capítulo XX; art. 14 parágrafo único LRP; Lei n. 10169/2000; transparência; microfilmagem; diligência; art. 16 IV Regimento Interno TJSP"},
+
+{n:18,org:"CSMSP",flag:false,
+t:"Impugnação genérica de confrontante não encerra automaticamente a usucapião extrajudicial",
+idp:"AC n. 1001713-42.2025.8.26.0543, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjo",
+exec:"<p>Recurso provido, com observação. A apresentação de impugnação por confrontante não conduz automaticamente ao encerramento do procedimento extrajudicial. É imprescindível que a oposição revele controvérsia relevante acerca dos limites, da titularidade ou da própria posse, mediante indicação de elementos concretos que evidenciem dúvida fundada. Impugnação genérica, destituída de fundamentação técnica e sem indicação precisa de sobreposição de áreas ou divergência de divisas, deve ser tida por infundada, com prosseguimento do procedimento.</p>",
+caso:"<p>Usucapião extrajudicial de imóvel rural. O espólio de coerdeira impugnou o pedido alegando incertezas na área, que não seria cercada nem adequadamente delimitada, e sustentando a necessidade de prova pericial sob contraditório. Os requerentes demonstraram que a área fora vendida em 1995 pelo espólio do titular, com anuência expressa dos herdeiros, inclusive da impugnante, e que a impugnação decorria de conflitos familiares. A sentença julgara procedente a dúvida e remetera as partes às vias ordinárias.</p>",
+pts:["O art. 216-A, § 10, da LRP distingue a impugnação justificada, que impõe a remessa ao juízo competente, da injustificada, que não será admitida pelo registrador, cabendo ao interessado suscitar dúvida.",
+"O subitem 420.5 do Capítulo XX das NSCGJ flexibiliza a regra: os autos são encaminhados ao juízo competente, que, de plano ou após instrução sumária, examinará apenas a pertinência da impugnação e determinará o retorno à serventia, para prosseguimento ou extinção.",
+"Argumento de sistema: a interpretação de que qualquer impugnação, ainda que desprovida de conteúdo mínimo, inviabilizaria o procedimento esvaziaria a finalidade da desjudicialização, convertendo a simples resistência formal em mecanismo automático de remessa ao Judiciário.",
+"Prestigiam-se a fé técnica do profissional habilitado responsável pelo levantamento topográfico e a presunção de regularidade dos elementos apresentados, não infirmados por prova idônea.",
+"A impugnação também não contestava a posse alegada nem comprovava a prática de qualquer ato inerente ao exercício da propriedade ao longo dos anos.",
+"Observação que qualifica o provimento: da certidão estadual de distribuições cíveis em nome do titular de domínio consta o ajuizamento de ação de usucapião extraordinária por terceiro, o que pode indicar oposição à posse alegada e deverá ser considerado na análise de mérito pelo registrador."],
+fontes:"",
+nota:"",
+keys:"usucapião extrajudicial; impugnação infundada; art. 216-A LRP; art. 216-A § 10; subitem 420.2 NSCGJ; subitem 420.5; Provimento CNJ 149/2023; planta e memorial descritivo; confrontante; certidão do distribuidor cível; desjudicialização; imóvel rural"},
+
+{n:19,org:"CSMSP",flag:false,
+t:"Alegação da União de que a área está parcialmente em terreno de marinha é impugnação fundamentada e encerra a usucapião extrajudicial",
+idp:"AC n. 1000134-42.2024.8.26.0366, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xkh",
+exec:"<p>Recurso não provido. Fixou-se a tese de que a impugnação apresentada por ente público que evidencia controvérsia jurídica relevante acerca da natureza do imóvel constitui impugnação fundamentada para os fins do art. 216-A da LRP, e de que, reconhecida sua pertinência, é inviável o prosseguimento na via extrajudicial, devendo a pretensão ser deduzida perante o juízo competente. A controvérsia recai sobre aspecto essencial ao próprio reconhecimento do direito, pois a natureza pública do imóvel enseja a vedação constitucional à usucapião.</p>",
+caso:"<p>Pedido de usucapião extraordinária de lote em Mongaguá, registrado em área maior. Notificados os órgãos públicos, a União impugnou sob o argumento de que parte da área estaria inserida em terreno de marinha. O oficial, reputando a impugnação genérica, abriu prazo para complementação; a União quedou-se inerte e a impugnação foi rejeitada. Sobreveio nova manifestação, instruída com documentos e indicando procedimento administrativo em curso perante a Secretaria do Patrimônio da União. O oficial manteve a rejeição; frustrada a conciliação, remeteu os autos ao juízo corregedor permanente, que reconheceu a pertinência da impugnação.</p>",
+pts:["Divergência expressa entre o registrador e o juízo. O oficial entendeu que eventual futura demarcação pela União não impediria, por si só, o reconhecimento da usucapião, preservadas as competências da Secretaria do Patrimônio da União quanto ao domínio direto. O juízo corregedor adotou entendimento diverso, prevalecente no Conselho.",
+"O fundamento constitucional é o art. 183, § 3º, da Constituição Federal, norma cogente e de ordem pública.",
+"Definição da função do julgamento da impugnação, reproduzida de voto anterior: nem o oficial nem o corregedor permanente exercem jurisdição contenciosa; ao julgar a impugnação, tudo o que se pode fazer é verificar a existência da lide, caso em que cessa a instância administrativa, ou constatar que há apenas aparência dela, o que autoriza o prosseguimento.",
+"A alegação da apelante de que faltariam elementos para demonstrar a natureza pública da área não pode ser decidida na esfera administrativa: a discussão extrapola os estreitos limites cognitivos do art. 216-A da LRP e exige dilação probatória.",
+"Contraste didático com a ficha 18: ali a impugnação era genérica e foi afastada; aqui a alegação, embora igualmente questionada quanto à prova, recai sobre a própria usucapibilidade do bem — o que altera a natureza da controvérsia."],
+fontes:"Precedente citado: AC 1032941-74.2023.8.26.0100 (rel. des. fernando antonio torres garcia), quanto aos limites do julgamento da impugnação em procedimento extrajudicial. Normas: art. 216-A da LRP; item 420 e subitens 420.4 e 420.5 do Capítulo XX do Tomo II das NSCGJ.",
+nota:"",
+keys:"usucapião extrajudicial; terreno de marinha; União; Secretaria do Patrimônio da União; impugnação fundamentada; art. 216-A LRP; art. 183 § 3º Constituição Federal; bem público; imprescritibilidade; item 420 NSCGJ; vias ordinárias; conciliação"},
+
+{n:20,org:"CSMSP",flag:false,
+t:"Usucapião extraordinária não dispensa prova da origem, da continuidade e da cadeia possessória, nem coerência técnica entre planta e matrículas confrontantes",
+idp:"AC n. 1018937-27.2025.8.26.0564, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xjs",
+exec:"<p>Recurso não provido, com observação. A natureza originária da aquisição não autoriza o ingresso de título deficiente no fólio real nem supera vícios que comprometem a identificação segura do imóvel, a ciência dos titulares de direitos e a comprovação da posse ad usucapionem. Mantidos os óbices relativos à divergência de confrontação dos fundos, à insegurança sobre a origem registral, à insuficiência da cadeia possessória, à qualificação civil de antecessor e às certidões negativas. Afastadas, porém, as exigências de reconhecimento de firma e de apresentação das vias originais.</p>",
+caso:"<p>Usucapião extraordinária de lote em São Bernardo do Campo, apresentada sob a terceira prenotação, após duas anteriores canceladas por descumprimento das exigências. O oficial apontou divergência entre os proprietários tabulares da matrícula confrontante e o ocupante indicado na planta; alteração da origem registral, inicialmente uma transcrição de um registro de imóveis e depois outra, de comarca diversa, sem demonstração da cadeia registral; instrução da posse por instrumentos particulares antigos, certidão de nascimento e cartão de vacinação; e divergência na qualificação de antecessor, solteiro em contrato de 1983 e separado em cessão de 2020.</p>",
+pts:["A divergência de confrontação não é falha meramente formal sanável pela simples notificação. A notificação do § 2º do art. 216-A da LRP pressupõe planta e memorial aptos a identificar com segurança o imóvel e os confrontantes; não é possível transformá-la em instrumento de convalidação de trabalhos técnicos imprecisos.",
+"A afirmação genérica de posse mansa e pacífica por mais de quarenta anos não basta. A usucapião extraordinária prescinde de justo título e boa-fé, mas não dispensa prova segura da origem, da continuidade, da cadeia possessória e do tempo de posse (art. 216-A da LRP e subitem 416.2, III, do Capítulo XX das NSCGJ).",
+"A divergência na qualificação civil do antecessor é relevante porque impede verificar se os direitos possessórios se comunicaram a cônjuge ou ex-cônjuge e se há terceiro interessado a ser cientificado.",
+"Certidões negativas cíveis e criminais atualizadas, expedidas nos últimos trinta dias, em nome da requerente, dos cedentes, dos antecessores e da proprietária tabular, servem à verificação da inexistência de ações possessórias ou petitórias que indiquem oposição à posse (subitem 416.2, IV).",
+"A menção genérica na ata notarial de que se utiliza a modalidade extrajudicial com base na legislação vigente não supre a exigência de justificação do óbice à correta escrituração (subitem 419.2), cuja declaração falsa configura crime de falsidade.",
+"Limite temporal do procedimento. Nos termos do art. 205 da LRP e do art. 406, § 2º, do CNN/CN/CNJ, a desídia do requerente acarreta o arquivamento do pedido e o cancelamento da prenotação; a retomada indefinida do procedimento à espera de documentos essenciais é incompatível com o sistema registral.",
+"Exigências afastadas: é dispensável o reconhecimento de firma nos documentos comprobatórios da posse, porque a usucapião é o título que se pretende registrar; e o subitem 416.10 do Capítulo XX permite que o documento oferecido em cópia seja declarado autêntico pelo advogado ou defensor público, sob responsabilidade pessoal, dispensadas cópias autenticadas."],
+fontes:"Precedentes: AC 1007038-37.2024.8.26.0024 (rel. des. silvia rocha, j. 06/05/2026), sobre especialidade objetiva em usucapião; AC 1018159-22.2020.8.26.0309 (rel. des. ricardo anafe, j. 03/11/2021), sobre a obrigatoriedade das certidões do subitem 416.2, IV; AC 1000692-26.2022.8.26.0126 (rel. des. francisco loureiro, j. 04/07/2024), que afastou o reconhecimento de firma e a exigência de registro da aquisição dos anteriores compradores.",
+nota:"",
+keys:"usucapião extraordinária; especialidade objetiva; cadeia registral; cadeia possessória; art. 216-A LRP; art. 216-A II e § 2º; art. 205 LRP; art. 406 § 2º CNN/CN/CNJ; subitem 416.2 III e IV; subitem 416.10; subitem 419.2; certidões negativas; reconhecimento de firma; declaração de autenticidade por advogado; prenotação cancelada"}
+);
+FICHAS.push(
+{n:21,org:"CSMSP",flag:false,
+t:"Bem desapropriado e registrado em nome do Município é insuscetível de usucapião, e a coisa julgada não vincula o registrador",
+idp:"AC n. 1025747-03.2024.8.26.0451, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 05/08/2026",
+u:"https://kollsys.org/xju",
+exec:"<p>Recurso não provido. Fixaram-se duas teses: imóveis de natureza pública são insuscetíveis de usucapião; e a qualificação registral é necessária mesmo para títulos judiciais, respeitadas as normas de ordem pública. A coisa julgada não tem o alcance de obrigar o registrador a praticar atos contrários ao ordenamento jurídico nem de afastar impedimentos que decorrem diretamente da Constituição Federal. Subsistem, ainda, óbices formais autônomos de especialidade objetiva e subjetiva.</p>",
+caso:"<p>Mandado de registro extraído de ação de usucapião foi apresentado ao registro de imóveis. Da matrícula constava que o imóvel fora objeto de desapropriação promovida pelo Município, formalizada por escritura de 2006 e registrada em fevereiro de 2020, o que conferiu natureza pública ao bem e rompeu a continuidade da cadeia dominial. O apelante sustentou que o Município teria manifestado inexistir domínio ou destinação pública e invocou a prevalência da coisa julgada.</p>",
+pts:["Vedação constitucional expressa: art. 183, § 3º, da Constituição Federal, norma cogente e de ordem pública.",
+"A desafetação de bem público, quando possível, exige ato formal e inequívoco do ente titular, não bastando declarações administrativas genéricas ou manifestações unilaterais desprovidas de eficácia. A natureza pública resulta do registro do título aquisitivo e só se desfaz por procedimento igualmente formal.",
+"A atividade registral não se limita à execução formal de decisões judiciais: envolve controle de legalidade do título, especialmente quanto à compatibilidade com o fólio real e com normas de ordem pública.",
+"Óbices formais mantidos de forma autônoma. A descrição do imóvel era insuficiente para a especialidade objetiva — croqui ilegível, memorial ilegível e divergência entre a folha indicada na sentença e a folha efetivamente juntada. Faltavam também elementos essenciais de identificação do adquirente, em afronta ao art. 176, § 1º, da LRP.",
+"Detalhe prático relevante da nota devolutiva: não foi possível reconhecer o sinal público da subscritora de certidão de nascimento expedida por serventia de outro Estado, por não constar depósito no acervo da serventia nem na Central Notarial de Serviços Eletrônicos Compartilhados; sugeriu-se ao interessado solicitar a remessa do sinal público ou o respectivo depósito na Central."],
+fontes:"Precedentes citados: AC 0003716-34.2010.8.26.0471; AC 1015479-18.2023.8.26.0161; AC 1051062-63.2017.8.26.0100.",
+nota:"",
+keys:"usucapião; título judicial; mandado de registro; bem público; imprescritibilidade; art. 183 § 3º Constituição Federal; desapropriação; desafetação; coisa julgada; qualificação registral; especialidade objetiva; especialidade subjetiva; art. 176 § 1º LRP; sinal público; CENSEC"},
+
+{n:22,org:"CSMSP",flag:false,
+t:"Embargos rejeitados: dispensa de notificação em usucapião pressupõe correspondência entre o imóvel descrito nos títulos e o requerido",
+idp:"ED n. 1007038-37.2024.8.26.0024/50000, rel. des. silvia rocha",
+sg:"CSMSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xkp",
+exec:"<p>Embargos de declaração rejeitados. O acórdão embargado dera parcial provimento à apelação, mantendo as exigências de notificação dos proprietários tabulares e dos confrontantes e de apresentação de certidão de distribuição da Justiça Federal em nome da antecessora, com observações sobre divergências de especialidade objetiva. Reconheceu-se que todos os argumentos capazes, em tese, de infirmar a conclusão foram apreciados, nos termos do art. 489, § 1º, IV, do CPC, e que os embargos traduzem inconformismo, incompatível com a via do art. 1022 do CPC.</p>",
+caso:"<p>Os embargantes sustentavam omissão quanto à aplicação do art. 410 do CNN/CN/CNJ — que dispensa notificações quando demonstrados cadeia dominial, justo título e quitação — e quanto ao art. 213, § 13, I, da LRP; alegavam que a divergência de toponímia decorrera da oficialização posterior da denominação da via por lei municipal; afirmavam que a existência de edificação não descaracteriza a identidade do imóvel, por constituir acessão decorrente da posse; e pediam o encaminhamento de cópias para apuração de falta disciplinar do registrador.</p>",
+pts:["A dispensa de notificação do art. 410 do CNN/CN/CNJ foi expressamente apreciada, ao lado da carência de prova da qualidade de únicos herdeiros dos signatários das declarações de reconhecimento de limites.",
+"O acórdão embargado não criou requisito novo. A existência da construção foi apreciada apenas no contexto das particularidades do caso, como um dos elementos de aferição da correspondência entre o imóvel descrito nos títulos e o objeto do requerimento — conclusão que repercutiu exclusivamente na análise dos pressupostos da dispensa de notificação, e não na compatibilidade geral entre edificação e usucapião extrajudicial.",
+"Solução prática apontada para a divergência de toponímia: pode ser sanada perante o próprio oficial registrador, cabendo à parte informar e demonstrar a alteração legislativa da denominação da via pública.",
+"O pedido de apuração de falta disciplinar foi rejeitado por fundamento nítido: a responsabilização do delegatário não se confunde com a revisão da qualificação registral na via recursal."],
+fontes:"",
+nota:"O acórdão embargado foi proferido em 06/05/2026 e é citado como precedente na ficha 20.",
+keys:"embargos de declaração; art. 1022 CPC; art. 489 § 1º IV CPC; usucapião extrajudicial; acessio possessionis; art. 410 CNN/CN/CNJ; art. 213 § 13 I LRP; art. 216-A LRP; dispensa de notificação; toponímia; herdeiros; confrontantes; falta disciplinar"},
+
+{n:23,org:"1VRPSP",flag:false,
+t:"Consolidação da propriedade fiduciária averbada é ato perfeito e acabado; purgação da mora não comunicada à serventia não a desconstitui",
+idp:"PP n. 1013384-96.2026.8.26.0100, rel. juíza luciana carone nucci eugênio mahuad",
+sg:"1VRPSP",
+idt:"j. 25/08/2026",
+u:"https://kollsys.org/xls",
+exec:"<p>Pedido de providências julgado procedente, com manutenção do óbice. Purgada a mora diretamente perante a credora, sem comunicação ao registro de imóveis antes da averbação, o procedimento tramita e produz o efeito registral previsto em lei: a transmissão da propriedade plena ao credor fiduciário. A falha de comunicação ocorreu fora da serventia e não torna inexata a averbação sob o prisma dos elementos que fundamentaram sua prática. A desconstituição depende de decisão judicial ou de novo negócio jurídico translativo, por escritura pública e com recolhimento do imposto de transmissão.</p>",
+caso:"<p>Fundo de investimento titular do crédito representado por cédula de crédito imobiliário requereu o cancelamento da averbação de consolidação da propriedade fiduciária e o restabelecimento da alienação fiduciária. Sustentou que a devedora purgara a mora diretamente perante a credora em fevereiro de 2026, abrangendo saldo vencido, encargos, despesas, custas, emolumentos e restituição do imposto de transmissão, mas que, por falha de comunicação entre a credora e o terceiro responsável pela condução operacional da cobrança, o pagamento não fora informado à serventia. A consolidação ocorreu em 31/03/2026. Não houve leilão nem alienação a terceiros.</p>",
+pts:["A própria interessada reconheceu que não houve falha na qualificação registral nem irregularidade imputável ao oficial. A decisão sublinha que não se está diante de erro material do assento, de inexatidão na transposição do título ou de desconformidade objetiva entre documento e averbação.",
+"O art. 26 da Lei n. 9514/1997 exige que a purgação se dê perante o registro de imóveis; purgada ali, o oficial entrega à credora as importâncias recebidas nos três dias seguintes e o contrato convalesce. Fora disso, a propriedade resolúvel consolida-se de forma plena.",
+"O acórdão examina e afasta a distinção proposta pela parte. Ainda que o pagamento tenha antecedido a consolidação, é incontroverso que não foi comunicado à serventia antes dela; o reconhecimento unilateral da credora quanto à falha operacional não equivale a título apto a desconstituir a transmissão dominial.",
+"Rejeição do argumento fundado na veracidade registral: o sistema busca a correspondência entre assentos e realidade jurídica, mas por meios legalmente previstos, não pela desconstituição administrativa de transmissão regularmente inscrita com base em declaração posterior das partes.",
+"O art. 250 da LRP admite o cancelamento por decisão judicial transitada em julgado, por requerimento unânime das partes ou por documento hábil, mas não dispensa título materialmente adequado à natureza do direito atingido; e o art. 252 estabelece que o registro, enquanto não cancelado, produz todos os efeitos legais.",
+"Capítulo tributário. A nova transmissão exige escritura pública (art. 108 do Código Civil) e recolhimento do imposto; eventuais ajustes financeiros entre credora e devedores não alteram a natureza jurídica da transmissão nem substituem o título e a tributação próprios de nova aquisição. Não compete ao oficial nem ao juízo administrativo criar hipótese de não incidência.",
+"Distinção temporal expressa: o REsp 1649595/RS examina contrato anterior às alterações da Lei n. 13465/2017 e não serve de fundamento para admitir purgação tardia ou reversão administrativa sob a disciplina atual."],
+fontes:"Precedentes administrativos: Parecer n. 240/2016-E (rel. des. pereira calças), no qual se assentou que, observado o procedimento da Lei n. 9514/1997, a consolidação se torna ato perfeito e acabado; RA n. 1114713-98.2019.8.26.0100 (rel. des. ricardo mair anafe, j. 16/08/2021); RA n. 1033352-83.2024.8.26.0100 (rel. des. francisco loureiro, j. 04/10/2024). Normas: arts. 26, § 7º, e 27 da Lei n. 9514/1997; arts. 221, IV, 249, 250, 252 e 289 da LRP; art. 134, VI, do Código Tributário Nacional; art. 30, XI, e art. 28 da Lei n. 8935/1994; item 117 do Capítulo XX das NSCGJ.",
+nota:"",
+keys:"alienação fiduciária; consolidação da propriedade; purgação da mora; art. 26 Lei n. 9514/1997; art. 26 § 7º; art. 27; cédula de crédito imobiliário; cancelamento de averbação; art. 249 LRP; art. 250 LRP; art. 252 LRP; art. 221 IV; veracidade registral; ITBI; art. 108 Código Civil; Lei n. 13465/2017; direito de preferência do fiduciante"},
+
+{n:24,org:"1VRPSP",flag:false,
+t:"Saldo devedor remanescente após leilões negativos é obrigação pessoal e não comporta averbação enunciativa na matrícula",
+idp:"PP n. 1013460-23.2026.8.26.0100, rel. juíza luciana carone nucci eugênio mahuad",
+sg:"1VRPSP",
+idt:"j. 19/08/2026",
+u:"https://kollsys.org/xl8",
+exec:"<p>Pedido de providências julgado procedente, com manutenção do óbice quanto à averbação enunciativa. Admitem-se as averbações dos leilões negativos e do cancelamento da propriedade fiduciária e da garantia, mas não a inserção de declarações sobre a forma de amortização da dívida, os critérios contábeis do credor, o valor de liquidação forçada, o saldo devedor remanescente ou futura cobrança judicial. A responsabilidade pelo saldo remanescente prescinde de publicidade registral, por consistir em obrigação pessoal restrita às partes do contrato.</p>",
+caso:"<p>Instituição financeira requereu a averbação de leilões realizados em junho de 2026, ambos sem arrematação, do cancelamento da alienação fiduciária e, ainda, de texto esclarecendo que a dívida fora parcialmente quitada e que eventual saldo devedor seria apurado e poderia ser cobrado judicialmente. Sustentou que o crédito é de natureza empresarial, não destinado à aquisição ou construção de residência, que o art. 27, § 5º-A, da Lei n. 9514/1997 permite a cobrança do saldo, e que o art. 248 da LRP determina a declaração do motivo do cancelamento e do título que o embasou.</p>",
+pts:["A decisão reconhece a ampliação jurisprudencial das hipóteses de averbação enunciativa, anterior mesmo à Lei n. 14382/2022, e enumera precedentes: contaminação do solo por substâncias tóxicas; tombamento provisório e restrições na vizinhança de bens tombados; área de proteção de fonte em lavra de água mineral; restrições legais municipais à alienação de imóveis de distrito industrial; e contrato-padrão, estatuto de associação de moradores e ata assemblear sobre contraprestação de serviços de loteamento.",
+"O limite, contudo, é o próprio art. 246 da LRP: a averbação enunciativa depende de alteração do registro ou de repercussão em direitos relativos ao imóvel. O controle de qualificação permanece rigoroso, sob pena de a matrícula tornar-se repositório de informações irrelevantes, dificultando a busca dos dados que efetivamente importam.",
+"No caso, a informação deixará de repercutir nos direitos relativos ao imóvel justamente com o cancelamento requerido: o saldo remanescente não reflete sobre o bem nem sobre titulares de direitos reais.",
+"Argumento de ineficácia prática. Ainda que o devedor sustente, em futura execução, que o cancelamento importou satisfação integral, o debate ocorrerá sob contraditório e será resolvido à luz do título, da memória de cálculo e da lei — a averbação não seria prova suficiente. A própria requerente admitira que a subsistência e a exigibilidade do saldo se demonstram pelo título obrigacional.",
+"Risco inverso: a inserção poderia gerar confusão em terceiros e possíveis adquirentes quanto à possibilidade de cobrança, transtorno que deve ser evitado.",
+"Aplicação do princípio da cindibilidade: as averbações principais autorizadas por lei podem ser praticadas de imediato, sem necessidade de novo requerimento, excluída apenas a parte enunciativa."],
+fontes:"Doutrina invocada: lição do Des. Francisco Loureiro sobre averbação enunciativa. Precedentes administrativos citados: Processo CG n. 167/2005 e Processo CG n. 1029/2006 (rel. des. gilberto passos de freitas); Processo CG n. 167.910/2015 e RA n. 1005381-06.2015.8.26.0047 (rel. des. manoel de queiroz pereira calças); RA n. 1000778-58.2023.8.26.0450 (rel. des. francisco loureiro, j. 27/01/2025).",
+nota:"",
+keys:"alienação fiduciária; leilão negativo; leilões infrutíferos; cancelamento da garantia; averbação enunciativa; art. 246 LRP; art. 248 LRP; art. 167 II; Lei n. 14382/2022; art. 27 § 5º-A Lei n. 9514/1997; saldo devedor remanescente; quitação parcial; cindibilidade; publicidade registral; direito pessoal"},
+
+{n:25,org:"1VRPSP",flag:false,
+t:"Excussão da alienação fiduciária imobiliária não se rege pela Lei n. 14711/2023 nem pelo Decreto-Lei n. 911/1969, e as fases intermediárias não se averbam",
+idp:"PP n. 1013258-46.2026.8.26.0100, rel. juíza luciana carone nucci eugênio mahuad",
+sg:"1VRPSP",
+idt:"j. 21/08/2026",
+u:"https://kollsys.org/xle",
+exec:"<p>Pedido de providências julgado improcedente. A pretensão de terceiro credor apoiava-se em premissa normativa que não corresponde à garantia constituída. À alienação fiduciária de coisa imóvel corresponde o procedimento próprio dos arts. 26, 26-A e 27 da Lei n. 9514/1997. Ingressam no fólio real apenas a consolidação da propriedade e o resultado dos leilões; exigir a inscrição prévia de cada diligência equivaleria a criar requisito sem previsão legal. Não havendo vício extrínseco nem nulidade de pleno direito, não incide o art. 214 da LRP.</p>",
+caso:"<p>Credora exequente do anterior titular dos direitos de devedor fiduciante requereu o cancelamento das averbações de consolidação da propriedade e de cumprimento das obrigações do art. 27 da Lei n. 9514/1997. Alegou que a excussão extrajudicial só seria admitida para contratos celebrados sob a Lei n. 14711/2023, que faltaria averbação prévia do início da excussão, que a matrícula não identificaria o procedimento nem a intimação para purgação, e apontou incongruências entre leilão judicial designado em execução condominial e os leilões extrajudiciais. Em aditamento, invocou os arts. 8º-B e 8º-C do Decreto-Lei n. 911/1969.</p>",
+pts:["Erro de premissa dissecado com precisão. O art. 9º da Lei n. 14711/2023 institui procedimento autônomo de execução extrajudicial de créditos garantidos por hipoteca — direito real estruturalmente diverso, em que a propriedade permanece com o devedor e o inadimplemento não produz, por si só, transferência. Os arts. 8º-B e 8º-C do Decreto-Lei n. 911/1969 disciplinam busca e apreensão extrajudicial de bens móveis, processada perante o registro de títulos e documentos.",
+"O fato de a Lei n. 14711/2023 ter alterado dispositivos da própria Lei n. 9514/1997 não autoriza a transposição indistinta de exigências concebidas para institutos distintos.",
+"Continuidade preservada. O que a requerente descreve como interrupção da cadeia é, na realidade, a ausência de atos que a lei não manda ingressar: o procedimento de intimação para purgação da mora é autuado e arquivado na própria serventia, servindo de suporte documental ao ato registral que dele resulta, sem constituir inscrição autônoma.",
+"Suporte documental dos atos impugnados: requerimento do credor, certificação do decurso do prazo, prova do recolhimento do imposto de transmissão e certidão positiva de registro de títulos e documentos atestando a entrega da notificação ao próprio destinatário, que a subscreveu; para os leilões, autos negativos da leiloeira, exemplares do jornal com os editais e o termo de quitação dos §§ 5º e 6º do art. 27.",
+"Delimitação do art. 214 da LRP: a invalidação independentemente de ação direta cabe apenas quando a nulidade de pleno direito é relativa ao próprio registro, isto é, quando há vício extrínseco ou registrário por ofensa a princípios registrais ou erro na qualificação.",
+"Esclarecimento sobre as supostas incongruências: o leilão judicial recaía sobre os direitos do devedor fiduciante, penhorados, e não sobre a propriedade, que já pertencia ao credor fiduciário — objetos diversos, em procedimentos distintos, que podiam tramitar simultaneamente.",
+"Prioridade. Existia título anteriormente prenotado, relativo a escritura de venda e compra do mesmo imóvel; pelos arts. 182 e 186 da LRP, a precedência do protocolo assegura prioridade ao título primeiro apresentado."],
+fontes:"",
+nota:"",
+keys:"alienação fiduciária de bem imóvel; art. 22 Lei n. 9514/1997; arts. 26, 26-A e 27; Lei n. 14711/2023 art. 9º § 2º; hipoteca execução extrajudicial; Decreto-Lei n. 911/1969 arts. 8º-B e 8º-C; busca e apreensão; art. 214 LRP; nulidade de pleno direito; art. 195 LRP; art. 237 LRP; art. 182 LRP; art. 186 LRP; art. 252 LRP; notificação por RTD; leilões negativos; art. 924 II CPC"},
+
+{n:26,org:"1VRPSP",flag:false,
+t:"Impugnação com indicação técnica e georreferenciada do ponto de sobreposição é fundamentada e remete a retificação às vias ordinárias",
+idp:"PP n. 1012846-18.2026.8.26.0100, rel. juíza luciana carone nucci eugênio mahuad",
+sg:"1VRPSP",
+idt:"j. 18/08/2026",
+u:"https://kollsys.org/xky",
+exec:"<p>Pedido de providências julgado procedente, com acolhimento das impugnações e remessa dos interessados às vias ordinárias. O procedimento de retificação administrativa tem como principal requisito a inexistência de lide. O item 136.20 do Capítulo XX das NSCGJ permite julgar a fundamentação da impugnação, afastando a claramente impertinente ou protelatória, mas esse exame se dá de plano ou após instrução sumária: havendo qualquer indício de veracidade que justifique conflito de interesses, a via extrajudicial fica prejudicada.</p>",
+caso:"<p>Retificação de área com apuração de remanescente de dois imóveis de entidades religiosas, instruída com plantas, memoriais e levantamento planimétrico. Um condomínio edilício confrontante impugnou quanto a área de 846,80 m², sustentando que corresponde a porção efetivamente possuída pelo conjunto residencial. O Município impugnou com base em manifestação técnica de seção de engenharia, que identificou interferência com bem de domínio público mediante sobreposição gráfica de levantamentos oficiais. As requerentes refutaram ambas como genéricas e sem lastro técnico idôneo.</p>",
+pts:["Evolução da impugnação do condomínio, expressamente descrita na decisão. A primeira manifestação era genérica e não indicava o ponto específico de avanço; o oficial franqueou nova oportunidade de esclarecimento técnico, e a segunda, instruída com laudo, individualizou de forma precisa o ponto de sobreposição. Só então a impugnação passou a ser fundamentada.",
+"Critério aplicado à impugnação do ente público: a indicação técnica e georreferenciada de cada ponto de sobreposição, com demarcação gráfica e cotejo com a qualificação das vias públicas oficiais, afasta o padrão de generalidade vedado pela nota do subitem 136.19 do Capítulo XX das NSCGJ.",
+"O juízo corregedor não pode permitir a produção de prova para demonstrar a existência de óbice: cabe apenas verificar se a impugnação é meramente protelatória ou completamente infundada.",
+"A decisão registra que a transação amigável era incabível na hipótese pelo envolvimento de ente público.",
+"Os elementos reunidos no procedimento extrajudicial podem ser aproveitados pelo interessado para instruir o pedido judicial."],
+fontes:"Normas: art. 213, § 6º, da LRP; subitens 136.19 e 136.20 do Capítulo XX das NSCGJ.",
+nota:"",
+keys:"retificação de área; apuração de remanescente; art. 213 § 6º LRP; subitem 136.19 NSCGJ; subitem 136.20; impugnação fundamentada; sobreposição; levantamento planimétrico; georreferenciamento; bem público; vias ordinárias; confrontante"},
+
+{n:27,org:"1VRPSP",flag:false,
+t:"Vencido o mandato, a diretoria não pode convocar assembleia; ata de eleição realizada contra ordem judicial não ingressa no registro civil das pessoas jurídicas",
+idp:"PP n. 1012410-59.2026.8.26.0100, rel. juíza luciana carone nucci eugênio mahuad",
+sg:"1VRPSP",
+idt:"j. 25/08/2026",
+u:"https://kollsys.org/xlr",
+exec:"<p>Pedido de providências julgado improcedente, com manutenção dos óbices e cancelamento da prenotação. Vencido o mandato, a diretoria deixa de existir formalmente e não é válida a convocação de assembleia por pessoa destituída do cargo representativo. A convalidação dos atos de gestão praticados sem poderes regulares é admissível, mas deve constar expressamente da pauta e do edital de convocação e ser deliberada como primeiro ato da reunião. Soma-se a isso a realização da eleição em violação direta a ordem judicial que determinara a suspensão do pleito.</p>",
+caso:"<p>Sindicato requereu a averbação de ata de assembleia geral ordinária de aclamação e proclamação de resultado eleitoral realizada em 16/04/2026. O mandato da última diretoria encerrara-se em 31/12/2025. O processo eleitoral, iniciado por edital de novembro de 2025, foi sucessivamente suspenso por decisões da Justiça do Trabalho, com adiamentos em dezembro, janeiro e abril. A ata consignou a ratificação de todos os atos administrativos praticados entre 1º/01/2026 e 16/04/2026. O registrador recusou a averbação por lacuna administrativa e por descumprimento da ordem judicial de suspensão.</p>",
+pts:["Premissa de competência: as entidades sindicais têm natureza jurídica de associação (art. 44, I, do Código Civil) e seu registro cabe ao registro civil das pessoas jurídicas, controle que não abrange questões derivadas da investidura sindical ou de regramentos da legislação trabalhista.",
+"O estatuto fixa que o mandato se encerra em 31 de dezembro e que as eleições gerais se darão até essa data. Toda eleição deve anteceder o término do mandato para que os eleitos sejam imediatamente empossados sem interrupção — é essa a continuidade exigida.",
+"Alternativa admitida à nomeação de administrador provisório do art. 49 do Código Civil: convalidação, pela assembleia geral, dos atos de gestão praticados por quem não detinha poderes regulares, ao lado de declaração expressa dos membros da última diretoria assumindo a responsabilidade, nos termos dos arts. 172 e 173 do Código Civil.",
+"Duas falhas formais decisivas. Primeira: não há nos autos o ato de convocação para a assembleia de 16/04/2026 — o edital mencionado na ata, de novembro de 2025, referia-se a assembleia prevista para dezembro. Segunda: a assembleia só pode tratar dos assuntos para os quais foi convocada, e a ratificação dos atos pretéritos não constou da pauta nem do edital.",
+"O mandato dos novos eleitos não terá vigência retroativa: haverá confirmação da validade dos atos praticados desde o vencimento do último mandato e a eleição, com posse para prosseguimento regular da administração a partir dessa nova escolha.",
+"Ponto mais delicado da decisão: mesmo na ausência de comando dirigido ao registro civil das pessoas jurídicas, a ordem trabalhista que suspendeu as eleições afetou o processo eleitoral, incorporando regra específica cujo desatendimento reflete no exame de legalidade e conduz à qualificação negativa. Não se admite o ingresso de ato praticado em direta violação de ordem judicial expressa enquanto não demonstrada sua revogação.",
+"Questão processual: indeferido o ingresso de terceira interessada, por ser a dúvida — e, por extensão, o pedido de providências — procedimento administrativo não litigioso, ressalvado o recurso como terceiro prejudicado (art. 202 da LRP)."],
+fontes:"Precedentes: Processo CG n. 2014/9855 (Corregedor-Geral Des. Hamilton Elliot Akel, j. 08/09/2014), sobre a natureza associativa das entidades sindicais; PP n. 1088184-32.2025.8.26.0100 (j. 07/08/2025), sobre convalidação assemblear; Processo Administrativo n. 1033971-18.2021.8.26.0100, sobre o procedimento de superação da lacuna administrativa; AC 1105389-21.2018.8.26.0100 (rel. des. pinheiro franco, j. 09/08/2019), AC 510-0 e AC 964-6/0, sobre intervenção de terceiros; Parecer CG n. 238/2007-E, invocado pela parte.",
+nota:"",
+keys:"registro civil das pessoas jurídicas; ata de assembleia; eleição de diretoria; sindicato; associação; art. 44 I Código Civil; art. 46 III; art. 49; art. 115; arts. 172 e 173; continuidade; legalidade estrita; administrador provisório; edital de convocação; ordem judicial; Justiça do Trabalho; art. 203 I LRP; art. 202 LRP; subitem 39.5.1 NSCGJ; intervenção de terceiros"},
+
+{n:28,org:"2VRPSP",flag:false,
+t:"Informação sobre existência de testamento no assento de óbito, oriunda de declaração assinada, não se retifica pela via administrativa",
+idp:"PP n. 0027639-76.2026.8.26.0100, rel. juiz marcelo benacchio",
+sg:"2VRPSP",
+idt:"j. 13/08/2026",
+u:"https://kollsys.org/xk6",
+exec:"<p>Pedido indeferido na via administrativa, com determinação de arquivamento. A retificação do art. 110 da LRP pressupõe erro evidente, objetivo e imediatamente constatável, que não exija qualquer indagação. Tendo o assento reproduzido fielmente declaração assinada pela própria filha do falecido, inexiste divergência objetiva entre o assento e o documento que embasou sua lavratura, e a apuração de eventual equívoco no preenchimento ultrapassa os limites da via administrativa, impondo-se o procedimento jurisdicional do art. 109 da LRP. Reconhecida a regularidade da conduta do delegatário.</p>",
+caso:"<p>Advogado da família requereu a retificação de assento de óbito para excluir a informação de que o falecido teria deixado testamento. A filha declarou que, ao ser indagada pelo serviço funerário, informou a inexistência de testamento, mas o documento por ela assinado indicava expressamente que o falecido deixava bens e deixava testamento; atribuiu a assinatura ao abalo emocional, ao cansaço e à urgência. Alegou-se que a informação dificultava o inventário extrajudicial e que havia urgência em razão de prazo do imposto de transmissão e risco de penalidade tributária. Juntou-se certidão negativa do Colégio Notarial do Brasil.</p>",
+pts:["A Lei n. 13484/2017 deu nova redação ao art. 110 da LRP e atribuiu ao oficial de registro civil reserva exclusiva para decidir sobre a retificação administrativa nas hipóteses de seus incisos, entre as quais a de erros que não exijam qualquer indagação para a constatação imediata da necessidade de correção.",
+"Ponto técnico de maior valor para a prática: a certidão negativa do Colégio Notarial informa a inexistência de registro de testamento público, de aprovação de testamento cerrado ou de revogação nas centrais consultadas, mas não afasta, de forma categórica, a possibilidade de testamento particular ou de formas especiais previstas no Código Civil.",
+"A serventia limitou-se a reproduzir a informação constante da declaração recebida do serviço funerário; o equívoco, se existente, ocorreu na origem do documento, e não no assento.",
+"A urgência alegada — prazo do imposto e risco de multa — não altera a natureza da via adequada.",
+"Afastada expressamente a instauração de procedimento administrativo contra o delegatário, por estrita observância da normativa incidente."],
+fontes:"Precedente: Processo CG n. 2008/103662 (j. 12/02/2009), no sentido de que na esfera correcional só se admite a emenda do erro de grafia e de que, fora dessas hipóteses, a via adequada é sempre o processo jurisdicional do art. 109 da LRP, para o que não tem competência o juízo corregedor permanente. Referência ao subitem 131.4 do Capítulo XVII das NSCGJ.",
+nota:"Processo em segredo de justiça quanto às partes; as iniciais foram preservadas na íntegra publicada.",
+keys:"registro civil das pessoas naturais; assento de óbito; testamento; retificação administrativa; art. 110 LRP; art. 109 LRP; art. 110 § 4º; Lei n. 13484/2017; erro de grafia; erro material; Colégio Notarial do Brasil; CENSEC; testamento particular; testamento especial; inventário extrajudicial; subitem 131.4 Capítulo XVII NSCGJ"}
+);
+const TOTAL = FICHAS.length;
+const KEY = "kollemata-ago2026-v1";
+const ORGFULL = Object.fromEntries(ORGS.map(o => [o.k, o.full]));
+
+let done = new Set();
+try {
+  const raw = localStorage.getItem(KEY);
+  if (raw) done = new Set(JSON.parse(raw));
+} catch (e) { done = new Set(); }
+
+function persist() {
+  try { localStorage.setItem(KEY, JSON.stringify([...done])); } catch (e) {}
+}
+
+const SIGKEY = "kollemata-ago2026-sigla-v1";
+let noSig = new Set();
+try {
+  const rawS = localStorage.getItem(SIGKEY);
+  if (rawS) noSig = new Set(JSON.parse(rawS));
+} catch (e) { noSig = new Set(); }
+
+function persistSig() {
+  try { localStorage.setItem(SIGKEY, JSON.stringify([...noSig])); } catch (e) {}
+}
+
+const sigOn = n => !noSig.has(n);
+const idText = f => "(" + f.idp + (sigOn(f.n) ? ", " + f.sg : "") + ", " + f.idt + ")";
+
+const state = { q: "", orgs: new Set(), only: "all", onlyFlag: false };
+
+const strip = s => String(s || "").replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+
+FICHAS.forEach(f => {
+  f._hay = [f.n, f.org, ORGFULL[f.org], f.t, f.idp, f.sg, f.idt, strip(f.exec), strip(f.caso),
+            (f.pts || []).join(" "), f.fontes, f.nota, f.keys, f.u]
+           .join(" ").toLowerCase()
+           .normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+});
+
+const norm = s => s.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+function matches(f) {
+  if (state.orgs.size && !state.orgs.has(f.org)) return false;
+  if (state.only === "done" && !done.has(f.n)) return false;
+  if (state.only === "todo" && done.has(f.n)) return false;
+  if (state.q) {
+    const terms = norm(state.q).split(/\s+/).filter(Boolean);
+    if (!terms.every(t => f._hay.includes(t))) return false;
+  }
+  return true;
+}
+
+function plainText(f) {
+  const L = [];
+  L.push(f.t.toUpperCase());
+  L.push("");
+  L.push(ORGFULL[f.org]);
+  L.push(idText(f));
+  L.push("Íntegra: " + f.u);
+  L.push("");
+  L.push("SÍNTESE EXECUTIVA");
+  L.push(strip(f.exec));
+  L.push("");
+  L.push("CASO CONCRETO");
+  L.push(strip(f.caso));
+  if (f.pts && f.pts.length) {
+    L.push("");
+    L.push("PONTOS DE ATENÇÃO");
+    f.pts.forEach(p => L.push("- " + strip(p)));
+  }
+  if (f.fontes) { L.push(""); L.push("DOUTRINA E PRECEDENTES"); L.push(strip(f.fontes)); }
+  if (f.nota)   { L.push(""); L.push("NOTA"); L.push(strip(f.nota)); }
+  return L.join("\n");
+}
+
+let toastTimer;
+function toast(msg) {
+  const el = document.getElementById("toast");
+  el.textContent = msg;
+  el.classList.add("on");
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.classList.remove("on"), 1700);
+}
+
+async function copy(text, msg) {
+  try {
+    await navigator.clipboard.writeText(text);
+    toast(msg);
+  } catch (e) {
+    const ta = document.createElement("textarea");
+    ta.value = text;
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    try { document.execCommand("copy"); toast(msg); } catch (e2) { toast("Não foi possível copiar"); }
+    document.body.removeChild(ta);
+  }
+}
+
+function fichaHTML(f) {
+  const isDone = done.has(f.n);
+  const cls = ["ficha", f.flag ? "flag" : "", isDone ? "done" : ""].filter(Boolean).join(" ");
+  const pts = (f.pts && f.pts.length)
+    ? '<div class="blk"><span class="lbl">Pontos de atenção</span><ul>' +
+      f.pts.map(p => "<li>" + p + "</li>").join("") + "</ul></div>"
+    : "";
+  const fontes = f.fontes
+    ? '<div class="fontes"><span class="lbl">Doutrina e precedentes citados</span>' + f.fontes + "</div>"
+    : "";
+  const nota = f.nota ? '<p class="nota">' + f.nota + "</p>" : "";
+  return `<article class="${cls}" id="f${f.n}" data-n="${f.n}">
+  <div class="ficha-head">
+    <span class="ficha-n">${String(f.n).padStart(2, "0")}</span>
+    <span class="tag org" title="${esc(ORGFULL[f.org])}">${f.org}</span>
+    ${f.flag ? '<span class="tag dest">Destaque</span>' : ""}
+    ${isDone ? '<span class="tag ok">Conferida</span>' : ""}
+  </div>
+  <h3>${f.t}</h3>
+  <div class="idbox">
+    <p class="idline">${esc(idText(f))}</p>
+    <div class="idctl">
+      <button type="button" class="sw" role="switch" aria-checked="${sigOn(f.n)}" data-act="sig" data-n="${f.n}" title="Incluir ou suprimir “${esc(f.sg)}” na linha de identificação">
+        <span class="tr" aria-hidden="true"><span class="kb"></span></span>Sigla
+      </button>
+      <button type="button" class="act" data-act="cid" data-n="${f.n}">Copiar identificação</button>
+      <a class="orig" href="${esc(f.u)}" target="_blank" rel="noopener noreferrer" title="Abrir a íntegra no repositório de origem">Abrir original<span class="arw" aria-hidden="true">↗</span></a>
+    </div>
+  </div>
+  <div class="blk"><span class="lbl">Síntese executiva</span>${f.exec}</div>
+  <div class="blk"><span class="lbl">Caso concreto</span>${f.caso}</div>
+  ${pts}
+  ${fontes}
+  ${nota}
+  <div class="acts">
+    <button type="button" class="act mark" data-act="mark" data-n="${f.n}" aria-pressed="${isDone}">${isDone ? "✓ Conferida" : "Marcar como conferida"}</button>
+    <button type="button" class="act" data-act="cfull" data-n="${f.n}">Copiar ficha</button>
+  </div>
+</article>`;
+}
+
+function railHTML() {
+  let out = "", last = null;
+  FICHAS.forEach(f => {
+    if (f.org !== last) {
+      out += `<div class="rail-group" data-group="${f.org}">${esc(ORGFULL[f.org])}</div>`;
+      last = f.org;
+    }
+    const cls = [done.has(f.n) ? "done" : "", f.flag ? "flag" : ""].filter(Boolean).join(" ");
+    out += `<a href="#f${f.n}" class="${cls}" data-n="${f.n}"><span class="num">${String(f.n).padStart(2, "0")}</span><span>${esc(f.t)}</span></a>`;
+  });
+  return out;
+}
+
+function chipsHTML() {
+  return ORGS.map(o => {
+    const c = FICHAS.filter(f => f.org === o.k).length;
+    return `<button type="button" class="chip" data-org="${o.k}" aria-pressed="false" title="${esc(o.full)}">${o.k}<span class="ct">${c}</span></button>`;
+  }).join("") +
+  `<button type="button" class="chip flagchip" data-flag="1" aria-pressed="false" title="Somente os julgados destacados">Destaques<span class="ct">${FICHAS.filter(f => f.flag).length}</span></button>`;
+}
+
+function applyFilters() {
+  let visible = 0;
+  FICHAS.forEach(f => {
+    const ok = matches(f) && (!state.onlyFlag || f.flag);
+    const card = document.getElementById("f" + f.n);
+    const link = document.querySelector('.rail a[data-n="' + f.n + '"]');
+    if (card) card.hidden = !ok;
+    if (link) link.hidden = !ok;
+    if (ok) visible++;
+  });
+  document.querySelectorAll(".rail-group").forEach(g => {
+    const org = g.dataset.group;
+    const any = FICHAS.some(f => f.org === org && !document.getElementById("f" + f.n).hidden);
+    g.hidden = !any;
+  });
+  document.getElementById("empty").hidden = visible > 0;
+}
+
+function updateProgress() {
+  const n = done.size;
+  document.getElementById("ptxt").textContent = n + "/" + TOTAL + " conferidas";
+  document.getElementById("pbar").style.width = (n / TOTAL * 100) + "%";
+}
+
+function refreshFicha(n) {
+  const f = FICHAS.find(x => x.n === n);
+  const old = document.getElementById("f" + n);
+  if (!old) return;
+  const wrap = document.createElement("div");
+  wrap.innerHTML = fichaHTML(f);
+  const fresh = wrap.firstElementChild;
+  old.replaceWith(fresh);
+  const link = document.querySelector('.rail a[data-n="' + n + '"]');
+  if (link) link.classList.toggle("done", done.has(n));
+}
+
+/* ---------- boot ---------- */
+document.getElementById("fichas").innerHTML = FICHAS.map(fichaHTML).join("");
+document.getElementById("rail").innerHTML = railHTML();
+document.getElementById("orgchips").innerHTML = chipsHTML();
+updateProgress();
+applyFilters();
+
+document.getElementById("q").addEventListener("input", e => {
+  state.q = e.target.value.trim();
+  applyFilters();
+});
+
+document.getElementById("orgchips").addEventListener("click", e => {
+  const b = e.target.closest(".chip");
+  if (!b) return;
+  const on = b.getAttribute("aria-pressed") === "true";
+  b.setAttribute("aria-pressed", String(!on));
+  if (b.dataset.flag) {
+    state.onlyFlag = !on;
+  } else {
+    if (on) state.orgs.delete(b.dataset.org); else state.orgs.add(b.dataset.org);
+  }
+  applyFilters();
+});
+
+document.querySelectorAll(".seg button").forEach(b => {
+  b.addEventListener("click", () => {
+    document.querySelectorAll(".seg button").forEach(x => x.setAttribute("aria-pressed", "false"));
+    b.setAttribute("aria-pressed", "true");
+    state.only = b.dataset.state;
+    applyFilters();
+  });
+});
+
+document.getElementById("fichas").addEventListener("click", e => {
+  const b = e.target.closest("button[data-act]");
+  if (!b) return;
+  const n = Number(b.dataset.n);
+  const f = FICHAS.find(x => x.n === n);
+  if (b.dataset.act === "mark") {
+    if (done.has(n)) done.delete(n); else done.add(n);
+    persist();
+    refreshFicha(n);
+    updateProgress();
+    applyFilters();
+    toast(done.has(n) ? "Ficha " + n + " marcada como conferida" : "Marcação removida da ficha " + n);
+  } else if (b.dataset.act === "sig") {
+    if (noSig.has(n)) noSig.delete(n); else noSig.add(n);
+    persistSig();
+    refreshFicha(n);
+    toast(sigOn(n) ? "Sigla “" + f.sg + "” incluída na identificação" : "Sigla “" + f.sg + "” suprimida da identificação");
+  } else if (b.dataset.act === "cid") {
+    copy(idText(f), "Linha de identificação copiada");
+  } else if (b.dataset.act === "cfull") {
+    copy(plainText(f), "Ficha " + n + " copiada em texto limpo");
+  }
+});
+
+document.getElementById("clearall").addEventListener("click", () => {
+  if (!done.size) { toast("Não há marcações a limpar"); return; }
+  done.clear();
+  persist();
+  document.getElementById("fichas").innerHTML = FICHAS.map(fichaHTML).join("");
+  document.getElementById("rail").innerHTML = railHTML();
+  updateProgress();
+  applyFilters();
+  toast("Marcações apagadas");
+});
+</script>
+
+
+<!-- radar:inicio -->
+<script type="application/json" id="radar-meta">{"slug": "kollemata-2026-001", "titulo": "Informativo Kollemata n. 001 — agosto de 2026", "orgao": "Kollemata", "tipo": "jurisprudencia", "inicio": "2026-08", "fim": "2026-08", "periodo": "agosto de 2026", "fonte": "Kollemata n. 001", "fichas": 28, "produzido": "2026-09-02"}</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice.
+   Nao interfere na marcacao propria do relatorio: apenas conta no DOM
+   quantas fichas existem e quantas estao marcadas, e grava o resumo. */
+(function(){
+  var SLUG = "kollemata-2026-001";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+<!-- radar:fim -->
+</body>
+</html>
