@@ -52,6 +52,25 @@ novo apenas substitui o bloco anterior.
 `inicio` e `fim` são o que alimenta o mapa de cobertura e a lista de lacunas —
 vale preenchê-los com cuidado.
 
+### O que um relatório novo precisa ter
+
+O índice não interpreta o conteúdo do relatório; ele só conta fichas. Para que
+a barra de progresso funcione, o relatório precisa respeitar duas convenções:
+
+- cada ficha é um elemento com a classe `ficha`;
+- a ficha conferida ganha, nesse mesmo elemento, uma destas marcas:
+  classe `done`, `feita`, `feito`, `is-done` ou `conferida`, ou o atributo
+  `data-done="true"`.
+
+Os relatórios existentes já seguem isso — usam, entre eles, quatro variantes
+diferentes, e o farol cobre todas. Um relatório que marque a ficha de outra
+maneira aparece no índice, mas com progresso sempre em zero; nesse caso, basta
+acrescentar a marca nova à lista `FEITA` em `ferramentas/injetar-farol.py` e
+rodar o script de novo.
+
+Fora isso, o relatório é livre: cada um tem sua própria paleta, tipografia e
+estrutura, e continua sendo um arquivo autocontido, que abre sozinho, offline.
+
 ## Como o progresso é registrado
 
 Cada relatório já tinha sua própria marcação de fichas conferidas, em
