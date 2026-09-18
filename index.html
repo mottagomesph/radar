@@ -352,6 +352,23 @@ pre.saida{
   font-family:var(--mono); font-size:.9em; background:var(--sheet-2);
   border:1px solid var(--rule); border-radius:4px; padding:.05rem .3rem
 }
+.entradas{display:flex; flex-direction:column; gap:.1rem}
+.entrada{
+  display:flex; align-items:center; gap:.6rem; flex-wrap:wrap;
+  padding:.5rem 0; border-bottom:1px solid var(--rule)
+}
+.entrada:last-child{border-bottom:0}
+.entrada-nome{
+  font-family:var(--mono); font-size:.78rem; font-weight:600; color:var(--ink);
+  flex:0 0 auto
+}
+.entrada-tit{
+  font-size:.82rem; color:var(--muted); flex:1 1 10rem; min-width:0;
+  overflow:hidden; text-overflow:ellipsis; white-space:nowrap
+}
+.entrada .botao{font-size:.76rem; padding:.22rem .6rem}
+.entrada.fora .entrada-nome{text-decoration:line-through; color:var(--muted)}
+.entrada.fora .entrada-tit{color:var(--seal)}
 .tag.rascunho{color:var(--warn)}
 article.cartao.rascunho{
   border-style:dashed;
@@ -394,7 +411,7 @@ article.cartao.rascunho{
   <div class="abas" role="tablist" aria-label="Modo de exibição">
     <button type="button" role="tab" id="aba-acervo" aria-selected="true" aria-controls="painel-acervo">Acervo</button>
     <button type="button" role="tab" id="aba-cobertura" aria-selected="false" aria-controls="painel-cobertura">Cobertura</button>
-    <button type="button" role="tab" id="aba-inserir" aria-selected="false" aria-controls="painel-inserir">Inserir</button>
+    <button type="button" role="tab" id="aba-registro" aria-selected="false" aria-controls="painel-registro">Registro</button>
   </div>
   <button class="icone" type="button" id="btn-tema" title="Alternar tema claro e escuro" aria-label="Alternar tema">&#9686;</button>
   <button class="icone" type="button" id="btn-exportar" title="Salvar o progresso em arquivo">&#8595; progresso</button>
@@ -418,11 +435,13 @@ article.cartao.rascunho{
     <div class="lacunas" id="lacunas"></div>
   </section>
 
-  <section class="painel" id="painel-inserir" role="tabpanel" aria-labelledby="aba-inserir" hidden>
+  <section class="painel" id="painel-registro" role="tabpanel" aria-labelledby="aba-registro" hidden>
+
+    <p class="intro-cob">As alterações feitas aqui ficam guardadas neste aparelho até você gravá-las no <code>reports.json</code>. Nada se perde ao recarregar a página, e nada muda para os outros antes da gravação.</p>
 
     <div class="passo">
-      <h3><b>1</b>Escolher o arquivo</h3>
-      <p class="ajuda">O relatório já deve estar em <code>relatorios/</code> — enviado pelo GitHub ou copiado para a pasta. Informe o nome do arquivo, ou escolha um dos que ainda não constam do registro.</p>
+      <h3><b>1</b>Acrescentar um relatório</h3>
+      <p class="ajuda">O arquivo já deve estar em <code>relatorios/</code> — enviado pelo GitHub ou copiado para a pasta. Informe o nome, ou escolha um dos que ainda não constam do registro.</p>
       <div class="linha">
         <input type="text" id="nome-arquivo" placeholder="stj-2025-t1.html" spellcheck="false" autocapitalize="off" aria-label="Nome do arquivo em relatorios/">
         <button class="botao" type="button" id="btn-analisar">Analisar</button>
@@ -432,27 +451,38 @@ article.cartao.rascunho{
       <p class="recado" id="recado-1"></p>
     </div>
 
-    <div class="passo" id="passo-2" aria-disabled="true">
-      <h3><b>2</b>Conferir e completar</h3>
-      <p class="ajuda">O que foi possível ler do próprio arquivo já vem preenchido. <i>Datas</i> e <i>fonte</i> são deduzidas do texto e merecem conferência; o resto costuma vir certo.</p>
-      <div class="campos" id="campos"></div>
+    <div class="passo">
+      <h3>Entradas do registro</h3>
+      <p class="ajuda">Para alterar ou retirar um relatório do índice.</p>
+      <div class="entradas" id="entradas"></div>
     </div>
 
-    <div class="passo" id="passo-3" aria-disabled="true">
-      <h3><b>3</b>Registrar</h3>
-      <p class="ajuda">Esta é a entrada a acrescentar na lista <code>relatorios</code> de <code>reports.json</code>.</p>
+    <div class="passo" id="passo-2" aria-disabled="true">
+      <h3><b>2</b><span id="titulo-form">Conferir e completar</span></h3>
+      <p class="ajuda" id="ajuda-form">O que foi possível ler do próprio arquivo já vem preenchido. <i>Datas</i> e <i>fonte</i> são deduzidas do texto e merecem conferência; o resto costuma vir certo.</p>
+      <div class="campos" id="campos"></div>
+      <div class="linha" style="margin-top:1rem">
+        <button class="botao" type="button" id="btn-aplicar">Aplicar ao registro</button>
+        <button class="botao secundario" type="button" id="btn-cancelar">Cancelar</button>
+      </div>
+      <p class="recado" id="recado-2"></p>
+    </div>
+
+    <div class="passo" id="passo-3">
+      <h3><b>3</b>Gravar no reports.json</h3>
+      <p class="ajuda" id="resumo-pendencias"></p>
       <pre class="saida" id="saida"></pre>
       <div class="linha">
-        <button class="botao" type="button" id="btn-copiar">Copiar entrada</button>
-        <button class="botao secundario" type="button" id="btn-rascunho">Ver como rascunho</button>
+        <button class="botao" type="button" id="btn-copiar">Copiar arquivo inteiro</button>
+        <button class="botao secundario" type="button" id="btn-baixar">Baixar reports.json</button>
+        <button class="botao secundario" type="button" id="btn-descartar">Descartar alterações</button>
       </div>
       <p class="recado" id="recado-3"></p>
       <ol class="receita">
         <li>abra <code>reports.json</code> no GitHub e clique no lápis;</li>
-        <li>cole a entrada dentro da lista <code>relatorios</code>, separada por vírgula;</li>
-        <li>confirme a alteração — o índice passa a mostrar o relatório para todo mundo.</li>
+        <li>selecione tudo e cole por cima — é o arquivo completo, já com as alterações;</li>
+        <li>confirme — o índice passa a mostrar o acervo alterado para todo mundo.</li>
       </ol>
-      <p class="ajuda" style="margin:.9rem 0 0">A barra de progresso deste relatório só começa a contar depois que o farol for injetado nele, com <code>python ferramentas/injetar-farol.py</code>. Até lá ele aparece normalmente, com o número de fichas do registro.</p>
     </div>
 
   </section>
@@ -475,7 +505,10 @@ var REG = [];
 var CHAVE_TEMA = "radar:tema";
 var CHAVE_SIT = "radar:situacao:";
 var CHAVE_PROG = "radar:progresso:";
-var CHAVE_RASC = "radar:rascunhos";
+var CHAVE_RASC = "radar:registro-pendente";
+var CAMPOS_ENTRADA = ["slug", "arquivo", "titulo", "orgao", "tipo", "inicio",
+                      "fim", "periodo", "fonte", "fichas", "produzido",
+                      "descricao"];
 
 /* ---------- utilidades ---------- */
 function ler(chave, padrao){
@@ -490,35 +523,96 @@ function esc(s){
     return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c];
   });
 }
-/* ---------- registro: reports.json quando servido, espelho no file:// ----- */
+/* ---------- registro ------------------------------------------------------
+   REG_OFICIAL e o que esta no reports.json publicado. Sobre ele pode haver
+   uma copia de trabalho - acrescimos, alteracoes e remocoes ainda nao
+   gravados -, guardada neste aparelho. O acervo mostra a copia quando ela
+   existe, marcando o que difere do publicado.                              */
+
+var REG_OFICIAL = [];
+
 function carregarRegistro(){
   return fetch("reports.json", { cache:"no-store" })
     .then(function(resp){ return resp.ok ? resp.json() : Promise.reject(); })
     .catch(function(){ return window.RADAR || { relatorios:[], orgaos:[] }; })
     .then(function(reg){
       RADAR = reg;
-      REG = (reg.relatorios || []).slice();
-      /* rascunhos locais: entram no indice deste aparelho, marcados como tal,
-         e somem sozinhos quando a entrada de verdade chega ao reports.json */
-      var oficiais = {};
-      REG.forEach(function(r){ oficiais[r.slug] = true; });
-      var restantes = rascunhos().filter(function(r){ return !oficiais[r.slug]; });
-      guardarRascunhos(restantes);
-      restantes.forEach(function(r){
-        r.rascunho = true;
-        REG.push(r);
-      });
+      REG_OFICIAL = (reg.relatorios || []).slice();
+      aplicarCopia();
       return reg;
     });
 }
-function rascunhos(){
+
+function copia(){
   try{
-    var v = JSON.parse(localStorage.getItem(CHAVE_RASC) || "[]");
-    return Array.isArray(v) ? v : [];
-  }catch(e){ return []; }
+    var v = JSON.parse(localStorage.getItem(CHAVE_RASC) || "null");
+    return Array.isArray(v) ? v : null;
+  }catch(e){ return null; }
 }
-function guardarRascunhos(lista){
-  try{ localStorage.setItem(CHAVE_RASC, JSON.stringify(lista)); }catch(e){}
+function guardarCopia(lista){
+  try{
+    if(lista === null) localStorage.removeItem(CHAVE_RASC);
+    else localStorage.setItem(CHAVE_RASC, JSON.stringify(lista));
+  }catch(e){}
+}
+function porSlug(lista){
+  var mapa = {};
+  lista.forEach(function(r){ mapa[r.slug] = r; });
+  return mapa;
+}
+function iguais(a, b){
+  if(!a || !b) return false;
+  return CAMPOS_ENTRADA.every(function(c){
+    return String(a[c] === undefined ? "" : a[c])
+        === String(b[c] === undefined ? "" : b[c]);
+  });
+}
+/* marca cada entrada com _estado: novo, alterado ou undefined */
+function aplicarCopia(){
+  var atual = copia();
+  if(!atual){
+    REG = REG_OFICIAL.map(function(r){
+      var c = {};
+      Object.keys(r).forEach(function(k){ c[k] = r[k]; });
+      return c;
+    });
+    return;
+  }
+  var oficiais = porSlug(REG_OFICIAL);
+  REG = atual.map(function(r){
+    var c = {};
+    Object.keys(r).forEach(function(k){ c[k] = r[k]; });
+    var antes = oficiais[r.slug];
+    if(!antes) c._estado = "novo";
+    else if(!iguais(antes, r)) c._estado = "alterado";
+    return c;
+  });
+}
+function pendencias(){
+  var atual = copia();
+  if(!atual) return { novos:[], alterados:[], removidos:[], total:0 };
+  var oficiais = porSlug(REG_OFICIAL), agora = porSlug(atual);
+  var novos = [], alterados = [];
+  atual.forEach(function(r){
+    if(!oficiais[r.slug]) novos.push(r.slug);
+    else if(!iguais(oficiais[r.slug], r)) alterados.push(r.slug);
+  });
+  var removidos = REG_OFICIAL.filter(function(r){ return !agora[r.slug]; })
+    .map(function(r){ return r.slug; });
+  return {
+    novos: novos, alterados: alterados, removidos: removidos,
+    total: novos.length + alterados.length + removidos.length
+  };
+}
+/* base para editar: a copia se existir, senao o publicado */
+function baseDeTrabalho(){
+  var atual = copia();
+  if(atual) return atual.slice();
+  return REG_OFICIAL.map(function(r){
+    var c = {};
+    CAMPOS_ENTRADA.forEach(function(k){ c[k] = r[k]; });
+    return c;
+  });
 }
 
 function progresso(slug){
@@ -608,10 +702,10 @@ function cartao(r){
   var classeCartao = sit === "revisado" ? "revisado" : (sit === "rever" ? "rever" : "");
   var naoAberto = !p && r.tipo !== "normativo";
   var rotuloTag = ROTULO[sit] || sit;
-  if(r.rascunho){
+  if(r._estado){
     classeTag = "rascunho";
     classeCartao = "rascunho";
-    rotuloTag = "rascunho local";
+    rotuloTag = r._estado === "novo" ? "novo, não gravado" : "alterado, não gravado";
   }
 
   var progressoHTML;
@@ -629,15 +723,13 @@ function cartao(r){
   var opcoes = [["auto","automático"], ["revisado","revisado"],
                 ["rever","revisar de novo"], ["nao-iniciado","não revisado"]];
 
-  var rodape = r.rascunho
-    ? '<button class="descartar" type="button" data-descartar="' + esc(r.slug)
-      + '">descartar rascunho</button>'
-    : '<select data-sit="' + esc(r.slug) + '" aria-label="Situação de ' + esc(r.titulo) + '">'
-      + opcoes.map(function(o){
-          return '<option value="' + o[0] + '"' + (manual === o[0] ? " selected" : "")
-            + ">" + o[1] + "</option>";
-        }).join("")
-      + "</select>";
+  var rodape = '<select data-sit="' + esc(r.slug) + '" aria-label="Situação de '
+    + esc(r.titulo) + '">'
+    + opcoes.map(function(o){
+        return '<option value="' + o[0] + '"' + (manual === o[0] ? " selected" : "")
+          + ">" + o[1] + "</option>";
+      }).join("")
+    + "</select>";
 
   return '<article class="cartao ' + classeCartao + '" data-slug="' + esc(r.slug) + '">'
     + '<div class="cab">'
@@ -944,33 +1036,172 @@ function pintarCampos(){
   }).join("");
 }
 
-function pintarSaida(){
-  var limpo = {};
-  CAMPOS.forEach(function(c){ limpo[c[0]] = achado[c[0]]; });
-  var ordenado = {
-    slug: limpo.slug, arquivo: "relatorios/" + limpo.slug + ".html",
-    titulo: limpo.titulo, orgao: limpo.orgao, tipo: limpo.tipo,
-    inicio: limpo.inicio, fim: limpo.fim, periodo: limpo.periodo,
-    fonte: limpo.fonte, fichas: Number(limpo.fichas) || 0,
-    produzido: limpo.produzido, descricao: limpo.descricao
+function entradaLimpa(){
+  return {
+    slug: achado.slug,
+    arquivo: "relatorios/" + achado.slug + ".html",
+    titulo: achado.titulo, orgao: achado.orgao, tipo: achado.tipo,
+    inicio: achado.inicio, fim: achado.fim, periodo: achado.periodo,
+    fonte: achado.fonte, fichas: Number(achado.fichas) || 0,
+    produzido: achado.produzido, descricao: achado.descricao || ""
   };
-  achado.arquivo = ordenado.arquivo;
-  document.getElementById("saida").textContent = JSON.stringify(ordenado, null, 2);
-  return ordenado;
+}
+
+/* o passo 3 mostra sempre o reports.json inteiro, ja com as pendencias */
+function pintarSaida(){
+  var lista = copia() || REG_OFICIAL;
+  var arquivo = {
+    atualizado: new Date().toISOString().slice(0, 10),
+    github: RADAR.github || { usuario:"", repo:"", ramo:"main" },
+    orgaos: RADAR.orgaos || [],
+    relatorios: lista.map(function(r){
+      var limpo = {};
+      CAMPOS_ENTRADA.forEach(function(k){
+        limpo[k] = k === "fichas" ? (Number(r[k]) || 0) : (r[k] === undefined ? "" : r[k]);
+      });
+      return limpo;
+    })
+  };
+  document.getElementById("saida").textContent = JSON.stringify(arquivo, null, 2);
+
+  var p = pendencias();
+  var resumo = document.getElementById("resumo-pendencias");
+  if(!p.total){
+    resumo.textContent = "Nenhuma alteração pendente — o que está abaixo é o "
+      + "reports.json como já está publicado.";
+  } else {
+    var partes = [];
+    if(p.novos.length) partes.push(p.novos.length + " novo(s): " + p.novos.join(", "));
+    if(p.alterados.length) partes.push(p.alterados.length + " alterado(s): " + p.alterados.join(", "));
+    if(p.removidos.length) partes.push(p.removidos.length + " removido(s): " + p.removidos.join(", "));
+    resumo.textContent = "Pendente de gravação — " + partes.join("; ") + ".";
+  }
+  return arquivo;
+}
+
+function pintarEntradas(){
+  var lista = copia() || REG_OFICIAL;
+  var removidos = pendencias().removidos;
+  var alvo = document.getElementById("entradas");
+  var html = lista.map(function(r){
+    return '<div class="entrada"><span class="entrada-nome">' + esc(r.slug) + "</span>"
+      + '<span class="entrada-tit">' + esc(r.titulo) + "</span>"
+      + '<button class="botao secundario" type="button" data-editar="' + esc(r.slug) + '">editar</button>'
+      + '<button class="descartar" type="button" data-remover="' + esc(r.slug) + '">remover</button>'
+      + "</div>";
+  }).join("");
+  html += removidos.map(function(slug){
+    return '<div class="entrada fora"><span class="entrada-nome">' + esc(slug) + "</span>"
+      + '<span class="entrada-tit">marcado para remoção</span>'
+      + '<button class="botao secundario" type="button" data-restaurar="' + esc(slug) + '">restaurar</button>'
+      + "</div>";
+  }).join("");
+  alvo.innerHTML = html;
+}
+
+function abrirFormulario(dados, titulo, ajuda){
+  achado = dados;
+  document.getElementById("passo-2").setAttribute("aria-disabled", "false");
+  document.getElementById("titulo-form").textContent = titulo;
+  document.getElementById("ajuda-form").innerHTML = ajuda;
+  pintarCampos();
+  document.getElementById("recado-2").textContent = "";
+  document.getElementById("passo-2").scrollIntoView({ behavior:"smooth", block:"start" });
+}
+
+function fecharFormulario(){
+  achado = null;
+  origem = {};
+  document.getElementById("campos").innerHTML = "";
+  document.getElementById("passo-2").setAttribute("aria-disabled", "true");
+  document.getElementById("titulo-form").textContent = "Conferir e completar";
 }
 
 function mostrarAchado(dados){
-  achado = dados;
-  document.getElementById("passo-2").setAttribute("aria-disabled", "false");
-  document.getElementById("passo-3").setAttribute("aria-disabled", "false");
-  pintarCampos();
-  pintarSaida();
-  var recado = document.getElementById("recado-1");
-  recado.className = "recado bom";
   var lidos = Object.keys(origem).filter(function(k){ return origem[k] === "lido"; }).length;
   var supostos = Object.keys(origem).filter(function(k){ return origem[k] === "supor"; }).length;
+  abrirFormulario(dados, "Conferir e completar",
+    "O que foi possível ler do próprio arquivo já vem preenchido. Confira "
+    + "sobretudo os campos marcados como <i>deduzido</i>.");
+  var recado = document.getElementById("recado-1");
+  recado.className = "recado bom";
   recado.textContent = "Li " + lidos + " campo(s) do arquivo e deduzi outro(s) "
-    + supostos + ". Confira abaixo.";
+    + supostos + ".";
+}
+
+function editarEntrada(slug){
+  var lista = copia() || REG_OFICIAL;
+  var achada = lista.filter(function(r){ return r.slug === slug; })[0];
+  if(!achada) return;
+  var dados = {};
+  CAMPOS_ENTRADA.forEach(function(k){ dados[k] = achada[k]; });
+  origem = {};
+  abrirFormulario(dados, "Editar " + slug,
+    "Alterando uma entrada já registrada. A alteração fica pendente até você "
+    + "gravá-la no <code>reports.json</code>.");
+}
+
+function aplicarAoRegistro(){
+  var recado = document.getElementById("recado-2");
+  if(!achado || !achado.slug || !achado.titulo){
+    recado.className = "recado erro";
+    recado.textContent = "Preencha ao menos slug e título.";
+    return;
+  }
+  var entrada = entradaLimpa();
+  var lista = baseDeTrabalho().filter(function(r){ return r.slug !== entrada.slug; });
+  lista.push(entrada);
+  var ordem = { "STF":1, "STJ":2, "CNJ":3, "Kollemata":4 };
+  lista.sort(function(a, b){
+    var d = (ordem[a.orgao] || 9) - (ordem[b.orgao] || 9);
+    if(d) return d;
+    return String(a.inicio).localeCompare(String(b.inicio));
+  });
+  guardarCopia(lista);
+  fecharFormulario();
+  recarregar();
+  var r3 = document.getElementById("recado-3");
+  r3.className = "recado bom";
+  r3.textContent = "Registro atualizado neste aparelho. Grave abaixo para valer para todos.";
+}
+
+function removerEntrada(slug){
+  var lista = baseDeTrabalho().filter(function(r){ return r.slug !== slug; });
+  guardarCopia(lista);
+  if(achado && achado.slug === slug) fecharFormulario();
+  recarregar();
+}
+
+function restaurarEntrada(slug){
+  var original = REG_OFICIAL.filter(function(r){ return r.slug === slug; })[0];
+  if(!original) return;
+  var entrada = {};
+  CAMPOS_ENTRADA.forEach(function(k){ entrada[k] = original[k]; });
+  var lista = baseDeTrabalho();
+  lista.push(entrada);
+  guardarCopia(lista);
+  recarregar();
+}
+
+function descartarPendencias(){
+  guardarCopia(null);
+  fecharFormulario();
+  recarregar();
+  var r3 = document.getElementById("recado-3");
+  r3.className = "recado";
+  r3.textContent = "Alterações descartadas. O índice voltou ao reports.json publicado.";
+}
+
+function baixarRegistro(){
+  var texto = document.getElementById("saida").textContent;
+  var url = URL.createObjectURL(new Blob([texto], { type:"application/json" }));
+  var a = document.createElement("a");
+  a.href = url;
+  a.download = "reports.json";
+  document.body.appendChild(a);
+  a.click();
+  a.remove();
+  setTimeout(function(){ URL.revokeObjectURL(url); }, 1000);
 }
 
 function procurarNoGitHub(){
@@ -1019,34 +1250,18 @@ function procurarNoGitHub(){
     });
 }
 
-function guardarRascunho(){
-  var entrada = pintarSaida();
-  if(!entrada.slug || !entrada.titulo){
-    var r3 = document.getElementById("recado-3");
-    r3.className = "recado erro";
-    r3.textContent = "Preencha ao menos slug e título.";
-    return;
-  }
-  var lista = rascunhos().filter(function(r){ return r.slug !== entrada.slug; });
-  lista.push(entrada);
-  guardarRascunhos(lista);
-  var r3b = document.getElementById("recado-3");
-  r3b.className = "recado bom";
-  r3b.textContent = "Rascunho guardado. Ele aparece no acervo deste aparelho, "
-    + "tracejado, até a entrada entrar no reports.json.";
-  recarregar();
-}
-
 function copiarEntrada(){
   var texto = document.getElementById("saida").textContent;
   var r3 = document.getElementById("recado-3");
   function ok(){
     r3.className = "recado bom";
-    r3.textContent = "Entrada copiada. Cole dentro da lista \"relatorios\" em reports.json.";
+    r3.textContent = "Arquivo copiado. No GitHub, abra reports.json, selecione "
+      + "tudo e cole por cima.";
   }
   function falhou(){
     r3.className = "recado erro";
-    r3.textContent = "Não consegui copiar sozinho — selecione o texto acima e copie à mão.";
+    r3.textContent = "Não consegui copiar sozinho — selecione o texto acima e "
+      + "copie à mão, ou use o botão de baixar.";
   }
   if(navigator.clipboard && navigator.clipboard.writeText){
     navigator.clipboard.writeText(texto).then(ok, falhou);
@@ -1134,13 +1349,12 @@ document.addEventListener("click", function(ev){
     document.getElementById("btn-analisar").click();
     return;
   }
-  var descarta = ev.target.closest("[data-descartar]");
-  if(descarta){
-    var alvo = descarta.dataset.descartar;
-    guardarRascunhos(rascunhos().filter(function(r){ return r.slug !== alvo; }));
-    recarregar();
-    return;
-  }
+  var edita = ev.target.closest("[data-editar]");
+  if(edita){ editarEntrada(edita.dataset.editar); return; }
+  var remove = ev.target.closest("[data-remover]");
+  if(remove){ removerEntrada(remove.dataset.remover); return; }
+  var restaura = ev.target.closest("[data-restaurar]");
+  if(restaura){ restaurarEntrada(restaura.dataset.restaurar); return; }
   if(ev.target.id === "btn-analisar"){
     var nome = document.getElementById("nome-arquivo").value.trim()
       .replace(/^.*[\\/]/, "");
@@ -1163,7 +1377,10 @@ document.addEventListener("click", function(ev){
   }
   if(ev.target.id === "btn-procurar"){ procurarNoGitHub(); return; }
   if(ev.target.id === "btn-copiar"){ copiarEntrada(); return; }
-  if(ev.target.id === "btn-rascunho"){ guardarRascunho(); return; }
+  if(ev.target.id === "btn-baixar"){ baixarRegistro(); return; }
+  if(ev.target.id === "btn-aplicar"){ aplicarAoRegistro(); return; }
+  if(ev.target.id === "btn-cancelar"){ fecharFormulario(); return; }
+  if(ev.target.id === "btn-descartar"){ descartarPendencias(); return; }
   if(ev.target.id === "btn-tema"){
     var atual = document.documentElement.getAttribute("data-theme");
     var escuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -1192,14 +1409,12 @@ document.addEventListener("input", function(ev){
         if(campoPeriodo) campoPeriodo.value = novo;
       }
     }
-    pintarSaida();
   }
 });
 
 document.addEventListener("change", function(ev){
   if(ev.target.dataset && ev.target.dataset.campo && achado){
     achado[ev.target.dataset.campo] = ev.target.value;
-    pintarSaida();
   }
   if(ev.target.dataset && ev.target.dataset.sit){
     gravar(CHAVE_SIT + ev.target.dataset.sit, ev.target.value);
@@ -1227,6 +1442,8 @@ function recarregar(){
   return carregarRegistro().then(function(){
     montarFiltros();
     pintarTudo();
+    pintarEntradas();
+    pintarSaida();
   });
 }
 

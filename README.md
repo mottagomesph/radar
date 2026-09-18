@@ -26,37 +26,46 @@ A chave `github` de `reports.json` — usuário, repositório e ramo — serve �
 registrados. Sem ela, o resto continua funcionando; só a listagem automática
 fica indisponível.
 
-## Como acrescentar um relatório, pela própria página
+## Gerir o registro pela própria página
 
-A aba **Inserir**, no índice, é o caminho mais curto. Ela só funciona com o
-site servido por HTTP — publicado, ou pelo servidor local descrito no fim
-deste arquivo.
+A aba **Registro**, no índice, acrescenta, altera e remove entradas sem
+editar JSON à mão. Ela só funciona com o site servido por HTTP — publicado,
+ou pelo servidor local descrito no fim deste arquivo.
 
-1. envie o arquivo para `relatorios/` (pelo GitHub, ou copiando para a pasta);
-2. abra a aba **Inserir** e informe o nome do arquivo. Com `github`
-   preenchido em `reports.json`, o botão *Procurar no GitHub* lista sozinho os
-   arquivos que ainda não constam do registro;
-3. a página abre o relatório num quadro oculto e lê dele o que consegue —
-   título, órgão, número de fichas, faixa de informativos e período. Cada
-   campo vem marcado como **lido** (veio do arquivo) ou **deduzido** (inferido
-   do texto). Confira os deduzidos, sobretudo as datas;
-4. *Copiar entrada* põe o JSON na área de transferência; cole-o na lista
-   `relatorios` de `reports.json`, pelo editor do GitHub mesmo, e confirme.
+**Acrescentar.** Envie o arquivo para `relatorios/` e informe o nome. Com
+`github` preenchido em `reports.json`, o botão *Procurar no GitHub* lista
+sozinho os arquivos que ainda não constam do registro. A página abre o
+relatório num quadro oculto e lê dele o que consegue. Se o relatório trouxer o
+bloco de metadados descrito em
+[instrucoes-para-novos-relatorios.md](instrucoes-para-novos-relatorios.md),
+tudo vem **lido**, sem deduzir nada; senão, título, órgão, fichas, fonte e
+período são inferidos do texto e vêm marcados como **deduzido**, para
+conferência — sobretudo as datas.
+
+**Alterar e remover.** A lista *Entradas do registro* traz cada relatório com
+os botões *editar* e *remover*. Editar reabre o mesmo formulário; remover tira
+o relatório do índice e deixa a entrada marcada, com um botão *restaurar*
+enquanto a remoção não for gravada. O arquivo em `relatorios/` não é apagado —
+só a entrada do registro.
+
+**Gravar.** As alterações ficam numa cópia de trabalho guardada neste
+aparelho: sobrevivem ao recarregamento, aparecem no acervo com o rótulo *novo*
+ou *alterado, não gravado*, e não mudam nada para os outros. O passo 3 mostra
+o `reports.json` **inteiro**, já com as alterações aplicadas; *Copiar arquivo
+inteiro* ou *Baixar reports.json* e, no GitHub, colar por cima do arquivo e
+confirmar. *Descartar alterações* devolve tudo ao estado publicado.
+
+Colar o arquivo por inteiro, em vez de uma entrada avulsa, é o que evita
+vírgula fora do lugar e JSON quebrado.
 
 O índice lê `reports.json` diretamente quando servido por HTTP, então essa
-edição já basta: não é preciso rodar nada para o relatório aparecer.
+edição já basta: não é preciso rodar nada para o acervo mudar.
 
-*Ver como rascunho* guarda a entrada só neste aparelho, e o relatório passa a
-aparecer no acervo com borda tracejada e o rótulo *rascunho local*. Serve para
-conferir antes de publicar. O rascunho some sozinho quando a entrada de
-verdade chega ao `reports.json`, e pode ser descartado a qualquer momento pelo
-próprio cartão.
+A **barra de progresso** de um relatório novo depende do farol estar nele. Se
+o relatório foi gerado conforme as instruções, já está; senão, rode o script
+descrito abaixo.
 
-Falta só uma coisa depois disso: a **barra de progresso** do relatório novo
-começa a contar quando o farol for injetado nele, com o script abaixo. Até lá
-ele aparece normalmente, com o número de fichas do registro.
-
-## Como acrescentar um relatório, pelo script
+## Gerir o registro pelo script
 
 1. salve o arquivo em `relatorios/`, com nome em minúsculas, sem espaços nem
    acentos, no padrão `<orgao>-<periodo>.html` — por exemplo
