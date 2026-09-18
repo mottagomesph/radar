@@ -771,11 +771,21 @@ function meses(inicio, fim){
   }
   return out;
 }
+/* As colunas vao do ano mais antigo coberto ate o semestre corrente, e
+   portanto crescem sozinhas com o tempo. O piso de 2024 e so uma ambicao
+   minima: um relatorio anterior a isso puxa a tabela para tras, em vez de
+   ficar sem celula onde aparecer. */
 function semestres(){
   var hoje = new Date();
   var anoFim = hoje.getFullYear(), semFim = hoje.getMonth() < 6 ? 1 : 2;
+  var anoInicio = 2024;
+  REG.forEach(function(r){
+    if(r.tipo !== "jurisprudencia" || !r.inicio) return;
+    var ano = parseInt(String(r.inicio).slice(0, 4), 10);
+    if(ano && ano < anoInicio) anoInicio = ano;
+  });
   var out = [];
-  for(var a = 2024; a <= anoFim; a++){
+  for(var a = anoInicio; a <= anoFim; a++){
     for(var s = 1; s <= 2; s++){
       if(a === anoFim && s > semFim) break;
       out.push({
