@@ -9,7 +9,7 @@ Site estático, sem build e sem dependências: basta servir a pasta.
 ## Estrutura
 
 ```
-index.html              índice: acervo, progresso, cobertura e inserção
+index.html              índice: acervo, progresso, cobertura e registro
 reports.json            registro dos relatórios (fonte da verdade)
 dados/reports.js        espelho do registro, gerado; só usado no file://
 relatorios/*.html       os relatórios, um arquivo autocontido cada
@@ -22,7 +22,7 @@ espelho para o caso de abrir o `index.html` pelo disco, onde o navegador
 bloqueia a leitura de JSON.
 
 A chave `github` de `reports.json` — usuário, repositório e ramo — serve à aba
-*Inserir*, para listar os arquivos de `relatorios/` que ainda não estão
+*Registro*, para listar os arquivos de `relatorios/` que ainda não estão
 registrados. Sem ela, o resto continua funcionando; só a listagem automática
 fica indisponível.
 
