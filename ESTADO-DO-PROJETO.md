@@ -127,7 +127,7 @@ Radar/
   `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>`. **Usar a identidade
   git global do usuário** (`mottagomesph` /
   `85656706+mottagomesph@users.noreply.github.com`) — **nunca** sobrescrever
-  com `-c user.name/-c user.email`. Ver pendência P1.
+  com `-c user.name/-c user.email`. Ver P1.
 - **Redação dos relatórios** (prompt do usuário): identificação
   `(REsp n. 1796394, rel. min. nome em minúsculas, T3, j. DD/MM/AAAA, Informativo n. X)`;
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
@@ -185,13 +185,17 @@ Só `cnj-2025-s1` nasceu conforme a especificação; os demais têm farol injeta
 
 ## 8. Pendências
 
-- **P1 — privacidade no histórico git (decisão do usuário).** Os commits
-  `92010bc` a `f8b6dfd` foram feitos com a autoria `Pedro Motta
-  <[e-mail pessoal]>`, sobrescrevendo a identidade global. O nome foi
-  inventado pelo Claude e o Gmail pessoal ficou exposto no repositório
-  público. Correção possível: reescrever a autoria dos commits e fazer
-  force-push. É destrutivo, então só com autorização explícita do usuário.
-  Commits futuros já usam a identidade global.
+- **P1 — privacidade no histórico git: resolvida em parte.** Os 9 primeiros
+  commits saíram com autoria inventada pelo Claude e o e-mail pessoal do
+  usuário. Em 2026-09-18, com autorização expressa do usuário, o histórico foi
+  reescrito (`git filter-branch`: autoria e committer → identidade global; o
+  endereço também foi retirado do conteúdo deste arquivo) e enviado com
+  `--force-with-lease`. O histórico publicado está limpo, confirmado pela API.
+  **Resta:** os commits antigos, agora órfãos, continuam acessíveis no GitHub
+  pelo identificador (ex.: `92010bc`) até o suporte do GitHub removê-los. Isso
+  só o usuário pode pedir (formulário de suporte, pedindo remoção de dados
+  sensíveis e de commits órfãos do repositório `mottagomesph/radar`). Force
+  push foi autorizado **só para essa ocasião**; não repetir sem nova autorização.
 - **P2 — GitHub Action** (oferecida, aguardando o usuário): ao entrar arquivo
   novo em `relatorios/`, ler o `radar-meta`, atualizar `reports.json` e
   commitar sozinha.
@@ -217,3 +221,8 @@ Só `cnj-2025-s1` nasceu conforme a especificação; os demais têm farol injeta
   especificação); injetor passa a pular relatórios com metadados próprios.
 - **2026-09-18** — Criado este documento. Identificado o problema de autoria
   dos commits (P1).
+- **2026-09-18** — Histórico reescrito e reenviado com force push (autorizado
+  uma vez): todos os commits passam a ter a identidade global; o e-mail pessoal
+  saiu da autoria e do conteúdo. Hashes mudaram (o primeiro commit agora é
+  `22d1221`). Restam commits órfãos no GitHub; ver P1.
+
