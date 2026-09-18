@@ -270,6 +270,97 @@ footer code{
   border-radius:10px; padding:.9rem 1.1rem; margin:1.6rem 0 0;
   font-size:.88rem; color:var(--ink-2)
 }
+
+/* ---------- inserir relatorio ---------- */
+.passo{
+  background:var(--sheet); border:1px solid var(--rule); border-radius:12px;
+  box-shadow:var(--shadow); padding:1.2rem 1.25rem; margin:1.1rem 0 0
+}
+.passo > h3{
+  font-family:var(--mono); font-size:.72rem; letter-spacing:.1em;
+  text-transform:uppercase; color:var(--muted); margin:0 0 .2rem
+}
+.passo > h3 b{
+  display:inline-block; width:1.35rem; height:1.35rem; line-height:1.35rem;
+  text-align:center; border-radius:50%; background:var(--accent-soft);
+  color:var(--accent); margin-right:.45rem; font-size:.7rem
+}
+.passo p.ajuda{font-size:.86rem; color:var(--muted); margin:.5rem 0 .9rem}
+.passo[aria-disabled="true"]{opacity:.5; pointer-events:none}
+.linha{display:flex; gap:.5rem; flex-wrap:wrap; align-items:center}
+.linha input[type="text"]{
+  flex:1 1 16rem; min-width:0; font:inherit; font-size:.9rem; color:var(--ink);
+  background:var(--sheet-2); border:1px solid var(--rule-strong);
+  border-radius:7px; padding:.45rem .6rem
+}
+.botao{
+  font:inherit; font-size:.85rem; font-weight:600; color:var(--accent-ink);
+  background:var(--accent); border:1px solid var(--accent); border-radius:7px;
+  padding:.45rem .9rem; cursor:pointer; white-space:nowrap
+}
+.botao:hover{filter:brightness(1.08)}
+.botao.secundario{
+  background:var(--sheet); color:var(--accent); border-color:var(--rule-strong)
+}
+.botao:disabled{opacity:.5; cursor:default; filter:none}
+.pendentes{display:flex; gap:.4rem; flex-wrap:wrap; margin:.7rem 0 0}
+.pendentes button{
+  font-family:var(--mono); font-size:.76rem; color:var(--ink-2);
+  background:var(--sheet-2); border:1px solid var(--rule-strong);
+  border-radius:6px; padding:.3rem .6rem; cursor:pointer
+}
+.pendentes button:hover{border-color:var(--accent); color:var(--accent)}
+.recado{font-size:.84rem; margin:.7rem 0 0}
+.recado.erro{color:var(--seal)}
+.recado.bom{color:var(--ok)}
+.campos{
+  display:grid; gap:.75rem 1rem; margin:0;
+  grid-template-columns:repeat(auto-fit, minmax(min(100%, 13rem), 1fr))
+}
+.campo{display:flex; flex-direction:column; gap:.2rem; min-width:0}
+.campo.largo{grid-column:1/-1}
+.campo label{
+  font-size:.72rem; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--muted); display:flex; align-items:baseline; gap:.4rem
+}
+.campo label i{
+  font-style:normal; font-family:var(--mono); font-size:.6rem;
+  letter-spacing:.04em; border-radius:3px; padding:.05rem .3rem
+}
+.campo label i.lido{background:var(--ok-soft); color:var(--ok)}
+.campo label i.supor{background:var(--warn-soft); color:var(--warn)}
+.campo input, .campo select, .campo textarea{
+  font:inherit; font-size:.88rem; color:var(--ink); background:var(--sheet-2);
+  border:1px solid var(--rule-strong); border-radius:7px; padding:.4rem .55rem;
+  width:100%
+}
+.campo textarea{font-size:.85rem; line-height:1.45; resize:vertical}
+.campo input:focus, .campo select:focus, .campo textarea:focus{
+  outline:2px solid var(--accent); outline-offset:1px
+}
+pre.saida{
+  font-family:var(--mono); font-size:.76rem; line-height:1.5; color:var(--ink-2);
+  background:var(--sheet-2); border:1px solid var(--rule); border-radius:8px;
+  padding:.8rem .9rem; overflow-x:auto; margin:0 0 .9rem;
+  white-space:pre; -webkit-overflow-scrolling:touch
+}
+.passo ol.receita{
+  margin:.2rem 0 0; padding-left:1.2rem; font-size:.86rem; color:var(--ink-2)
+}
+.passo ol.receita li{margin:.25rem 0}
+.passo ol.receita code{
+  font-family:var(--mono); font-size:.9em; background:var(--sheet-2);
+  border:1px solid var(--rule); border-radius:4px; padding:.05rem .3rem
+}
+.tag.rascunho{color:var(--warn)}
+article.cartao.rascunho{
+  border-style:dashed;
+  border-color:color-mix(in srgb, var(--warn) 55%, var(--rule))
+}
+.descartar{
+  font:inherit; font-size:.78rem; color:var(--seal); background:none;
+  border:0; padding:0; cursor:pointer; text-decoration:underline
+}
 /* no celular a barra fixa comeria metade da tela: deixa rolar junto */
 @media (max-width:46rem){
   .controles{position:static; padding:.85rem 0 1rem}
@@ -303,6 +394,7 @@ footer code{
   <div class="abas" role="tablist" aria-label="Modo de exibição">
     <button type="button" role="tab" id="aba-acervo" aria-selected="true" aria-controls="painel-acervo">Acervo</button>
     <button type="button" role="tab" id="aba-cobertura" aria-selected="false" aria-controls="painel-cobertura">Cobertura</button>
+    <button type="button" role="tab" id="aba-inserir" aria-selected="false" aria-controls="painel-inserir">Inserir</button>
   </div>
   <button class="icone" type="button" id="btn-tema" title="Alternar tema claro e escuro" aria-label="Alternar tema">&#9686;</button>
   <button class="icone" type="button" id="btn-exportar" title="Salvar o progresso em arquivo">&#8595; progresso</button>
@@ -325,6 +417,45 @@ footer code{
     </p>
     <div class="lacunas" id="lacunas"></div>
   </section>
+
+  <section class="painel" id="painel-inserir" role="tabpanel" aria-labelledby="aba-inserir" hidden>
+
+    <div class="passo">
+      <h3><b>1</b>Escolher o arquivo</h3>
+      <p class="ajuda">O relatório já deve estar em <code>relatorios/</code> — enviado pelo GitHub ou copiado para a pasta. Informe o nome do arquivo, ou escolha um dos que ainda não constam do registro.</p>
+      <div class="linha">
+        <input type="text" id="nome-arquivo" placeholder="stj-2025-t1.html" spellcheck="false" autocapitalize="off" aria-label="Nome do arquivo em relatorios/">
+        <button class="botao" type="button" id="btn-analisar">Analisar</button>
+        <button class="botao secundario" type="button" id="btn-procurar">Procurar no GitHub</button>
+      </div>
+      <div class="pendentes" id="pendentes"></div>
+      <p class="recado" id="recado-1"></p>
+    </div>
+
+    <div class="passo" id="passo-2" aria-disabled="true">
+      <h3><b>2</b>Conferir e completar</h3>
+      <p class="ajuda">O que foi possível ler do próprio arquivo já vem preenchido. <i>Datas</i> e <i>fonte</i> são deduzidas do texto e merecem conferência; o resto costuma vir certo.</p>
+      <div class="campos" id="campos"></div>
+    </div>
+
+    <div class="passo" id="passo-3" aria-disabled="true">
+      <h3><b>3</b>Registrar</h3>
+      <p class="ajuda">Esta é a entrada a acrescentar na lista <code>relatorios</code> de <code>reports.json</code>.</p>
+      <pre class="saida" id="saida"></pre>
+      <div class="linha">
+        <button class="botao" type="button" id="btn-copiar">Copiar entrada</button>
+        <button class="botao secundario" type="button" id="btn-rascunho">Ver como rascunho</button>
+      </div>
+      <p class="recado" id="recado-3"></p>
+      <ol class="receita">
+        <li>abra <code>reports.json</code> no GitHub e clique no lápis;</li>
+        <li>cole a entrada dentro da lista <code>relatorios</code>, separada por vírgula;</li>
+        <li>confirme a alteração — o índice passa a mostrar o relatório para todo mundo.</li>
+      </ol>
+      <p class="ajuda" style="margin:.9rem 0 0">A barra de progresso deste relatório só começa a contar depois que o farol for injetado nele, com <code>python ferramentas/injetar-farol.py</code>. Até lá ele aparece normalmente, com o número de fichas do registro.</p>
+    </div>
+
+  </section>
 </main>
 
 <footer>
@@ -340,10 +471,11 @@ footer code{
 "use strict";
 
 var RADAR = window.RADAR || { relatorios: [], orgaos: [] };
-var REG = RADAR.relatorios || [];
+var REG = [];
 var CHAVE_TEMA = "radar:tema";
 var CHAVE_SIT = "radar:situacao:";
 var CHAVE_PROG = "radar:progresso:";
+var CHAVE_RASC = "radar:rascunhos";
 
 /* ---------- utilidades ---------- */
 function ler(chave, padrao){
@@ -358,6 +490,37 @@ function esc(s){
     return { "&":"&amp;", "<":"&lt;", ">":"&gt;", '"':"&quot;" }[c];
   });
 }
+/* ---------- registro: reports.json quando servido, espelho no file:// ----- */
+function carregarRegistro(){
+  return fetch("reports.json", { cache:"no-store" })
+    .then(function(resp){ return resp.ok ? resp.json() : Promise.reject(); })
+    .catch(function(){ return window.RADAR || { relatorios:[], orgaos:[] }; })
+    .then(function(reg){
+      RADAR = reg;
+      REG = (reg.relatorios || []).slice();
+      /* rascunhos locais: entram no indice deste aparelho, marcados como tal,
+         e somem sozinhos quando a entrada de verdade chega ao reports.json */
+      var oficiais = {};
+      REG.forEach(function(r){ oficiais[r.slug] = true; });
+      var restantes = rascunhos().filter(function(r){ return !oficiais[r.slug]; });
+      guardarRascunhos(restantes);
+      restantes.forEach(function(r){
+        r.rascunho = true;
+        REG.push(r);
+      });
+      return reg;
+    });
+}
+function rascunhos(){
+  try{
+    var v = JSON.parse(localStorage.getItem(CHAVE_RASC) || "[]");
+    return Array.isArray(v) ? v : [];
+  }catch(e){ return []; }
+}
+function guardarRascunhos(lista){
+  try{ localStorage.setItem(CHAVE_RASC, JSON.stringify(lista)); }catch(e){}
+}
+
 function progresso(slug){
   try{
     var bruto = localStorage.getItem(CHAVE_PROG + slug);
@@ -444,6 +607,12 @@ function cartao(r){
   var classeTag = sit === "revisado" ? "ok" : (sit === "rever" ? "rever" : "");
   var classeCartao = sit === "revisado" ? "revisado" : (sit === "rever" ? "rever" : "");
   var naoAberto = !p && r.tipo !== "normativo";
+  var rotuloTag = ROTULO[sit] || sit;
+  if(r.rascunho){
+    classeTag = "rascunho";
+    classeCartao = "rascunho";
+    rotuloTag = "rascunho local";
+  }
 
   var progressoHTML;
   if(r.tipo === "normativo"){
@@ -460,22 +629,27 @@ function cartao(r){
   var opcoes = [["auto","automático"], ["revisado","revisado"],
                 ["rever","revisar de novo"], ["nao-iniciado","não revisado"]];
 
+  var rodape = r.rascunho
+    ? '<button class="descartar" type="button" data-descartar="' + esc(r.slug)
+      + '">descartar rascunho</button>'
+    : '<select data-sit="' + esc(r.slug) + '" aria-label="Situação de ' + esc(r.titulo) + '">'
+      + opcoes.map(function(o){
+          return '<option value="' + o[0] + '"' + (manual === o[0] ? " selected" : "")
+            + ">" + o[1] + "</option>";
+        }).join("")
+      + "</select>";
+
   return '<article class="cartao ' + classeCartao + '" data-slug="' + esc(r.slug) + '">'
     + '<div class="cab">'
     + '<span class="orgao" data-tipo="' + esc(r.tipo) + '">' + esc(r.orgao) + "</span>"
-    + '<span class="tag ' + classeTag + '">' + esc(ROTULO[sit] || sit) + "</span>"
+    + '<span class="tag ' + classeTag + '">' + esc(rotuloTag) + "</span>"
     + "</div>"
     + '<h2 class="titulo"><a href="' + esc(r.arquivo) + '">' + esc(r.titulo) + "</a></h2>"
     + '<p class="meta"><span><b>' + esc(r.periodo) + "</b></span><span>"
     + esc(r.fonte) + "</span></p>"
     + progressoHTML
     + '<div class="pe">'
-    + '<select data-sit="' + esc(r.slug) + '" aria-label="Situação de ' + esc(r.titulo) + '">'
-    + opcoes.map(function(o){
-        return '<option value="' + o[0] + '"' + (manual === o[0] ? " selected" : "")
-          + ">" + o[1] + "</option>";
-      }).join("")
-    + "</select>"
+    + rodape
     + '<a class="abrir" href="' + esc(r.arquivo) + '">abrir &rarr;</a>'
     + "</div>"
     + "</article>";
@@ -571,6 +745,314 @@ function pintarCobertura(){
   }).join("") + "</ul>";
 }
 
+/* ---------- inserir relatorio ------------------------------------------
+   Le o que der do proprio arquivo, abrindo-o num quadro oculto: como e a
+   mesma origem, da para inspecionar o DOM ja montado - o que importa,
+   porque quase todos os relatorios desenham as fichas por script.        */
+
+var MESES = ["janeiro","fevereiro","março","abril","maio","junho","julho",
+             "agosto","setembro","outubro","novembro","dezembro"];
+var achado = null;   /* dados extraidos + preenchidos a mao */
+var origem = {};     /* de onde veio cada campo: lido | supor | vazio */
+
+function porExtenso(inicio, fim){
+  if(!inicio || !fim) return "";
+  var ai = inicio.slice(0,4), mi = parseInt(inicio.slice(5,7), 10) - 1;
+  var af = fim.slice(0,4), mf = parseInt(fim.slice(5,7), 10) - 1;
+  if(inicio === fim) return MESES[mi] + " de " + ai;
+  if(ai === af){
+    if(mi === 0 && mf === 5) return "1º semestre de " + ai;
+    if(mi === 6 && mf === 11) return "2º semestre de " + ai;
+    if(mi === 0 && mf === 2) return "1º trimestre de " + ai;
+    if(mi === 3 && mf === 5) return "2º trimestre de " + ai;
+    if(mi === 6 && mf === 8) return "3º trimestre de " + ai;
+    if(mi === 9 && mf === 11) return "4º trimestre de " + ai;
+    return MESES[mi] + " a " + MESES[mf] + " de " + ai;
+  }
+  return MESES[mi] + " de " + ai + " a " + MESES[mf] + " de " + af;
+}
+
+function extrair(doc, arquivo){
+  var slug = arquivo.replace(/\.html?$/i, "");
+  var dados = {
+    slug: slug, arquivo: "relatorios/" + arquivo, titulo: "", orgao: "",
+    tipo: "jurisprudencia", inicio: "", fim: "", periodo: "", fonte: "",
+    fichas: 0, produzido: new Date().toISOString().slice(0,10), descricao: ""
+  };
+  origem = {};
+  function por(campo, valor, como){
+    if(valor === "" || valor === null || valor === undefined) return;
+    dados[campo] = valor;
+    origem[campo] = como;
+  }
+
+  /* se o farol ja foi injetado, o proprio arquivo diz quem e */
+  var bloco = doc.getElementById("radar-meta");
+  if(bloco){
+    try{
+      var meta = JSON.parse(bloco.textContent);
+      Object.keys(meta).forEach(function(k){ por(k, meta[k], "lido"); });
+      dados.arquivo = "relatorios/" + arquivo;
+      dados.descricao = dados.descricao || "";
+    }catch(e){}
+  }
+
+  var h1 = doc.querySelector("h1");
+  por("titulo", (h1 && h1.textContent.trim()) || doc.title || "", "lido");
+  var md = doc.querySelector('meta[name="description"]');
+  por("descricao", md ? md.getAttribute("content") : "", "lido");
+  por("fichas", doc.querySelectorAll(".ficha").length, "lido");
+
+  var texto = "";
+  try{ texto = (doc.body.innerText || "").slice(0, 400000); }catch(e){}
+  var pista = (slug + " " + dados.titulo + " " + texto.slice(0, 3000)).toLowerCase();
+
+  if(!dados.orgao){
+    var qual = /kollemata/.test(pista) ? "Kollemata"
+             : /\bstf\b|supremo/.test(pista) ? "STF"
+             : /\bstj\b|superior tribunal/.test(pista) ? "STJ"
+             : /\bcnj\b|conselho nacional/.test(pista) ? "CNJ" : "";
+    por("orgao", qual, "supor");
+  }
+  if(/resolu|provimento|apresenta/.test(slug)) por("tipo", "normativo", "supor");
+
+  /* Periodo: o texto cita muitas datas alheias ao recorte - precedentes
+     antigos, datas de protocolo. O minimo absoluto erraria feio, entao
+     vale a concentracao: fica com os anos dominantes e, dentro deles,
+     com os meses que aparecem com frequencia relevante. */
+  if(!dados.inicio){
+    var conta = {}, re = /\b(\d{2})\/(\d{2})\/(20\d{2})\b/g, m;
+    while((m = re.exec(texto)) !== null){
+      if(+m[2] >= 1 && +m[2] <= 12){
+        var mes = m[3] + "-" + m[2];
+        conta[mes] = (conta[mes] || 0) + 1;
+      }
+    }
+    var listaMeses = Object.keys(conta);
+    if(listaMeses.length){
+      var porAno = {};
+      listaMeses.forEach(function(mes){
+        var ano = mes.slice(0, 4);
+        porAno[ano] = (porAno[ano] || 0) + conta[mes];
+      });
+      var maiorAno = Math.max.apply(null, Object.keys(porAno).map(function(a){
+        return porAno[a];
+      }));
+      var anosBons = {};
+      Object.keys(porAno).forEach(function(a){
+        if(porAno[a] >= maiorAno * 0.2) anosBons[a] = true;
+      });
+      var candidatos = listaMeses.filter(function(mes){ return anosBons[mes.slice(0,4)]; });
+      var maiorMes = Math.max.apply(null, candidatos.map(function(mes){
+        return conta[mes];
+      }));
+      var bons = candidatos.filter(function(mes){ return conta[mes] >= maiorMes * 0.1; });
+      if(bons.length){
+        bons.sort();
+        por("inicio", bons[0], "supor");
+        por("fim", bons[bons.length - 1], "supor");
+      }
+    }
+  }
+  if(dados.inicio && dados.fim && !dados.periodo){
+    por("periodo", porExtenso(dados.inicio, dados.fim), "supor");
+  }
+
+  /* fonte: faixa de informativos citada */
+  if(!dados.fonte){
+    var nums = [], n;
+    var reNum = /informativo[s]?\s*(?:de\s+jurisprud[êe]ncia\s*)?n?\.?\s*(\d{1,4})/gi;
+    while((n = reNum.exec(texto)) !== null) nums.push(parseInt(n[1], 10));
+    nums = nums.filter(function(v, i, a){ return a.indexOf(v) === i; })
+               .sort(function(x, y){ return x - y; });
+    if(nums.length === 1) por("fonte", "Informativo " + nums[0], "supor");
+    else if(nums.length > 1){
+      por("fonte", "Informativos " + nums[0] + " a " + nums[nums.length - 1], "supor");
+    }
+  }
+  return dados;
+}
+
+function analisar(arquivo){
+  var recado = document.getElementById("recado-1");
+  recado.className = "recado";
+  recado.textContent = "Abrindo " + arquivo + "…";
+  return fetch("relatorios/" + arquivo, { method:"GET", cache:"no-store" })
+    .then(function(resp){
+      if(!resp.ok) throw new Error("não encontrei relatorios/" + arquivo);
+      return new Promise(function(resolve, reject){
+        var quadro = document.createElement("iframe");
+        quadro.setAttribute("aria-hidden", "true");
+        quadro.style.cssText =
+          "position:fixed;left:-10000px;top:0;width:1100px;height:900px;border:0";
+        quadro.src = "relatorios/" + arquivo;
+        var prazo = setTimeout(function(){
+          quadro.remove();
+          reject(new Error("o arquivo demorou demais para abrir"));
+        }, 15000);
+        quadro.onload = function(){
+          setTimeout(function(){
+            clearTimeout(prazo);
+            try{
+              var doc = quadro.contentDocument;
+              if(!doc) throw new Error("não consegui ler o conteúdo");
+              resolve(extrair(doc, arquivo));
+            }catch(e){
+              reject(new Error("não consegui ler o arquivo: " + e.message));
+            }finally{
+              quadro.remove();
+            }
+          }, 800);
+        };
+        document.body.appendChild(quadro);
+      });
+    });
+}
+
+var CAMPOS = [
+  ["slug", "slug", "text"], ["titulo", "título", "text"],
+  ["orgao", "órgão", "text"], ["tipo", "tipo", "select"],
+  ["inicio", "primeiro mês", "month"], ["fim", "último mês", "month"],
+  ["periodo", "período por extenso", "text"], ["fonte", "fonte", "text"],
+  ["fichas", "fichas", "number"], ["produzido", "produzido em", "date"],
+  ["descricao", "descrição", "textarea"]
+];
+
+function pintarCampos(){
+  var alvo = document.getElementById("campos");
+  alvo.innerHTML = CAMPOS.map(function(c){
+    var chave = c[0], rotulo = c[1], tipo = c[2];
+    var valor = achado[chave] === undefined ? "" : achado[chave];
+    var como = origem[chave];
+    var selo = como === "lido" ? '<i class="lido">lido</i>'
+             : como === "supor" ? '<i class="supor">deduzido</i>' : "";
+    var entrada;
+    if(tipo === "select"){
+      entrada = '<select data-campo="' + chave + '">'
+        + '<option value="jurisprudencia"' + (valor === "jurisprudencia" ? " selected" : "")
+        + ">jurisprudência</option>"
+        + '<option value="normativo"' + (valor === "normativo" ? " selected" : "")
+        + ">normativo</option></select>";
+    } else if(tipo === "textarea"){
+      entrada = '<textarea rows="3" data-campo="' + chave + '">' + esc(valor) + "</textarea>";
+    } else {
+      entrada = '<input type="' + tipo + '" data-campo="' + chave
+        + '" value="' + esc(valor) + '">';
+    }
+    return '<div class="campo' + (tipo === "textarea" ? " largo" : "") + '">'
+      + "<label>" + esc(rotulo) + selo + "</label>" + entrada + "</div>";
+  }).join("");
+}
+
+function pintarSaida(){
+  var limpo = {};
+  CAMPOS.forEach(function(c){ limpo[c[0]] = achado[c[0]]; });
+  var ordenado = {
+    slug: limpo.slug, arquivo: "relatorios/" + limpo.slug + ".html",
+    titulo: limpo.titulo, orgao: limpo.orgao, tipo: limpo.tipo,
+    inicio: limpo.inicio, fim: limpo.fim, periodo: limpo.periodo,
+    fonte: limpo.fonte, fichas: Number(limpo.fichas) || 0,
+    produzido: limpo.produzido, descricao: limpo.descricao
+  };
+  achado.arquivo = ordenado.arquivo;
+  document.getElementById("saida").textContent = JSON.stringify(ordenado, null, 2);
+  return ordenado;
+}
+
+function mostrarAchado(dados){
+  achado = dados;
+  document.getElementById("passo-2").setAttribute("aria-disabled", "false");
+  document.getElementById("passo-3").setAttribute("aria-disabled", "false");
+  pintarCampos();
+  pintarSaida();
+  var recado = document.getElementById("recado-1");
+  recado.className = "recado bom";
+  var lidos = Object.keys(origem).filter(function(k){ return origem[k] === "lido"; }).length;
+  var supostos = Object.keys(origem).filter(function(k){ return origem[k] === "supor"; }).length;
+  recado.textContent = "Li " + lidos + " campo(s) do arquivo e deduzi outro(s) "
+    + supostos + ". Confira abaixo.";
+}
+
+function procurarNoGitHub(){
+  var recado = document.getElementById("recado-1");
+  var gh = RADAR.github || {};
+  if(!gh.usuario || !gh.repo){
+    recado.className = "recado erro";
+    recado.textContent = 'Para listar sozinho, preencha "github" em reports.json '
+      + 'com usuário e repositório. Por enquanto, digite o nome do arquivo.';
+    return;
+  }
+  recado.className = "recado";
+  recado.textContent = "Consultando o GitHub…";
+  var url = "https://api.github.com/repos/" + gh.usuario + "/" + gh.repo
+    + "/contents/relatorios?ref=" + (gh.ramo || "main");
+  fetch(url, { headers:{ "Accept":"application/vnd.github+json" } })
+    .then(function(resp){
+      if(!resp.ok) throw new Error("resposta " + resp.status);
+      return resp.json();
+    })
+    .then(function(lista){
+      var registrados = {};
+      REG.forEach(function(r){ registrados[r.arquivo] = true; });
+      var novos = lista.filter(function(item){
+        return item.type === "file" && /\.html?$/i.test(item.name)
+          && !registrados["relatorios/" + item.name];
+      });
+      var alvo = document.getElementById("pendentes");
+      if(!novos.length){
+        alvo.innerHTML = "";
+        recado.className = "recado bom";
+        recado.textContent = "Nenhum arquivo novo: tudo em relatorios/ já consta do registro.";
+        return;
+      }
+      alvo.innerHTML = novos.map(function(item){
+        return '<button type="button" data-arquivo="' + esc(item.name) + '">'
+          + esc(item.name) + "</button>";
+      }).join("");
+      recado.className = "recado bom";
+      recado.textContent = novos.length + " arquivo(s) ainda fora do registro.";
+    })
+    .catch(function(e){
+      recado.className = "recado erro";
+      recado.textContent = "Não consegui consultar o GitHub (" + e.message
+        + "). Digite o nome do arquivo.";
+    });
+}
+
+function guardarRascunho(){
+  var entrada = pintarSaida();
+  if(!entrada.slug || !entrada.titulo){
+    var r3 = document.getElementById("recado-3");
+    r3.className = "recado erro";
+    r3.textContent = "Preencha ao menos slug e título.";
+    return;
+  }
+  var lista = rascunhos().filter(function(r){ return r.slug !== entrada.slug; });
+  lista.push(entrada);
+  guardarRascunhos(lista);
+  var r3b = document.getElementById("recado-3");
+  r3b.className = "recado bom";
+  r3b.textContent = "Rascunho guardado. Ele aparece no acervo deste aparelho, "
+    + "tracejado, até a entrada entrar no reports.json.";
+  recarregar();
+}
+
+function copiarEntrada(){
+  var texto = document.getElementById("saida").textContent;
+  var r3 = document.getElementById("recado-3");
+  function ok(){
+    r3.className = "recado bom";
+    r3.textContent = "Entrada copiada. Cole dentro da lista \"relatorios\" em reports.json.";
+  }
+  function falhou(){
+    r3.className = "recado erro";
+    r3.textContent = "Não consegui copiar sozinho — selecione o texto acima e copie à mão.";
+  }
+  if(navigator.clipboard && navigator.clipboard.writeText){
+    navigator.clipboard.writeText(texto).then(ok, falhou);
+  } else { falhou(); }
+}
+
 /* ---------- exportar / importar ---------- */
 function coletarEstado(){
   var dados = { versao:1, gerado:new Date().toISOString(), itens:{} };
@@ -639,13 +1121,49 @@ document.addEventListener("click", function(ev){
   }
   var aba = ev.target.closest('[role="tab"]');
   if(aba){
-    var acervo = aba.id === "aba-acervo";
-    document.getElementById("aba-acervo").setAttribute("aria-selected", String(acervo));
-    document.getElementById("aba-cobertura").setAttribute("aria-selected", String(!acervo));
-    document.getElementById("painel-acervo").hidden = !acervo;
-    document.getElementById("painel-cobertura").hidden = acervo;
+    [].forEach.call(document.querySelectorAll('[role="tab"]'), function(b){
+      var ativa = b === aba;
+      b.setAttribute("aria-selected", String(ativa));
+      document.getElementById(b.getAttribute("aria-controls")).hidden = !ativa;
+    });
     return;
   }
+  var pendente = ev.target.closest("#pendentes button");
+  if(pendente){
+    document.getElementById("nome-arquivo").value = pendente.dataset.arquivo;
+    document.getElementById("btn-analisar").click();
+    return;
+  }
+  var descarta = ev.target.closest("[data-descartar]");
+  if(descarta){
+    var alvo = descarta.dataset.descartar;
+    guardarRascunhos(rascunhos().filter(function(r){ return r.slug !== alvo; }));
+    recarregar();
+    return;
+  }
+  if(ev.target.id === "btn-analisar"){
+    var nome = document.getElementById("nome-arquivo").value.trim()
+      .replace(/^.*[\\/]/, "");
+    var aviso = document.getElementById("recado-1");
+    if(!nome){
+      aviso.className = "recado erro";
+      aviso.textContent = "Informe o nome do arquivo, por exemplo stj-2025-t1.html.";
+      return;
+    }
+    if(!/\.html?$/i.test(nome)) nome += ".html";
+    ev.target.disabled = true;
+    analisar(nome).then(mostrarAchado).catch(function(e){
+      aviso.className = "recado erro";
+      aviso.textContent = e.message
+        + (location.protocol === "file:"
+            ? " — abrindo pelo disco o navegador bloqueia a leitura; use o servidor local ou o site publicado."
+            : "");
+    }).then(function(){ ev.target.disabled = false; });
+    return;
+  }
+  if(ev.target.id === "btn-procurar"){ procurarNoGitHub(); return; }
+  if(ev.target.id === "btn-copiar"){ copiarEntrada(); return; }
+  if(ev.target.id === "btn-rascunho"){ guardarRascunho(); return; }
   if(ev.target.id === "btn-tema"){
     var atual = document.documentElement.getAttribute("data-theme");
     var escuro = window.matchMedia("(prefers-color-scheme: dark)").matches;
@@ -661,7 +1179,28 @@ document.addEventListener("click", function(ev){
   }
 });
 
+document.addEventListener("input", function(ev){
+  if(ev.target.dataset && ev.target.dataset.campo && achado){
+    var chave = ev.target.dataset.campo;
+    achado[chave] = ev.target.value;
+    origem[chave] = "";
+    if(chave === "inicio" || chave === "fim"){
+      var novo = porExtenso(achado.inicio, achado.fim);
+      if(novo){
+        achado.periodo = novo;
+        var campoPeriodo = document.querySelector('[data-campo="periodo"]');
+        if(campoPeriodo) campoPeriodo.value = novo;
+      }
+    }
+    pintarSaida();
+  }
+});
+
 document.addEventListener("change", function(ev){
+  if(ev.target.dataset && ev.target.dataset.campo && achado){
+    achado[ev.target.dataset.campo] = ev.target.value;
+    pintarSaida();
+  }
   if(ev.target.dataset && ev.target.dataset.sit){
     gravar(CHAVE_SIT + ev.target.dataset.sit, ev.target.value);
     pintarNumeros();
@@ -684,9 +1223,15 @@ document.addEventListener("visibilitychange", function(){
   if(!document.hidden) pintarTudo();
 });
 
+function recarregar(){
+  return carregarRegistro().then(function(){
+    montarFiltros();
+    pintarTudo();
+  });
+}
+
 aplicarTema();
-montarFiltros();
-pintarTudo();
+recarregar();
 })();
 </script>
 </body>

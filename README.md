@@ -9,15 +9,54 @@ Site estático, sem build e sem dependências: basta servir a pasta.
 ## Estrutura
 
 ```
-index.html              índice: acervo, progresso e mapa de cobertura
+index.html              índice: acervo, progresso, cobertura e inserção
 reports.json            registro dos relatórios (fonte da verdade)
-dados/reports.js        espelho do registro, gerado; é o que o índice carrega
+dados/reports.js        espelho do registro, gerado; só usado no file://
 relatorios/*.html       os relatórios, um arquivo autocontido cada
 ferramentas/
   injetar-farol.py      injeta metadados e o farol de progresso nos relatórios
 ```
 
-## Como acrescentar um relatório
+Servido por HTTP, o índice lê `reports.json` direto. `dados/reports.js` é um
+espelho para o caso de abrir o `index.html` pelo disco, onde o navegador
+bloqueia a leitura de JSON.
+
+A chave `github` de `reports.json` — usuário, repositório e ramo — serve à aba
+*Inserir*, para listar os arquivos de `relatorios/` que ainda não estão
+registrados. Sem ela, o resto continua funcionando; só a listagem automática
+fica indisponível.
+
+## Como acrescentar um relatório, pela própria página
+
+A aba **Inserir**, no índice, é o caminho mais curto. Ela só funciona com o
+site servido por HTTP — publicado, ou pelo servidor local descrito no fim
+deste arquivo.
+
+1. envie o arquivo para `relatorios/` (pelo GitHub, ou copiando para a pasta);
+2. abra a aba **Inserir** e informe o nome do arquivo. Com `github`
+   preenchido em `reports.json`, o botão *Procurar no GitHub* lista sozinho os
+   arquivos que ainda não constam do registro;
+3. a página abre o relatório num quadro oculto e lê dele o que consegue —
+   título, órgão, número de fichas, faixa de informativos e período. Cada
+   campo vem marcado como **lido** (veio do arquivo) ou **deduzido** (inferido
+   do texto). Confira os deduzidos, sobretudo as datas;
+4. *Copiar entrada* põe o JSON na área de transferência; cole-o na lista
+   `relatorios` de `reports.json`, pelo editor do GitHub mesmo, e confirme.
+
+O índice lê `reports.json` diretamente quando servido por HTTP, então essa
+edição já basta: não é preciso rodar nada para o relatório aparecer.
+
+*Ver como rascunho* guarda a entrada só neste aparelho, e o relatório passa a
+aparecer no acervo com borda tracejada e o rótulo *rascunho local*. Serve para
+conferir antes de publicar. O rascunho some sozinho quando a entrada de
+verdade chega ao `reports.json`, e pode ser descartado a qualquer momento pelo
+próprio cartão.
+
+Falta só uma coisa depois disso: a **barra de progresso** do relatório novo
+começa a contar quando o farol for injetado nele, com o script abaixo. Até lá
+ele aparece normalmente, com o número de fichas do registro.
+
+## Como acrescentar um relatório, pelo script
 
 1. salve o arquivo em `relatorios/`, com nome em minúsculas, sem espaços nem
    acentos, no padrão `<orgao>-<periodo>.html` — por exemplo

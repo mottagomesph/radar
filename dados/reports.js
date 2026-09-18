@@ -2,6 +2,11 @@
    Nao edite aqui: edite reports.json e rode o script. */
 window.RADAR = {
   "atualizado": "2026-09-17",
+  "github": {
+    "usuario": "",
+    "repo": "",
+    "ramo": "main"
+  },
   "orgaos": [
     "STF",
     "STJ",

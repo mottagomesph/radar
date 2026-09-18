@@ -72,8 +72,10 @@ AVISO_JS = ("/* Gerado por ferramentas/injetar-farol.py a partir de "
 def injetar(relatorio):
     caminho = RAIZ / relatorio["arquivo"]
     texto = caminho.read_text(encoding="utf-8")
-    texto = re.sub(re.escape(INICIO) + r".*?" + re.escape(FIM), "",
-                   texto, flags=re.S).rstrip()
+    # consome tambem as quebras em volta, senao cada execucao deixaria uma
+    # linha em branco a mais no arquivo
+    texto = re.sub(r"\n*" + re.escape(INICIO) + r".*?" + re.escape(FIM) + r"\n*",
+                   "\n", texto, flags=re.S)
     if "</body>" not in texto:
         print("  ! sem </body>, ignorado:", relatorio["slug"])
         return False

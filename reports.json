@@ -1,6 +1,16 @@
 {
   "atualizado": "2026-09-17",
-  "orgaos": ["STF", "STJ", "CNJ", "Kollemata"],
+  "github": {
+    "usuario": "",
+    "repo": "",
+    "ramo": "main"
+  },
+  "orgaos": [
+    "STF",
+    "STJ",
+    "CNJ",
+    "Kollemata"
+  ],
   "relatorios": [
     {
       "slug": "stf-2025-s1",
