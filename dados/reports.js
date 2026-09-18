@@ -3,8 +3,8 @@
 window.RADAR = {
   "atualizado": "2026-09-17",
   "github": {
-    "usuario": "",
-    "repo": "",
+    "usuario": "mottagomesph",
+    "repo": "radar",
     "ramo": "main"
   },
   "orgaos": [
