@@ -81,6 +81,11 @@ O script injeta em cada relatório, antes de `</body>`, um bloco de metadados e
 o farol de progresso, e regenera `dados/reports.js`. É idempotente: rodar de
 novo apenas substitui o bloco anterior.
 
+Relatórios que já nasceram conforme
+[instrucoes-para-novos-relatorios.md](instrucoes-para-novos-relatorios.md),
+com bloco de metadados próprio, são deixados intactos: o script só regenera o
+espelho do registro para eles.
+
 ### Campos de `reports.json`
 
 | campo       | o que é                                                        |

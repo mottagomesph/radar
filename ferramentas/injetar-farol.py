@@ -76,6 +76,11 @@ def injetar(relatorio):
     # linha em branco a mais no arquivo
     texto = re.sub(r"\n*" + re.escape(INICIO) + r".*?" + re.escape(FIM) + r"\n*",
                    "\n", texto, flags=re.S)
+    # relatorio gerado conforme instrucoes-para-novos-relatorios.md ja traz
+    # metadados e farol proprios: injetar de novo os duplicaria
+    if 'id="radar-meta"' in texto:
+        print("  = ja traz metadados proprios, mantido:", relatorio["slug"])
+        return False
     if "</body>" not in texto:
         print("  ! sem </body>, ignorado:", relatorio["slug"])
         return False
