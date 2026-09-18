@@ -1173,6 +1173,18 @@ function aplicarAoRegistro(){
   var r3 = document.getElementById("recado-3");
   r3.className = "recado bom";
   r3.textContent = "Registro atualizado neste aparelho. Grave abaixo para valer para todos.";
+
+  /* o caminho do arquivo vem do slug: se o slug nao corresponder a um
+     arquivo existente, o cartao apontaria para o vazio sem avisar */
+  fetch(entrada.arquivo, { method:"GET", cache:"no-store" })
+    .then(function(resp){
+      if(resp.ok) return;
+      r3.className = "recado erro";
+      r3.textContent = "Registro atualizado, mas não encontrei " + entrada.arquivo
+        + ". Confira se o slug corresponde ao nome do arquivo, ou envie o arquivo "
+        + "para relatorios/.";
+    })
+    .catch(function(){});
 }
 
 function removerEntrada(slug){
