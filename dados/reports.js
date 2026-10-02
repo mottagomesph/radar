@@ -127,6 +127,20 @@ window.RADAR = {
       "descricao": "Relatório de jurisprudência e atos normativos do CNJ publicados nos informativos n. 10 a 17 de 2025, triados para concursos de outorga de delegação de serventias extrajudiciais."
     },
     {
+      "slug": "cnj-2026-set",
+      "arquivo": "relatorios/cnj-2026-set.html",
+      "titulo": "Jurisprudência do CNJ — setembro de 2026",
+      "orgao": "CNJ",
+      "tipo": "jurisprudencia",
+      "inicio": "2026-09",
+      "fim": "2026-09",
+      "periodo": "setembro de 2026",
+      "fonte": "Informativos 12/2026 e 13/2026",
+      "fichas": 5,
+      "produzido": "2026-10-02",
+      "descricao": "Julgados e atos normativos do CNJ divulgados nos Informativos 12/2026 e 13/2026, selecionados e fichados para concursos de outorga de delegações de notas e de registro."
+    },
+    {
       "slug": "cnj-2026-jan-ago",
       "arquivo": "relatorios/cnj-2026-jan-ago.html",
       "titulo": "Jurisprudência e atos normativos do CNJ — 2026, até agosto",

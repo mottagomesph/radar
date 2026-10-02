@@ -133,7 +133,7 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (11 relatórios, 274 fichas)
+## 5. Acervo atual (12 relatórios, 279 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
@@ -146,16 +146,18 @@ Radar/
 | cnj-2025-s1 | CNJ | 2025-01 → 2025-06 | Inf. 1/2025–9/2025 | 9 |
 | cnj-2025-s2 | CNJ | 2025-07 → 2025-12 | Inf. 10–17/2025 | 25 |
 | cnj-2026-jan-ago | CNJ | 2026-01 → 2026-08 | Inf. 01–11/2026 | 22 |
+| cnj-2026-set | CNJ | 2026-09 | Inf. 12–13/2026 | 5 |
 | kollemata-2026-001 | Kollemata | 2026-08 | n. 001 | 28 |
 | cnj-res-696-2026 | CNJ (normativo) | — | Res. 696/2026 | 0 |
 
-Só `cnj-2025-s1` nasceu conforme a especificação; os demais têm farol injetado.
+Só `cnj-2025-s1` e `cnj-2026-set` nasceram conforme a especificação; os demais
+têm farol injetado.
 
 **Lacunas (o que pedir em seguida):**
 - **STJ — a mais grave:** 2024 inteiro, 2025·S1, 3º trimestre de 2025
   (jul–set), 2026·S1, julho de 2026.
 - **STF:** 2024 inteiro, 2026·S2.
-- **CNJ:** 2024 inteiro, set–dez de 2026.
+- **CNJ:** 2024 inteiro, out–dez de 2026.
 - **Kollemata:** só o n. 001 (ago/2026); números seguintes.
 
 ## 6. Decisões tomadas (não reabrir sem motivo)
@@ -230,4 +232,9 @@ Só `cnj-2025-s1` nasceu conforme a especificação; os demais têm farol injeta
   10 fichas), renomeado de `STJ-Informativos-900-903-serventias.html`. Sem
   `radar-meta` próprio: farol injetado pelo script; período deduzido das datas
   dos informativos (08 a 29/09/2026).
+- **2026-10-02** — Acrescentado `cnj-2026-set` (Inf. 12 e 13/2026, set/2026,
+  5 fichas). Já veio com nome de slug, `radar-meta` e farol próprios (segundo
+  relatório conforme a especificação); injetor o manteve intacto. Lacuna do CNJ
+  passa a out–dez de 2026. Obs.: o injetor, ao reprocessar, remove uma linha em
+  branco antes do bloco no `stj-2026-inf-900-903.html`; irrelevante, não commitado.
 

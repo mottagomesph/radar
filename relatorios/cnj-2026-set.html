@@ -1,0 +1,683 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Radar CNJ — setembro de 2026</title>
+<meta name="description" content="Julgados e atos normativos do CNJ divulgados nos Informativos 12/2026 e 13/2026, selecionados e fichados para concursos de outorga de delegações de notas e de registro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: painel de controle claro — sidebar escura com índice, barra fixa de ferramentas, cartões brancos com coluna de leitura de ~68ch. Somente tema claro, por escolha do usuário. */
+:root{
+  color-scheme: light;
+  --canvas:#EBEDF3;      /* fundo do painel, cinza com viés azulado */
+  --panel:#FFFFFF;       /* cartões */
+  --ink:#171B30;         /* texto principal e sidebar */
+  --ink-2:#4A5070;       /* texto secundário */
+  --line:#DADDE8;        /* filetes */
+  --soft:#F4F5F9;        /* fundos sutis */
+  --accent:#3347D1;      /* acento único: cobalto */
+  --accent-soft:#E6E9FB;
+  --hl:#B9781A;          /* segundo acento: grupo de destaques (Grupo I) */
+  --hl-soft:#FBF1E0;
+  --done:#17855A;        /* exclusivo do estado conferida */
+  --done-soft:#EAF6F0;
+  --side-ink:#C9CDE0;
+  --serif:"Source Serif 4", Georgia, "Times New Roman", serif;
+  --sans:"Manrope", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono:"JetBrains Mono", ui-monospace, "Cascadia Mono", Consolas, monospace;
+  --r:18px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth;scroll-padding-top:130px}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}*{transition:none!important}}
+body{background:var(--canvas);color:var(--ink);font-family:var(--sans);font-size:15px;line-height:1.5;margin:0}
+a{color:var(--accent)}
+button,input{font-family:var(--sans)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* ===== Barra de ferramentas ===== */
+.toolbar{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:rgba(235,237,243,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.toolbar-in{max-width:1320px;margin:0 auto;padding:10px 16px;display:flex;flex-wrap:wrap;gap:10px 16px;align-items:center}
+.brand{font-weight:800;letter-spacing:.02em;font-size:13px;display:flex;align-items:center;gap:8px;white-space:nowrap}
+.brand i{display:inline-block;width:22px;height:22px;border-radius:7px;background:var(--ink);position:relative}
+.brand i::after{content:"";position:absolute;inset:6px;border-radius:50%;border:2px solid var(--panel)}
+.search{flex:1 1 260px;min-width:0;position:relative}
+.search input{width:100%;border:1px solid var(--line);background:var(--panel);border-radius:999px;padding:9px 14px 9px 36px;font-size:14px;color:var(--ink)}
+.search svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:15px;height:15px;stroke:var(--ink-2)}
+.seg{display:flex;flex-wrap:wrap;gap:4px;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:3px}
+.seg button{border:0;background:transparent;color:var(--ink-2);font-size:12.5px;font-weight:600;padding:6px 11px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--panel)}
+.prog{display:flex;align-items:center;gap:10px;font-size:12.5px;font-weight:600;color:var(--ink-2);white-space:nowrap}
+.bar{width:120px;height:8px;border-radius:99px;background:var(--panel);border:1px solid var(--line);overflow:hidden}
+.bar span{display:block;height:100%;width:0;background:var(--done);transition:width .3s}
+.btn-ghost{border:1px solid var(--line);background:var(--panel);color:var(--ink-2);border-radius:999px;padding:6px 12px;font-size:12px;font-weight:600;cursor:pointer}
+.btn-ghost.armed{border-color:#B3261E;color:#B3261E}
+
+/* ===== Estrutura ===== */
+.shell{max-width:1320px;margin:0 auto;padding-inline:16px;padding-block:20px 60px;display:grid;grid-template-columns:270px minmax(0,1fr);gap:22px;align-items:start}
+.side{position:sticky;top:calc(env(safe-area-inset-top,0px) + 116px);background:var(--ink);color:var(--side-ink);border-radius:var(--r);padding:18px 14px;max-height:calc(100vh - 136px);overflow:auto}
+.side h2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:#8D93B5;margin:0 6px 10px;font-weight:700}
+.side .g{font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:#8D93B5;margin:14px 6px 6px}
+.side ol{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.side a{display:grid;grid-template-columns:26px 1fr 16px;gap:8px;align-items:start;text-decoration:none;color:var(--side-ink);padding:7px 8px;border-radius:10px;font-size:12.5px;line-height:1.35}
+.side a:hover{background:rgba(255,255,255,.07);color:#fff}
+.side .n{font-family:var(--mono);font-size:11px;color:#8D93B5;padding-top:1px}
+.side .ck{width:14px;height:14px;border-radius:50%;border:1.5px solid #5A6085;margin-top:1px}
+.side li.is-done .ck{background:var(--done);border-color:var(--done);box-shadow:inset 0 0 0 3px var(--ink)}
+.side li.is-done a{color:#8FD3B4}
+.side li.hide{display:none}
+.side .hl-dot{color:var(--hl)}
+
+/* ===== Cabeçalho ===== */
+.hero{background:var(--panel);border-radius:var(--r);padding:26px 26px 22px;display:grid;gap:18px}
+.eyebrow{font-size:11.5px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,3.4vw,38px);line-height:1.12;margin:0;text-wrap:balance}
+.hero p{font-family:var(--serif);font-size:17px;color:var(--ink-2);margin:0;max-width:68ch}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.stat{background:var(--soft);border-radius:14px;padding:14px 16px}
+.stat b{display:block;font-size:30px;font-weight:800;font-variant-numeric:tabular-nums;line-height:1.1}
+.stat span{font-size:12px;font-weight:600;color:var(--ink-2);text-transform:uppercase;letter-spacing:.06em}
+.stat.sel{background:var(--ink);color:var(--panel)}
+.stat.sel span{color:#AEB3CF}
+.src{font-size:12.5px;color:var(--ink-2)}
+
+/* ===== Grupos ===== */
+.grp{margin-top:30px;display:grid;gap:16px}
+.grp-h{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;padding:0 4px}
+.grp-h .tag{font-family:var(--mono);font-size:12px;font-weight:500;padding:3px 9px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+.grp.g1 .grp-h .tag{background:var(--hl-soft);color:var(--hl)}
+.grp-h h2{font-size:19px;font-weight:800;margin:0}
+.grp-h p{flex-basis:100%;margin:0;color:var(--ink-2);font-size:13.5px;max-width:80ch}
+
+/* ===== Fichas ===== */
+.ficha{background:var(--panel);border-radius:var(--r);border:1px solid transparent;position:relative;overflow:hidden;transition:background .25s,border-color .25s}
+.ficha::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:transparent;transition:background .25s}
+.grp.g1 .ficha::before{background:var(--hl)}
+.grp .ficha.conferida{background:var(--done-soft);border-color:#BFE3D1}
+.grp .ficha.conferida::before{background:var(--done)}
+.ficha.hide{display:none}
+.f-head{display:flex;flex-wrap:wrap;gap:8px;align-items:center;padding:18px 26px 0}
+.num{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.chip{font-size:11px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;padding:3px 9px;background:var(--soft);color:var(--ink-2)}
+.chip.normativo{background:var(--accent-soft);color:var(--accent)}
+.chip.hl{background:var(--hl-soft);color:var(--hl)}
+.chip.ok{background:var(--done);color:#fff;display:none}
+.ficha.conferida .chip.ok{display:inline-block}
+.f-body{padding:10px 26px 4px}
+.f-title{font-family:var(--serif);font-size:22px;line-height:1.25;font-weight:700;margin:4px 0 14px;max-width:68ch;text-wrap:balance}
+.idbox{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;background:var(--soft);border:1px solid var(--line);border-radius:12px;padding:10px 12px;margin-bottom:6px}
+.idline{font-family:var(--mono);font-size:12.6px;line-height:1.5;flex:1 1 300px;min-width:0;overflow-wrap:anywhere}
+.idline.plain{font-family:var(--sans);font-weight:600;font-size:13px}
+.idctl{display:flex;gap:8px;align-items:center}
+.sw{display:flex;align-items:center;gap:6px;font-size:11.5px;font-weight:600;color:var(--ink-2);cursor:pointer;user-select:none}
+.sw input{appearance:none;width:30px;height:17px;border-radius:99px;background:var(--line);position:relative;cursor:pointer;margin:0;transition:background .2s}
+.sw input::after{content:"";position:absolute;top:2px;left:2px;width:13px;height:13px;border-radius:50%;background:var(--panel);transition:left .2s}
+.sw input:checked{background:var(--accent)}
+.sw input:checked::after{left:15px}
+.btn-copy{border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:9px;padding:5px 10px;font-size:12px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn-copy:hover{border-color:var(--accent);color:var(--accent)}
+.btn-copy.ok{border-color:var(--done);color:var(--done)}
+.sec{max-width:68ch;margin-top:18px}
+.sec h3{font-family:var(--sans);font-size:11.5px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);margin:0 0 6px}
+.grp.g1 .sec h3{color:var(--hl)}
+.sec h4{font-family:var(--sans);font-size:13.5px;font-weight:700;margin:16px 0 4px;color:var(--ink)}
+.sec p,.sec li{font-family:var(--serif);font-size:16.5px;line-height:1.62;color:var(--ink)}
+.sec p{margin:0 0 10px}
+.sec ul{margin:0 0 10px;padding-left:1.2em}
+.sec li{margin-bottom:6px}
+.sec li::marker{color:var(--ink-2)}
+.sec .tese{border-left:3px solid var(--accent);padding:2px 0 2px 14px;font-style:italic}
+.grp.g1 .sec .tese{border-color:var(--hl)}
+.tbl-wrap{overflow-x:auto;margin:6px 0 12px}
+table{border-collapse:collapse;font-size:13.5px;min-width:420px;width:100%}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink-2)}
+td{font-variant-numeric:tabular-nums}
+.refs{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
+.refs span{font-family:var(--mono);font-size:11.5px;background:var(--soft);border:1px solid var(--line);border-radius:7px;padding:2px 7px;color:var(--ink-2)}
+.f-foot{display:flex;flex-wrap:wrap;gap:10px;justify-content:space-between;align-items:center;padding:16px 26px 20px;margin-top:10px;border-top:1px dashed var(--line)}
+.btn-done{border:1.5px solid var(--done);background:var(--panel);color:var(--done);border-radius:999px;padding:8px 16px;font-size:13px;font-weight:700;cursor:pointer}
+.ficha.conferida .btn-done{background:var(--done);color:#fff}
+.empty{background:var(--panel);border-radius:var(--r);padding:22px;color:var(--ink-2);text-align:center}
+
+/* ===== Notas finais ===== */
+.note{background:var(--panel);border-radius:var(--r);padding:24px 26px;margin-top:30px}
+.note h2{font-size:19px;font-weight:800;margin:0 0 10px}
+.note p,.note li{font-family:var(--serif);font-size:16px;line-height:1.6;max-width:68ch}
+.note ul{padding-left:1.2em}
+.disc{display:grid;gap:10px;margin-top:8px}
+.disc div{display:grid;grid-template-columns:minmax(0,1fr);gap:2px;padding:10px 12px;background:var(--soft);border-radius:12px}
+.disc code{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.disc b{font-size:14px}
+.disc span{font-size:13.5px;color:var(--ink-2)}
+
+@media (max-width:980px){
+  .shell{grid-template-columns:minmax(0,1fr)}
+  .side{position:static;max-height:none}
+}
+@media (max-width:560px){
+  .brand{display:none}
+  .toolbar-in{gap:8px}
+  .stats{grid-template-columns:minmax(0,1fr)}
+  .f-head,.f-body,.f-foot{padding-inline:16px}
+  .hero,.note{padding:20px 16px}
+  .bar{width:80px}
+}
+@media print{
+  .toolbar,.side,.btn-copy,.sw,.btn-done,.btn-ghost{display:none!important}
+  body{background:#fff}
+  .shell{display:block;padding:0}
+  .ficha,.hero,.note{break-inside:avoid-page;border:1px solid #ccc}
+  .ficha.conferida{background:#EAF6F0!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .ficha.conferida .chip.ok{display:inline-block!important;-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .ficha::before{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+</head>
+<body>
+
+<header class="toolbar" role="search">
+  <div class="toolbar-in">
+    <div class="brand"><i aria-hidden="true"></i>Radar CNJ · set/2026</div>
+    <label class="search" for="q">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="q" type="search" placeholder="Buscar tese, processo, relator, dispositivo…" autocomplete="off">
+    </label>
+    <div class="seg" id="fg" aria-label="Filtrar por grupo">
+      <button type="button" data-g="all" aria-pressed="true">Todos</button>
+      <button type="button" data-g="1" aria-pressed="false">I · Notarial e Registral</button>
+      <button type="button" data-g="2" aria-pressed="false">II · Outras</button>
+      <button type="button" data-g="3" aria-pressed="false">III · Tangenciais</button>
+    </div>
+    <div class="seg" id="fs" aria-label="Filtrar por situação">
+      <button type="button" data-s="all" aria-pressed="true">Todas</button>
+      <button type="button" data-s="pend" aria-pressed="false">Pendentes</button>
+      <button type="button" data-s="done" aria-pressed="false">Conferidas</button>
+    </div>
+    <div class="prog"><div class="bar" aria-hidden="true"><span id="pbar"></span></div><span id="ptxt">0 de 5</span></div>
+    <button type="button" class="btn-ghost" id="clear">Limpar marcações</button>
+  </div>
+</header>
+
+<div class="shell">
+  <nav class="side" aria-label="Índice das fichas">
+    <h2>Índice</h2>
+    <div class="g"><span class="hl-dot">●</span> I · Notarial e Registral</div>
+    <ol>
+      <li data-for="f1"><a href="#f1"><span class="n">01</span><span>Res. CNJ n. 696/2026: novo regime dos concursos de outorga</span><span class="ck"></span></a></li>
+      <li data-for="f2"><a href="#f2"><span class="n">02</span><span>Inventário extrajudicial sem prévio recolhimento do ITCMD</span><span class="ck"></span></a></li>
+    </ol>
+    <div class="g">II · Outras matérias</div>
+    <ol>
+      <li data-for="f3"><a href="#f3"><span class="n">03</span><span>CNJ afasta lei estadual no caso concreto sem controle concentrado</span><span class="ck"></span></a></li>
+    </ol>
+    <div class="g">III · Tangenciais</div>
+    <ol>
+      <li data-for="f4"><a href="#f4"><span class="n">04</span><span>Revisão disciplinar: prazo, prescrição e censura sem dolo</span><span class="ck"></span></a></li>
+      <li data-for="f5"><a href="#f5"><span class="n">05</span><span>Aposentadoria não extingue o PAD; pena é registrada</span><span class="ck"></span></a></li>
+    </ol>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow">Conselho Nacional de Justiça · Informativos 12/2026 e 13/2026</div>
+      <h1>Jurisprudência e atos normativos do CNJ — setembro de 2026</h1>
+      <p>Seleção, para estudo de direito notarial e registral, dos julgados e atos normativos do Plenário do CNJ divulgados nos informativos publicados em setembro de 2026. O destaque do período é a nova resolução nacional dos concursos de outorga de delegações, que revoga a Resolução CNJ n. 81/2009.</p>
+      <div class="stats">
+        <div class="stat"><b>2</b><span>Informativos analisados</span></div>
+        <div class="stat"><b>11</b><span>Julgados e atos examinados</span></div>
+        <div class="stat sel"><b>5</b><span>Fichas selecionadas</span></div>
+      </div>
+      <div class="src">Informativo n. 12/2026 (04/09/2026, 12ª Sessão Ordinária de 18/08/2026) e Informativo n. 13/2026 (14/09/2026, 13ª Sessão Ordinária de 01/09/2026).</div>
+    </section>
+
+    <!-- ================= GRUPO I ================= -->
+    <section class="grp g1" data-grp="1">
+      <div class="grp-h"><span class="tag">Grupo I</span><h2>Direito Notarial e Registral</h2><p>Julgados e atos com repercussão direta na atividade notarial e registral, nas serventias extrajudiciais ou na vida funcional dos delegatários.</p></div>
+
+      <!-- FICHA 1 -->
+      <article class="ficha" id="f1" data-grp="1" data-search="resolução 696/2026 concurso outorga delegação notas registro res 81/2009 revogada enac exame nacional dos cartórios instituição organizadora banca própria comissão examinadora corregedoria nacional lvec rgv relação geral de vacância provimento 219/2026 reescolha vacância superveniente alternância cotas sorteio lei 15142/2025 lei 8935/1994 art. 16 art. 17 art. 35 remoção títulos prova discursiva oral peso rodrigo badaró ato normativo 0004551-42.2026 tema 779 interinos teto">
+        <div class="f-head"><span class="num">Ficha 01</span><span class="chip normativo">Ato normativo</span><span class="chip hl">Destaque</span><span class="chip ok">Conferida</span></div>
+        <div class="f-body"><div class="copy-src">
+          <h2 class="f-title">Resolução CNJ n. 696/2026: novo regime nacional dos concursos públicos de outorga de delegações de notas e de registro</h2>
+          <div class="idbox">
+            <div class="idline plain">Resolução CNJ n. 696, de 26/08/2026 (DJe/CNJ n. 206/2026, de 28/08/2026, p. 2-33). Vigência na data da publicação.</div>
+          </div>
+          <div class="idbox">
+            <div class="idline">(Ato Normativo n. 00045514220262000000, rel. cons. rodrigo badaró<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
+            <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
+          </div>
+
+          <div class="sec">
+            <h3>Síntese executiva</h3>
+            <p class="tese">A Resolução CNJ n. 696/2026 revoga e substitui a Resolução CNJ n. 81/2009 e passa a reger, de forma nacional e exaustiva, os concursos de provimento e remoção. Torna obrigatória a contratação de instituição organizadora (vedada a banca própria, salvo autorização do CNJ), incorpora o Exame Nacional dos Cartórios como requisito de inscrição sem natureza classificatória, redefine os pesos (discursiva 70%, oral 25%, títulos 5%, objetiva apenas eliminatória), cria a Lista de Vacâncias para Efeitos de Concurso (LVEC), disciplina a vacância superveniente e substitui o sorteio de serventias reservadas pelo sistema de alternância na ordem de chamamento.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Resumo do ato normativo</h3>
+
+            <h4>Competência e fontes normativas</h4>
+            <p>O art. 4º afirma competir privativa e exclusivamente ao CNJ disciplinar todos os aspectos dos concursos de outorga (organização, etapas, isenção, critérios de seleção, políticas afirmativas, títulos, classificação e escolha), com base no art. 22, XXV, e no art. 103-B, § 4º, I e II, da Constituição Federal. Aos tribunais cabe a organização administrativa e a execução material (§ 1º). É vedada a aplicação de normas estaduais, distritais ou municipais sobre matéria de competência do CNJ (§ 2º), e o regime de reserva de vagas é nacional e exaustivo, sem redução, ampliação ou cumulação com percentuais locais (§ 3º). É nula a cláusula editalícia incompatível com a resolução ou baseada em norma local (art. 39, § 2º).</p>
+
+            <h4>Governança: comissão examinadora e instituição organizadora</h4>
+            <p>A comissão examinadora supervisiona, fiscaliza e acompanha o certame, sem atuar nas atividades avaliativas e recursais (art. 2º, I). Compõe-se de um desembargador (presidente), três juízes de direito, um membro do Ministério Público, um advogado, um registrador, um tabelião e um representante da Corregedoria Nacional de Justiça (art. 9º, § 1º). Se o Procurador-Geral de Justiça ou a Seccional da OAB não indicarem representante em sete dias úteis, o concurso prossegue sem eles, em definitivo (art. 9º, § 5º). Não pode integrar a comissão o delegatário que exerça cargo diretivo em entidade de classe ou função de direção em Operador Nacional do SERP ou no Agente Regulador (art. 9º, § 6º).</p>
+            <p>O tribunal contrata, por licitação, instituição organizadora especializada, à qual compete com exclusividade elaborar, aplicar e corrigir as provas e julgar os recursos em caráter terminativo (arts. 18 e 19). A banca própria é vedada, admitida excepcionalmente mediante autorização do CNJ, requerida antes do edital, com demonstração de capacidade técnica, operacional e de segurança (art. 18, §§ 1º e 2º). A comissão não tem acesso prévio às questões (art. 19, § 1º) e só intervém em caso de erro material evidente, ilegalidade manifesta, desconformidade objetiva com o edital ou risco relevante à lisura do certame, vedada a substituição do juízo técnico da banca (art. 10, VIII e § 3º). O representante da Corregedoria Nacional tem poderes de supervisão, fiscalização e orientação da constituição da comissão até a homologação (art. 16).</p>
+
+            <h4>Impedimentos e segurança</h4>
+            <p>Os impedimentos e suspeições alcançam membros da comissão e colaboradores da instituição organizadora: hipóteses dos arts. 144 e 145 do CPC; magistério em cursos preparatórios até três anos após a cessação; servidor vinculado entre os candidatos; participação societária, própria ou de parente até o terceiro grau, em cursos preparatórios (art. 14). Identificado parente de membro ou colaborador entre os inscritos, em qualquer fase e mesmo após o término do concurso, o candidato é eliminado, ainda que já tenha assumido a serventia (art. 15, II). Os arts. 22 e 23 fixam protocolos mínimos de cadeia de custódia, criptografia, log auditável, sala-cofre, identificação biométrica e grafológica e varredura eletromagnética.</p>
+
+            <h4>Exame Nacional dos Cartórios (ENAC)</h4>
+            <p>O ENAC, organizado pela Corregedoria Nacional, é requisito obrigatório de habilitação para a inscrição preliminar nos concursos de provimento e de remoção, sem uso para classificação ou desempate (art. 25, caput e § 1º). A aprovação vale por seis anos da expedição do certificado (art. 25, § 3º). A prova tem cem questões objetivas, sessenta delas de direito notarial e registral (art. 27). Aprova-se com 60% de acertos na ampla concorrência e 50% para candidatos com deficiência, pretos, pardos, indígenas e quilombolas (art. 28). O exame ocorre ao menos duas vezes por ano, em todas as capitais (art. 30). O tribunal pode adotar o ENAC em substituição à prova objetiva, se o edital o previr; nesse caso, todos os aprovados no ENAC com inscrição deferida seguem para a discursiva (art. 31).</p>
+
+            <h4>Etapas, prazos e requisitos</h4>
+            <p>O concurso deve terminar, com a outorga, em até 365 dias da primeira publicação do edital (art. 33), dividido em blocos com prazos máximos próprios (art. 34). São requisitos da inscrição preliminar: nacionalidade brasileira, capacidade civil, quitação eleitoral e militar, bacharelado em direito ou dez anos completos de exercício em serviço notarial ou de registro antes da publicação do primeiro edital, e certificado válido do ENAC (art. 41). O diploma pode ser apresentado até a outorga, se o candidato fizer essa opção na inscrição (art. 41, § 2º). A isenção da taxa restringe-se às hipóteses da Lei n. 13656/2018 (art. 43).</p>
+
+            <h4>Provas e pesos</h4>
+            <div class="tbl-wrap"><table>
+              <thead><tr><th>Etapa</th><th>Natureza</th><th>Peso na nota final</th><th>Dispositivo</th></tr></thead>
+              <tbody>
+                <tr><td>Prova objetiva (ou ENAC)</td><td>Eliminatória</td><td>Sem peso</td><td>art. 46, I</td></tr>
+                <tr><td>Prova discursiva</td><td>Eliminatória e classificatória</td><td>7 (70%)</td><td>art. 46, II</td></tr>
+                <tr><td>Prova oral</td><td>Exclusivamente classificatória</td><td>2,5 (25%)</td><td>art. 46, III</td></tr>
+                <tr><td>Títulos</td><td>Exclusivamente classificatória</td><td>0,5 (5%)</td><td>art. 46, IV</td></tr>
+              </tbody>
+            </table></div>
+            <p>Na objetiva, são convocados à discursiva os candidatos que obtiverem ao menos 50% na disciplina de direito notarial e registral e 60% do total, até doze por vaga em cada modalidade (art. 49, § 1º). Direito penal, processual penal, do trabalho e processual do trabalho são exigidos apenas no ENAC e na objetiva (art. 48, § 2º). A discursiva compreende ao menos uma dissertação, uma peça prática e três questões, pode ser aplicada em até três dias (sexta a domingo) e é única para todos, vedada a segmentação por grupos ou tipos de serventia (art. 50). Vale 70 pontos de conteúdo exclusivamente jurídico; a língua portuguesa opera apenas por desconto de erros objetivos de grafia, morfossintaxe e propriedade vocabular (art. 51). Habilitam-se à oral os que atingirem 60% na discursiva (art. 53), sem cláusula de barreira para cotistas (art. 47). A oral vale 25 pontos, 90% para conteúdo jurídico e 10% para articulação técnica (art. 54), com perguntas formuladas previamente e entregues por escrito (art. 55) e gravação integral em áudio e vídeo (art. 57).</p>
+
+            <h4>Títulos</h4>
+            <p>Máximo de cinco pontos, com termo final na primeira publicação do edital (art. 58). O Bloco I (experiência profissional, até três pontos) é progressivo e não cumulativo, de 0,5 ponto a partir de um ano até três pontos a partir de seis anos, abrangendo advocacia (com participação em ao menos cinco processos por ano), serviço notarial ou de registro, cargo privativo de bacharel em direito, magistério superior jurídico e atuação como conciliador ou mediador judicial (art. 59). O Bloco II (pesquisa, até dois pontos) valora doutorado (1), mestrado (0,5) e até duas especializações com monografia (0,25 cada) (art. 60).</p>
+
+            <h4>Recursos, vieses regionais e desempate</h4>
+            <p>A disponibilização do espelho completo é condição prévia à abertura do prazo recursal (art. 24, II). É vedada a resposta padronizada que não enfrente os argumentos do recorrente (arts. 24, III, e 65). O recurso contra a correção individual da discursiva é examinado por dois examinadores que não corrigiram a prova, exigida unanimidade, com terceiro examinador em caso de divergência (art. 64). Nenhuma região pode concentrar mais de 30% dos examinadores, e na oral não se exige resposta única em tema de elevada divergência, salvo direcionamento no enunciado ou no edital (art. 66, § 2º, IV e VI). O desempate segue, sucessivamente, maior nota na discursiva, maior nota na oral, exercício da função de jurado e maior idade (art. 67).</p>
+
+            <h4>RGV, LVEC e critérios de preenchimento</h4>
+            <p>A relação geral de vacância (RGV) é a relação única, permanente e cronológica de todas as serventias de cada unidade da Federação, nos termos do Provimento CN/CNJ n. 219/2026 (art. 2º, IV). A LVEC reúne apenas as serventias vagas na data da publicação do edital, sem abranger vacâncias supervenientes (art. 2º, V). Alterações na RGV durante o concurso não geram reinício, anulação ou suspensão (art. 73, parágrafo único), e a LVEC tem natureza de expectativa de oferta, não de condição de validade do certame (art. 104). Mantém-se a proporção de dois terços por provimento e um terço por remoção (art. 72; art. 16 da Lei n. 8935/1994). Na remoção, exige-se titularidade de delegação no mesmo Estado há mais de dois anos ininterruptos na data da primeira publicação do edital, admitida a soma de períodos em serventias distintas da mesma unidade federativa (art. 72, §§ 1º e 2º); fica inabilitado quem não detenha titularidade ativa nessa data, ainda que tenha completado o biênio antes (§ 3º).</p>
+
+            <h4>Audiência de escolha e reescolha</h4>
+            <p>A audiência de escolha ocorre em até 25 dias da homologação. Os aprovados têm acesso, sob termo de confidencialidade, aos dados contábeis e ao livro-caixa dos últimos doze meses das serventias da LVEC (art. 69). Escolhem primeiro os candidatos da remoção e depois os do provimento (art. 70). A opção é personalíssima, imediata e irretratável (art. 70, § 5º). O aprovado nos dois critérios declara, ao ser chamado pela primeira vez, por qual concorre, renunciando ao outro (art. 70, § 6º). A reescolha é única, realizada em até três meses do encerramento do prazo para outorga (art. 97), e dela só participa quem compareceu à escolha e consignou em ata a reserva desse direito (art. 98). São ofertadas apenas as serventias remanescentes e as escolhidas sem outorga; não entram serventias novas, as que vagaram após a entrada em exercício do escolhido nem as serventias sub judice (art. 99). As remanescentes retornam à RGV com a data de vacância originária (art. 101).</p>
+
+            <h4>Serventia ainda vaga e serventia supervenientemente vaga</h4>
+            <p>Serventia ainda vaga é a que constou do edital e não foi escolhida, sendo disponibilizada na reescolha (art. 2º, XI). Serventia supervenientemente vaga é aquela escolhida, outorgada e com investidura efetiva, ainda que amparada em decisão judicial precária, cuja delegação vem a ser desconstituída, especialmente pela invalidação ou revisão da decisão que lhe deu suporte (art. 2º, XII). A efetiva escolha, outorga ou exercício basta para caracterizar a vacância superveniente (art. 3º, caput). Essa serventia não é ofertada na reescolha e vai à RGV para concurso subsequente (art. 3º, § 1º). A desconstituição produz efeitos análogos aos da perda da delegação do art. 35, I, da Lei n. 8935/1994 (art. 3º, § 3º). O reposicionamento de candidato por decisão superveniente faz-se por reescolha, vedada a desconstituição das escolhas regularmente outorgadas a outros candidatos (art. 3º, §§ 4º e 5º).</p>
+
+            <h4>Ações afirmativas e sistema de alternância</h4>
+            <p>Sobre as serventias destinadas ao provimento, reservam-se 25% a candidatos negros, 5% a candidatos com deficiência, 3% a indígenas e 2% a quilombolas, com arredondamento para o inteiro superior em frações iguais ou superiores a 0,5 (art. 74 e § 5º), em cumprimento à Lei n. 15142/2025. A reserva incide somente sobre o provimento (art. 74, § 1º). Extingue-se o sorteio de serventias reservadas (art. 75): todas as serventias ficam disponíveis a todos, e as cotas incidem sobre a ordem de chamamento, com frequência tendencial de uma posição a cada 4 (negros), 20 (PCD), 33 (indígenas) e 50 (quilombolas) (art. 76, § 2º). Em coincidência de posições, prevalece PCD, depois quilombolas, indígenas e negros (art. 76, § 4º). Ao final, divulgam-se, além da lista da remoção, cinco listas do provimento (art. 77). O Anexo Único traz exemplos de cálculo para concursos de 1 a 13 serventias.</p>
+
+            <h4>Outorga, investidura e exercício</h4>
+            <p>A outorga é expedida em até 30 dias da audiência de escolha e é ato personalíssimo, intransferível e indelegável (art. 106). A investidura ocorre em 30 dias da publicação da outorga, prorrogáveis uma vez por igual período (art. 108); sua falta injustificada acarreta revogação da outorga e declaração de vacância, mantida a posição da serventia na RGV (art. 108, § 3º). O exercício deve iniciar em 30 dias da investidura (art. 109), sob pena de caducidade da outorga (art. 111). A Corregedoria-Geral dá exercício após inspeção prévia e termo de entrega circunstanciado (art. 110).</p>
+
+            <h4>Preclusão, controle e coercitividade</h4>
+            <p>São preclusivos os prazos de dez dias para impugnar o edital, 48 horas para recorrer de espelhos e resultados provisórios e dez dias para impugnar outras irregularidades (art. 102). Matéria preclusa não pode ser rediscutida em PCA, que não será conhecido liminarmente (arts. 102, parágrafo único, e 103). Qualquer pessoa pode noticiar ao CNJ a não publicação da RGV em janeiro e julho ou a não publicação de edital em até 60 dias após RGV que revele três ou mais serventias vagas (art. 112). Entre as medidas de coercitividade contra o tribunal está o bloqueio do saldo do repasse decorrente da aplicação do teto remuneratório aos interinos, com remissão ao Tema 779 da repercussão geral do STF (art. 113, § 2º, V).</p>
+
+            <h4>Transição e revogações</h4>
+            <p>As regras aplicam-se imediatamente (art. 116), com três ressalvas: a alternância não se aplica a concursos em que já houve sorteio de cotas; os novos pesos e títulos não se aplicam a concursos com inscrições encerradas; os demais procedimentos não são obrigatórios em concursos com edital já publicado, devendo-se internalizar, quando possível, as regras de segurança, transparência, prazos e prevenção de fraudes. O art. 117 revoga, entre outras, as Resoluções CNJ n. 81/2009, 122/2010, 187/2014, 382/2021, 478/2022, 509/2023, 575/2024, 590/2024 e 596/2024.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Pontos relevantes, curiosos ou inovadores</h3>
+            <ul>
+              <li>Aprovação por maioria. Ficaram parcialmente vencidos os conselheiros Jaceguara Dantas, Fabio Esteves, Noemia Porto, Silvio Amorim e o Presidente quanto ao art. 74, § 1º: entendiam que a reserva de vagas deveria alcançar também a remoção.</li>
+              <li>O Informativo justifica a alternância pela lógica de outros concursos públicos, em que a política afirmativa incide sobre a convocação e a ordem de acesso, e não sobre a predeterminação aleatória de unidades.</li>
+              <li>A prova objetiva deixa de compor a nota final; o peso decisivo passa à discursiva.</li>
+              <li>O conciliador e o mediador judicial passam a pontuar como experiência profissional (art. 59, § 1º, V).</li>
+              <li>A delegação outorgada com base em decisão judicial precária tem caráter provisório, condicionada à confirmação definitiva (art. 3º, § 2º).</li>
+              <li>A participação de candidato parente de membro da comissão gera eliminação mesmo depois da assunção da serventia (art. 15, II).</li>
+              <li>Disponibilização dos dados contábeis e do livro-caixa das serventias antes da escolha (art. 69, § 1º).</li>
+            </ul>
+            <div class="refs"><span>CF, art. 22, XXV</span><span>CF, art. 103-B, § 4º</span><span>CF, art. 236</span><span>Lei n. 8935/1994, arts. 16, 17, 35</span><span>Lei n. 15142/2025, art. 9º</span><span>Prov. CN/CNJ n. 219/2026</span><span>Prov. CN/CNJ n. 176/2024</span><span>STF, Tema 779</span></div>
+          </div>
+        </div></div>
+        <div class="f-foot"><button type="button" class="btn-copy" data-copy="full">Copiar ficha completa</button><button type="button" class="btn-done" aria-pressed="false">Marcar como conferida</button></div>
+      </article>
+
+      <!-- FICHA 2 -->
+      <article class="ficha" id="f2" data-grp="1" data-search="itcmd inventário partilha extrajudicial escritura tabelião notas certidão negativa de débitos cnd fisco resolução 35/2007 art. 15 resolução 695/2026 colégio notarial lei 11441/2007 art. 1784 código civil sanção política lei 6830/1980 tema 1074 stj adi 394 testamento revogado caduco divórcio união estável filhos menores guarda alimentos mauro campbell marques pp 0008622-24.2025">
+        <div class="f-head"><span class="num">Ficha 02</span><span class="chip">Julgado</span><span class="chip">Ato normativo resultante</span><span class="chip hl">Destaque</span><span class="chip ok">Conferida</span></div>
+        <div class="f-body"><div class="copy-src">
+          <h2 class="f-title">Escritura de inventário e partilha não se condiciona ao prévio recolhimento do ITCMD; o tabelião consigna a situação fiscal e comunica ao Fisco</h2>
+          <div class="idbox">
+            <div class="idline">(PP n. 00086222420252000000, rel. cons. mauro campbell marques<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
+            <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
+          </div>
+
+          <div class="sec">
+            <h3>Síntese executiva</h3>
+            <p class="tese">É ilegal exigir o pagamento do ITCMD ou a apresentação de certidão negativa de débitos como condição para a lavratura de escritura de inventário e partilha. O tabelião de notas deve solicitar as certidões fiscais do de cujus e do espólio, fazer constar no ato a informação sobre eventuais débitos e comunicar a lavratura ao Fisco. Sua responsabilidade limita-se ao dever de orientar e não se estende à garantia do pagamento do tributo. O Plenário alterou o art. 15 da Resolução CNJ n. 35/2007, o que se formalizou na Resolução CNJ n. 695/2026.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Caso concreto</h3>
+            <p>O Colégio Notarial do Brasil formulou pedido de providências com três pretensões de alteração da Resolução CNJ n. 35/2007: (i) afastar a exigência de recolhimento prévio dos tributos, então prevista no art. 15; (ii) dispensar a decisão judicial para inventários extrajudiciais em que haja testamento revogado ou caduco; (iii) admitir a lavratura de divórcio e de dissolução de união estável com partilha, havendo filhos menores, sem o trânsito em julgado das questões de guarda, visitas e alimentos. O Plenário, por unanimidade, julgou os pedidos parcialmente procedentes: acolheu o primeiro e rejeitou os outros dois.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Fundamentos</h3>
+            <p>O inventário e a partilha são atos essenciais ao exercício do direito à herança (art. 5º, XXX, da Constituição Federal) e à propriedade (art. 5º, XXII), ainda que realizados pela via extrajudicial da Lei n. 11441/2007. O inventário é o meio legal para formalizar a transmissão causa mortis (art. 1784 do Código Civil). Condicioná-lo à quitação de débitos do falecido ou das partes caracteriza desvio de finalidade e meio indireto e coercitivo de cobrança, a sanção política tributária vedada pela Constituição.</p>
+            <p>O Fisco dispõe de meios próprios: habilitação de crédito no inventário judicial e execução fiscal contra o espólio ou os herdeiros após a partilha (Lei n. 6830/1980). O tabelião não pode ser transformado em agente arrecadador indireto, bloqueando a eficácia da Lei n. 11441/2007. O voto invocou o Tema Repetitivo 1074 do STJ (no arrolamento sumário, a homologação da partilha não se condiciona ao prévio recolhimento do ITCMD) e a ADI 394 do STF, além de precedentes do CNJ sobre a impossibilidade de condicionar atos de notas e de registro à apresentação de certidões fiscais.</p>
+            <p>Quanto aos pedidos rejeitados, o Plenário entendeu que o inventário com testamento revogado ou caduco envolve controvérsias fáticas e jurídicas que exigem controle jurisdicional para preservar herdeiros e terceiros. No divórcio e na dissolução de união estável com filhos menores, as questões de guarda, visitas e alimentos geram efeitos patrimoniais na partilha, e o tabelião não dispõe de meios para controlar essas controvérsias, de modo que se mantém a exigência do trânsito em julgado.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Ato normativo resultante: Resolução CNJ n. 695/2026</h3>
+            <p>A Resolução CNJ n. 695, de 26/08/2026, deu nova redação ao art. 15 da Resolução CNJ n. 35/2007. O caput dispõe: "A lavratura das escrituras públicas de inventário e partilha não se condiciona à comprovação do prévio recolhimento do Imposto sobre Transmissão Causa Mortis e Doação (ITCMD)". O § 1º determina que o tabelião consigne a declaração das partes, orientadas por advogado, sobre a ciência da obrigação tributária e sobre a apuração e o recolhimento do ITCMD conforme a legislação estadual ou distrital, com menção a eventuais isenções ou hipóteses de não incidência. O § 2º determina que, não recolhido previamente o imposto, o tabelião informe a lavratura à administração tributária em até cinco dias ou no prazo da legislação tributária. A resolução entrou em vigor na data de sua publicação.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Pontos relevantes, curiosos ou inovadores</h3>
+            <ul>
+              <li>A vedação abrange a recusa fundada tanto na ausência de pagamento do ITCMD quanto na ausência de certidão negativa de débitos.</li>
+              <li>A exigência das certidões fiscais permanece, com finalidade informativa: a consignação dos débitos protege os envolvidos e, em especial, terceiros que venham a adquirir bens objeto da partilha.</li>
+              <li>A responsabilidade do tabelião restringe-se ao dever de orientar.</li>
+              <li>O pedido de dispensa de decisão judicial em inventário com testamento revogado ou caduco foi expressamente rejeitado.</li>
+              <li>Também foi rejeitada a lavratura de divórcio ou dissolução de união estável com partilha, havendo filhos menores, sem trânsito em julgado sobre guarda, visitas e alimentos.</li>
+            </ul>
+            <div class="refs"><span>CF, art. 5º, XXII e XXX</span><span>Lei n. 11441/2007</span><span>Código Civil, art. 1784</span><span>Lei n. 6830/1980</span><span>Res. CNJ n. 35/2007, art. 15</span><span>Res. CNJ n. 695/2026</span><span>STJ, Tema 1074</span><span>STF, ADI 394</span></div>
+          </div>
+        </div></div>
+        <div class="f-foot"><button type="button" class="btn-copy" data-copy="full">Copiar ficha completa</button><button type="button" class="btn-done" aria-pressed="false">Marcar como conferida</button></div>
+      </article>
+    </section>
+
+    <!-- ================= GRUPO II ================= -->
+    <section class="grp g2" data-grp="2">
+      <div class="grp-h"><span class="tag">Grupo II</span><h2>Outras matérias</h2><p>Julgados sem ligação direta com a atividade extrajudicial, mas pertinentes a disciplinas do edital.</p></div>
+
+      <!-- FICHA 3 -->
+      <article class="ficha" id="f3" data-grp="2" data-search="controle de constitucionalidade cnj lei estadual caso concreto controle administrativo questão prejudicial controle concentrado stf art. 102 art. 93 estatuto da magistratura remoção antiguidade juiz-corregedor preferência código de organização judiciária rio grande do sul lei 7356/1980 art. 43 modulação de efeitos lindb arts. 20 21 23 24 segurança jurídica kátia magalhães arruda pca 0008171-33.2024 recurso administrativo">
+        <div class="f-head"><span class="num">Ficha 03</span><span class="chip">Julgado</span><span class="chip ok">Conferida</span></div>
+        <div class="f-body"><div class="copy-src">
+          <h2 class="f-title">O CNJ pode deixar de aplicar, no caso concreto, lei estadual materialmente incompatível com a Constituição que fundamenta ato administrativo de tribunal, sem exercer controle concentrado de constitucionalidade</h2>
+          <div class="idbox">
+            <div class="idline">(RA no PCA n. 00081713320242000000, rel. cons. kátia magalhães arruda<span class="sigla">, Pleno</span>, j. 01/09/2026, Informativo n. 13/2026)</div>
+            <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
+          </div>
+
+          <div class="sec">
+            <h3>Síntese executiva</h3>
+            <p class="tese">O controle abstrato de leis estaduais compete ao STF (art. 102, I, "a", da Constituição Federal), mas o CNJ pode examinar a compatibilidade constitucional da norma que fundamenta ato administrativo de tribunal quando essa análise é questão prejudicial ao controle administrativo. A finalidade não é expulsar a norma do ordenamento, e sim impedir que produza efeitos no caso submetido ao Conselho. Com esse fundamento, o CNJ afastou regra estadual de preferência a juízes-corregedores em movimentações por antiguidade, com modulação de efeitos.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Caso concreto</h3>
+            <p>Discutia-se o art. 43, § 4º, do Código de Organização Judiciária do Rio Grande do Sul (Lei n. 7356/1980), que conferia preferência, na remoção por antiguidade na entrância final, aos magistrados que exerceram a função de juiz-corregedor. A decisão monocrática havia rejeitado o PCA. O Plenário, por maioria, deu provimento ao recurso administrativo e julgou procedente o procedimento.</p>
+            <p>Reconheceu-se que o tribunal buscava compensar o juiz-corregedor, que perde sua classificação na entrância e não concorre a remoções na entrância final por até quatro anos. Ainda assim, a movimentação funcional integra o regime jurídico nacional da magistratura, sujeito à reserva de Estatuto Nacional (art. 93 da Constituição Federal), e não cabe aos Estados criar critérios autônomos de preferência. A função de juiz-corregedor não é fator constitucional ou legal de preferência.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Modulação de efeitos</h3>
+            <p>Com base nos arts. 20, 21, 23 e 24 da LINDB, o Plenário estabeleceu: (a) o exercício futuro da função de juiz-corregedor não constitui preferência para qualquer movimentação; (b) ficam preservadas as movimentações definitivamente concluídas até a publicação da decisão; (c) nos procedimentos em curso sem homologação definitiva e nos futuros em que figurem juízes-corregedores que assumiram até a publicação, preserva-se a preferência do § 5º do art. 43, exercida uma única vez na comarca de que eram titulares; (d) a modulação não convalida a norma estadual nem lhe reconhece legitimidade constitucional.</p>
+          </div>
+
+          <div class="sec">
+            <h3>Pontos relevantes, curiosos ou inovadores</h3>
+            <ul>
+              <li>A decisão distingue expressamente as missões: o STF retira normas do ordenamento com eficácia geral e vinculante; o CNJ controla a validade de atos administrativos dos tribunais.</li>
+              <li>A análise de constitucionalidade é tratada como questão prejudicial, não como objeto principal do procedimento.</li>
+              <li>O Plenário registrou que o reconhecimento não configura declaração de inconstitucionalidade nem controle concentrado.</li>
+              <li>A nulidade retroativa foi recusada em nome da segurança jurídica, da confiança legítima e da estabilidade das relações administrativas.</li>
+            </ul>
+            <div class="refs"><span>CF, art. 93</span><span>CF, art. 102, I, "a"</span><span>CF, art. 103-B, § 4º</span><span>LINDB, arts. 20, 21, 23, 24</span><span>Lei estadual (RS) n. 7356/1980, art. 43</span></div>
+          </div>
+        </div></div>
+        <div class="f-foot"><button type="button" class="btn-copy" data-copy="full">Copiar ficha completa</button><button type="button" class="btn-done" aria-pressed="false">Marcar como conferida</button></div>
+      </article>
+    </section>
+
+    <!-- ================= GRUPO III ================= -->
+    <section class="grp g3" data-grp="3">
+      <div class="grp-h"><span class="tag">Grupo III</span><h2>Julgados tangenciais</h2><p>Relevância indireta: regime disciplinar e processo administrativo perante o CNJ.</p></div>
+
+      <!-- FICHA 4 -->
+      <article class="ficha" id="f4" data-grp="3" data-search="revisão disciplinar revdis prazo de um ano art. 103-B § 4º V trânsito em julgado prescrição termo inicial conhecimento cnj censura resolução 135/2011 art. 26 art. 4º imparcialidade equidistância aime ação de impugnação de mandato eletivo whatsapp tre marcello terto 0002441-07.2025 regimento interno art. 83 I contrária à evidência dos autos">
+        <div class="f-head"><span class="num">Ficha 04</span><span class="chip">Julgado</span><span class="chip ok">Conferida</span></div>
+        <div class="f-body"><div class="copy-src">
+          <h2 class="f-title">Revisão disciplinar: prazo de um ano contado do trânsito em julgado do PAD; prescrição contada da ciência do CNJ; responsabilização independe de dolo ou favorecimento</h2>
+          <div class="idbox">
+            <div class="idline">(RevDis n. 00024410720252000000, rel. cons. marcello terto<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
+            <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
+          </div>
+          <div class="sec">
+            <h3>Síntese executiva</h3>
+            <p class="tese">A revisão disciplinar deve ser autuada no CNJ em até um ano do trânsito em julgado do processo disciplinar na origem (art. 103-B, § 4º, V, da Constituição Federal). O termo inicial da prescrição não se vincula à instauração do PAD na origem, mas ao momento em que o CNJ toma conhecimento do julgado. A responsabilização disciplinar pode decorrer de procedimento incorreto, sem corrupção, perseguição, dolo ou favorecimento patrimonial.</p>
+          </div>
+          <div class="sec">
+            <h3>Caso concreto</h3>
+            <p>Juiz eleitoral telefonou, por WhatsApp, ao prefeito réu em ação de impugnação de mandato eletivo, um dia após cassá-lo, e por quase 40 minutos apontou fragilidades da própria sentença e sugeriu teses recursais. O TRE reconheceu a conduta imprudente e parcial, mas julgou improcedente o PAD por ausência de má-fé. O CNJ considerou o acórdão contrário à evidência dos autos (art. 83, I, do Regimento Interno do CNJ), julgou procedente a revisão e aplicou censura (art. 4º da Resolução CNJ n. 135/2011). O PAD transitou em 13/05/2024 e a revisão foi autuada em 18/04/2025, dentro do prazo. A prescrição da censura é de dois anos (art. 26 da Resolução CNJ n. 135/2011).</p>
+          </div>
+          <div class="sec">
+            <h3>Pontos relevantes</h3>
+            <ul>
+              <li>O desaparecimento do celular, que impediu perícia nos arquivos, não obstou o julgamento, porque o juiz admitiu o diálogo e detalhou seu conteúdo no interrogatório.</li>
+              <li>Fundamentos de conduta: arts. 1º e 8º do Código de Ética da Magistratura Nacional (imparcialidade e equidistância).</li>
+            </ul>
+          </div>
+        </div></div>
+        <div class="f-foot"><button type="button" class="btn-copy" data-copy="full">Copiar ficha completa</button><button type="button" class="btn-done" aria-pressed="false">Marcar como conferida</button></div>
+      </article>
+
+      <!-- FICHA 5 -->
+      <article class="ficha" id="f5" data-grp="3" data-search="processo administrativo disciplinar pad aposentadoria compulsória perda de objeto enunciado administrativo 19/2018 registro assentamentos funcionais resolução 135/2011 art. 25 disponibilidade negligência dolo error in judicando art. 41 loman plantão habeas corpus prisão domiciliar art. 318 cpp noemia porto 0001873-25.2024">
+        <div class="f-head"><span class="num">Ficha 05</span><span class="chip">Julgado</span><span class="chip ok">Conferida</span></div>
+        <div class="f-body"><div class="copy-src">
+          <h2 class="f-title">Aposentadoria superveniente não acarreta perda de objeto do PAD; a pena é aplicada e registrada nos assentamentos funcionais, embora não executada</h2>
+          <div class="idbox">
+            <div class="idline">(PAD n. 00018732520242000000, rel. cons. noemia porto<span class="sigla">, Pleno</span>, j. 01/09/2026, Informativo n. 13/2026)</div>
+            <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
+          </div>
+          <div class="sec">
+            <h3>Síntese executiva</h3>
+            <p class="tese">A aposentadoria superveniente do investigado não acarreta perda do objeto do processo disciplinar (Enunciado Administrativo CNJ n. 19/2018). Ela impede a execução material da pena, mas não sua aplicação e registro nos assentamentos funcionais (art. 25 da Resolução CNJ n. 135/2011). O magistrado não responde pelo teor de suas decisões (art. 41 da Loman); a responsabilização exige violação de deveres funcionais, e a ausência de dolo afasta a pena máxima.</p>
+          </div>
+          <div class="sec">
+            <h3>Caso concreto</h3>
+            <p>Em plantão, desembargador substituiu a prisão preventiva de réu apontado como líder de facção por prisão domiciliar, com base no art. 318, parágrafo único, do CPP, sem examinar certidão que indicava três habeas corpus vinculados ao mesmo processo, sem verificar a urgência e sem prova da imprescindibilidade dos cuidados paternos, embora houvesse quase 43 horas entre a impetração e a liminar. No mesmo plantão, recusou exame de outro habeas corpus por falta de urgência. O Plenário, por unanimidade, reconheceu negligência funcional (art. 35, I, da Loman; arts. 24 e 25 do Código de Ética da Magistratura Nacional), afastou a imputação de fraude na alteração de seu ano de nascimento, retificado por decisão judicial transitada em julgado, e aplicou disponibilidade por dois anos, com registro nos assentamentos.</p>
+          </div>
+          <div class="sec">
+            <h3>Pontos relevantes</h3>
+            <ul>
+              <li>Distinção entre erro de julgamento, não punível, e omissão de cautelas mínimas, punível.</li>
+              <li>A pluralidade de cautelas omitidas afastou a fixação de disponibilidade por período reduzido.</li>
+            </ul>
+          </div>
+        </div></div>
+        <div class="f-foot"><button type="button" class="btn-copy" data-copy="full">Copiar ficha completa</button><button type="button" class="btn-done" aria-pressed="false">Marcar como conferida</button></div>
+      </article>
+    </section>
+
+    <div class="empty" id="empty" hidden>Nenhuma ficha corresponde aos filtros atuais.</div>
+
+    <!-- ================= NOTA METODOLÓGICA ================= -->
+    <section class="note" id="metodo">
+      <h2>Nota metodológica</h2>
+      <p><b>Período coberto:</b> setembro de 2026.</p>
+      <p><b>Critério temporal:</b> data de publicação do informativo. Foram analisados os dois informativos de jurisprudência do CNJ publicados no mês: o n. 12/2026, de 04/09/2026, referente à 12ª Sessão Ordinária (18/08/2026), e o n. 13/2026, de 14/09/2026, referente à 13ª Sessão Ordinária (01/09/2026).</p>
+      <p><b>Total examinado:</b> 11 itens, sendo 3 atos normativos e 6 julgados no Informativo n. 12/2026 e 2 julgados no Informativo n. 13/2026. Foram selecionados 5 (2 no Grupo I, 1 no Grupo II e 2 no Grupo III) e descartados 6.</p>
+      <p><b>Fontes complementares:</b> a ficha 01 foi elaborada a partir do texto integral da Resolução CNJ n. 696/2026, publicado no portal de atos normativos do CNJ. Na ficha 02, o caput do art. 15 da Resolução CNJ n. 35/2007 foi transcrito e os §§ 1º e 2º foram resumidos a partir de reprodução do texto da Resolução CNJ n. 695/2026 em base legislativa secundária, pois o portal do CNJ não estava acessível no momento da consulta. Convém conferir os parágrafos no DJe.</p>
+      <p><b>Temas sem julgados no período:</b> registro de imóveis; registro civil das pessoas naturais; registro civil das pessoas jurídicas; registro de títulos e documentos; tabelionato de protesto; emolumentos e custeio; interinidade e remuneração de interinos (salvo a remissão do art. 113 da Resolução CNJ n. 696/2026); responsabilidade civil e disciplinar de notários e registradores; SERP e operadores nacionais; LGPD nas serventias; usucapião extrajudicial e regularização fundiária.</p>
+    </section>
+
+    <section class="note" id="descartes">
+      <h2>Apêndice: matérias examinadas e descartadas</h2>
+      <p>Descartadas por impertinência com o edital dos concursos de outorga de delegações.</p>
+      <div class="disc">
+        <div><b>Rejeição de proposta de alteração da Resolução CNJ n. 412/2021</b><code>Ato n. 0007919-98.2022.2.00.0000 · Inf. 12/2026</code><span>Acesso direto do Ministério Público a dados de monitoramento eletrônico. Execução penal.</span></div>
+        <div><b>Liminar afasta desembargador da relatoria de recuperação judicial</b><code>RD n. 0006441-16.2026.2.00.0000 · Inf. 12/2026</code><span>Prevenção (art. 930, parágrafo único, do CPC) e disciplina de magistrado.</span></div>
+        <div><b>Consumo de bebida alcoólica e fumo em sessão de julgamento</b><code>RD n. 0006600-56.2026.2.00.0000 · Inf. 12/2026</code><span>Afastamento cautelar de magistrado (art. 27, § 3º, da Loman).</span></div>
+        <div><b>Reunião do juiz com uma das partes em processo de falência</b><code>RD n. 0006625-69.2026.2.00.0000 · Inf. 12/2026</code><span>Imparcialidade; afastamento restrito ao processo.</span></div>
+        <div><b>Atos com efeitos financeiros durante suspensão determinada por tribunal superior</b><code>RD n. 0001120-97.2026.2.00.0000 · Inf. 12/2026</code><span>Abertura de PAD contra desembargador e manutenção do afastamento.</span></div>
+        <div><b>Linguagem hostil a vítima de tentativa de feminicídio e a promotora</b><code>RevDis n. 0006788-83.2025.2.00.0000 · Inf. 12/2026</code><span>Protocolo para Julgamento com Perspectiva de Gênero; abertura de PAD.</span></div>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+  var KEY = "cnj-2026-set:conferidas";
+  var fichas = Array.prototype.slice.call(document.querySelectorAll(".ficha"));
+  var state = {g:"all", s:"all", q:""};
+  function load(){ try{ return JSON.parse(localStorage.getItem(KEY) || "[]"); }catch(e){ return []; } }
+  function save(ids){ try{ localStorage.setItem(KEY, JSON.stringify(ids)); }catch(e){} }
+  function setDone(f, on){
+    f.classList.toggle("conferida", on);
+    f.setAttribute("data-done", on ? "true" : "false");
+    var b = f.querySelector(".btn-done");
+    b.textContent = on ? "Conferida ✓ (desmarcar)" : "Marcar como conferida";
+    b.setAttribute("aria-pressed", on ? "true" : "false");
+    var li = document.querySelector('.side li[data-for="'+f.id+'"]');
+    if(li) li.classList.toggle("is-done", on);
+  }
+  function persist(){ save(fichas.filter(function(f){return f.classList.contains("conferida");}).map(function(f){return f.id;})); }
+  function progress(){
+    var d = fichas.filter(function(f){return f.classList.contains("conferida");}).length;
+    document.getElementById("pbar").style.width = (d / fichas.length * 100) + "%";
+    document.getElementById("ptxt").textContent = d + " de " + fichas.length + " conferidas";
+  }
+  function norm(s){ return (s||"").toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,""); }
+  function apply(){
+    var q = norm(state.q).trim(), shown = 0;
+    fichas.forEach(function(f){
+      var okG = state.g === "all" || f.getAttribute("data-grp") === state.g;
+      var done = f.classList.contains("conferida");
+      var okS = state.s === "all" || (state.s === "done" ? done : !done);
+      var okQ = !q || norm(f.getAttribute("data-search") + " " + f.textContent).indexOf(q) > -1;
+      var vis = okG && okS && okQ;
+      f.classList.toggle("hide", !vis);
+      var li = document.querySelector('.side li[data-for="'+f.id+'"]');
+      if(li) li.classList.toggle("hide", !vis);
+      if(vis) shown++;
+    });
+    document.querySelectorAll(".grp").forEach(function(g){
+      g.hidden = !g.querySelector(".ficha:not(.hide)");
+    });
+    document.getElementById("empty").hidden = shown > 0;
+  }
+  load().forEach(function(id){ var f = document.getElementById(id); if(f) setDone(f, true); });
+  fichas.forEach(function(f){ if(!f.classList.contains("conferida")) setDone(f, false); });
+  progress();
+
+  document.addEventListener("click", function(e){
+    var b = e.target.closest("button"); if(!b) return;
+    var f = b.closest(".ficha");
+    if(b.classList.contains("btn-done") && f){
+      setDone(f, !f.classList.contains("conferida")); persist(); progress(); apply();
+    } else if(b.hasAttribute("data-copy") && f){
+      var txt;
+      if(b.getAttribute("data-copy") === "id"){
+        txt = b.closest(".idbox").querySelector(".idline").innerText.trim();
+      } else {
+        txt = plain(f);
+      }
+      copy(txt, b);
+    }
+  });
+  function plain(f){
+    var src = f.querySelector(".copy-src").cloneNode(true);
+    src.querySelectorAll(".idctl").forEach(function(n){ n.remove(); });
+    var hiddenSigla = !f.querySelector(".sw input") || !f.querySelector(".sw input").checked;
+    if(hiddenSigla) src.querySelectorAll(".sigla").forEach(function(n){ n.remove(); });
+    var out = [];
+    src.querySelectorAll(".f-title, .idline, .sec h3, .sec h4, .sec p, .sec li, .sec tr, .refs").forEach(function(n){
+      if(n.matches(".sec h3")) out.push("\n" + n.textContent.trim().toUpperCase());
+      else if(n.matches(".sec h4")) out.push("\n" + n.textContent.trim());
+      else if(n.matches(".sec li")) out.push("- " + n.textContent.replace(/\s+/g," ").trim());
+      else if(n.matches(".sec tr")) out.push(Array.prototype.map.call(n.children, function(c){return c.textContent.trim();}).join(" | "));
+      else if(n.matches(".refs")) out.push("Dispositivos: " + Array.prototype.map.call(n.children, function(c){return c.textContent.trim();}).join("; "));
+      else out.push(n.textContent.replace(/\s+/g," ").trim());
+    });
+    return out.join("\n").replace(/\n{3,}/g,"\n\n").trim();
+  }
+  function copy(txt, b){
+    var orig = b.textContent;
+    function ok(){ b.textContent = "Copiado"; b.classList.add("ok"); setTimeout(function(){ b.textContent = orig; b.classList.remove("ok"); }, 1400); }
+    function fallback(){
+      var ta = document.createElement("textarea"); ta.value = txt; ta.setAttribute("readonly",""); ta.style.position="fixed"; ta.style.opacity="0";
+      document.body.appendChild(ta); ta.select();
+      try{ document.execCommand("copy"); ok(); }catch(e){ b.textContent = "Selecione e copie"; }
+      setTimeout(function(){ ta.remove(); }, 50);
+    }
+    try{
+      if(navigator.clipboard && navigator.clipboard.writeText){ navigator.clipboard.writeText(txt).then(ok, fallback); }
+      else fallback();
+    }catch(e){ fallback(); }
+  }
+  document.querySelectorAll(".sw input").forEach(function(i){
+    i.addEventListener("change", function(){
+      i.closest(".idbox").querySelectorAll(".sigla").forEach(function(s){ s.hidden = !i.checked; });
+    });
+  });
+  document.getElementById("q").addEventListener("input", function(e){ state.q = e.target.value; apply(); });
+  function seg(id, key){
+    var box = document.getElementById(id);
+    box.addEventListener("click", function(e){
+      var b = e.target.closest("button"); if(!b) return;
+      box.querySelectorAll("button").forEach(function(x){ x.setAttribute("aria-pressed", x === b ? "true" : "false"); });
+      state[key] = b.getAttribute(key === "g" ? "data-g" : "data-s"); apply();
+    });
+  }
+  seg("fg","g"); seg("fs","s");
+  var clr = document.getElementById("clear"), armT;
+  clr.addEventListener("click", function(){
+    if(!clr.classList.contains("armed")){
+      clr.classList.add("armed"); clr.textContent = "Confirmar limpeza";
+      armT = setTimeout(function(){ clr.classList.remove("armed"); clr.textContent = "Limpar marcações"; }, 3500);
+      return;
+    }
+    clearTimeout(armT); clr.classList.remove("armed"); clr.textContent = "Limpar marcações";
+    fichas.forEach(function(f){ setDone(f, false); }); persist(); progress(); apply();
+  });
+})();
+</script>
+
+<script type="application/json" id="radar-meta">
+{
+  "slug": "cnj-2026-set",
+  "titulo": "Jurisprudência do CNJ — setembro de 2026",
+  "orgao": "CNJ",
+  "tipo": "jurisprudencia",
+  "inicio": "2026-09",
+  "fim": "2026-09",
+  "periodo": "setembro de 2026",
+  "fonte": "Informativos 12/2026 e 13/2026",
+  "fichas": 5,
+  "produzido": "2026-10-02"
+}
+</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice. */
+(function(){
+  var SLUG = "cnj-2026-set";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+
+</body>
+</html>
