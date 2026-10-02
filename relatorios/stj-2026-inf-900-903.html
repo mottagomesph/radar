@@ -1,0 +1,859 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STJ 900–903 · Serventias</title>
+<meta name="description" content="Triagem dos Informativos de Jurisprudência do STJ n. 900 a 903 para concursos de outorga de delegações de notas e de registro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@200;300;400&family=Lexend:wght@300;400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: painel analítico em vidro fosco sobre fundo menta; cabeçalho com KPIs, gráfico hachurado e medidor de conferência; barra flutuante fixa; índice lateral em vidro + coluna de leitura de ~68ch. */
+:root{
+  --bg-1:#E3ECEA; --bg-2:#F3F7F6; --blob-1:rgba(255,255,255,.95); --blob-2:rgba(170,212,204,.55);
+  --glass:rgba(255,255,255,.58); --glass-strong:rgba(255,255,255,.80); --glass-line:rgba(19,38,58,.08); --hi:rgba(255,255,255,.75);
+  --ink:#13263A; --ink-2:#34485A; --muted:#6B7D8C; --line:#D2DCDA;
+  --accent:#17324A; --accent-ink:#FFFFFF; --accent-soft:rgba(23,50,74,.07);
+  --teal:#3D8A8C;
+  --violet:#5653DE; --violet-soft:rgba(86,83,222,.10); --violet-glow:rgba(104,96,255,.30);
+  --ok:#0D936A; --ok-soft:rgba(13,147,106,.11);
+  --hatch:rgba(19,38,58,.26);
+  --shadow:0 18px 50px -28px rgba(19,38,58,.35);
+  --display:"Lexend Exa","Lexend",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"Lexend",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --measure:68ch; --tb-h:96px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg-1:#0A1215; --bg-2:#0F1A1E; --blob-1:rgba(70,140,150,.16); --blob-2:rgba(86,83,222,.10);
+    --glass:rgba(255,255,255,.045); --glass-strong:rgba(22,34,39,.86); --glass-line:rgba(255,255,255,.08); --hi:rgba(255,255,255,.05);
+    --ink:#E3ECEE; --ink-2:#BCC9CE; --muted:#8597A2; --line:#25363C;
+    --accent:#BFE0EA; --accent-ink:#0A1215; --accent-soft:rgba(191,224,234,.09);
+    --teal:#6CC3C2;
+    --violet:#ADAAFF; --violet-soft:rgba(173,170,255,.13); --violet-glow:rgba(140,130,255,.22);
+    --ok:#3AD49C; --ok-soft:rgba(58,212,156,.12);
+    --hatch:rgba(227,236,238,.26);
+    --shadow:0 18px 50px -28px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg-1:#0A1215; --bg-2:#0F1A1E; --blob-1:rgba(70,140,150,.16); --blob-2:rgba(86,83,222,.10);
+  --glass:rgba(255,255,255,.045); --glass-strong:rgba(22,34,39,.86); --glass-line:rgba(255,255,255,.08); --hi:rgba(255,255,255,.05);
+  --ink:#E3ECEE; --ink-2:#BCC9CE; --muted:#8597A2; --line:#25363C;
+  --accent:#BFE0EA; --accent-ink:#0A1215; --accent-soft:rgba(191,224,234,.09);
+  --teal:#6CC3C2;
+  --violet:#ADAAFF; --violet-soft:rgba(173,170,255,.13); --violet-glow:rgba(140,130,255,.22);
+  --ok:#3AD49C; --ok-soft:rgba(58,212,156,.12);
+  --hatch:rgba(227,236,238,.26);
+  --shadow:0 18px 50px -28px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(var(--tb-h) + 24px)}
+body{margin:0;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  background-color:var(--bg-1);
+  background-image:radial-gradient(1100px 620px at 88% -8%,var(--blob-1),transparent 62%),radial-gradient(900px 600px at -12% 28%,var(--blob-2),transparent 60%),linear-gradient(180deg,var(--bg-2),var(--bg-1));
+  background-attachment:fixed}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--violet);outline-offset:2px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.wrap{max-width:1240px;margin:0 auto;padding-inline:24px}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.35);backdrop-filter:blur(18px) saturate(1.35);border:1px solid var(--glass-line);border-radius:24px;box-shadow:inset 0 1px 0 var(--hi),var(--shadow)}
+.hatch{background-image:repeating-linear-gradient(-55deg,var(--hatch) 0 1.2px,transparent 1.2px 6px)}
+.cap{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 8px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-family:var(--sans);font-size:11.5px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1}
+
+/* Cabeçalho */
+.masthead{padding-block:40px 18px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:end}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--ink-2);padding:6px 12px 6px 8px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--glass-line);margin:0 0 18px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 4px var(--violet-soft)}
+.masthead h1{font-family:var(--display);font-weight:200;font-size:clamp(30px,5.2vw,60px);line-height:1.04;letter-spacing:-.045em;margin:0 0 14px;text-wrap:balance}
+.masthead h1 em{font-style:normal;font-weight:300;color:var(--muted)}
+.masthead .sub{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.55;color:var(--ink-2);margin:0;max-width:56ch}
+
+.gauge{padding:20px 22px 18px;display:flex;flex-direction:column;gap:2px}
+.card-t{font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:-.01em;margin:0}
+.card-s{font-family:var(--sans);font-size:12.5px;font-weight:300;color:var(--muted);font-style:italic;margin:0}
+.gauge svg{width:100%;height:auto;display:block;margin-top:6px}
+.gauge .g-num{font-family:var(--display);font-weight:200;font-size:44px;letter-spacing:-.05em;fill:var(--ink)}
+.gauge .g-lbl{font-family:var(--sans);font-size:11px;fill:var(--muted)}
+.gauge .trk{stroke:url(#hatchP);}
+.gauge .val{stroke:var(--ok);transition:stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1)}
+.gauge-foot{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.gauge-foot .cap{background:var(--ok);color:#fff}
+
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.9fr);gap:14px;margin-top:22px}
+.kpi{padding:18px 20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi .k-n{font-family:var(--display);font-weight:200;font-size:clamp(40px,5vw,62px);line-height:1;letter-spacing:-.06em;font-variant-numeric:tabular-nums;margin-top:auto}
+.kpi.sel .k-n{color:var(--accent)}
+.kpi .k-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chart{padding:18px 20px;min-width:0}
+.bars{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+.bar-row{display:grid;grid-template-columns:52px minmax(0,1fr) 54px;align-items:center;gap:10px;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.bar-row .lab{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.bar-row .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.bar-row .val b{color:var(--ink);font-weight:500}
+.track{position:relative;height:16px}
+.track .ex{position:absolute;inset:0 auto 0 0;border-radius:6px;border:1px solid var(--glass-line)}
+.track .se{position:absolute;inset:0 auto 0 0;border-radius:6px;background:var(--accent)}
+.chart-legend{display:flex;gap:14px;margin-top:12px;font-family:var(--sans);font-size:11.5px;color:var(--muted)}
+.chart-legend span{display:inline-flex;align-items:center;gap:6px}
+.chart-legend i{display:inline-block;width:14px;height:9px;border-radius:3px}
+
+/* Barra de ferramentas flutuante */
+.toolbar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;margin-top:8px}
+.toolbar .tb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 12px;border-radius:22px;background:var(--glass-strong)}
+.search{flex:1 1 440px;min-width:0;position:relative}
+.search input{width:100%;font-family:var(--sans);font-weight:300;font-size:14.5px;padding:10px 14px 10px 40px;border-radius:999px;border:1px solid var(--glass-line);background:var(--accent-soft);color:var(--ink)}
+.search input::placeholder{color:var(--muted)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:1.8}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--sans);font-size:13px;font-weight:400;padding:5px 6px 5px 13px;border-radius:999px;border:1px solid var(--glass-line);background:var(--accent-soft);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:background .2s,color .2s}
+.chip:hover{border-color:var(--accent)}
+.chip .dot{width:7px;height:7px;border-radius:50%}
+.chip .cap{height:20px;min-width:22px;font-size:11px;background:var(--glass-strong);color:var(--ink);border:1px solid var(--glass-line)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip[aria-pressed="true"] .cap{background:var(--accent-ink);color:var(--accent);border-color:transparent}
+.chip[data-g="all"]{padding-left:13px}
+.seg{display:inline-flex;border:1px solid var(--glass-line);border-radius:999px;background:var(--accent-soft);padding:3px}
+.seg button{font-family:var(--sans);font-size:13px;font-weight:400;border:0;background:transparent;color:var(--muted);padding:5px 13px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--glass-strong);color:var(--ink);box-shadow:0 1px 3px rgba(19,38,58,.14)}
+.progress{display:flex;align-items:center;gap:10px;flex:1 1 200px;min-width:0;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.bar{flex:1;height:8px;border-radius:999px;overflow:hidden;min-width:70px;border:1px solid var(--glass-line)}
+.bar > i{display:block;height:100%;width:0;background:var(--ok);border-radius:999px;transition:width .4s ease}
+.progress b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:500}
+.progress .sm{display:none}
+.btn{font-family:var(--sans);font-size:13px;font-weight:400;padding:8px 14px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass-strong);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;transition:border-color .2s,color .2s}
+.btn:hover{border-color:var(--accent)}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8}
+.btn.danger:hover{border-color:#C2412D;color:#C2412D}
+.confirm{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.ibtn{width:38px;height:38px;border-radius:50%;border:1px solid var(--glass-line);background:var(--glass-strong);color:var(--ink);display:inline-grid;place-items:center;cursor:pointer;flex:none;transition:border-color .2s,color .2s,background .2s}
+.ibtn:hover{border-color:var(--accent)}
+.ibtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+.ibtn .i-ok{display:none}
+.ibtn.copied{color:var(--ok);border-color:var(--ok)}
+.ibtn.copied .i-cp{display:none}
+.ibtn.copied .i-ok{display:block}
+.copied{color:var(--ok)!important;border-color:var(--ok)!important}
+
+/* Grade principal */
+.layout{display:grid;grid-template-columns:268px minmax(0,1fr);gap:36px;padding-block:28px 72px}
+.index{position:sticky;top:calc(var(--tb-h) + 22px);align-self:start;max-height:calc(100vh - var(--tb-h) - 40px);overflow:auto;font-family:var(--sans);font-size:13px;padding:18px 12px 14px;border-radius:24px}
+.index .i-head{display:flex;justify-content:space-between;align-items:center;padding:0 8px 6px}
+.index .i-head b{font-size:15px;font-weight:500;letter-spacing:-.01em}
+.index .i-head span{font-size:12px;color:var(--muted);font-style:italic;font-weight:300}
+.index h3{font-size:12.5px;font-weight:400;color:var(--ink-2);margin:14px 8px 6px;display:flex;align-items:center;gap:8px}
+.index h3 .dot{width:7px;height:7px;border-radius:50%}
+.index h3 .cap{margin-left:auto;height:19px;min-width:20px;font-size:10.5px}
+.index ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.index a{display:grid;grid-template-columns:22px minmax(0,1fr) 18px;gap:8px;align-items:start;padding:7px 8px;border-radius:12px;color:var(--ink);text-decoration:none;line-height:1.35;font-weight:300}
+.index a:hover{background:var(--accent-soft)}
+.index a .num{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:1px}
+.index a .ck{width:18px;height:18px;border-radius:50%;border:1.5px dashed var(--line);display:grid;place-items:center;margin-top:-1px}
+.index a.done .ck{background:var(--ok);border:1.5px solid var(--ok)}
+.index a.done .ck::after{content:"";width:7px;height:4px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.index a.done .t{color:var(--muted)}
+.index a.off{opacity:.35}
+.index details summary{display:none}
+
+main{min-width:0}
+.group{margin-bottom:44px}
+.group-head{max-width:calc(var(--measure) + 68px);margin-bottom:16px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px 14px;padding-inline:4px}
+.group-head .ttl{flex:1 1 auto;min-width:0}
+.group-head .roman{font-family:var(--sans);font-size:12.5px;font-weight:300;font-style:italic;color:var(--muted)}
+.group-head h2{font-family:var(--display);font-weight:200;font-size:clamp(24px,3vw,32px);letter-spacing:-.04em;line-height:1.15;margin:2px 0 4px;text-wrap:balance;display:flex;align-items:center;gap:12px}
+.group-head h2 .cap{font-family:var(--sans);letter-spacing:0}
+.group-head p{flex-basis:100%;margin:0;font-family:var(--sans);font-weight:300;font-size:14px;color:var(--muted)}
+.group[data-g="I"] .group-head h2 .cap{background:var(--violet);color:#fff;box-shadow:0 0 0 5px var(--violet-soft)}
+
+/* Ficha */
+.ficha{position:relative;max-width:calc(var(--measure) + 68px);background:var(--glass-strong);border:1px solid var(--glass-line);border-radius:26px;padding:28px 34px 22px;margin-bottom:18px;box-shadow:inset 0 1px 0 var(--hi),var(--shadow);transition:background .3s ease,box-shadow .3s ease;overflow:hidden}
+.ficha::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:4px;border-radius:0 4px 4px 0;background:transparent;transition:background .3s}
+.ficha[data-g="I"]{box-shadow:inset 0 1px 0 var(--hi),0 26px 70px -34px var(--violet-glow)}
+.ficha[data-g="I"]::after{content:"";position:absolute;right:-90px;top:-110px;width:280px;height:280px;border-radius:50%;background:radial-gradient(closest-side,var(--violet-glow),transparent);pointer-events:none}
+.ficha.done{background:linear-gradient(var(--ok-soft),var(--ok-soft)),var(--glass-strong)}
+.ficha.done::before{background:var(--ok)}
+.ficha > *{position:relative;z-index:1}
+.f-head{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:8px;font-family:var(--sans);font-size:12px}
+.f-num{font-family:var(--mono);color:var(--muted);margin-right:4px}
+.tag{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-weight:400;border:1px solid var(--glass-line);color:var(--ink-2);background:var(--accent-soft)}
+.tag .dot{width:6px;height:6px;border-radius:50%}
+.tag.g-I{background:var(--violet-soft);color:var(--violet);border-color:transparent}
+.tag.rep{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.tag.ok{background:var(--ok);color:#fff;border-color:transparent;font-weight:500;margin-left:auto}
+.tag.ok svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.6}
+.ficha h3{font-family:var(--sans);font-size:22px;line-height:1.3;font-weight:500;letter-spacing:-.015em;margin:6px 0 20px;text-wrap:balance}
+.blk{margin:0 0 18px}
+.lbl{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--muted);margin-bottom:7px}
+.lbl::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.6}
+.idbox{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.id{flex:1 1 320px;min-width:0;font-family:var(--mono);font-size:13.5px;line-height:1.6;background:var(--accent-soft);border:1px solid var(--glass-line);border-radius:16px;padding:11px 15px;overflow-wrap:anywhere;color:var(--ink)}
+.id .sc{font-variant:small-caps;font-variant-caps:small-caps;letter-spacing:.02em}
+.id b{font-weight:500}
+.id-tools{display:flex;align-items:center;gap:10px}
+.switch{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted);cursor:pointer;user-select:none;padding:6px 10px 6px 6px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass-strong)}
+.switch input{appearance:none;-webkit-appearance:none;width:30px;height:18px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;margin:0;transition:background .2s}
+.switch input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform .2s}
+.switch input:checked{background:var(--accent)}
+.switch input:checked::after{transform:translateX(12px)}
+.disc{margin:0;font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.tese{margin:0;padding:2px 0 2px 20px;border-left:3px solid var(--accent);font-size:18.5px;line-height:1.56;font-weight:500;color:var(--ink)}
+.ficha[data-g="I"] .tese{border-left-color:var(--violet)}
+.tese.lit{font-style:italic;font-weight:400}
+.ctx p{margin:0 0 10px;font-size:16.5px;color:var(--ink-2)}
+.ctx p:last-child{margin-bottom:0}
+.f-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;padding-top:16px;border-top:1px dashed var(--line)}
+.btn-conf{font-family:var(--sans);font-size:13.5px;font-weight:400;padding:10px 18px 10px 14px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;display:inline-flex;align-items:center;gap:9px;transition:background .25s,transform .15s}
+.btn-conf:active{transform:scale(.98)}
+.btn-conf .ring{width:18px;height:18px;border-radius:50%;border:1.5px dashed currentColor;display:grid;place-items:center;opacity:.85}
+.btn-conf svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.8;opacity:0}
+.ficha.done .btn-conf{background:var(--ok);color:#fff}
+.ficha.done .btn-conf .ring{border-style:solid;background:rgba(255,255,255,.18)}
+.ficha.done .btn-conf svg{opacity:1}
+mark{background:var(--violet-soft);color:inherit;border-radius:3px;padding:0 1px}
+.empty{max-width:var(--measure);font-family:var(--sans);font-weight:300;color:var(--muted);border:1.5px dashed var(--line);border-radius:24px;padding:28px;text-align:center}
+
+/* Nota e apêndice */
+.notes{max-width:calc(var(--measure) + 68px);padding:30px 34px;margin-top:56px;border-radius:26px}
+.notes .ttl-s{font-family:var(--sans);font-size:12.5px;font-weight:300;font-style:italic;color:var(--muted);margin:0}
+.notes h2{font-family:var(--display);font-weight:200;font-size:clamp(24px,3vw,30px);letter-spacing:-.04em;margin:2px 0 16px}
+.notes p,.notes li{font-size:16px;color:var(--ink-2)}
+.notes p b{font-family:var(--sans);font-weight:500;color:var(--ink);font-size:14.5px}
+.notes ul{padding-left:20px;margin:0 0 12px}
+.notes li{margin-bottom:4px}
+.notes hr{border:0;border-top:1px dashed var(--line);margin:32px 0 26px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--glass-line);border-radius:18px;background:var(--glass-strong);margin:10px 0 22px}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-weight:300;font-size:13px;line-height:1.45}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--glass-line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:400;background:var(--accent-soft)}
+tr:last-child td{border-bottom:0}
+td.proc{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--ink)}
+.notes h3{font-family:var(--sans);font-size:14px;font-weight:500;margin:24px 0 4px;display:flex;align-items:center;gap:8px}
+
+@media (max-width:1060px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .gauge{max-width:420px}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .chart{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:20px}
+  .index{position:static;max-height:none;padding:6px 12px}
+  .index details summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:10px 8px;font-weight:500;font-size:14px;list-style:none}
+  .index details summary::-webkit-details-marker{display:none}
+  .index details > div{padding-bottom:10px}
+  .index .i-head{display:none}
+}
+@media (max-width:560px){
+  .wrap{padding-inline:16px}
+  .masthead{padding-block:28px 10px}
+  .kpis{gap:8px}
+  .kpi{padding:14px 12px;border-radius:20px}
+  .kpi .card-t{font-size:12.5px}
+  .kpi .k-row .cap{display:none}
+  .toolbar .tb{gap:8px;padding:9px;border-radius:20px}
+  .search{flex-basis:100%}
+  .search input{padding-block:8px;font-size:14px}
+  .chips{order:3;flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .chips::-webkit-scrollbar{display:none}
+  .seg{order:4}
+  .seg button{padding:4px 10px}
+  .progress{order:5;flex:1 1 60px}
+  .progress .lg,.clear .lg{display:none}
+  .progress .sm{display:inline}
+  .clear{order:6}
+  .clear .btn{padding:7px 11px}
+  .ficha{padding:22px 18px 18px;border-radius:22px}
+  .ficha h3{font-size:19.5px}
+  .tese{font-size:17.5px;padding-left:16px}
+  .notes{padding:22px 18px}
+  body{font-size:16.5px}
+}
+@media print{
+  :root{--bg-1:#fff;--bg-2:#fff;--glass:#fff;--glass-strong:#fff;--glass-line:#ccc;--hi:transparent;--ink:#000;--ink-2:#222;--muted:#555;--line:#bbb;--accent:#17324A;--accent-soft:#f3f5f6;--violet:#4a47c8;--ok:#0b7a57;--ok-soft:#e8f4ee;--shadow:none;--violet-glow:transparent}
+  body{font-size:11pt;background:#fff!important}
+  .toolbar,.index,.id-tools,.f-foot .btn,.btn-conf,.gauge,.chart,.chart-legend{display:none!important}
+  .glass{-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .layout{display:block;padding:0}
+  .ficha{break-inside:avoid;box-shadow:none;max-width:none;border-radius:10px}
+  .ficha[data-g="I"]::after{display:none}
+  .ficha.done,.ficha.done::before,.tag.ok,.tag.rep,.cap{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .f-foot{border-top:0;margin-top:4px;padding-top:0}
+}
+</style>
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="hatchP" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="6" height="6" fill="transparent"></rect>
+      <line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--hatch)" stroke-width="2.2"></line>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="hero">
+      <div>
+        <p class="eyebrow"><i></i>Superior Tribunal de Justiça · Informativos de Jurisprudência</p>
+        <h1>Informativos 900–903 <em>para concursos de serventias extrajudiciais</em></h1>
+        <p class="sub">Triagem dos julgados publicados entre 8 e 29 de setembro de 2026, com fichas de revisão para o caderno de direito notarial e registral e matérias correlatas.</p>
+      </div>
+      <div class="glass gauge" aria-live="polite">
+        <p class="card-t">Conferência</p>
+        <p class="card-s">Fichas revisadas para o caderno</p>
+        <svg viewBox="0 0 240 132" role="img" aria-labelledby="gTitle">
+          <title id="gTitle">Fichas conferidas</title>
+          <path class="trk" d="M 20 112 A 100 100 0 0 1 220 112" fill="none" stroke-width="18" stroke-linecap="round"></path>
+          <path class="val" id="gVal" d="M 20 112 A 100 100 0 0 1 220 112" fill="none" stroke-width="18" stroke-linecap="round" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="100"></path>
+          <text class="g-num" id="gNum" x="120" y="100" text-anchor="middle">0/10</text>
+          <text class="g-lbl" x="20" y="130" text-anchor="middle">0</text>
+          <text class="g-lbl" x="220" y="130" text-anchor="middle">10</text>
+        </svg>
+        <div class="gauge-foot"><span id="gTxt">Nenhuma ficha conferida</span><span class="cap" id="gPct">0%</span></div>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="glass kpi"><div class="k-row"><p class="card-t">Informativos</p><span class="cap">n. 900–903</span></div><p class="card-s">analisados</p><div class="k-n">4</div></div>
+      <div class="glass kpi"><div class="k-row"><p class="card-t">Julgados</p><span class="cap">51</span></div><p class="card-s">examinados</p><div class="k-n">51</div></div>
+      <div class="glass kpi sel"><div class="k-row"><p class="card-t">Selecionados</p><span class="cap">20%</span></div><p class="card-s">com pertinência ao edital</p><div class="k-n" id="cSel">10</div></div>
+      <div class="glass chart">
+        <div class="k-row" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><p class="card-t">Seleção por informativo</p><span class="card-s">selecionados / examinados</span></div>
+        <div class="bars" id="bars"></div>
+        <div class="chart-legend"><span><i class="hatch" style="border:1px solid var(--glass-line)"></i>examinados</span><span><i style="background:var(--accent)"></i>selecionados</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <div class="wrap">
+    <div class="tb glass">
+      <label class="search" for="q">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="q" type="search" placeholder="Buscar por tese, processo, relator ou dispositivo legal" autocomplete="off">
+      </label>
+      <div class="seg" role="group" aria-label="Situação">
+        <button type="button" data-st="all" aria-pressed="true">Todas</button>
+        <button type="button" data-st="pending" aria-pressed="false">Pendentes</button>
+        <button type="button" data-st="done" aria-pressed="false">Conferidas</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Grupo temático"></div>
+      <div class="progress" aria-live="polite">
+        <div class="bar hatch" aria-hidden="true"><i id="barFill"></i></div>
+        <span><b id="pDone">0</b><span class="lg"> de </span><span class="sm">/</span><b id="pTot">10</b><span class="lg"> conferidas</span></span>
+      </div>
+      <span id="clearWrap" class="clear"><button type="button" class="btn danger" id="clearBtn">Limpar<span class="lg"> marcações</span></button></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="index glass" id="index" aria-label="Índice das fichas"></nav>
+  <main id="main">
+    <div id="groups"></div>
+    <p class="empty" id="empty" hidden>Nenhuma ficha corresponde à busca e aos filtros selecionados.</p>
+
+    <section class="notes glass" id="nota">
+      <p class="ttl-s">Nota metodológica</p>
+      <h2>Período, critério e cobertura</h2>
+      <p><b>Período coberto.</b> Informativos de Jurisprudência do STJ n. 900 (08/09/2026), 901 (15/09/2026), 902 (22/09/2026) e 903 (29/09/2026).</p>
+      <p><b>Critério temporal.</b> Data de publicação no informativo, e não data do julgamento. Por isso constam julgados realizados entre 20/05/2026 e 15/09/2026.</p>
+      <p><b>Universo examinado.</b> 51 julgados, contados por destaque do informativo: 15 no n. 900, 10 no n. 901, 16 no n. 902 e 10 no n. 903. Recursos repetitivos julgados em conjunto sob um mesmo destaque foram contados uma vez. O AgInt nos EDcl no CC 209919/DF gerou dois destaques no n. 900 e foi contado duas vezes; os Temas 1241 e 1154, julgados em conjunto, têm destaques próprios no n. 901.</p>
+      <p><b>Seleção.</b> 10 julgados: 1 destaque, 1 de direito notarial e registral, 3 de outras matérias e 5 tangenciais. Os 41 restantes constam do apêndice.</p>
+      <p><b>Identificação.</b> Nos julgamentos conjuntos, a linha de identificação aponta o primeiro recurso indicado no informativo, e os demais aparecem no contexto. Havendo relator para o acórdão, ele é indicado como responsável pelo julgado. Nos recursos repetitivos, o bloco central transcreve literalmente a tese fixada.</p>
+      <p><b>Temas sem julgados no período.</b> Não houve julgados sobre:</p>
+      <ul>
+        <li>tabelionato de notas (escrituras, procurações, atas notariais e forma dos testamentos);</li>
+        <li>tabelionato de protesto de títulos;</li>
+        <li>registro de imóveis em sentido estrito (qualificação registral, retificação, usucapião extrajudicial, alienação fiduciária, incorporação, condomínio e parcelamento do solo);</li>
+        <li>registro de títulos e documentos e registro civil das pessoas jurídicas;</li>
+        <li>emolumentos e custas extrajudiciais;</li>
+        <li>regime jurídico, responsabilidade civil e responsabilidade disciplinar de notários e registradores (Lei n. 8935/1994);</li>
+        <li>concursos de ingresso e de remoção nas serventias extrajudiciais;</li>
+        <li>tributos incidentes sobre atos notariais e registrais (ITBI, ITCMD e ISS).</li>
+      </ul>
+      <hr>
+      <p class="ttl-s">Apêndice</p>
+      <h2>Matérias examinadas e descartadas</h2>
+      <p>Julgados lidos integralmente e descartados por impertinência com o edital dos concursos de outorga de delegações.</p>
+      <div id="appendix"></div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var GROUPS = {
+  I:   {roman:"Grupo I",   name:"Destaques", short:"Destaques", color:"var(--violet)", desc:"Julgamentos de maior relevância para o concurso, independentemente da disciplina."},
+  II:  {roman:"Grupo II",  name:"Direito Notarial e Registral", short:"Notarial e Registral", color:"var(--accent)", desc:"Julgamentos com repercussão objetiva ou subjetiva na atividade notarial e registral."},
+  III: {roman:"Grupo III", name:"Outras matérias", short:"Outras matérias", color:"var(--teal)", desc:"Julgamentos de outras disciplinas do edital com relevância direta para o concurso."},
+  IV:  {roman:"Grupo IV",  name:"Julgamentos tangenciais", short:"Tangenciais", color:"var(--muted)", desc:"Julgamentos de relevância indireta, para leitura rápida."}
+};
+
+var F = [
+{
+  g:"I", title:"Supressão do patronímico paterno por justo motivo",
+  seg:true, rel:"rel.", cargo:"min.", nome:"daniela teixeira", turma:"T3", data:"08/09/2026", inf:901,
+  disc:"Direito Notarial e Registral; Direito Civil. Registro civil das pessoas naturais: alteração do nome, supressão de sobrenome paterno, justo motivo e direitos da personalidade.",
+  lab:"Síntese",
+  tese:"A prática de crime pelos irmãos da interessada, contra ela ou contra pessoa a ela vinculada por afinidade, pode constituir justo motivo para a supressão do patronímico paterno, quando a manutenção do sobrenome não corresponder à sua realidade familiar e identitária, sem que isso desconstitua o estado de filiação.",
+  ctx:[
+   "No caso, os irmãos da interessada praticaram crime contra o cônjuge dela. A Terceira Turma partiu do art. 16 do Código Civil, que inclui o nome entre os direitos da personalidade, e registrou que a Lei n. 14382/2022, ao ampliar as hipóteses de modificação do nome na LRP, flexibilizou o regime de imutabilidade e reforçou a correspondência entre o nome e a identidade familiar efetivamente vivida.",
+   "O acórdão distingue a supressão do sobrenome, que atinge apenas elemento do nome civil, da desconstituição da filiação: a ascendência permanece no registro de nascimento e subsistem os direitos e deveres da parentalidade. Como a própria LRP assegura a rastreabilidade das alterações, a invocação genérica da imutabilidade não basta para negar o pedido quando não houver propósito fraudulento, prejuízo a terceiros ou comprometimento da identificação civil.",
+   "O julgado se apoia no REsp 1304718/SP (2014, abandono paterno) e no REsp 2169650/GO (j. 03/03/2026), além do art. 18 da Convenção Americana sobre Direitos Humanos e dos arts. 7º e 8º da Convenção sobre os Direitos da Criança. A hipótese não figura entre as alterações extrajudiciais de sobrenome do art. 57 da LRP, que prevê a exclusão de sobrenomes em razão de alteração das relações de filiação; a supressão com manutenção da filiação segue pela via judicial, fundada em justo motivo."
+  ],
+  kw:"nome sobrenome patronímico retificação registro civil Lei 14382/2022 LRP art. 57 art. 16 Código Civil imutabilidade filiação"
+},
+{
+  g:"II", title:"Doação inoficiosa: a prescrição corre do registro, não da escritura",
+  tipo:"REsp", num:"2012027", rel:"rel.", cargo:"min.", nome:"joão otávio de noronha", turma:"T4", data:"31/08/2026", inf:902,
+  disc:"Direito Notarial e Registral; Direito Civil (Sucessões). Doação inoficiosa, redução de disposições testamentárias, prescrição, termo inicial e publicidade registral.",
+  lab:"Síntese",
+  tese:"A pretensão de invalidação ou redução de doação inoficiosa prescreve a partir do registro do título no registro de imóveis, e não da lavratura da escritura; para a redução de disposições testamentárias, é inadequado fixar o termo inicial na data da lavratura do testamento, pois antes do óbito não há lesão atual à legítima.",
+  ctx:[
+   "O tribunal de origem havia contado a prescrição da data de lavratura das escrituras de doação, embora reconhecesse que os atos não tinham sido registrados nas matrículas, e aplicou o mesmo raciocínio às disposições testamentárias. A Quarta Turma reformou o acórdão nos dois pontos.",
+   "Quanto à doação, aplicou o entendimento do REsp 2001763/SP (T3, j. 13/04/2026): pelo art. 189 do Código Civil, a pretensão nasce com a violação do direito, que se consuma com a liberalidade, mas só se torna juridicamente relevante e oponível a terceiros com o registro do título translativo (arts. 1227 e 1245 do Código Civil). A publicidade registral e a fé pública dela decorrente impõem o registro como marco objetivo da prescrição.",
+   "Quanto ao testamento, negócio jurídico destinado a produzir efeitos após a morte e livremente revogável, sua validade não pode ser questionada em vida do testador. O julgado fixa o registro, e não o ato notarial, como marco da prescrição, distinção central para as atribuições de notas e de registro de imóveis."
+  ],
+  kw:"doação inoficiosa legítima testamento escritura pública lavratura registro de imóveis matrícula art. 189 art. 1227 art. 1245 prescrição REsp 2001763"
+},
+{
+  g:"III", title:"Bem transferido para quitar alimentos não se sujeita a colação",
+  tipo:"AgInt no REsp", num:"2049637", rel:"rel.", cargo:"min.", nome:"maria isabel gallotti", turma:"T4", data:"18/08/2026", inf:900,
+  disc:"Direito Civil (Sucessões; Família). Inventário, colação, adiantamento de legítima e dação em pagamento de obrigação alimentar.",
+  lab:"Síntese",
+  tese:"A transferência de bens do genitor a descendente em pagamento de obrigação alimentar configura dação em pagamento, e não adiantamento de legítima, o que afasta o dever de colacionar os bens no inventário.",
+  ctx:[
+   "Em acordo celebrado em ação de alimentos, o alimentante transferiu aos filhos a nua-propriedade de imóvel, com usufruto para a mãe dos alimentandos, como pagamento de alimentos vencidos; o usufruto foi considerado na fixação dos alimentos futuros. A Quarta Turma reafirmou o REsp 629117/DF: sem ato de liberalidade não há adiantamento de herança, e o herdeiro fica dispensado da colação.",
+   "O critério delimita o alcance dos arts. 544 e 2002 do Código Civil, que vinculam a colação às doações feitas pelo ascendente, e interessa à partilha, seja judicial, seja por escritura pública."
+  ],
+  kw:"colação inventário partilha adiantamento de legítima herança dação em pagamento alimentos nua-propriedade usufruto art. 544 art. 2002 REsp 629117"
+},
+{
+  g:"III", title:"Nu-proprietário locador, com anuência do usufrutuário, pode propor despejo",
+  tipo:"REsp", num:"2218467", rel:"rel.", cargo:"min.", nome:"nancy andrighi", turma:"T3", data:"14/09/2026", inf:902,
+  disc:"Direito Civil (Direitos Reais; Locação). Usufruto, nua-propriedade, legitimidade ativa para o despejo e boa-fé objetiva.",
+  lab:"Síntese",
+  tese:"Celebrada a locação pelo nu-proprietário com a anuência expressa do usufrutuário, o nu-proprietário tem legitimidade para a ação de despejo, e a alegação de sua ilegitimidade pelo locatário é incompatível com a boa-fé objetiva.",
+  ctx:[
+   "A Terceira Turma reiterou que o usufruto desmembra a propriedade: o usufrutuário tem direito à posse, uso, administração e percepção dos frutos (art. 1394 do Código Civil), enquanto o nu-proprietário conserva a posse indireta e o poder de disposição, podendo a nua-propriedade ser alienada, gravada e penhorada, ressalvado o usufruto (REsp 1712097/RS).",
+   "Daí a assimetria: o usufrutuário pode locar o imóvel sem anuência do nu-proprietário, mas o nu-proprietário só pode fazê-lo com o consentimento do usufrutuário. No caso, a usufrutuária figurou como interveniente no contrato, e ambos passaram a deter legitimidade para a ação prevista no art. 5º da Lei n. 8245/1991."
+  ],
+  kw:"usufruto nu-proprietário nua-propriedade usufrutuário locação despejo legitimidade boa-fé objetiva art. 1394 Lei 8245/1991 direitos reais"
+},
+{
+  g:"III", title:"Ação civil pública demolitória individual em núcleo sob regularização fundiária",
+  tipo:"AREsp", num:"2765693", rel:"rel.", cargo:"min.", nome:"paulo sérgio domingues", turma:"T1", data:"18/08/2026", inf:900,
+  disc:"Direito Urbanístico; Direito Processual Civil. Ação civil pública, loteamento irregular, Zona Especial de Interesse Social, regularização fundiária e direito à moradia.",
+  lab:"Síntese",
+  tese:"O ajuizamento em massa, pelo município, de ações civis públicas individuais para demolir imóveis de moradores de baixa renda em loteamentos cuja regularização lhe compete não veicula interesse coletivo apto a justificar a via eleita, mascara a omissão do poder público na política habitacional e viola o direito à moradia.",
+  ctx:[
+   "O loteamento estava classificado pelo próprio município como ZEIS 1, categoria voltada à regularização fundiária, e o procedimento administrativo de regularização já tramitava. Sentença e acórdão concluíram que eventual demolição deveria ser examinada nesse procedimento, após os estudos técnicos.",
+   "A Primeira Turma afastou a alegada violação dos arts. 1º, I e VI, e 18 da Lei n. 7347/1985, por ausência de direito transindividual, e apontou as Comissões de Soluções Fundiárias como via de solução consensual coletiva. O tema dialoga com a regularização fundiária urbana (Lei n. 13465/2017), cujo registro integra o programa de registro de imóveis."
+  ],
+  kw:"ação civil pública loteamento irregular ZEIS regularização fundiária Reurb moradia demolição área de preservação permanente Lei 7347/1985 urbanístico"
+},
+{
+  g:"IV", title:"Crédito rural: suspensão legal da prescrição opera de pleno direito",
+  tipo:"REsp", num:"2217707", rel:"rel.", cargo:"min.", nome:"raul araújo", turma:"CE", data:"02/09/2026", inf:900, tema:"1406",
+  disc:"Direito Civil; Direito Bancário; Direito Processual Civil. Crédito rural, prescrição intercorrente e suspensão legal do prazo prescricional.",
+  lab:"Tese fixada", lit:true,
+  tese:"I - A suspensão do prazo prescricional prevista nas leis que instituíram medidas de liquidação ou renegociação de dívidas de crédito rural opera de pleno direito, independentemente de manifestação ou adesão do devedor, quando o respectivo dispositivo legal a estabelecer diretamente para as operações nele enquadráveis. II - A suspensão somente dependerá de manifestação, adesão ou outra providência do devedor quando o próprio dispositivo legal expressamente a estabelecer como condição para a sua incidência, observados os requisitos objetivos de enquadramento da operação.",
+  ctx:[
+   "Recurso repetitivo (Tema 1406), julgado pela Corte Especial com os REsps 2219068/MA, 2232278/PR e 2236997/RS. As janelas legais de suspensão (Lei n. 11775/2008, art. 8º, § 5º; Lei n. 12844/2013, art. 8º, § 13; Lei n. 13340/2016, art. 10) operaram por força de lei, com efeito erga omnes; encerrada cada janela, o prazo retoma o curso pelo saldo remanescente. A suspensão dependeu de ato do devedor apenas onde a lei assim exigiu (Lei n. 11775/2008, arts. 33 e 59-A). Interesse indireto: causa legal de suspensão da prescrição fora do Código Civil, em operações de crédito rural."
+  ],
+  kw:"crédito rural prescrição intercorrente suspensão renegociação Tema 1406 repetitivo Lei 11775/2008 Lei 12844/2013 Lei 13340/2016 REsp 2219068 2232278 2236997"
+},
+{
+  g:"IV", title:"Sanção administrativa mais benéfica não retroage sem lei expressa",
+  tipo:"REsp", num:"2175768", rel:"rel.", cargo:"min.", nome:"paulo sérgio domingues", turma:"S1", data:"09/09/2026", inf:901, tema:"1327",
+  disc:"Direito Administrativo sancionador. Multa da ANTT, retroatividade de norma mais benéfica e tempus regit actum.",
+  lab:"Tese fixada", lit:true,
+  tese:"1) A sanção administrativa prevista na Resolução ANTT n. 5.847/2019, ainda que mais benéfica ao infrator, não retroage para incidir sobre condutas e sanções aplicadas regularmente à luz da norma vigente à época dos fatos; e 2) A penalidade administrativa deve se basear pelo princípio do tempus regit actum, salvo se houver previsão legal, específica e expressa, autorizativa de aplicação do normativo mais benéfico posterior às condutas pretéritas.",
+  ctx:[
+   "Recurso repetitivo (Tema 1327), julgado pela Primeira Seção com o REsp 2175767/ES. A retroatividade benéfica do art. 5º, XL, da Constituição Federal não se transpõe por analogia ao direito administrativo sancionador: não há lacuna, pois o art. 5º, XXXVI, da Constituição Federal, o art. 6º da LINDB e o art. 2º, parágrafo único, XIII, da Lei n. 9784/1999 disciplinam a eficácia temporal; e falta identidade de razão, já que o fundamento penal é o favor libertatis (Tema 1199/STF). Interesse indireto: parâmetro para a aplicação no tempo das normas do regime disciplinar dos delegatários (arts. 31 a 36 da Lei n. 8935/1994)."
+  ],
+  kw:"direito administrativo sancionador retroatividade norma mais benéfica tempus regit actum ANTT Tema 1327 repetitivo LINDB art. 6º Lei 9784/1999 Tema 1199 STF regime disciplinar"
+},
+{
+  g:"IV", title:"Investigação social: absolvição por falta de provas não vincula a Administração",
+  seg:true, rel:"rel.", cargo:"min.", nome:"marco aurélio bellizze", turma:"T2", data:"04/08/2026", inf:900,
+  disc:"Direito Administrativo. Concurso público, investigação social, idoneidade moral e independência das instâncias.",
+  lab:"Síntese",
+  tese:"Na investigação social de concurso para carreira policial, a Administração pode valorar fatos desabonadores e ação penal em curso, com amparo normativo e critérios objetivos; a absolvição criminal por insuficiência de provas não vincula o juízo administrativo de idoneidade, salvo se reconhecida a inexistência do fato ou a negativa de autoria.",
+  ctx:[
+   "A Segunda Turma conciliou os Temas 22 e 1190/STF com a exigência de padrão elevado de idoneidade para a carreira policial. A absolvição superveniente (art. 386, VII, do CPP) foi considerada com base no art. 493 do CPC, mas não afastou a legalidade do ato, porque a própria sentença penal reconheceu fatos concretos incompatíveis com o cargo. Interesse indireto: o precedente é restrito à carreira policial, mas traz parâmetros sobre valoração da vida pregressa de candidatos e independência das instâncias."
+  ],
+  kw:"concurso público investigação social idoneidade moral vida pregressa absolvição insuficiência de provas independência das instâncias Tema 22 Tema 1190 art. 386 VII CPP art. 493 CPC"
+},
+{
+  g:"IV", title:"Ambiental: obrigação de demolir não se converte em indenização por acordo",
+  tipo:"AgInt no REsp", num:"2154598", rel:"rel.", cargo:"min.", nome:"regina helena costa", turma:"T1", data:"22/06/2026", inf:900,
+  disc:"Direito Ambiental; Direito Processual Civil. Cumprimento de sentença de ação civil pública, área de preservação permanente, terreno de marinha e Súmula 613/STJ.",
+  lab:"Síntese",
+  tese:"Em cumprimento de sentença de ação civil pública ambiental, o Ministério Público e o particular não podem celebrar acordo para converter a obrigação de demolir em obrigação de indenizar.",
+  ctx:[
+   "Tratava-se de casa de veraneio construída em área de preservação permanente à margem de rio, situada em terreno de marinha. A Primeira Turma lembrou que o art. 4º da Lei n. 4771/1965 só admitia supressão de vegetação em APP por utilidade pública ou interesse social, rol que não abrange casas de veraneio; que a omissão estatal na fiscalização não converte bem público em privado; e que não há direito adquirido a situação lesiva ao meio ambiente (Súmula 613/STJ: “Não se admite a aplicação da teoria do fato consumado em tema de Direito Ambiental”). Interesse indireto: reafirmação da Súmula 613 e do regime das áreas de preservação permanente."
+  ],
+  kw:"ambiental área de preservação permanente APP terreno de marinha demolição indenização acordo fato consumado Súmula 613 Lei 4771/1965 ação civil pública"
+},
+{
+  g:"IV", title:"Homologação de decisão estrangeira: citação por edital sem diligências é nula",
+  seg:true, rel:"rel. p/ acórdão", cargo:"min.", nome:"og fernandes", turma:"CE", data:"03/06/2026", inf:902,
+  disc:"Direito Processual Civil. Homologação de decisão estrangeira, citação por edital, ação rescisória e vício transrescisório.",
+  lab:"Síntese",
+  tese:"A informação da autoridade central estrangeira de que o paradeiro do requerido é desconhecido não supre as diligências efetivas de localização exigidas pelo art. 256, § 3º, do CPC, sobretudo quando se afirma que ele passou a residir no Brasil; a nulidade da citação é vício transrescisório.",
+  ctx:[
+   "Julgamento por maioria; relatora originária a min. Maria Thereza de Assis Moura. A Corte Especial admitiu ação rescisória contra decisão proferida em homologação de decisão estrangeira, para controle dos requisitos de validade do processo homologatório, e não do mérito da decisão estrangeira. O requerido residia regularmente no Brasil desde 2007, com endereço fixo comprovado desde 2016, e nenhuma diligência de localização foi feita no país. O Tema 1338/STJ, segundo o qual a expedição de ofícios a órgãos públicos ou concessionárias não é requisito obrigatório em caráter absoluto, não dispensa base concreta para concluir pelo esgotamento razoável dos meios. Interesse indireto: a homologação condiciona, em regra, a eficácia de decisões estrangeiras no Brasil, inclusive para ingresso nos registros públicos."
+  ],
+  kw:"homologação de decisão estrangeira sentença estrangeira citação por edital art. 256 § 3º CPC ação rescisória vício transrescisório querela nullitatis Tema 1338 autoridade central"
+}
+];
+
+var DISCARD = [
+ {inf:900, rows:[
+  ["AgInt nos EDcl no CC 209919/DF (1º destaque)","Dir. Administrativo e Processual Civil","Improbidade com dano nacional: competência já fixada não se altera pela teoria da competência adequada nem pelo deslocamento da ação penal."],
+  ["AgInt nos EDcl no CC 209919/DF (2º destaque)","Dir. Administrativo e Processual Civil","Improbidade com dano nacional: foro da capital do estado ou do Distrito Federal, à escolha do autor, apesar do art. 17, § 4º-A, da Lei n. 8429/1992."],
+  ["REsp 2189427/PE","Dir. Tributário e Processual Civil","Execução fiscal: arresto via Sisbajud antes da citação por edital."],
+  ["REsp 1537571/SP","Dir. do Consumidor","Rotulagem nutricional: ausência de aviso sobre tolerância de 20%."],
+  ["REsp 2226768/MA","Dir. Ambiental","Perdimento de veículo usado em desmate, independentemente da boa-fé do proprietário."],
+  ["REsp 2244010/TO","Dir. Civil","Responsabilidade solidária de fabricante e vendedor de fertilizante ineficaz."],
+  ["REsp 2139708/SC","Dir. Processual Civil","Efeito devolutivo da apelação; matéria disponível não cognoscível de ofício."],
+  ["AgRg no HC 1024064/SP","Dir. Processual Penal","Promotor natural; atuação do GEDEC sem designação prévia."],
+  ["EDcl no AgRg no REsp 1954331/RN","Dir. Processual Penal","Captação ambiental no atendimento advocatício em presídio federal."],
+  ["AgRg no HC 1087657/SP","Dir. Penal","Atenuante do art. 65, III, b, do Código Penal em roubo."]
+ ]},
+ {inf:901, rows:[
+  ["REsp 2195089/RS e 2215194/DF (Tema 1384)","Dir. Processual Civil","Possessória de concessionária em faixa de domínio; intervenção facultativa da União, DNIT e ANTT."],
+  ["REsp 2199392/RJ e 2182044/RN (Tema 1399)","Dir. Processual Civil","Honorários em execução individual extinta por procedência de rescisória."],
+  ["REsp 2123906/SP e outros (Tema 1276)","Dir. Tributário","CPRB na base de cálculo do PIS e da Cofins."],
+  ["REsp 1941347/SP (Tema 1119)","Dir. do Consumidor","Encerramento unilateral de conta-corrente pela instituição financeira."],
+  ["REsp 2059576/MG e 2059577/MG (Tema 1241)","Dir. Penal","Tráfico privilegiado: natureza e quantidade de drogas."],
+  ["REsp 1963433/SP e outros (Tema 1154)","Dir. Penal","Tráfico privilegiado: fração de redução e bis in idem."],
+  ["AgRg no AREsp 3203005/MT","Dir. Processual Penal","Busca veicular a partir de abordagem de trânsito."],
+  ["AgRg no AREsp 3141827/DF","Dir. Processual Penal","Tribunal do Júri: atuação ativa do juiz presidente."]
+ ]},
+ {inf:902, rows:[
+  ["REsp 2215075/SC e 2177940/RS (Tema 1455)","Dir. Tributário","PIS e Cofins sobre cigarros em substituição tributária."],
+  ["EAREsp 2082431/DF","Dir. Processual Civil","Multa do art. 1021, § 4º, do CPC: recolhimento prévio dispensado no recurso que a impugna."],
+  ["REsp 2212795/SC","Dir. Tributário","Lucro presumido: alienação de participações societárias como cessão de direitos (32%)."],
+  ["Em segredo de justiça (T2, min. Teodoro Silva Santos)","Dir. Processual Civil","Comando oculto dirigido a sistemas de inteligência artificial: litigância de má-fé."],
+  ["REsp 1806555/SP","Dir. Tributário","IRRF de 15% sobre remessas por exploração de obras audiovisuais."],
+  ["REsp 2225111/SP","Dir. Digital","Responsabilidade de plataforma de reclamações de consumidores (Marco Civil da Internet)."],
+  ["Em segredo de justiça (T3, min. Nancy Andrighi)","Dir. Digital","Exclusão de jogos eletrônicos: dever de notificar o desenvolvedor."],
+  ["REsp 2246810/SP","Dir. Processual Civil","Limites da jurisdição nacional; forum non conveniens."],
+  ["AREsp 3129052/SE","Dir. Processual Civil","Citação por aplicativo de mensagens sem documento com foto."],
+  ["Em segredo de justiça (T4, min. Raul Araújo)","Dir. Processual Civil","Multa por litigância de má-fé em habeas corpus reiterado."],
+  ["Em segredo de justiça (T5, min. Joel Ilan Paciornik)","Dir. Processual Penal","Medidas assecuratórias: adjudicação de imóvel ao herdeiro da vítima."],
+  ["Em segredo de justiça (T6, min. Og Fernandes)","Dir. Processual Penal","Mensagens armazenadas em nuvem: dados estáticos, não interceptação."],
+  ["REsp 2256731/PB","Dir. Processual Penal","Comando oculto dirigido a sistemas de inteligência artificial: ofício à OAB e ao MPF."]
+ ]},
+ {inf:903, rows:[
+  ["AR 5541/RS","Dir. Processual Civil e Tributário","Rescisória após os Temas 881 e 885/STF: interesse de agir para efeitos pretéritos."],
+  ["Em segredo de justiça (S2, min. Nancy Andrighi)","Dir. Civil e Internacional","Alegação incidental de subtração internacional de criança não desloca a competência."],
+  ["REsp 2211684/SP","Dir. Tributário","IR sobre ganho de FII na alienação de cotas de outro FII."],
+  ["Em segredo de justiça (T3, min. Nancy Andrighi)","Dir. Processual Civil","Prazo em dobro da Defensoria Pública habilitada no curso do prazo."],
+  ["REsp 2133082/MG","Dir. Civil e do Consumidor","Seguro aeronáutico: aplicação do CDC e limites da cobertura."],
+  ["REsp 2089439/SP","Dir. do Consumidor","Reajuste por sinistralidade em plano de saúde coletivo."],
+  ["REsp 2270023/SC","Dir. Penal","Peculato-desvio: continuidade delitiva com pluralidade de vítimas."],
+  ["AgRg no REsp 2245002/RS","Dir. Penal","Agravante do art. 61, II, f, nos crimes dos arts. 147-A e 147-B do Código Penal."],
+  ["HC 1095688/RJ","Dir. Penal","Agravante de liderança (art. 62, I, do Código Penal)."],
+  ["AgRg no RHC 232676/DF","Dir. Processual Penal","Prisão domiciliar de mãe que trafica na residência."]
+ ]}
+];
+
+
+
+/* ---------- armazenamento local ---------- */
+var KEY = "stj-900-903-v1";
+var state = {done:{}, turma:{}};
+try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); state.done = p.done || {}; state.turma = p.turma || {}; } } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {} }
+
+/* ---------- utilidades ---------- */
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function fid(i){ return "f" + (i+1); }
+function showT(i){ return state.turma[fid(i)] !== false; }
+function idParts(f, withT){
+  var head = f.seg ? "em segredo de justiça" : (f.tipo + " n. " + f.num);
+  return {head:head, rel:f.rel + " " + f.cargo + " ", nome:f.nome, t: withT ? f.turma + ", " : "", tail:"j. " + f.data + ", ", inf:"n. " + f.inf};
+}
+function idText(f, withT){ var p = idParts(f, withT); return "(" + p.head + ", " + p.rel + p.nome + ", " + p.t + p.tail + "Informativo " + p.inf + ")"; }
+function idHTML(f, withT, inline){
+  var p = idParts(f, withT);
+  var sc = inline ? '<span style="font-variant:small-caps">' : '<span class="sc">';
+  return "(" + esc(p.head) + ", " + esc(p.rel) + sc + esc(p.nome) + "</span>, " + esc(p.t) + esc(p.tail) + "<b>Informativo</b> " + esc(p.inf) + ")";
+}
+function fichaText(f, i){
+  return [f.title, "", "Identificação: " + idText(f, showT(i)), "Disciplina e assunto: " + f.disc, f.lab + ": " + f.tese, "Contexto: " + f.ctx.join("\n\n")].join("\n");
+}
+function fichaHTML(f, i){
+  return '<p><b>' + esc(f.title) + '</b></p>' +
+    '<p><b>Identificação:</b> ' + idHTML(f, showT(i), true) + '</p>' +
+    '<p><b>Disciplina e assunto:</b> ' + esc(f.disc) + '</p>' +
+    '<p><b>' + esc(f.lab) + ':</b> ' + (f.lit ? '<i>' + esc(f.tese) + '</i>' : esc(f.tese)) + '</p>' +
+    '<p><b>Contexto:</b> ' + f.ctx.map(esc).join('</p><p>') + '</p>';
+}
+function flash(btn, msg){
+  btn.classList.add("copied");
+  var lab = btn.querySelector("[data-l]");
+  if (lab) { if (!lab.getAttribute("data-o")) lab.setAttribute("data-o", lab.textContent); lab.textContent = msg; }
+  btn.setAttribute("title", msg);
+  clearTimeout(btn._t);
+  btn._t = setTimeout(function(){ btn.classList.remove("copied"); if (lab) lab.textContent = lab.getAttribute("data-o"); btn.setAttribute("title", btn.getAttribute("aria-label") || ""); }, 1600);
+}
+function legacyCopy(text){
+  var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly","");
+  ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+  var ok = false; try { ok = document.execCommand("copy"); } catch(e) {}
+  document.body.removeChild(ta); return ok;
+}
+function copy(html, text, btn, selectEl){
+  function fail(){
+    if (legacyCopy(text)) { flash(btn, "Copiado"); return; }
+    if (selectEl) { var r = document.createRange(); r.selectNodeContents(selectEl); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+    flash(btn, "Selecionado: use Ctrl+C");
+  }
+  try {
+    if (navigator.clipboard && window.ClipboardItem && navigator.clipboard.write) {
+      var item = new ClipboardItem({"text/html": new Blob([html], {type:"text/html"}), "text/plain": new Blob([text], {type:"text/plain"})});
+      navigator.clipboard.write([item]).then(function(){ flash(btn, "Copiado"); }, function(){
+        navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+      });
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+    } else { fail(); }
+  } catch(e) { fail(); }
+}
+
+/* ---------- ícones ---------- */
+var IC = {
+  copy:'<svg class="i-cp" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>',
+  ok:'<svg class="i-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>',
+  doc:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg>',
+  chk:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>'
+};
+
+/* ---------- renderização ---------- */
+var order = ["I","II","III","IV"];
+var groupsEl = document.getElementById("groups");
+var indexEl = document.getElementById("index");
+var C = {I:0,II:0,III:0,IV:0}; F.forEach(function(f){ C[f.g]++; });
+
+/* gráfico: selecionados / examinados por informativo (dados contados na triagem) */
+var EXAM = {900:15, 901:10, 902:16, 903:10}, SEL = {900:0, 901:0, 902:0, 903:0};
+F.forEach(function(f){ SEL[f.inf]++; });
+var MAXE = 16;
+document.getElementById("bars").innerHTML = [900,901,902,903].map(function(n){
+  var we = (EXAM[n] / MAXE * 100).toFixed(2), ws = (SEL[n] / MAXE * 100).toFixed(2);
+  return '<div class="bar-row"><span class="lab">n. ' + n + '</span><div class="track" role="img" aria-label="Informativo ' + n + ': ' + SEL[n] + ' de ' + EXAM[n] + ' selecionados"><span class="ex hatch" style="width:' + we + '%"></span>' + (SEL[n] ? '<span class="se" style="width:' + ws + '%"></span>' : '') + '</div><span class="val"><b>' + SEL[n] + '</b> / ' + EXAM[n] + '</span></div>';
+}).join("");
+
+document.getElementById("chips").innerHTML =
+  '<button type="button" class="chip" data-g="all" aria-pressed="true">Todos <span class="cap">' + F.length + '</span></button>' +
+  order.map(function(g){
+    return '<button type="button" class="chip" data-g="' + g + '" aria-pressed="false"><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + ' <span class="cap">' + C[g] + '</span></button>';
+  }).join("");
+
+var html = "", idx = '<details open><summary><span>Índice das fichas</span><span class="cap">' + F.length + '</span></summary><div><div class="i-head"><b>Índice</b><span>' + F.length + ' fichas</span></div>';
+var n = 0;
+order.forEach(function(g){
+  var items = []; F.forEach(function(f, i){ if (f.g === g) items.push(i); });
+  if (!items.length) return;
+  html += '<section class="group" data-g="' + g + '" id="grupo-' + g + '"><div class="group-head"><div class="ttl"><span class="roman">' + GROUPS[g].roman + '</span><h2>' + GROUPS[g].name + ' <span class="cap">' + items.length + '</span></h2></div><p>' + GROUPS[g].desc + '</p></div>';
+  idx += '<h3><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + '<span class="cap">' + items.length + '</span></h3><ol>';
+  items.forEach(function(i){
+    var f = F[i]; n++; var id = fid(i), nn = String(n).padStart(2,"0");
+    var tags = '<span class="f-num">Ficha ' + nn + '</span>' +
+      '<span class="tag ' + (g === "I" ? "g-I" : "") + '"><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + '</span>' +
+      (f.tema ? '<span class="tag rep">Repetitivo · Tema ' + f.tema + '</span>' : '') +
+      '<span class="tag">Inf. ' + f.inf + '</span>' +
+      '<span class="tag ok" data-ok hidden>' + IC.chk + 'conferida</span>';
+    html += '<article class="ficha" id="' + id + '" data-i="' + i + '" data-g="' + g + '">' +
+      '<div class="f-head">' + tags + '</div>' +
+      '<h3>' + esc(f.title) + '</h3>' +
+      '<div class="blk"><span class="lbl">Identificação</span><div class="idbox"><div class="id" data-id>' + idHTML(f, showT(i)) + '</div>' +
+        '<div class="id-tools"><label class="switch" title="Incluir ou suprimir a sigla do órgão julgador"><input type="checkbox" id="sw-' + id + '"' + (showT(i) ? " checked" : "") + '> ' + esc(f.turma) + '</label>' +
+        '<button type="button" class="ibtn" data-copy-id aria-label="Copiar identificação" title="Copiar identificação">' + IC.copy + IC.ok + '</button></div></div></div>' +
+      '<div class="blk"><span class="lbl">Disciplina e assunto</span><p class="disc">' + esc(f.disc) + '</p></div>' +
+      '<div class="blk"><span class="lbl">' + esc(f.lab) + '</span><p class="tese' + (f.lit ? " lit" : "") + '">' + esc(f.tese) + '</p></div>' +
+      '<div class="blk ctx"><span class="lbl">Contexto</span>' + f.ctx.map(function(p){ return "<p>" + esc(p) + "</p>"; }).join("") + '</div>' +
+      '<div class="f-foot"><button type="button" class="btn" data-copy-f aria-label="Copiar ficha">' + IC.doc + '<span data-l>Copiar ficha</span></button>' +
+      '<button type="button" class="btn-conf" data-conf aria-pressed="false"><span class="ring">' + IC.chk + '</span><span>Marcar como conferida</span></button></div>' +
+      '</article>';
+    idx += '<li><a href="#' + id + '" data-ix="' + i + '"><span class="num">' + nn + '</span><span class="t">' + esc(f.title) + '</span><span class="ck" aria-hidden="true"></span></a></li>';
+  });
+  html += '</section>';
+  idx += '</ol>';
+});
+idx += '</div></details>';
+groupsEl.innerHTML = html;
+indexEl.innerHTML = idx;
+
+document.getElementById("appendix").innerHTML = DISCARD.map(function(b){
+  return '<h3>Informativo n. ' + b.inf + ' <span class="cap">' + b.rows.length + '</span></h3><div class="tbl-wrap"><table><thead><tr><th>Processo</th><th>Ramo</th><th>Matéria</th></tr></thead><tbody>' +
+    b.rows.map(function(r){ return '<tr><td class="proc">' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>'; }).join("") + '</tbody></table></div>';
+}).join("");
+
+/* ---------- estado visual ---------- */
+function paint(i){
+  var id = fid(i), el = document.getElementById(id), done = !!state.done[id];
+  el.classList.toggle("done", done);
+  el.querySelector("[data-ok]").hidden = !done;
+  var b = el.querySelector("[data-conf]");
+  b.setAttribute("aria-pressed", done ? "true" : "false");
+  b.lastChild.textContent = done ? "Conferida · desmarcar" : "Marcar como conferida";
+  var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("done", done);
+}
+function progress(){
+  var d = F.filter(function(f, i){ return state.done[fid(i)]; }).length, t = F.length, pct = Math.round(100 * d / t);
+  document.getElementById("pDone").textContent = d;
+  document.getElementById("pTot").textContent = t;
+  document.getElementById("barFill").style.width = pct + "%";
+  document.getElementById("gVal").setAttribute("stroke-dashoffset", String(100 - 100 * d / t));
+  document.getElementById("gVal").style.opacity = d ? "1" : "0";
+  document.getElementById("gNum").textContent = d + "/" + t;
+  document.getElementById("gPct").textContent = pct + "%";
+  document.getElementById("gTxt").textContent = d === 0 ? "Nenhuma ficha conferida" : d === t ? "Todas as fichas conferidas" : (t - d) + (t - d === 1 ? " ficha pendente" : " fichas pendentes");
+}
+F.forEach(function(f, i){ paint(i); });
+progress();
+
+/* ---------- filtros ---------- */
+var fGroup = "all", fStatus = "all", fQuery = "";
+function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[.\-\/]/g,""); }
+var hay = F.map(function(f){
+  return norm([f.title, f.disc, f.tese, f.ctx.join(" "), idText(f, true), f.tipo || "", f.num || "", f.nome, f.tema ? "tema " + f.tema : "", f.kw || ""].join(" "));
+});
+function apply(){
+  var q = norm(fQuery).trim(), terms = q ? q.split(/\s+/) : [], shown = 0;
+  F.forEach(function(f, i){
+    var id = fid(i), done = !!state.done[id];
+    var ok = (fGroup === "all" || f.g === fGroup) &&
+             (fStatus === "all" || (fStatus === "done" ? done : !done)) &&
+             terms.every(function(t){ return hay[i].indexOf(t) !== -1; });
+    document.getElementById(id).hidden = !ok;
+    var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("off", !ok);
+    if (ok) shown++;
+  });
+  groupsEl.querySelectorAll(".group").forEach(function(s){ s.hidden = !s.querySelector(".ficha:not([hidden])"); });
+  document.getElementById("empty").hidden = shown > 0;
+}
+document.getElementById("q").addEventListener("input", function(e){ fQuery = e.target.value; apply(); });
+document.getElementById("chips").addEventListener("click", function(e){
+  var b = e.target.closest(".chip"); if (!b) return;
+  fGroup = b.getAttribute("data-g");
+  this.querySelectorAll(".chip").forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+  apply();
+});
+document.querySelector(".seg").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  fStatus = b.getAttribute("data-st");
+  this.querySelectorAll("button").forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+  apply();
+});
+
+/* ---------- ações das fichas ---------- */
+groupsEl.addEventListener("click", function(e){
+  var art = e.target.closest(".ficha"); if (!art) return;
+  var i = +art.getAttribute("data-i"), f = F[i], id = fid(i), b;
+  if ((b = e.target.closest("[data-copy-id]"))) { copy(idHTML(f, showT(i), true), idText(f, showT(i)), b, art.querySelector("[data-id]")); }
+  else if ((b = e.target.closest("[data-copy-f]"))) { copy(fichaHTML(f, i), fichaText(f, i), b, art); }
+  else if ((b = e.target.closest("[data-conf]"))) {
+    if (state.done[id]) delete state.done[id]; else state.done[id] = true;
+    save(); paint(i); progress(); apply();
+  }
+});
+groupsEl.addEventListener("change", function(e){
+  if (!e.target.matches(".switch input")) return;
+  var art = e.target.closest(".ficha"), i = +art.getAttribute("data-i"), id = fid(i);
+  state.turma[id] = e.target.checked; save();
+  art.querySelector("[data-id]").innerHTML = idHTML(F[i], showT(i));
+});
+
+/* ---------- limpar marcações (confirmação na própria página) ---------- */
+var clearWrap = document.getElementById("clearWrap");
+function clearIdle(){ clearWrap.innerHTML = '<button type="button" class="btn danger" id="clearBtn">Limpar<span class="lg"> marcações</span></button>'; }
+clearWrap.addEventListener("click", function(e){
+  var t = e.target.closest("button"); if (!t) return;
+  if (t.id === "clearBtn") {
+    clearWrap.innerHTML = '<span class="confirm">Desmarcar todas? <button type="button" class="btn danger" id="clearYes">Desmarcar</button><button type="button" class="btn" id="clearNo">Cancelar</button></span>';
+    document.getElementById("clearNo").focus();
+  } else if (t.id === "clearYes") {
+    state.done = {}; save(); F.forEach(function(f, i){ paint(i); }); progress(); apply(); clearIdle();
+  } else if (t.id === "clearNo") { clearIdle(); }
+});
+
+/* ---------- altura da barra para o índice e as âncoras ---------- */
+var tb = document.getElementById("toolbar");
+function setTb(){ document.documentElement.style.setProperty("--tb-h", tb.offsetHeight + "px"); }
+setTb();
+if (window.ResizeObserver) new ResizeObserver(setTb).observe(tb); else window.addEventListener("resize", setTb);
+
+/* índice recolhido em telas estreitas */
+if (window.matchMedia) {
+  var mq = window.matchMedia("(max-width:900px)"), det = indexEl.querySelector("details");
+  var syncDet = function(){ if (det) det.open = !mq.matches; };
+  syncDet();
+  if (mq.addEventListener) mq.addEventListener("change", syncDet); else if (mq.addListener) mq.addListener(syncDet);
+}
+
+apply();
+})();
+</script>
+
+<!-- radar:inicio -->
+<script type="application/json" id="radar-meta">{"slug": "stj-2026-inf-900-903", "titulo": "Jurisprudência do STJ — Informativos 900 a 903", "orgao": "STJ", "tipo": "jurisprudencia", "inicio": "2026-09", "fim": "2026-09", "periodo": "setembro de 2026", "fonte": "Informativos 900 a 903", "fichas": 10, "produzido": "2026-10-02"}</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice.
+   Nao interfere na marcacao propria do relatorio: apenas conta no DOM
+   quantas fichas existem e quantas estao marcadas, e grava o resumo. */
+(function(){
+  var SLUG = "stj-2026-inf-900-903";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+<!-- radar:fim -->
+</body>
+</html>

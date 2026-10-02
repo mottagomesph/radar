@@ -6,7 +6,7 @@
 > atualize as seções afetadas e acrescente uma linha ao *Histórico*.
 > Um documento desatualizado é pior que nenhum.
 
-Última atualização: 2026-09-18
+Última atualização: 2026-10-02
 
 ---
 
@@ -133,7 +133,7 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (10 relatórios, 264 fichas)
+## 5. Acervo atual (11 relatórios, 274 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
@@ -142,6 +142,7 @@ Radar/
 | stf-2026-s1 | STF | 2026-01 → 2026-06 | Inf. 1203–1222 | 42 |
 | stj-2025-t4 | STJ | 2025-10 → 2025-12 | Inf. 865–874 | 33 |
 | stj-2026-inf-898-899 | STJ | 2026-08 → 2026-09 | Inf. 898–899 | 21 |
+| stj-2026-inf-900-903 | STJ | 2026-09 | Inf. 900–903 | 10 |
 | cnj-2025-s1 | CNJ | 2025-01 → 2025-06 | Inf. 1/2025–9/2025 | 9 |
 | cnj-2025-s2 | CNJ | 2025-07 → 2025-12 | Inf. 10–17/2025 | 25 |
 | cnj-2026-jan-ago | CNJ | 2026-01 → 2026-08 | Inf. 01–11/2026 | 22 |
@@ -225,4 +226,8 @@ Só `cnj-2025-s1` nasceu conforme a especificação; os demais têm farol injeta
   uma vez): todos os commits passam a ter a identidade global; o e-mail pessoal
   saiu da autoria e do conteúdo. Hashes mudaram (o primeiro commit agora é
   `22d1221`). Restam commits órfãos no GitHub; ver P1.
+- **2026-10-02** — Acrescentado `stj-2026-inf-900-903` (Inf. 900–903, set/2026,
+  10 fichas), renomeado de `STJ-Informativos-900-903-serventias.html`. Sem
+  `radar-meta` próprio: farol injetado pelo script; período deduzido das datas
+  dos informativos (08 a 29/09/2026).
 
