@@ -126,6 +126,25 @@ continua autocontido — abre sozinho, offline.
 > Mantenha, no `<head>`, um `<title>` curto e um
 > `<meta name="description" content="…">` com uma frase descrevendo o
 > relatório. São aproveitados pelo índice quando o bloco de metadados falta.
+>
+> ### 6. Botão de voltar ao índice
+>
+> Inclua, no topo da página, um link para o índice do acervo, com este
+> formato, **no estilo visual do próprio relatório** (mesma tipografia e
+> paleta do cabeçalho; por exemplo, no feitio das etiquetas ou da linha
+> superior do cabeçalho). Deve ficar discreto, sumir na impressão e funcionar
+> no celular:
+>
+> ```html
+> <a class="radar-voltar" href="../index.html" aria-label="Voltar ao índice do Radar Extrajudicial">← Voltar ao Radar</a>
+> ```
+>
+> O endereço `../index.html` pressupõe o relatório dentro de `relatorios/`.
+>
+> ### 7. Ícone
+>
+> Não é preciso incluir ícone: o script do acervo injeta o favicon do Radar no
+> `<head>`. Se o relatório trouxer um `<link rel="icon">` próprio, ele é mantido.
 
 ---
 

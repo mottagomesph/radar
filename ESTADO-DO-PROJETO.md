@@ -6,7 +6,7 @@
 > atualize as seções afetadas e acrescente uma linha ao *Histórico*.
 > Um documento desatualizado é pior que nenhum.
 
-Última atualização: 2026-10-02
+Última atualização: 2026-10-03
 
 ---
 
@@ -73,10 +73,15 @@ servidor `radar` (`python -m http.server 8765 --directory Radar`); usar
 ```
 Radar/
   index.html                       índice (abas Acervo, Cobertura, Registro)
+  favicon.ico, favicon.png,
+  apple-touch-icon.png             ícone do Radar (só o índice usa os arquivos)
+  icone/                           radar-original.webp (fonte) e
+                                   favicon-embutido.png (64 px, vai nos relatórios)
   reports.json                     registro — FONTE DA VERDADE
   dados/reports.js                 espelho gerado (só para file://); não editar
   relatorios/*.html                relatórios autocontidos
-  ferramentas/injetar-farol.py     injeta metadados+farol; gera o espelho
+  ferramentas/injetar-farol.py     injeta metadados+farol, favicon e botão de
+                                   voltar de reserva; gera o espelho
   instrucoes-para-novos-relatorios.md   contrato para colar no prompt de geração
   README.md                        documentação de uso
   ESTADO-DO-PROJETO.md             este arquivo
@@ -119,10 +124,26 @@ Radar/
   orgaos, relatorios`.
 - **Relatório novo** deve seguir `instrucoes-para-novos-relatorios.md`: bloco
   `radar-meta` + farol embutido + classe `ficha` + marca de conferida + nome
-  `<slug>.html`. Assim nasce autorregistrável e com progresso funcionando.
+  `<slug>.html` + botão de voltar `.radar-voltar` no estilo da página. Assim nasce autorregistrável e com progresso funcionando.
 - **Injetor** (`injetar-farol.py`): idempotente; envolve o que injeta em
-  `<!-- radar:inicio -->…<!-- radar:fim -->`; **pula** arquivos que já têm
-  `id="radar-meta"` próprio.
+  `<!-- radar:inicio -->…<!-- radar:fim -->`; **pula** o farol dos arquivos que
+  já têm `id="radar-meta"` próprio. Também injeta, no `<head>`, o favicon como
+  data URI (`<!-- radar:icone -->…`; relatório sem `</head>`, como o
+  `stf-2026-s1`, recebe antes do `<title>`; `<link rel="icon">` próprio é
+  mantido) e, só se a página não tiver elemento `.radar-voltar`, um botão de
+  voltar de reserva no canto (`<!-- radar:voltar -->…`).
+- **Favicon:** imagem enviada pelo usuário (radar verde, fundo transparente),
+  guardada em `icone/radar-original.webp`. Índice usa arquivos
+  (`favicon.ico`, `favicon.png`, `apple-touch-icon.png`); relatórios levam o
+  PNG de 64 px embutido, para continuarem autocontidos.
+- **Botão de voltar:** `<a class="radar-voltar" href="../index.html">` no topo de
+  cada relatório, **feito à mão no estilo de cada página** (tokens, tipografia e
+  formato do cabeçalho de cada uma; some na impressão). No deck
+  `cnj-res-696-2026` fica no canto inferior, ao lado do botão de tema; no
+  `cnj-2026-set` entra na barra de ferramentas fixa, com rótulo curto "Radar",
+  porque a barra tem `top` da lateral fixado em 116 px e uma terceira linha de
+  controles sobreporia a lateral. Relatório novo deve trazer o seu (contrato,
+  item 6); sem ele, o injetor põe o de reserva.
 - **Commits:** mensagens em português, corpo explicando o porquê, rodapé
   `Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>`. **Usar a identidade
   git global do usuário** (`mottagomesph` /
@@ -237,4 +258,11 @@ têm farol injetado.
   relatório conforme a especificação); injetor o manteve intacto. Lacuna do CNJ
   passa a out–dez de 2026. Obs.: o injetor, ao reprocessar, remove uma linha em
   branco antes do bloco no `stj-2026-inf-900-903.html`; irrelevante, não commitado.
+- **2026-10-03** — Favicon do Radar (imagem do usuário) no índice e em todos os
+  relatórios; botão "Voltar ao Radar" em todos os 12 relatórios, no estilo de
+  cada página; injetor passa a cuidar de favicon e de botão de reserva;
+  contrato (`instrucoes-para-novos-relatorios.md`, itens 6 e 7) e README
+  atualizados. Verificado por HTTP: ícone decodifica (64×64) em todas as
+  páginas, link aponta para `../index.html`, layout conferido em desktop,
+  celular e tema claro/escuro.
 

@@ -10,11 +10,13 @@ Site estático, sem build e sem dependências: basta servir a pasta.
 
 ```
 index.html              índice: acervo, progresso, cobertura e registro
+favicon.ico, favicon.png, apple-touch-icon.png   ícone do Radar, usado pelo índice
+icone/                  imagem original do ícone e a versão embutida nos relatórios
 reports.json            registro dos relatórios (fonte da verdade)
 dados/reports.js        espelho do registro, gerado; só usado no file://
 relatorios/*.html       os relatórios, um arquivo autocontido cada
 ferramentas/
-  injetar-farol.py      injeta metadados e o farol de progresso nos relatórios
+  injetar-farol.py      injeta metadados, farol e favicon nos relatórios
 ```
 
 Servido por HTTP, o índice lê `reports.json` direto. `dados/reports.js` é um
@@ -78,13 +80,21 @@ descrito abaixo.
    ```
 
 O script injeta em cada relatório, antes de `</body>`, um bloco de metadados e
-o farol de progresso, e regenera `dados/reports.js`. É idempotente: rodar de
-novo apenas substitui o bloco anterior.
+o farol de progresso, e regenera `dados/reports.js`. Injeta também, no
+`<head>`, o favicon do Radar (embutido como data URI, para o relatório seguir
+autocontido) e, se o relatório não tiver botão de voltar ao índice, um botão
+discreto de reserva no canto da tela. É idempotente: rodar de novo apenas
+substitui os blocos anteriores.
 
 Relatórios que já nasceram conforme
 [instrucoes-para-novos-relatorios.md](instrucoes-para-novos-relatorios.md),
-com bloco de metadados próprio, são deixados intactos: o script só regenera o
-espelho do registro para eles.
+com bloco de metadados próprio, não recebem outro farol; o favicon e o botão de
+reserva continuam sendo conferidos, e o script regenera o espelho do registro.
+
+O botão de voltar dos relatórios existentes é feito à mão, no estilo de cada
+página (elemento `<a class="radar-voltar" href="../index.html">`), e o script o
+reconhece pela classe. O ícone original está em `icone/radar-original.webp`; a
+versão de 64 px embutida nos relatórios, em `icone/favicon-embutido.png`.
 
 ### Campos de `reports.json`
 
