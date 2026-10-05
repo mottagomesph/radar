@@ -6,7 +6,7 @@
 > atualize as seções afetadas e acrescente uma linha ao *Histórico*.
 > Um documento desatualizado é pior que nenhum.
 
-Última atualização: 2026-10-03
+Última atualização: 2026-10-05
 
 ---
 
@@ -154,7 +154,7 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (12 relatórios, 279 fichas)
+## 5. Acervo atual (13 relatórios, 327 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
@@ -169,17 +169,18 @@ Radar/
 | cnj-2026-jan-ago | CNJ | 2026-01 → 2026-08 | Inf. 01–11/2026 | 22 |
 | cnj-2026-set | CNJ | 2026-09 | Inf. 12–13/2026 | 5 |
 | kollemata-2026-001 | Kollemata | 2026-08 | n. 001 | 28 |
+| kollemata-2026-09 | Kollemata | 2026-09 | seleção de set/2026 | 48 |
 | cnj-res-696-2026 | CNJ (normativo) | — | Res. 696/2026 | 0 |
 
-Só `cnj-2025-s1` e `cnj-2026-set` nasceram conforme a especificação; os demais
-têm farol injetado.
+Só `cnj-2025-s1`, `cnj-2026-set` e `kollemata-2026-09` nasceram conforme a
+especificação; os demais têm farol injetado.
 
 **Lacunas (o que pedir em seguida):**
 - **STJ — a mais grave:** 2024 inteiro, 2025·S1, 3º trimestre de 2025
   (jul–set), 2026·S1, julho de 2026.
 - **STF:** 2024 inteiro, 2026·S2.
 - **CNJ:** 2024 inteiro, out–dez de 2026.
-- **Kollemata:** só o n. 001 (ago/2026); números seguintes.
+- **Kollemata:** ago e set/2026 cobertos; meses seguintes (e antes de ago/2026).
 
 ## 6. Decisões tomadas (não reabrir sem motivo)
 
@@ -265,4 +266,9 @@ têm farol injetado.
   atualizados. Verificado por HTTP: ícone decodifica (64×64) em todas as
   páginas, link aponta para `../index.html`, layout conferido em desktop,
   celular e tema claro/escuro.
-
+- **2026-10-05** — Acrescentado `kollemata-2026-09` (Kollemata, set/2026, 48 fichas).
+  Já veio com `radar-meta` e farol próprios, mas sem favicon nem botão de voltar:
+  favicon injetado pelo script e botão de voltar feito à mão (pílula de vidro,
+  mesmo desenho do `stj-2026-inf-900-903`, de que o relatório compartilha a
+  família visual). Slug por mês (`-09`), diferente do `kollemata-2026-001` (por
+  número do informativo); aceito como veio.

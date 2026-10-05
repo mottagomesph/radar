@@ -1,7 +1,7 @@
 /* Gerado por ferramentas/injetar-farol.py a partir de reports.json.
    Nao edite aqui: edite reports.json e rode o script. */
 window.RADAR = {
-  "atualizado": "2026-10-02",
+  "atualizado": "2026-10-05",
   "github": {
     "usuario": "mottagomesph",
     "repo": "radar",
@@ -167,6 +167,20 @@ window.RADAR = {
       "fichas": 28,
       "produzido": "2026-09-02",
       "descricao": "Fichas de revisão da jurisprudência notarial e registral de agosto de 2026, de vários órgãos."
+    },
+    {
+      "slug": "kollemata-2026-09",
+      "arquivo": "relatorios/kollemata-2026-09.html",
+      "titulo": "Kollemata — julgados de setembro de 2026",
+      "orgao": "Kollemata",
+      "tipo": "jurisprudencia",
+      "inicio": "2026-09",
+      "fim": "2026-09",
+      "periodo": "setembro de 2026",
+      "fonte": "Kollemata — Jurisprudência Registral e Notarial (seleção de setembro de 2026)",
+      "fichas": 48,
+      "produzido": "2026-10-05",
+      "descricao": "Fichas de revisão dos 48 julgados de direito notarial e registral selecionados do Kollemata em setembro de 2026, agrupados por órgão julgador, para concursos de outorga de delegações de notas e de registro."
     },
     {
       "slug": "cnj-res-696-2026",
