@@ -151,6 +151,9 @@ Radar/
   com `-c user.name/-c user.email`. Ver P1.
 - **Redação dos relatórios** (prompt do usuário): identificação
   `(REsp n. 1796394, rel. min. nome em minúsculas, T3, j. DD/MM/AAAA, Informativo n. X)`;
+  números de processo no padrão CNJ de 20 dígitos **sempre com pontos e hífen**
+  (`NNNNNNN-DD.AAAA.J.TR.OOOO`), sem letras ou siglas dentro do número (a sigla da
+  classe fica à parte: `AC n. 1027078-93.2025.8.26.0577`);
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
@@ -272,3 +275,11 @@ especificação; os demais têm farol injetado.
   mesmo desenho do `stj-2026-inf-900-903`, de que o relatório compartilha a
   família visual). Slug por mês (`-09`), diferente do `kollemata-2026-001` (por
   número do informativo); aceito como veio.
+- **2026-10-05** — `kollemata-2026-09`: os 48 números de processo (campo `num`)
+  vieram só com dígitos; formatados no padrão CNJ com pontos e hífen. A busca
+  do relatório passou a aceitar também os dígitos soltos. Regra registrada na
+  seção 4.
+- **2026-10-05** — Deploy do Pages travou na fila (build do commit `06f1af5`
+  nunca iniciou, sem queda no githubstatus); resolvido com commit vazio
+  (`4dd47e9`) que disparou nova execução. Sem `gh` nem login, não dá para
+  cancelar/reexecutar build; commit vazio é o recurso.
