@@ -283,3 +283,6 @@ especificação; os demais têm farol injetado.
   nunca iniciou, sem queda no githubstatus); resolvido com commit vazio
   (`4dd47e9`) que disparou nova execução. Sem `gh` nem login, não dá para
   cancelar/reexecutar build; commit vazio é o recurso.
+- **2026-10-05** — `kollemata-2026-09`: os interruptores da sigla da turma passam a
+  ser vinculados (mudar um liga/desliga os 48, e o estado é gravado em todos).
+  Alteração feita só nesse relatório; os demais mantêm interruptor por ficha.

@@ -630,9 +630,15 @@ groupsEl.addEventListener("click", function(e){
 });
 groupsEl.addEventListener("change", function(e){
   if (!e.target.matches(".switch input")) return;
-  var art = e.target.closest(".ficha"), f = bySrc[art.getAttribute("data-src")];
-  state.turma[fid(f)] = e.target.checked; save();
-  art.querySelector("[data-id]").innerHTML = idHTML(f, showT(f));
+  /* os interruptores são vinculados: mudar um muda todos */
+  var on = e.target.checked;
+  F.forEach(function(g){ state.turma[fid(g)] = on; });
+  save();
+  [].forEach.call(groupsEl.querySelectorAll(".ficha"), function(art){
+    var g = bySrc[art.getAttribute("data-src")], sw = art.querySelector(".switch input");
+    if (sw) sw.checked = on;
+    art.querySelector("[data-id]").innerHTML = idHTML(g, showT(g));
+  });
 });
 
 /* ---------- limpar marcações ---------- */
