@@ -157,11 +157,11 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (14 relatórios, 338 fichas)
+## 5. Acervo atual (14 relatórios, 340 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
-| stf-2024-s2 | STF | 2024-07 → 2024-12 | Inf. 1143–1162 | 11 |
+| stf-2024-s2 | STF | 2024-07 → 2024-12 | Inf. 1143–1162 | 13 |
 | stf-2025-s1 | STF | 2025-01 → 2025-06 | Inf. 1163–1182 | 39 |
 | stf-2025-s2 | STF | 2025-07 → 2025-12 | Inf. 1183–1202 | 45 |
 | stf-2026-s1 | STF | 2026-01 → 2026-06 | Inf. 1203–1222 | 42 |
@@ -291,3 +291,7 @@ especificação; os demais têm farol injetado.
   fichas). Veio com `radar-meta` e farol próprios, sem favicon e sem botão de
   voltar: favicon injetado, botão feito à mão (pílula de vidro, como
   `stj-2026-inf-900-903`). Lacuna do STF em 2024 cai para só o 1º semestre.
+- **2026-10-13** — `stf-2024-s2` substituído por nova versão do usuário (11 → 13
+  fichas). A substituição apaga o botão de voltar feito à mão: refeito (mesma
+  pílula de vidro). Lição: ao trocar um relatório, reaplicar o botão e rodar o
+  injetor; contar fichas de novo e atualizar `fichas` em `reports.json`.
