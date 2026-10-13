@@ -1,7 +1,7 @@
 /* Gerado por ferramentas/injetar-farol.py a partir de reports.json.
    Nao edite aqui: edite reports.json e rode o script. */
 window.RADAR = {
-  "atualizado": "2026-10-05",
+  "atualizado": "2026-10-13",
   "github": {
     "usuario": "mottagomesph",
     "repo": "radar",
@@ -14,6 +14,20 @@ window.RADAR = {
     "Kollemata"
   ],
   "relatorios": [
+    {
+      "slug": "stf-2024-s2",
+      "arquivo": "relatorios/stf-2024-s2.html",
+      "titulo": "Jurisprudência do STF — 2º semestre de 2024",
+      "orgao": "STF",
+      "tipo": "jurisprudencia",
+      "inicio": "2024-07",
+      "fim": "2024-12",
+      "periodo": "2º semestre de 2024",
+      "fonte": "Informativos 1143 a 1162",
+      "fichas": 11,
+      "produzido": "2026-10-13",
+      "descricao": "Triagem dos Informativos STF n. 1143 a 1162 (2º semestre de 2024) para concursos de outorga de delegações de notas e de registro."
+    },
     {
       "slug": "stf-2025-s1",
       "arquivo": "relatorios/stf-2025-s1.html",

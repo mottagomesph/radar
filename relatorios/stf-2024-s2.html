@@ -1,0 +1,1578 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>STF 2º semestre 2024 · Serventias</title>
+<meta name="description" content="Triagem dos Informativos STF n. 1143 a 1162 (2º semestre de 2024) para concursos de outorga de delegações de notas e de registro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@200;300;400&family=Lexend:wght@300;400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: painel analítico em vidro fosco sobre fundo menta; cabeçalho com KPIs, gráfico hachurado e medidor de conferência; barra flutuante fixa; índice lateral em vidro + coluna de leitura de ~68ch. */
+:root{
+  --bg-1:#E3ECEA; --bg-2:#F3F7F6; --blob-1:rgba(255,255,255,.95); --blob-2:rgba(170,212,204,.55);
+  --glass:rgba(255,255,255,.58); --glass-strong:rgba(255,255,255,.80); --glass-line:rgba(19,38,58,.08); --hi:rgba(255,255,255,.75);
+  --ink:#13263A; --ink-2:#34485A; --muted:#6B7D8C; --line:#D2DCDA;
+  --accent:#17324A; --accent-ink:#FFFFFF; --accent-soft:rgba(23,50,74,.07);
+  --teal:#3D8A8C;
+  --violet:#5653DE; --violet-soft:rgba(86,83,222,.10); --violet-glow:rgba(104,96,255,.30);
+  --ok:#0D936A; --ok-soft:rgba(13,147,106,.11);
+  --hatch:rgba(19,38,58,.26);
+  --shadow:0 18px 50px -28px rgba(19,38,58,.35);
+  --display:"Lexend Exa","Lexend",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"Lexend",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --measure:68ch; --tb-h:96px;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg-1:#0A1215; --bg-2:#0F1A1E; --blob-1:rgba(70,140,150,.16); --blob-2:rgba(86,83,222,.10);
+    --glass:rgba(255,255,255,.045); --glass-strong:rgba(22,34,39,.86); --glass-line:rgba(255,255,255,.08); --hi:rgba(255,255,255,.05);
+    --ink:#E3ECEE; --ink-2:#BCC9CE; --muted:#8597A2; --line:#25363C;
+    --accent:#BFE0EA; --accent-ink:#0A1215; --accent-soft:rgba(191,224,234,.09);
+    --teal:#6CC3C2;
+    --violet:#ADAAFF; --violet-soft:rgba(173,170,255,.13); --violet-glow:rgba(140,130,255,.22);
+    --ok:#3AD49C; --ok-soft:rgba(58,212,156,.12);
+    --hatch:rgba(227,236,238,.26);
+    --shadow:0 18px 50px -28px rgba(0,0,0,.7);
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg-1:#0A1215; --bg-2:#0F1A1E; --blob-1:rgba(70,140,150,.16); --blob-2:rgba(86,83,222,.10);
+  --glass:rgba(255,255,255,.045); --glass-strong:rgba(22,34,39,.86); --glass-line:rgba(255,255,255,.08); --hi:rgba(255,255,255,.05);
+  --ink:#E3ECEE; --ink-2:#BCC9CE; --muted:#8597A2; --line:#25363C;
+  --accent:#BFE0EA; --accent-ink:#0A1215; --accent-soft:rgba(191,224,234,.09);
+  --teal:#6CC3C2;
+  --violet:#ADAAFF; --violet-soft:rgba(173,170,255,.13); --violet-glow:rgba(140,130,255,.22);
+  --ok:#3AD49C; --ok-soft:rgba(58,212,156,.12);
+  --hatch:rgba(227,236,238,.26);
+  --shadow:0 18px 50px -28px rgba(0,0,0,.7);
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(var(--tb-h) + 24px)}
+body{margin:0;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  background-color:var(--bg-1);
+  background-image:radial-gradient(1100px 620px at 88% -8%,var(--blob-1),transparent 62%),radial-gradient(900px 600px at -12% 28%,var(--blob-2),transparent 60%),linear-gradient(180deg,var(--bg-2),var(--bg-1));
+  background-attachment:fixed}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--violet);outline-offset:2px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.wrap{max-width:1240px;margin:0 auto;padding-inline:24px}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.35);backdrop-filter:blur(18px) saturate(1.35);border:1px solid var(--glass-line);border-radius:24px;box-shadow:inset 0 1px 0 var(--hi),var(--shadow)}
+.hatch{background-image:repeating-linear-gradient(-55deg,var(--hatch) 0 1.2px,transparent 1.2px 6px)}
+.cap{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 8px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-family:var(--sans);font-size:11.5px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1}
+
+/* Cabeçalho */
+.masthead{padding-block:40px 18px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:end}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--ink-2);padding:6px 12px 6px 8px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--glass-line);margin:0 0 18px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 4px var(--violet-soft)}
+.masthead h1{font-family:var(--display);font-weight:200;font-size:clamp(30px,5.2vw,60px);line-height:1.04;letter-spacing:-.045em;margin:0 0 14px;text-wrap:balance}
+.masthead h1 em{font-style:normal;font-weight:300;color:var(--muted)}
+.masthead .sub{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.55;color:var(--ink-2);margin:0;max-width:56ch}
+
+.gauge{padding:20px 22px 18px;display:flex;flex-direction:column;gap:2px}
+.card-t{font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:-.01em;margin:0}
+.card-s{font-family:var(--sans);font-size:12.5px;font-weight:300;color:var(--muted);font-style:italic;margin:0}
+.gauge svg{width:100%;height:auto;display:block;margin-top:6px}
+.gauge .g-num{font-family:var(--display);font-weight:200;font-size:44px;letter-spacing:-.05em;fill:var(--ink)}
+.gauge .g-lbl{font-family:var(--sans);font-size:11px;fill:var(--muted)}
+.gauge .trk{stroke:url(#hatchP);}
+.gauge .val{stroke:var(--ok);transition:stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1)}
+.gauge-foot{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.gauge-foot .cap{background:var(--ok);color:#fff}
+
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.9fr);gap:14px;margin-top:22px}
+.kpi{padding:18px 20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi .k-n{font-family:var(--display);font-weight:200;font-size:clamp(40px,5vw,62px);line-height:1;letter-spacing:-.06em;font-variant-numeric:tabular-nums;margin-top:auto}
+.kpi.sel .k-n{color:var(--accent)}
+.kpi .k-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chart{padding:18px 20px;min-width:0}
+.bars{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+.bar-row{display:grid;grid-template-columns:40px minmax(0,1fr) 72px;align-items:center;gap:10px;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.bar-row .lab{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.bar-row .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.bar-row .val b{color:var(--ink);font-weight:500}
+.track{position:relative;height:16px}
+.track .ex{position:absolute;inset:0 auto 0 0;border-radius:6px;border:1px solid var(--glass-line)}
+.track .se{position:absolute;inset:0 auto 0 0;border-radius:6px;background:var(--accent)}
+.chart-legend{display:flex;gap:14px;margin-top:12px;font-family:var(--sans);font-size:11.5px;color:var(--muted)}
+.chart-legend span{display:inline-flex;align-items:center;gap:6px}
+.chart-legend i{display:inline-block;width:14px;height:9px;border-radius:3px}
+
+/* Barra de ferramentas flutuante */
+.toolbar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;margin-top:8px}
+.toolbar .tb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 12px;border-radius:22px;background:var(--glass-strong)}
+.search{flex:1 1 440px;min-width:0;position:relative}
+.search input{width:100%;font-family:var(--sans);font-weight:300;font-size:14.5px;padding:10px 14px 10px 40px;border-radius:999px;border:1px solid var(--glass-line);background:var(--accent-soft);color:var(--ink)}
+.search input::placeholder{color:var(--muted)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:1.8}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--sans);font-size:13px;font-weight:400;padding:5px 6px 5px 13px;border-radius:999px;border:1px solid var(--glass-line);background:var(--accent-soft);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:background .2s,color .2s}
+.chip:hover{border-color:var(--accent)}
+.chip .dot{width:7px;height:7px;border-radius:50%}
+.chip .cap{height:20px;min-width:22px;font-size:11px;background:var(--glass-strong);color:var(--ink);border:1px solid var(--glass-line)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip[aria-pressed="true"] .cap{background:var(--accent-ink);color:var(--accent);border-color:transparent}
+.chip[data-g="all"]{padding-left:13px}
+.seg{display:inline-flex;border:1px solid var(--glass-line);border-radius:999px;background:var(--accent-soft);padding:3px}
+.seg button{font-family:var(--sans);font-size:13px;font-weight:400;border:0;background:transparent;color:var(--muted);padding:5px 13px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--glass-strong);color:var(--ink);box-shadow:0 1px 3px rgba(19,38,58,.14)}
+.progress{display:flex;align-items:center;gap:10px;flex:1 1 200px;min-width:0;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.bar{flex:1;height:8px;border-radius:999px;overflow:hidden;min-width:70px;border:1px solid var(--glass-line)}
+.bar > i{display:block;height:100%;width:0;background:var(--ok);border-radius:999px;transition:width .4s ease}
+.progress b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:500}
+.progress .sm{display:none}
+.btn{font-family:var(--sans);font-size:13px;font-weight:400;padding:8px 14px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass-strong);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;transition:border-color .2s,color .2s}
+.btn:hover{border-color:var(--accent)}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8}
+.btn.danger:hover{border-color:#C2412D;color:#C2412D}
+.confirm{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.ibtn{width:38px;height:38px;border-radius:50%;border:1px solid var(--glass-line);background:var(--glass-strong);color:var(--ink);display:inline-grid;place-items:center;cursor:pointer;flex:none;transition:border-color .2s,color .2s,background .2s}
+.ibtn:hover{border-color:var(--accent)}
+.ibtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+.ibtn .i-ok{display:none}
+.ibtn.copied{color:var(--ok);border-color:var(--ok)}
+.ibtn.copied .i-cp{display:none}
+.ibtn.copied .i-ok{display:block}
+.copied{color:var(--ok)!important;border-color:var(--ok)!important}
+
+/* Grade principal */
+.layout{display:grid;grid-template-columns:268px minmax(0,1fr);gap:36px;padding-block:28px 72px}
+.index{position:sticky;top:calc(var(--tb-h) + 22px);align-self:start;max-height:calc(100vh - var(--tb-h) - 40px);overflow:auto;font-family:var(--sans);font-size:13px;padding:18px 12px 14px;border-radius:24px}
+.index .i-head{display:flex;justify-content:space-between;align-items:center;padding:0 8px 6px}
+.index .i-head b{font-size:15px;font-weight:500;letter-spacing:-.01em}
+.index .i-head span{font-size:12px;color:var(--muted);font-style:italic;font-weight:300}
+.index h3{font-size:12.5px;font-weight:400;color:var(--ink-2);margin:14px 8px 6px;display:flex;align-items:center;gap:8px}
+.index h3 .dot{width:7px;height:7px;border-radius:50%}
+.index h3 .cap{margin-left:auto;height:19px;min-width:20px;font-size:10.5px}
+.index ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.index a{display:grid;grid-template-columns:22px minmax(0,1fr) 18px;gap:8px;align-items:start;padding:7px 8px;border-radius:12px;color:var(--ink);text-decoration:none;line-height:1.35;font-weight:300}
+.index a:hover{background:var(--accent-soft)}
+.index a .num{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:1px}
+.index a .ck{width:18px;height:18px;border-radius:50%;border:1.5px dashed var(--line);display:grid;place-items:center;margin-top:-1px}
+.index a.done .ck{background:var(--ok);border:1.5px solid var(--ok)}
+.index a.done .ck::after{content:"";width:7px;height:4px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.index a.done .t{color:var(--muted)}
+.index a.off{opacity:.35}
+.index details summary{display:none}
+
+main{min-width:0}
+.group{margin-bottom:44px}
+.group-head{max-width:calc(var(--measure) + 68px);margin-bottom:16px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px 14px;padding-inline:4px}
+.group-head .ttl{flex:1 1 auto;min-width:0}
+.group-head .roman{font-family:var(--sans);font-size:12.5px;font-weight:300;font-style:italic;color:var(--muted)}
+.group-head h2{font-family:var(--display);font-weight:200;font-size:clamp(24px,3vw,32px);letter-spacing:-.04em;line-height:1.15;margin:2px 0 4px;text-wrap:balance;display:flex;align-items:center;gap:12px}
+.group-head h2 .cap{font-family:var(--sans);letter-spacing:0}
+.group-head p{flex-basis:100%;margin:0;font-family:var(--sans);font-weight:300;font-size:14px;color:var(--muted)}
+.group[data-g="I"] .group-head h2 .cap{background:var(--violet);color:#fff;box-shadow:0 0 0 5px var(--violet-soft)}
+
+/* Ficha */
+.ficha{position:relative;max-width:calc(var(--measure) + 68px);background:var(--glass-strong);border:1px solid var(--glass-line);border-radius:26px;padding:28px 34px 22px;margin-bottom:18px;box-shadow:inset 0 1px 0 var(--hi),var(--shadow);transition:background .3s ease,box-shadow .3s ease;overflow:hidden}
+.ficha::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:4px;border-radius:0 4px 4px 0;background:transparent;transition:background .3s}
+.ficha[data-g="I"]{box-shadow:inset 0 1px 0 var(--hi),0 26px 70px -34px var(--violet-glow)}
+.ficha[data-g="I"]::after{content:"";position:absolute;right:-90px;top:-110px;width:280px;height:280px;border-radius:50%;background:radial-gradient(closest-side,var(--violet-glow),transparent);pointer-events:none}
+.ficha.done{background:linear-gradient(var(--ok-soft),var(--ok-soft)),var(--glass-strong)}
+.ficha.done::before{background:var(--ok)}
+.ficha > *{position:relative;z-index:1}
+.f-head{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:8px;font-family:var(--sans);font-size:12px}
+.f-num{font-family:var(--mono);color:var(--muted);margin-right:4px}
+.tag{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-weight:400;border:1px solid var(--glass-line);color:var(--ink-2);background:var(--accent-soft)}
+.tag .dot{width:6px;height:6px;border-radius:50%}
+.tag.g-I{background:var(--violet-soft);color:var(--violet);border-color:transparent}
+.tag.rep{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.tag.ok{background:var(--ok);color:#fff;border-color:transparent;font-weight:500;margin-left:auto}
+.tag.ok svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.6}
+.ficha h3{font-family:var(--sans);font-size:22px;line-height:1.3;font-weight:500;letter-spacing:-.015em;margin:6px 0 20px;text-wrap:balance}
+.blk{margin:0 0 18px}
+.lbl{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--muted);margin-bottom:7px}
+.lbl::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.6}
+.idbox{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.id{flex:1 1 320px;min-width:0;font-family:var(--mono);font-size:13.5px;line-height:1.6;background:var(--accent-soft);border:1px solid var(--glass-line);border-radius:16px;padding:11px 15px;overflow-wrap:anywhere;color:var(--ink)}
+.id .sc{font-variant:small-caps;font-variant-caps:small-caps;letter-spacing:.02em}
+.id b{font-weight:500}
+.id-tools{display:flex;align-items:center;gap:10px}
+.switch{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted);cursor:pointer;user-select:none;padding:6px 10px 6px 6px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass-strong)}
+.switch input{appearance:none;-webkit-appearance:none;width:30px;height:18px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;margin:0;transition:background .2s}
+.switch input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform .2s}
+.switch input:checked{background:var(--accent)}
+.switch input:checked::after{transform:translateX(12px)}
+.disc{margin:0;font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.tese{margin:0;padding:2px 0 2px 20px;border-left:3px solid var(--accent);font-size:18.5px;line-height:1.56;font-weight:500;color:var(--ink)}
+.ficha[data-g="I"] .tese{border-left-color:var(--violet)}
+.tese.lit{font-style:italic;font-weight:400}
+.ctx p{margin:0 0 10px;font-size:16.5px;color:var(--ink-2)}
+.ctx p:last-child{margin-bottom:0}
+.f-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;padding-top:16px;border-top:1px dashed var(--line)}
+.btn-conf{font-family:var(--sans);font-size:13.5px;font-weight:400;padding:10px 18px 10px 14px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;display:inline-flex;align-items:center;gap:9px;transition:background .25s,transform .15s}
+.btn-conf:active{transform:scale(.98)}
+.btn-conf .ring{width:18px;height:18px;border-radius:50%;border:1.5px dashed currentColor;display:grid;place-items:center;opacity:.85}
+.btn-conf svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.8;opacity:0}
+.ficha.done .btn-conf{background:var(--ok);color:#fff}
+.ficha.done .btn-conf .ring{border-style:solid;background:rgba(255,255,255,.18)}
+.ficha.done .btn-conf svg{opacity:1}
+mark{background:var(--violet-soft);color:inherit;border-radius:3px;padding:0 1px}
+.empty{max-width:var(--measure);font-family:var(--sans);font-weight:300;color:var(--muted);border:1.5px dashed var(--line);border-radius:24px;padding:28px;text-align:center}
+
+/* Nota e apêndice */
+.notes{max-width:calc(var(--measure) + 68px);padding:30px 34px;margin-top:56px;border-radius:26px}
+.notes .ttl-s{font-family:var(--sans);font-size:12.5px;font-weight:300;font-style:italic;color:var(--muted);margin:0}
+.notes h2{font-family:var(--display);font-weight:200;font-size:clamp(24px,3vw,30px);letter-spacing:-.04em;margin:2px 0 16px}
+.notes p,.notes li{font-size:16px;color:var(--ink-2)}
+.notes p b{font-family:var(--sans);font-weight:500;color:var(--ink);font-size:14.5px}
+.notes ul{padding-left:20px;margin:0 0 12px}
+.notes li{margin-bottom:4px}
+.notes hr{border:0;border-top:1px dashed var(--line);margin:32px 0 26px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--glass-line);border-radius:18px;background:var(--glass-strong);margin:10px 0 22px}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-weight:300;font-size:13px;line-height:1.45}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--glass-line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:400;background:var(--accent-soft)}
+tr:last-child td{border-bottom:0}
+td.proc{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--ink)}
+.notes h3{font-family:var(--sans);font-size:14px;font-weight:500;margin:24px 0 4px;display:flex;align-items:center;gap:8px}
+
+@media (max-width:1060px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .gauge{max-width:420px}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .chart{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:20px}
+  .index{position:static;max-height:none;padding:6px 12px}
+  .index details summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:10px 8px;font-weight:500;font-size:14px;list-style:none}
+  .index details summary::-webkit-details-marker{display:none}
+  .index details > div{padding-bottom:10px}
+  .index .i-head{display:none}
+}
+@media (max-width:560px){
+  .wrap{padding-inline:16px}
+  .masthead{padding-block:28px 10px}
+  .kpis{gap:8px}
+  .kpi{padding:14px 12px;border-radius:20px}
+  .kpi .card-t{font-size:12.5px}
+  .kpi .k-row .cap{display:none}
+  .toolbar .tb{gap:8px;padding:9px;border-radius:20px}
+  .search{flex-basis:100%}
+  .search input{padding-block:8px;font-size:14px}
+  .chips{order:3;flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .chips::-webkit-scrollbar{display:none}
+  .seg{order:4}
+  .seg button{padding:4px 10px}
+  .progress{order:5;flex:1 1 60px}
+  .progress .lg,.clear .lg{display:none}
+  .progress .sm{display:inline}
+  .clear{order:6}
+  .clear .btn{padding:7px 11px}
+  .ficha{padding:22px 18px 18px;border-radius:22px}
+  .ficha h3{font-size:19.5px}
+  .tese{font-size:17.5px;padding-left:16px}
+  .notes{padding:22px 18px}
+  body{font-size:16.5px}
+}
+@media print{
+  :root{--bg-1:#fff;--bg-2:#fff;--glass:#fff;--glass-strong:#fff;--glass-line:#ccc;--hi:transparent;--ink:#000;--ink-2:#222;--muted:#555;--line:#bbb;--accent:#17324A;--accent-soft:#f3f5f6;--violet:#4a47c8;--ok:#0b7a57;--ok-soft:#e8f4ee;--shadow:none;--violet-glow:transparent}
+  body{font-size:11pt;background:#fff!important}
+  .toolbar,.index,.id-tools,.f-foot .btn,.btn-conf,.gauge,.chart,.chart-legend{display:none!important}
+  .glass{-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .layout{display:block;padding:0}
+  .ficha{break-inside:avoid;box-shadow:none;max-width:none;border-radius:10px}
+  .ficha[data-g="I"]::after{display:none}
+  .ficha.done,.ficha.done::before,.tag.ok,.tag.rep,.cap{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .f-foot{border-top:0;margin-top:4px;padding-top:0}
+}
+/* radar: voltar ao indice */
+a.radar-voltar{display:inline-flex;align-items:center;gap:8px;margin:0 0 14px;padding:6px 14px 6px 10px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--ink-2);text-decoration:none;border-radius:999px;background:var(--glass-strong);border:1px solid var(--glass-line)}
+a.radar-voltar svg{width:14px;height:14px;flex:none;color:var(--violet)}
+a.radar-voltar:hover{background:var(--hi);color:var(--ink);border-color:var(--violet-glow)}
+a.radar-voltar:focus-visible{outline:2px solid var(--violet);outline-offset:3px}
+@media print{a.radar-voltar{display:none}}
+</style>
+<!-- radar:icone --><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAABIFBMVEVkoVuW3ZFzlGJm0FkYUx5dZy1wlmB3j2NPZDlGljuaxpVoc02O4HWn66YtkzRUckhacUWOr4wpXkKay5iPt4o6p0tSaT0+dzxbcUZ//3////+WoWdOaTqDrHeJuYYIJxg2NikA/wD//wBxODiHrXnT/6ldGV1////c/8iCvICNcVV/0IwAAAAVVTEQRypOl1JHiU0OOyQwZzVkqW5ttXQEKBFcomhVmmQ2dkYKNRlUplWJyI8saEYwdjclWTAZZTBKeUeR1JkQRho5hUg0hTl3uoRJajds1ms4lkh/f31NtFR6xYcBGwSa2KJwxXCW9YpVqlWq+JRntluj3KNVVVWo5KeqqqpLcz3K/LF25XB/v38eXEAbcyyJ6XdTx1i2+qWl2bk8AAAAYHRSTlP07mD//xiaK1r/Yxr/FP/epSj/o03/oAVtAgES0I6u/wcBAQRg/wQC//8J/wD///7+//3+/v/+/v7///z//v7//f7////+/P//A/////7//wP///4D/wP+//8E//////+5oFHXAAAIOklEQVR42o2XB3fbOBaFqeYStyR2MmmbOrM7s0sCYBNJSCAlkrKq5Vjujsv//xd7H0A5iZOZExwfWSJ5P9z38Ihi2T9pZ1v0+e8nW49023uySr+vzn72rPXjpa1XEG892q31+8enp6fHx/1ObXd3b0y3fgFA3Wzt1oz0+OCg3z+gBsruXnX7nwAvX9nvH5H6+KDfedBgZO+T/Z9X/wSAxUe109MDUgdoPrXAp68DzajtPTTxLWD8yn6ye9yHeAot51yIsiyFwDfpE2UAyttV++pvACA/6vd13z4XpfLSZp4keZI3U1WC0vYN4vfvcvkVcIXutXWoC5XmSYg2a6azcDabhbmnKgQRzn4CgL4G+QBy5eXQJs0UTfC02/XSPATjHvEv++zDQ8CVvdcx3RckTyCjlnKexnExkrJIYafknJIBwtYDwJn9pEPdR0I5Yeg+7XaXAOnEmtAYzlUYqnvC1XeAl/d6L58lT3vdbhx36SOWVlxowMQa3gxV2BwhDP8bggaMX76udQYUvpfMmjs9CLtxEaErK1hIjJ8lAWgMb46CpCL8VbfHXwFX9tu+0YdhuoOeu93I95FMD0l0kP/JfDhvNIbD2lEtzQ0hWLU/LwFnSOBA+4dehy4CrtL0qU5ippQqR5PNmyEAtbu7tMk1wRq//GgA41dPKn1S6X1fOSaPHgCUgmdyAvVl7fDw4qJZEVZ0OVhk4C2GLxJxMmMkigOeZXH3K6DQObwdQn54dPfncaILwvd1EBY+XqN42yJ2kH+YjoPymvPYEBzOnetiBAAycHl0dHR3cTHMwpK3QbAwejZ9vJ0GVQKeGv3mxZHUgLhoS8hHzyYAXF6if9zZLsMcFoCo269t67O9OlgGkKZeNyid0dHRZgNRRG3JJf4wjJNbGEAAF7Xt6yxzUFARABaG0rqyV6Y+GZiFKH0nwrCVjUZjO4vaceowDKMq5RwjcLl5eHcxb5TQO4m2EFEWLHsj0AZyMuDEgeN4WbldZlI4zPniCAwjImjc3Nwc3t1NrvnEcRzGQiWjKPJX7CvLrge+yQDDrXbpdL3MYRn32JenXzSgGE1ub+H/TtufKIYWOgSIrP8iiSuB345EOkugjyXGHx49CT2aQwAYuEUCLobbGW6VkgBJwtsEqBtAFBWJNoBB62ZO5kSKdUlOObgeaf1RQyJ4NIkIXDdUyEFkrdjWhk8OYhOBVA4ZKDiFr5vgChm4PKxtZ7hJSB5rgCcB4ACsoqQirsIEAE86TqY5zKlawctnt8PDeQnzXANKjhDcMCeAsDYsnUPuzQhQSC3ypHPfpBw9a1xOYKuZ6cvMoyS4JgnCWq0AacgY+dUGKALTvM5pf357u11F7+E6q5KQcJ8A9QqA9wBcXpKSjfCPUs0c6DvB/Do3baTwkMuk4yIHIQ8weKJurRgHucLMHyw4tUAKrClCFHwTRdZul4XQPy1eoIlAYMaKmbgHYDx4mq6v0xKkn9T/er1eLCy9PKnqqjS3JV/Hw00DWLHq6KIdpe8wlYdKJeROeWFCLUzweIyL1U+V6i8l00vO9wAvdBGz0NljsUki4k0V5sU8YSapPNWJqSppmYO6jxczUhoQLwfKjAFVbLMZ6hKhy6YOHEl6N5FBm/eWgDZPCOBN9HgxWbCKEDbZLKl+iEL/U9wF4B2jWYwAq5YGGJ+o1oyeWVR1wNzYWwaQySxTWcaKkgBhOqdJoLeKWmwTwaNKYtxUkiP5klDEy6LiZTavbZaOTDVAEKDXe423UcdQmBgWeBepLQpn6XsZAG/yPzAjKm5S0MY6HPce43Wu+5jffIkSgwV0nalgc6QWotIJPTDQ50xu3txsc1VFQBN57wUAqxYBfKVj8BZeNv/j4ubas2RGFwjAWBaJnDnZemO95LlLtcKnNI31NmzrwyeUG1lItAUurzc3bxol3qwFjw0g5tIzQ4FFKdW1xuYUwfnOpw+YlevaQkAWgFjw9UZjncYiXZdmWucqd82o5lzXKhlABB4iaFljxCCI0NZpRBAjVZpyAA6Lq8NwQ1cQva5Gz6ZYy3sUwZiWthUuMMsHRVgRyty5rwMhqjogvRSJAfjTABk4fwyxZZ+QBUHbp1QH4XoL9Lok6CQaP167rPS9/gBDQAZO9PJurwBA+xGmPbgOX8SMfTuMkDsCmXS1Pv3flAKAgRO9vJOFnrbQTt7pKJiyZKwnJVes6yuYLkVe6dm0QwHAwIex2aEgC0IT5jx8pwFurqTFYw8OML15BcdCl1ABQe/OqwBe6D0OAVrjDaunCVMe6jzQtJueYwyBoYkIc4LLjJ4FRr+/c3K/RwKpviS03YpAM3eS50LlOaXOyBH/FHokwNvZMNs0s09s2SvWORGCKcbCZcvmhjHmKv1by8O4X+kRwMm3O9XXSIPSHgZT4X5FuIKmciPH8unXKH+x1v/23Vb348fWjiZE/qA/j92qW5pQQteYDxnvHyz1j5f6+8322G7t9DwgIoTRDwTDbp961YCEdt9RH7vZttbrEny43QfhMWKLhUBJTbEgCQ95DFMWJm7ajaYHB3ovDTn1P/7JgWNsv3/c2ycEVeWgg8PLVB+agg4d3PD6RBz6dH9/rcrfwyNPy7Zf9M5B6MEF6nIw7RCFTm8DvYuh7tPzndZ9/D+c2j5TGGQippeDNnK60V4Eax3J9/efv/9O/+DYh1svds6BMD70iqgXxJjUHuQt+1v/Px48W8jE2ptzwyAr1Mz3fcjX7K/p/7ujL/HXnuPpirEU779ZQ+/j8S8cvgnRWnv+/M3+fXvznNT2+OSXTu9AaJ+tVmtNt5bJ2m+tnz37f2zaIHOJeenjAAAAAElFTkSuQmCC"><!-- radar:icone-fim -->
+</head>
+<body>
+
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="hatchP" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="6" height="6" fill="transparent"></rect>
+      <line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--hatch)" stroke-width="2.2"></line>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="masthead">
+  <div class="wrap">
+    <a class="radar-voltar" href="../index.html" aria-label="Voltar ao índice do Radar Extrajudicial"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/></svg><span>Voltar ao Radar</span></a>
+<div class="hero">
+      <div>
+        <p class="eyebrow"><i></i>Supremo Tribunal Federal · Informativos de Jurisprudência</p>
+        <h1>Informativos 1143–1162 <em>para concursos de serventias extrajudiciais</em></h1>
+        <p class="sub">Triagem dos julgados publicados entre 2 de agosto e 16 de dezembro de 2024, no segundo semestre, com fichas de revisão para o caderno de direito notarial e registral e matérias correlatas.</p>
+      </div>
+      <div class="glass gauge" aria-live="polite">
+        <p class="card-t">Conferência</p>
+        <p class="card-s">Fichas revisadas para o caderno</p>
+        <svg viewBox="0 0 240 132" role="img" aria-labelledby="gTitle">
+          <title id="gTitle">Fichas conferidas</title>
+          <path class="trk" d="M 20 112 A 100 100 0 0 1 220 112" fill="none" stroke-width="18" stroke-linecap="round"></path>
+          <path class="val" id="gVal" d="M 20 112 A 100 100 0 0 1 220 112" fill="none" stroke-width="18" stroke-linecap="round" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="100"></path>
+          <text class="g-num" id="gNum" x="120" y="100" text-anchor="middle">0/11</text>
+          <text class="g-lbl" x="20" y="130" text-anchor="middle">0</text>
+          <text class="g-lbl" x="220" y="130" text-anchor="middle">11</text>
+        </svg>
+        <div class="gauge-foot"><span id="gTxt">Nenhuma ficha conferida</span><span class="cap" id="gPct">0%</span></div>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="glass kpi"><div class="k-row"><p class="card-t">Informativos</p><span class="cap">n. 1143–1162</span></div><p class="card-s">analisados</p><div class="k-n">20</div></div>
+      <div class="glass kpi"><div class="k-row"><p class="card-t">Julgados</p><span class="cap">119</span></div><p class="card-s">examinados</p><div class="k-n">119</div></div>
+      <div class="glass kpi sel"><div class="k-row"><p class="card-t">Selecionados</p><span class="cap">9%</span></div><p class="card-s">com pertinência ao edital</p><div class="k-n" id="cSel">11</div></div>
+      <div class="glass chart">
+        <div class="k-row" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><p class="card-t">Seleção por mês de publicação</p><span class="card-s">selecionados / examinados</span></div>
+        <div class="bars" id="bars"></div>
+        <div class="chart-legend"><span><i class="hatch" style="border:1px solid var(--glass-line)"></i>examinados</span><span><i style="background:var(--accent)"></i>selecionados</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <div class="wrap">
+    <div class="tb glass">
+      <label class="search" for="q">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="q" type="search" placeholder="Buscar por tese, processo, relator ou dispositivo legal" autocomplete="off">
+      </label>
+      <div class="seg" role="group" aria-label="Situação">
+        <button type="button" data-st="all" aria-pressed="true">Todas</button>
+        <button type="button" data-st="pending" aria-pressed="false">Pendentes</button>
+        <button type="button" data-st="done" aria-pressed="false">Conferidas</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Grupo temático"></div>
+      <div class="progress" aria-live="polite">
+        <div class="bar hatch" aria-hidden="true"><i id="barFill"></i></div>
+        <span><b id="pDone">0</b><span class="lg"> de </span><span class="sm">/</span><b id="pTot">11</b><span class="lg"> conferidas</span></span>
+      </div>
+      <span id="clearWrap" class="clear"><button type="button" class="btn danger" id="clearBtn">Limpar<span class="lg"> marcações</span></button></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="index glass" id="index" aria-label="Índice das fichas"></nav>
+  <main id="main">
+    <div id="groups"></div>
+    <p class="empty" id="empty" hidden>Nenhuma ficha corresponde à busca e aos filtros selecionados.</p>
+
+    <section class="notes glass" id="nota">
+      <p class="ttl-s">Nota metodológica</p>
+      <h2>Período, critério e cobertura</h2>
+      <p><b>Período coberto.</b> Segundo semestre de 2024. O acervo analisado reúne 20 edições do Informativo STF: n. 1143 (02/08/2024), 1144 (13/08), 1145 (19/08), 1146 (26/08), 1147 (30/08), 1148 (06/09), 1149 (16/09), 1150 (23/09), 1151 (30/09), 1152 (07/10), 1153 (14/10), 1154 (21/10), 1155 (28/10), 1156 (06/11), 1157 (13/11), 1158 (21/11), 1159 (27/11), 1160 (04/12), 1161 (09/12) e 1162 (16/12/2024). Não há no acervo edição divulgada em julho de 2024.</p>
+      <p><b>Critério temporal.</b> Data de divulgação no informativo, e não data do julgamento. Por isso consta julgado concluído em 28/06/2024 (ADI 7194, publicada no n. 1143).</p>
+      <p><b>Universo examinado.</b> 119 julgados, contados por destaque do informativo (Plenário e Turmas): 10 no n. 1143, 6 no 1144, 4 no 1145, 9 no 1146, 4 no 1147, 3 no 1148, 9 no 1149, 6 no 1150, 5 no 1151, 7 no 1152, 7 no 1153, 5 no 1154, 10 no 1155, 6 no 1156, 4 no 1157, 7 no 1158, 4 no 1159, 6 no 1160, 3 no 1161 e 4 no 1162. Ações julgadas em conjunto sob um mesmo destaque foram contadas uma vez. As seções “Plenário Virtual em Evidência” (pautas de julgamento) e “Inovações Normativas STF” foram lidas, mas não contadas, porque não contêm julgamentos.</p>
+      <p><b>Seleção.</b> 11 julgados: 2 destaques, 3 de direito notarial e registral, 1 de outras matérias e 5 tangenciais. Os 108 restantes constam do apêndice. A classificação seguiu o Filtro de Pertinência (conexão material, força do precedente e rendimento em prova).</p>
+      <p><b>Identificação.</b> Os julgamentos do Plenário são identificados pela sigla Pleno. Nos julgamentos conjuntos, a linha de identificação aponta o primeiro processo indicado no informativo, e os demais aparecem no contexto; no Tema 309, aponta o RE 656558, em que a tese foi fixada, porque o RE 610523 foi julgado prejudicado. Havendo tese de repercussão geral, o bloco central a transcreve literalmente.</p>
+      <p><b>Pauta sem resultado no período.</b> O Tema 1214 da repercussão geral (incidência do ITCMD sobre VGBL e PGBL na morte do titular, RE 1363013/RJ) foi pautado para a sessão virtual de 06 a 13/12/2024 (n. 1161), mas seu resultado não foi divulgado nos informativos do período. Convém conferi-lo no relatório do semestre seguinte.</p>
+      <p><b>Temas sem julgados no período.</b> Não houve julgados sobre:</p>
+      <ul>
+        <li>tabelionato de notas: requisitos e efeitos de escrituras, procurações, atas notariais e testamentos;</li>
+        <li>tabelionato de protesto: títulos protestáveis, intimação, cancelamento e sustação (a ADI 7655 tratou apenas da atribuição da especialidade a serventia existente);</li>
+        <li>registro de imóveis: qualificação registral, alienação fiduciária, usucapião e adjudicação compulsória extrajudiciais, Reurb, incorporação, condomínio e parcelamento do solo;</li>
+        <li>registro de títulos e documentos e registro civil das pessoas jurídicas;</li>
+        <li>registro civil das pessoas naturais quanto a nome, gênero no assento, filiação socioafetiva, casamento e união estável;</li>
+        <li>natureza jurídica, isenções e valores de emolumentos;</li>
+        <li>responsabilidade civil, penal e disciplinar de notários e registradores, perda da delegação e teto remuneratório de interinos;</li>
+        <li>tributos incidentes sobre atos notariais e registrais (ITBI, ITCMD e ISS);</li>
+        <li>família e sucessões com reflexo cartorário: regime de bens, inventário e partilha, divórcio extrajudicial, doação e colação.</li>
+      </ul>
+      <hr>
+      <p class="ttl-s">Apêndice</p>
+      <h2>Matérias examinadas e descartadas</h2>
+      <p>Julgados lidos integralmente e descartados por impertinência com o edital dos concursos de outorga de delegações.</p>
+      <div id="appendix"></div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var GROUPS = {
+  I:   {roman:"Grupo I",   name:"Destaques", short:"Destaques", color:"var(--violet)", desc:"Julgamentos de maior relevância para o concurso, independentemente da disciplina."},
+  II:  {roman:"Grupo II",  name:"Direito Notarial e Registral", short:"Notarial e Registral", color:"var(--accent)", desc:"Julgamentos com repercussão objetiva ou subjetiva na atividade notarial e registral."},
+  III: {roman:"Grupo III", name:"Outras matérias", short:"Outras matérias", color:"var(--teal)", desc:"Julgamentos de outras disciplinas do edital com relevância direta para o concurso."},
+  IV:  {roman:"Grupo IV",  name:"Julgamentos tangenciais", short:"Tangenciais", color:"var(--muted)", desc:"Julgamentos de relevância indireta, para leitura rápida."}
+};
+
+var F = [
+ {
+  "g": "I",
+  "title": "CNJ pode declarar a vacância e regulamentar o concurso das serventias",
+  "tipo": "ADI",
+  "num": "4300",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "dias toffoli",
+  "turma": "Pleno",
+  "data": "06/08/2024",
+  "inf": 1144,
+  "disc": "Direito Notarial e Registral; Direito Constitucional. Ingresso na atividade notarial e de registro, declaração de vacância, concurso público de provas e títulos (provimento e remoção) e poder regulamentar do CNJ (Resoluções CNJ n. 80/2009 e 81/2009).",
+  "lab": "Síntese",
+  "tese": "São constitucionais as normas das Resoluções CNJ n. 80/2009 e 81/2009 que declaram a vacância das serventias cujos responsáveis não ingressaram por concurso público específico e organizam as vagas para concurso de provas e títulos, pois o CNJ atuou nos limites de sua competência de controle da atividade administrativa dos tribunais (art. 103-B, § 4º, da Constituição Federal).",
+  "ctx": [
+   "O Plenário julgou a ação improcedente, por unanimidade. O ponto de partida é que compete ao Poder Judiciário desenvolver, em todas as suas fases, a seleção e o provimento das serventias extrajudiciais (art. 15 da Lei n. 8935/1994; ADPF 209), e que cabe ao CNJ, como instituição de caráter nacional, editar atos regulamentares que deem aplicabilidade aos princípios constitucionais da atividade administrativa, independentemente do ente responsável pela regulamentação e pela realização do concurso.",
+   "O art. 236, § 3º, da Constituição Federal foi interpretado sistematicamente: a natureza e a complexidade da atividade exigem concurso de provas e títulos tanto para o provimento inicial quanto para a remoção. Ao declarar vagas as serventias providas em desconformidade com a Constituição, o CNJ apenas tornou efetivo esse comando e balizou a atuação dos tribunais na organização e no provimento dos serviços.",
+   "Entre as normas validadas estão: a permanência precária e interina dos responsáveis pelas unidades declaradas vagas, em confiança do Poder Público delegante, vedado contratar prepostos, aumentar salários ou assumir despesas continuadas sem autorização do tribunal (art. 3º, § 4º, da Resolução CNJ n. 80/2009); a relação geral e permanente de vacâncias, com a sequência de duas vagas de provimento para uma de remoção (arts. 9º, § 1º, e 11); e a destinação de dois terços das delegações vagas ao provimento e de um terço à remoção, esta restrita a quem exerça a titularidade de outra delegação, na mesma unidade da federação, há mais de dois anos (art. 3º da Resolução CNJ n. 81/2009; art. 17 da Lei n. 8935/1994)."
+  ],
+  "kw": "vacância concurso público provimento remoção Resolução CNJ 80/2009 81/2009 art. 236 § 3º art. 103-B § 4º art. 15 art. 17 Lei 8935/1994 interino prepostos relação geral de vacâncias desacumulação ADPF 209"
+ },
+ {
+  "g": "I",
+  "title": "Nova especialidade em serventia existente: delegatário concursado e concurso para a vaga desacumulada",
+  "tipo": "ADI",
+  "num": "7655",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "alexandre de moraes",
+  "turma": "Pleno",
+  "data": "06/09/2024",
+  "inf": 1149,
+  "disc": "Direito Notarial e Registral; Direito Constitucional. Organização dos serviços notariais e de registro, acumulação e desacumulação de especialidades (art. 26 da Lei n. 8935/1994) e exigência de concurso público (art. 236, § 3º, da Constituição Federal).",
+  "lab": "Síntese",
+  "tese": "É constitucional atribuir nova especialidade notarial ou de registro a serventia já existente, antes exercida por outra unidade, desde que o delegatário tenha sido habilitado em concurso público para uma das atividades e se trate da hipótese excepcional do art. 26, parágrafo único, da Lei n. 8935/1994; a vaga da serventia desacumulada deve ser preenchida por concurso público.",
+  "ctx": [
+   "A Lei n. 17939/2024 do Estado de São Paulo atribuiu a especialidade de protesto de letras e títulos ao oficial de registro civil das pessoas naturais, interdições e tutelas e tabelião de notas da sede da Comarca de Arujá. O Plenário, por unanimidade, julgou a ação parcialmente procedente e deu interpretação conforme ao art. 2º da lei, para exigir o preenchimento, por concurso público, da vaga da serventia desacumulada.",
+   "Segundo o acórdão, o Poder Judiciário local tem plena autonomia para reestruturar os serviços delegados, desde que assegure a habilitação do delegatário por concurso público, em qualquer de suas modalidades (ingresso ou remoção). Essa exigência não impede a reorganização dos serviços em caso de vacância de serventia economicamente inviável.",
+   "O julgado articula a regra da inacumulabilidade dos serviços enumerados no art. 5º da Lei n. 8935/1994 (art. 26, caput), a exceção dos municípios que não comportam, pelo volume dos serviços ou da receita, a instalação de mais de um deles (art. 26, parágrafo único), e o ingresso na atividade exclusivamente por concurso (art. 236, § 3º, da Constituição Federal)."
+  ],
+  "kw": "acumulação desacumulação especialidade serventia protesto de letras e títulos registro civil tabelião de notas Arujá Lei 17939/2024 São Paulo art. 26 parágrafo único art. 5º Lei 8935/1994 art. 236 § 3º concurso ingresso remoção serventia deficitária"
+ },
+ {
+  "g": "II",
+  "title": "Entidades de classe na gestão do fundo de ressarcimento do registro civil",
+  "tipo": "ADI",
+  "num": "7474",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "gilmar mendes",
+  "turma": "Pleno",
+  "data": "11/10/2024",
+  "inf": 1154,
+  "disc": "Direito Notarial e Registral; Direito Constitucional. Registro civil das pessoas naturais, gratuidade do registro de nascimento e do assento de óbito, fundo de compensação dos atos gratuitos e destinação de emolumentos.",
+  "lab": "Síntese",
+  "tese": "É constitucional lei estadual que prevê a participação conjunta de agentes públicos e de entidades privadas representativas de notários e registradores na gestão do fundo, composto por recursos públicos, destinado a ressarcir os registradores civis pelos atos gratuitos, havendo supervisão e fiscalização pelo Tribunal de Justiça.",
+  "ctx": [
+   "A Lei n. 13228/2001 do Estado do Paraná criou o Fundo de Apoio ao Registro Civil de Pessoas Naturais (FUNARPEN) para ressarcir os registradores que praticam atos gratuitos, principalmente o registro de nascimento e o assento de óbito (art. 5º, LXXVI e LXXVII, da Constituição Federal; Lei n. 9534/1997). Os conselhos diretor e fiscal são integrados por dirigentes da ANOREG/PR e do IRPEN e por registradores civis indicados por entrância.",
+   "O Plenário, por unanimidade, conheceu em parte da ação e a julgou improcedente, declarando constitucionais os arts. 3º, § 3º; 4º, I a III; 5º, § 1º; e 6º, I, II e V, da lei. Aplicou-se a orientação da ADI 5672: é válida a administração, por associação privada representativa da categoria, de fundo de natureza pública criado por lei estadual para viabilizar os serviços e o aperfeiçoamento da prestação jurisdicional, quando submetida à supervisão e à fiscalização permanente do Tribunal de Justiça. Esses mecanismos de controle afastaram a alegada ofensa à isonomia, à moralidade e à impessoalidade (arts. 5º, caput, e 37, caput, da Constituição Federal).",
+   "Entre os dispositivos validados está o art. 3º, § 3º, que destina mensalmente 15% das receitas do FUNARPEN ao Fundo da Justiça (FUNJUS). O acórdão reafirma que os serviços notariais e de registro são exercidos em caráter privado, por delegação do Poder Público, e remunerados por emolumentos (art. 236, caput, da Constituição Federal)."
+  ],
+  "kw": "FUNARPEN fundo de apoio registro civil das pessoas naturais gratuidade registro de nascimento assento de óbito ressarcimento atos gratuitos emolumentos ANOREG IRPEN FUNJUS Lei 13228/2001 Paraná Lei 9534/1997 art. 5º LXXVI LXXVII art. 236 ADI 5672"
+ },
+ {
+  "g": "II",
+  "title": "Prazo máximo de atendimento nas serventias e vedação de equiparar escreventes a servidores",
+  "tipo": "ADI",
+  "num": "7602",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "alexandre de moraes",
+  "turma": "Pleno",
+  "data": "11/11/2024",
+  "inf": 1158,
+  "disc": "Direito Notarial e Registral; Direito Constitucional. Organização das serventias extrajudiciais, tempo de atendimento ao público, poder de emenda parlamentar e regime dos prepostos (art. 48 da Lei n. 8935/1994).",
+  "lab": "Síntese",
+  "tese": "É constitucional norma estadual, oriunda de emenda parlamentar com pertinência temática a projeto de iniciativa do Tribunal de Justiça, que fixa limite razoável de tempo para o atendimento ao público nas serventias extrajudiciais; é inconstitucional, por ofensa ao art. 37, II, da Constituição Federal, equiparar escreventes celetistas, admitidos por concurso antes da Lei n. 8935/1994, a cargo efetivo do Poder Judiciário.",
+  "ctx": [
+   "A Lei n. 11438/2021 do Estado do Espírito Santo, que reestruturou as serventias notariais e registrais, fixou em 30 minutos o prazo máximo de atendimento ao público externo. O Plenário, por unanimidade, reconheceu a pertinência temática da emenda com o projeto do Tribunal de Justiça, cuja iniciativa é privativa em matéria de organização judiciária (art. 96, II, “b” e “d”, da Constituição Federal), e entendeu que a regra concretiza o princípio da eficiência (art. 37, caput).",
+   "Foi declarada inconstitucional a expressão do art. 7º da lei que convalidava, em quadro especial em extinção, os vínculos trabalhistas dos escreventes juramentados nomeados por concurso até a vigência da Lei n. 8935/1994, equiparando-os ao cargo efetivo de analista judiciário especial. A aprovação prévia em concurso é requisito do provimento originário e do derivado, e esses escreventes, ainda que tenham prestado concurso perante o Tribunal de Justiça, não têm direito ao regime estatutário.",
+   "O acórdão delimitou o art. 48 da Lei n. 8935/1994: o dispositivo trata apenas dos escreventes e auxiliares de investidura estatutária ou em regime especial. Os que mantinham relação celetista com a serventia permanecem regidos pela legislação trabalhista e, mesmo admitidos por concurso, não fazem jus à estabilidade extraordinária nem podem ser transpostos para cargo público."
+  ],
+  "kw": "escreventes juramentados prepostos art. 48 Lei 8935/1994 celetista estatutário analista judiciário especial equiparação estabilidade atendimento ao público 30 minutos eficiência emenda parlamentar pertinência temática Lei 11438/2021 Espírito Santo art. 37 II art. 96 II"
+ },
+ {
+  "g": "II",
+  "title": "Declaração de Nascido Vivo com campos adequados à parentalidade de pessoas trans",
+  "tipo": "ADPF",
+  "num": "787",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "gilmar mendes",
+  "turma": "Pleno",
+  "data": "17/10/2024",
+  "inf": 1155,
+  "disc": "Direito Notarial e Registral; Direito Constitucional. Registro civil das pessoas naturais, Declaração de Nascido Vivo (Lei n. 12662/2012), identidade de gênero, filiação e acesso à saúde de pessoas transexuais e travestis.",
+  "lab": "Síntese",
+  "tese": "O Ministério da Saúde deve atualizar o layout da Declaração de Nascido Vivo para que dela conste a categoria “parturiente/mãe”, de preenchimento obrigatório, e o campo “responsável legal/pai”, de preenchimento facultativo, e deve garantir às pessoas transexuais e travestis atendimento no SUS de acordo com suas necessidades biológicas, independentemente do sexo registrado.",
+  "ctx": [
+   "O Plenário, por unanimidade, confirmou a cautelar e julgou procedente a arguição, com base na dignidade da pessoa humana, no direito à saúde e na igualdade (arts. 1º, III, 3º, IV, 5º, caput, e 6º, caput, da Constituição Federal). Determinou ajustes em todos os sistemas de informação do SUS, para que consultas e exames de qualquer especialidade sejam marcados independentemente do registro do sexo biológico, e a substituição do campo “responsável legal” por “responsável legal/pai”, nos termos da Lei n. 12662/2012.",
+   "A Declaração de Nascido Vivo é expedida pelo estabelecimento de saúde no momento do parto e instrui a lavratura do assento de nascimento, cujo conteúdo inclui o número da declaração (art. 54 da LRP). A nova nomenclatura altera, portanto, o documento que serve de base ao registro de nascimento dos filhos de pessoas transexuais."
+  ],
+  "kw": "Declaração de Nascido Vivo DNV parturiente mãe responsável legal pai pessoas transexuais travestis identidade de gênero registro de nascimento Lei 12662/2012 art. 54 LRP SUS filiação"
+ },
+ {
+  "g": "III",
+  "title": "Recusa de transfusão por motivo religioso e diretivas antecipadas de vontade",
+  "tipo": "RE",
+  "num": "979742",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "luís roberto barroso",
+  "turma": "Pleno",
+  "data": "25/09/2024",
+  "inf": 1152,
+  "tema": "952 e 1069",
+  "disc": "Direito Civil; Direito Constitucional. Direitos da personalidade, capacidade civil e autodeterminação do paciente, liberdade religiosa, consentimento informado e diretivas antecipadas de vontade.",
+  "lab": "Tese fixada — Temas 952 e 1069 da repercussão geral",
+  "lit": true,
+  "tese": "Tema 952 (RE 979.742/AM): “1. Testemunhas de Jeová, quando maiores e capazes, têm o direito de recusar procedimento médico que envolva transfusão de sangue, com base na autonomia individual e na liberdade religiosa. 2. Como consequência, em respeito ao direito à vida e à saúde, fazem jus aos procedimentos alternativos disponíveis no Sistema Único de Saúde - SUS, podendo, se necessário, recorrer a tratamento fora de seu domicílio”. Tema 1069 (RE 1.212.272/AL): “1. É permitido ao paciente, no gozo pleno de sua capacidade civil, recusar-se a se submeter a tratamento de saúde, por motivos religiosos. A recusa a tratamento de saúde, por razões religiosas, é condicionada à decisão inequívoca, livre, informada e esclarecida do paciente, inclusive, quando veiculada por meio de diretivas antecipadas de vontade. 2. É possível a realização de procedimento médico, disponibilizado a todos pelo sistema público de saúde, com a interdição da realização de transfusão sanguínea ou outra medida excepcional, caso haja viabilidade técnico-científica de sucesso, anuência da equipe médica com a sua realização e decisão inequívoca, livre, informada e esclarecida do paciente”.",
+  "ctx": [
+   "Julgamento conjunto, por unanimidade: no Tema 952 (RE 979742/AM, rel. min. Luís Roberto Barroso), o recurso foi desprovido; no Tema 1069 (RE 1212272/AL, rel. min. Gilmar Mendes), foi julgado prejudicado. O fundamento central é a liberdade de crença (art. 5º, VI, da Constituição Federal), somada ao direito à autodeterminação, que impede impor transfusão a pessoa maior e capaz que a recuse de forma voluntária e consciente, mesmo com risco de vida.",
+   "A recusa só é válida se manifestada por paciente maior, capaz e com discernimento; de forma livre e sem coação; inequívoca, expressa, prévia ao ato médico, atual e revogável a qualquer tempo; esclarecida por informação médica completa; e restrita ao próprio interessado. Quando não for possível colher a manifestação atual, prevalece a anteriormente expressa em diretiva antecipada de vontade, em documentos autênticos ou em testamento vital.",
+   "A convicção religiosa dos pais, em regra, não autoriza a recusa de tratamento em favor de filhos menores, embora possam escolher tratamento alternativo eficaz e seguro. O médico não é obrigado a realizar procedimento alternativo contra sua autonomia profissional. Interesse para o caderno: o STF reconhece eficácia às diretivas antecipadas de vontade como meio válido de expressão da recusa, instrumento que pode ser formalizado por escritura pública declaratória no tabelionato de notas."
+  ],
+  "kw": "Testemunhas de Jeová transfusão de sangue recusa de tratamento liberdade religiosa autodeterminação capacidade civil diretivas antecipadas de vontade testamento vital consentimento informado direitos da personalidade Tema 952 Tema 1069 RE 979742 RE 1212272 art. 5º VI"
+ },
+ {
+  "g": "IV",
+  "title": "Publicações das sociedades anônimas sem Diário Oficial",
+  "tipo": "ADI",
+  "num": "7194",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "dias toffoli",
+  "turma": "Pleno",
+  "data": "28/06/2024",
+  "inf": 1143,
+  "disc": "Direito Empresarial; Direito Constitucional. Sociedades anônimas, publicidade dos atos societários e certificação digital de documentos (art. 289 da Lei n. 6404/1976).",
+  "lab": "Síntese",
+  "tese": "É constitucional o art. 1º da Lei n. 13818/2019, que dispensa a publicação dos atos das sociedades anônimas no Diário Oficial e mantém a publicação em jornal de grande circulação da localidade da sede, resumida no impresso e na íntegra na página do jornal na internet, com certificação digital no âmbito da ICP-Brasil.",
+  "ctx": [
+   "Por unanimidade, o Plenário afastou a alegada ofensa à publicidade, à primazia do interesse público, à segurança jurídica e ao direito à informação: o regime de ampla publicidade das companhias foi preservado, a integridade dos documentos é assegurada pela certificação digital e a vacatio legis, até 1º/01/2022, foi suficiente. Interesse indireto: publicidade legal dos atos societários e autenticidade de documentos eletrônicos."
+  ],
+  "kw": "sociedade anônima S.A. publicação atos societários Diário Oficial jornal de grande circulação ICP-Brasil certificação digital art. 289 Lei 6404/1976 Lei 13818/2019 empresarial"
+ },
+ {
+  "g": "IV",
+  "title": "Improbidade exige dolo; contratação direta de advogado por inexigibilidade",
+  "tipo": "RE",
+  "num": "656558",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "dias toffoli",
+  "turma": "Pleno",
+  "data": "25/10/2024",
+  "inf": 1156,
+  "tema": "309",
+  "disc": "Direito Administrativo. Improbidade administrativa, elemento subjetivo, inconstitucionalidade da modalidade culposa e inexigibilidade de licitação para serviços advocatícios.",
+  "lab": "Tese fixada — Tema 309 da repercussão geral",
+  "lit": true,
+  "tese": "“a) O dolo é necessário para a configuração de qualquer ato de improbidade administrativa (art. 37, § 4º, da Constituição Federal), de modo que é inconstitucional a modalidade culposa de ato de improbidade administrativa prevista nos arts. 5º e 10 da Lei nº 8.429/92, em sua redação originária. b) São constitucionais os arts. 13, V, e 25, II, da Lei nº 8.666/1993, desde de que interpretados no sentido de que a contratação direta de serviços advocatícios pela Administração Pública, por inexigibilidade de licitação, além dos critérios já previstos expressamente (necessidade de procedimento administrativo formal; notória especialização profissional; natureza singular do serviço), deve observar: (i) inadequação da prestação do serviço pelos integrantes do Poder Público; e (ii) cobrança de preço compatível com a responsabilidade profissional exigida pelo caso, observado, também, o valor médio cobrado pelo escritório de advocacia contratado em situações similares anteriores.”",
+  "ctx": [
+   "Julgamento conjunto com o RE 610523/SP, julgado prejudicado; o Tema 309 foi apreciado no RE 656558/SP, provido por maioria. A Lei n. 14230/2021, ao exigir conduta dolosa, apenas corroborou que a improbidade sempre demandou dolo, e a aplicação de sanções severas a condutas culposas seria desproporcional. A existência de procuradores concursados não impede, por si, a contratação direta de advogados, se comprovada a real necessidade e ausente vedação específica do ente. Interesse indireto: tese geral sobre o elemento subjetivo da improbidade administrativa."
+  ],
+  "kw": "improbidade administrativa dolo modalidade culposa art. 37 § 4º Lei 8429/1992 arts. 5º e 10 Lei 14230/2021 inexigibilidade de licitação contratação direta advogado notória especialização Lei 8666/1993 Tema 309 RE 610523"
+ },
+ {
+  "g": "IV",
+  "title": "Cooperativa médica operadora de plano de saúde e recuperação judicial",
+  "tipo": "ADI",
+  "num": "7442",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "alexandre de moraes",
+  "turma": "Pleno",
+  "data": "24/10/2024",
+  "inf": 1156,
+  "disc": "Direito Empresarial; Direito Constitucional. Recuperação judicial e falência, sociedades cooperativas e processo legislativo (emenda de redação).",
+  "lab": "Síntese",
+  "tese": "É constitucional a parte final do art. 6º, § 13, da Lei n. 11101/2005, incluída pela Lei n. 14112/2020, segundo a qual não se aplica a vedação do art. 2º, II, quando a operadora de plano de assistência à saúde for cooperativa médica, pois a inserção pelo Senado foi emenda de redação, que dispensa o retorno à Casa iniciadora.",
+  "ctx": [
+   "Por maioria, o Plenário entendeu que o trecho apenas explicitou o que já estava contido na legislação, sem modificação substancial do projeto aprovado pela Câmara dos Deputados (art. 65, parágrafo único, da Constituição Federal); o veto presidencial, fundado em contrariedade ao interesse público, foi derrubado pelo Congresso Nacional. Interesse indireto: o § 13 exclui dos efeitos da recuperação judicial os contratos e obrigações decorrentes de atos cooperativos (art. 79 da Lei n. 5764/1971) e afasta, para as cooperativas médicas operadoras de planos de saúde, a exclusão do art. 2º, II, da Lei n. 11101/2005."
+  ],
+  "kw": "recuperação judicial falência cooperativa médica operadora de plano de saúde atos cooperativos art. 6º § 13 art. 2º II Lei 11101/2005 Lei 14112/2020 Lei 5764/1971 emenda de redação bicameralismo art. 65"
+ },
+ {
+  "g": "IV",
+  "title": "Responsabilidade solidária do representante do transportador estrangeiro",
+  "tipo": "ADI",
+  "num": "5431",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "gilmar mendes",
+  "turma": "Pleno",
+  "data": "29/11/2024",
+  "inf": 1161,
+  "disc": "Direito Tributário. Imposto de importação, sujeição passiva e responsabilidade de terceiros vinculados ao fato gerador (art. 128 do CTN).",
+  "lab": "Síntese",
+  "tese": "É constitucional o art. 32, parágrafo único, II, do Decreto-Lei n. 37/1966, na redação da Medida Provisória n. 2158-35/2001, que atribui responsabilidade solidária pelo imposto de importação ao representante, no País, do transportador estrangeiro, terceiro vinculado ao fato gerador.",
+  "ctx": [
+   "Por unanimidade, o Plenário aplicou o Tema 13 (RE 562276): o CTN fixa as regras matrizes de responsabilidade tributária, e o legislador de cada ente pode instituir hipóteses específicas, observado o art. 128. A norma não versa sobre normas gerais (art. 146, III, da Constituição Federal) nem ofende a vedação ao confisco, a capacidade contributiva ou a livre iniciativa. Interesse indireto: parâmetro sobre responsabilidade de terceiros, regime que, no CTN, abrange a dos tabeliães, escrivães e demais serventuários de ofício pelos tributos devidos sobre os atos praticados por eles ou perante eles (art. 134, VI)."
+  ],
+  "kw": "responsabilidade tributária solidária terceiro vinculado ao fato gerador art. 128 CTN art. 134 VI imposto de importação transportador estrangeiro Decreto-Lei 37/1966 MP 2158-35/2001 Tema 13 RE 562276 art. 146 III"
+ },
+ {
+  "g": "IV",
+  "title": "Imóveis públicos: alienação direta a estatal e gestão de bem de outro ente",
+  "tipo": "ADI",
+  "num": "6216",
+  "rel": "rel.",
+  "cargo": "min.",
+  "nome": "dias toffoli",
+  "turma": "Pleno",
+  "data": "06/12/2024",
+  "inf": 1162,
+  "disc": "Direito Administrativo; Direito Constitucional. Bens públicos, alienação de imóveis estaduais a empresa pública, licitação e repartição constitucional de bens (arts. 20, IV, e 26, II, da Constituição Federal).",
+  "lab": "Síntese",
+  "tese": "É constitucional lei estadual que autoriza a transferência direta de imóveis do Estado a empresa pública estadual e a disposição desses bens pela estatal, observada a legislação federal; a ampliação do objeto social, porém, não basta para que a estatal administre bem de outro ente, o que depende de ato do titular que lhe atribua a gestão ou lhe transfira a titularidade.",
+  "ctx": [
+   "Por maioria, foi validada a Lei n. 11013/2019 do Estado do Maranhão, que criou o Complexo Industrial e Portuário e ampliou o objeto social da EMAP. A alienação direta à estatal justifica-se pelo objetivo de fomento regional, e a liberdade negocial das estatais equipara-se à das empresas privadas, ressalvados os limites constitucionais e legais (art. 173, § 1º, da Constituição Federal; ADI 1846). A lei autoriza transferir a propriedade, o domínio útil ou a posse, dar em garantia e celebrar promessas de compra e venda, compras e vendas e concessões de uso, por instrumento público ou particular. Interesse indireto: alienação de bens públicos e títulos de transmissão de imóveis públicos."
+  ],
+  "kw": "bens públicos alienação de imóveis empresa pública licitação domínio útil promessa de compra e venda instrumento público bens da União art. 20 IV art. 26 II art. 173 § 1º EMAP Maranhão Lei 11013/2019 ADI 1846"
+ }
+];
+
+var DISCARD = [
+ {
+  "inf": 1143,
+  "rows": [
+   [
+    "RE 635659/SP (Tema 506)",
+    "Dir. Penal",
+    "Porte de cannabis para consumo pessoal: ilícito extrapenal e presunção de usuário até 40 g ou seis plantas."
+   ],
+   [
+    "ADI 2316/DF",
+    "Dir. Civil e Bancário",
+    "Capitalização de juros em periodicidade inferior a um ano no SFN (art. 5º da MP n. 2170-36/2001)."
+   ],
+   [
+    "ADI 5668/DF",
+    "Dir. Constitucional",
+    "Plano Nacional de Educação: dever das escolas de coibir discriminação por gênero e orientação sexual."
+   ],
+   [
+    "ADI 6551/SP e ADI 7233/SP",
+    "Dir. Constitucional",
+    "Lista tríplice para procurador-geral de justiça restrita a procuradores de justiça."
+   ],
+   [
+    "ADI 5793/DF",
+    "Dir. Processual Penal",
+    "Procedimento investigatório criminal do Ministério Público (Resolução CNMP n. 181/2017)."
+   ],
+   [
+    "ADPF 462/SC",
+    "Dir. Constitucional",
+    "Lei municipal que veda conteúdos sobre gênero nos currículos escolares."
+   ],
+   [
+    "ADI 5562/RS",
+    "Dir. Administrativo",
+    "Recomposição linear de vencimentos: revisão geral anual e iniciativa do Executivo."
+   ],
+   [
+    "ADI 7497/MT",
+    "Dir. Constitucional",
+    "Restrição à competência do governador para contratar serviços privados de saúde."
+   ],
+   [
+    "ADPF 1011/PE",
+    "Dir. Processual Civil e Financeiro",
+    "Legitimidade para executar multas de Tribunal de Contas estadual (acréscimo à tese do Tema 642)."
+   ]
+  ]
+ },
+ {
+  "inf": 1144,
+  "rows": [
+   [
+    "ADI 7177/PR",
+    "Dir. Constitucional",
+    "Assessoramento jurídico e representação judicial de Tribunal de Contas por servidores do próprio quadro."
+   ],
+   [
+    "ADI 4899/DF",
+    "Dir. Eleitoral",
+    "Quitação eleitoral: basta a apresentação tempestiva das contas de campanha."
+   ],
+   [
+    "ADI 7212/DF",
+    "Dir. Eleitoral",
+    "EC n. 123/2022: estado de emergência e benefícios sociais em ano eleitoral."
+   ],
+   [
+    "ARE 1327576/RS (Tema 1204)",
+    "Dir. Processual Civil",
+    "Execução fiscal: art. 46, § 5º, do CPC restrito ao território do ente."
+   ],
+   [
+    "ADI 2805/RS",
+    "Dir. Tributário",
+    "ICMS: antecipação tributária não é benefício fiscal; iniciativa parlamentar."
+   ]
+  ]
+ },
+ {
+  "inf": 1145,
+  "rows": [
+   [
+    "ADI 7552/AL",
+    "Dir. Constitucional",
+    "Exames solicitados por nutricionistas e cobertura obrigatória por planos de saúde."
+   ],
+   [
+    "ADI 3608/GO",
+    "Dir. Constitucional",
+    "Serviço auxiliar voluntário na Polícia Militar e no Corpo de Bombeiros Militar."
+   ],
+   [
+    "ADI 5303/MT",
+    "Dir. Constitucional",
+    "Colégio eleitoral dos órgãos diretivos do Tribunal de Justiça."
+   ],
+   [
+    "ARE 1462538 AgR/PR (T1)",
+    "Dir. Constitucional e Financeiro",
+    "Juros de mora no inadimplemento de parcelas de precatório."
+   ]
+  ]
+ },
+ {
+  "inf": 1146,
+  "rows": [
+   [
+    "ADI 5667/DF",
+    "Dir. Administrativo",
+    "Sipaer: investigação de acidentes aeronáuticos e uso de suas fontes como prova."
+   ],
+   [
+    "RE 603116/RS (Tema 703)",
+    "Dir. Administrativo",
+    "Punições disciplinares militares detalhadas por decreto regulamentar."
+   ],
+   [
+    "ADI 7688, ADI 7695 e ADI 7697 MC-Ref/DF",
+    "Dir. Financeiro",
+    "Emendas parlamentares por transferência especial: transparência e rastreabilidade."
+   ],
+   [
+    "ADI 3801/RS",
+    "Dir. Ambiental",
+    "Comercialização de pneus usados importados."
+   ],
+   [
+    "ADI 7416/MS",
+    "Dir. do Consumidor",
+    "Informação da velocidade de internet entregue na fatura mensal."
+   ],
+   [
+    "ADI 4979/RS",
+    "Dir. Processual Penal",
+    "Prescrição de falta disciplinar na execução penal fixada por decreto estadual."
+   ],
+   [
+    "ADPF 591/DF",
+    "Dir. Processual Civil",
+    "Ação de alimentos: dispensa de advogado na audiência inicial."
+   ],
+   [
+    "ADI 3495/ES",
+    "Dir. Tributário",
+    "Isenção de ICMS na aquisição de veículos por pessoas com deficiência."
+   ],
+   [
+    "ADI 6030/DF",
+    "Dir. Tributário",
+    "Simples Nacional: ICMS por substituição tributária e diferencial de alíquotas."
+   ]
+  ]
+ },
+ {
+  "inf": 1147,
+  "rows": [
+   [
+    "ADI 5597/AM",
+    "Dir. Administrativo",
+    "Cargos da Secretaria da Fazenda e atividades da administração tributária."
+   ],
+   [
+    "ADI 5254/PA",
+    "Dir. Constitucional",
+    "Ministério Público de Contas sem autonomia administrativa e orçamentária."
+   ],
+   [
+    "ARE 1491569/SP (Tema 1317)",
+    "Dir. Constitucional e Financeiro",
+    "Execução individual de título coletivo por substituto processual não fraciona precatório."
+   ],
+   [
+    "ADI 6557/MT",
+    "Dir. Financeiro",
+    "Destinação da receita de multas do Tribunal de Contas estadual."
+   ]
+  ]
+ },
+ {
+  "inf": 1148,
+  "rows": [
+   [
+    "ADI 4082/DF",
+    "Dir. Administrativo",
+    "Cotas para pessoas com mais de quarenta anos na Administração e em licitações."
+   ],
+   [
+    "ADI 7230/MG",
+    "Dir. Constitucional",
+    "Emenda parlamentar sem pertinência temática em lei sobre Tribunal de Contas."
+   ],
+   [
+    "ADI 5801/DF",
+    "Dir. Previdenciário",
+    "Vinculação de militares e policiais civis do Distrito Federal ao RPPS distrital."
+   ]
+  ]
+ },
+ {
+  "inf": 1149,
+  "rows": [
+   [
+    "ADI 6890/DF",
+    "Dir. Administrativo",
+    "Vedação de recontratação na dispensa emergencial (art. 75, VIII, da Lei n. 14133/2021)."
+   ],
+   [
+    "ADI 3963/DF",
+    "Dir. Administrativo",
+    "Licença sanitária como requisito de habilitação em licitação."
+   ],
+   [
+    "ADI 3877/DF",
+    "Dir. do Consumidor",
+    "Proibição de cobrança de ponto adicional de TV a cabo."
+   ],
+   [
+    "ADI 3815/PR",
+    "Dir. Constitucional",
+    "Vedações aos membros do Tribunal de Contas: participação societária."
+   ],
+   [
+    "ADPF 474/RJ",
+    "Dir. Financeiro",
+    "Repasse de duodécimos às universidades estaduais."
+   ],
+   [
+    "ADPF 853/DF",
+    "Dir. Previdenciário",
+    "Adesão de deputado servidor ao Plano de Seguridade Social dos Congressistas."
+   ],
+   [
+    "ARE 1244302/SP (Tema 1083)",
+    "Dir. Tributário",
+    "Imunidade de fonogramas não alcança suportes produzidos no exterior."
+   ],
+   [
+    "ADI 7276/DF",
+    "Dir. Tributário",
+    "Dados de pagamentos eletrônicos fornecidos ao fisco estadual (Convênio ICMS n. 134/2016)."
+   ]
+  ]
+ },
+ {
+  "inf": 1150,
+  "rows": [
+   [
+    "RE 1366243/SC (Tema 1234)",
+    "Dir. Administrativo e Processual Civil",
+    "Medicamentos não incorporados ao SUS: competência, custeio e acordos interfederativos."
+   ],
+   [
+    "ADI 4906/DF",
+    "Dir. Processual Penal",
+    "Acesso a dados cadastrais de investigados sem autorização judicial."
+   ],
+   [
+    "ADI 7518/ES",
+    "Dir. Administrativo",
+    "Licença-adotante e licença-maternidade de servidores civis e militares estaduais."
+   ],
+   [
+    "ADI 7704 MC-Ref/SP",
+    "Dir. Ambiental",
+    "Castração obrigatória de cães e gatos por canis e gatis."
+   ],
+   [
+    "RE 1459224/SP (Tema 1304)",
+    "Dir. Eleitoral",
+    "Inelegibilidade por rejeição de contas pelo Poder Legislativo."
+   ],
+   [
+    "RE 1235340/SC (Tema 1068)",
+    "Dir. Processual Penal",
+    "Execução imediata da condenação imposta pelo Tribunal do Júri."
+   ]
+  ]
+ },
+ {
+  "inf": 1151,
+  "rows": [
+   [
+    "ADI 6615/MT",
+    "Dir. Administrativo",
+    "Alteração de nomenclatura de cargo sem provimento derivado."
+   ],
+   [
+    "ADI 5342/MG",
+    "Dir. Constitucional",
+    "Requisitos para nomeação do advogado-geral do Estado."
+   ],
+   [
+    "HC 185913/DF",
+    "Dir. Processual Penal",
+    "Acordo de não persecução penal em processos em curso."
+   ],
+   [
+    "ADI 7694 MC-Ref/RO",
+    "Dir. Processual Civil e Tributário",
+    "Redução de honorários de procuradores em programa de regularização fiscal."
+   ],
+   [
+    "ADI 3837/DF",
+    "Dir. Financeiro e Tributário",
+    "Repasse aos municípios do ICMS extinto por compensação ou transação."
+   ]
+  ]
+ },
+ {
+  "inf": 1152,
+  "rows": [
+   [
+    "ADI 4716/DF e ADI 4742/DF",
+    "Dir. do Trabalho e Administrativo",
+    "Certidão Negativa de Débitos Trabalhistas e sua exigência em licitações."
+   ],
+   [
+    "RE 1498128/CE (Tema 1323)",
+    "Dir. Administrativo",
+    "Loteria por particulares depende de delegação precedida de licitação."
+   ],
+   [
+    "RE 566471/RN (Tema 6)",
+    "Dir. Administrativo",
+    "Concessão judicial de medicamentos não incorporados às listas do SUS."
+   ],
+   [
+    "ADI 4157/RJ",
+    "Dir. do Trabalho",
+    "Folga remunerada para exames preventivos de câncer na iniciativa privada."
+   ],
+   [
+    "ADI 4676/DF",
+    "Dir. Constitucional",
+    "Pesagem obrigatória de botijões de GLP na presença do consumidor."
+   ],
+   [
+    "ADI 7056/SC",
+    "Dir. Ambiental",
+    "Multas a todos os participantes de rinhas de galo."
+   ]
+  ]
+ },
+ {
+  "inf": 1153,
+  "rows": [
+   [
+    "RE 1496204/DF (Tema 1326)",
+    "Dir. Constitucional e Financeiro",
+    "Iniciativa legislativa concorrente para fixar o teto de RPV."
+   ],
+   [
+    "ARE 901623/SP (Tema 857)",
+    "Dir. Penal",
+    "Porte de arma branca (art. 19 da Lei de Contravenções Penais)."
+   ],
+   [
+    "ARE 1225185/MG (Tema 1087)",
+    "Dir. Processual Penal",
+    "Apelação contra absolvição pelo quesito genérico e clemência."
+   ],
+   [
+    "ADI 6040/DF e ADI 6055/DF",
+    "Dir. Tributário",
+    "Reintegra: percentual de ressarcimento fixado pelo Poder Executivo."
+   ],
+   [
+    "ADI 7633 MC-Ref/DF",
+    "Dir. Tributário e Financeiro",
+    "Desoneração da folha sem estimativa de impacto orçamentário (art. 113 do ADCT)."
+   ],
+   [
+    "RE 736090/SC (Tema 863)",
+    "Dir. Tributário",
+    "Limite da multa qualificada por sonegação, fraude ou conluio."
+   ],
+   [
+    "RE 1468558 AgR/SP (T1)",
+    "Dir. Processual Penal",
+    "Busca pessoal e domiciliar por guardas municipais em flagrante de tráfico."
+   ]
+  ]
+ },
+ {
+  "inf": 1154,
+  "rows": [
+   [
+    "RE 1515163/RS (Tema 1335)",
+    "Dir. Constitucional e Financeiro",
+    "Selic não incide no período de graça dos precatórios."
+   ],
+   [
+    "ADI 7712 MC-Ref/GO",
+    "Dir. Penal",
+    "Lei estadual que cria crime de incêndio."
+   ],
+   [
+    "ADI 7715 MC-Ref/MT",
+    "Dir. Penal e Administrativo",
+    "Sanções estaduais a ocupantes e invasores de propriedades."
+   ],
+   [
+    "ADC 84/DF e ADI 7342/DF",
+    "Dir. Tributário",
+    "Repristinação das alíquotas de PIS e Cofins sobre receitas financeiras."
+   ]
+  ]
+ },
+ {
+  "inf": 1155,
+  "rows": [
+   [
+    "ADPF 936/DF",
+    "Dir. Constitucional",
+    "Composição do Conade e participação da sociedade civil."
+   ],
+   [
+    "ADI 4959/AL",
+    "Dir. Ambiental",
+    "Controle reprodutivo de cães e gatos de rua."
+   ],
+   [
+    "ADI 6856/AL",
+    "Dir. Constitucional",
+    "Indicação, pela Assembleia, de membros de conselhos do Executivo."
+   ],
+   [
+    "ADI 2647/PR",
+    "Dir. Financeiro e Processual Civil",
+    "Transferência de depósitos judiciais ao Poder Executivo."
+   ],
+   [
+    "ADI 5340/DF",
+    "Dir. Previdenciário",
+    "Prazos de carência do seguro-desemprego."
+   ],
+   [
+    "ADI 5389/DF",
+    "Dir. Previdenciário",
+    "Pensão por morte, seguro-desemprego e seguro-defeso (Leis n. 13134/2015 e 13135/2015)."
+   ],
+   [
+    "RE 1489562/PE (Tema 1338)",
+    "Dir. Processual Civil",
+    "Ação rescisória para adequar julgado à modulação do Tema 69."
+   ],
+   [
+    "RE 1501643/PR (Tema 1337)",
+    "Dir. Tributário",
+    "Alíquotas integrais de PIS e Cofins e anterioridade nonagesimal."
+   ],
+   [
+    "ARE 1327491/SC (Tema 1174)",
+    "Dir. Tributário",
+    "IR de 25% na fonte sobre aposentadorias e pensões de residentes no exterior."
+   ]
+  ]
+ },
+ {
+  "inf": 1156,
+  "rows": [
+   [
+    "ADI 6054/AL",
+    "Dir. Administrativo",
+    "Auditor substituto de Tribunal de Contas não vota nas eleições internas."
+   ],
+   [
+    "ADI 6260/DF",
+    "Dir. Constitucional",
+    "Registro do profissional de educação física e descrição de suas atividades."
+   ],
+   [
+    "ADI 6291/RS e ADI 6325/RS",
+    "Dir. Constitucional",
+    "Revogação do plebiscito prévio à desestatização."
+   ],
+   [
+    "ADI 5027/AL",
+    "Dir. Constitucional",
+    "Gratificação a militares na assessoria do Tribunal de Contas."
+   ]
+  ]
+ },
+ {
+  "inf": 1157,
+  "rows": [
+   [
+    "RE 1500990/AM (Tema 1344)",
+    "Dir. Administrativo",
+    "Vantagens de servidores efetivos não se estendem a contratados temporários."
+   ],
+   [
+    "RE 1455038/DF (Tema 1347)",
+    "Dir. Administrativo",
+    "Adiamento de prova de concurso pela Covid-19 não gera dever de indenizar."
+   ],
+   [
+    "ADPF 1178 MC-Ref/DF",
+    "Dir. Administrativo",
+    "Honorários ad exitum em litígios de municípios perante tribunais estrangeiros."
+   ],
+   [
+    "ADI 4080/AM",
+    "Dir. Tributário e Financeiro",
+    "Compensação de ICMS com precatórios estaduais."
+   ]
+  ]
+ },
+ {
+  "inf": 1158,
+  "rows": [
+   [
+    "ADI 7466/AC",
+    "Dir. Administrativo",
+    "Instituto socioeducativo fora da segurança pública; transformação de cargos."
+   ],
+   [
+    "ADI 7722 MC-Ref/GO",
+    "Dir. Administrativo",
+    "Compartilhamento de infraestrutura de energia elétrica por lei estadual."
+   ],
+   [
+    "ADPF 743 MC-Ref/DF",
+    "Dir. Ambiental",
+    "Suspensão de processos sobre combate a incêndios na Amazônia e no Pantanal."
+   ],
+   [
+    "ADI 4354/DF, ARE 1454560 AgR/MA e ADI 7627/RS",
+    "Dir. Constitucional",
+    "Perícia oficial criminal: normas gerais, autonomia e porte de arma."
+   ],
+   [
+    "ADI 2135/DF",
+    "Dir. Administrativo",
+    "EC n. 19/1998 e fim da obrigatoriedade do regime jurídico único."
+   ],
+   [
+    "ADPF 946/MG",
+    "Dir. Constitucional",
+    "Lei municipal que proíbe a vacinação compulsória."
+   ]
+  ]
+ },
+ {
+  "inf": 1159,
+  "rows": [
+   [
+    "ADI 6247/DF",
+    "Dir. Constitucional",
+    "Nomeação do procurador-geral do MPDFT pelo Presidente da República."
+   ],
+   [
+    "ADI 7733/DF",
+    "Dir. Constitucional",
+    "Eleição da Mesa da Assembleia Legislativa para o segundo biênio."
+   ],
+   [
+    "ADI 7341/SE",
+    "Dir. Processual Civil e Tributário",
+    "Honorários de procuradores fixados em programa de parcelamento."
+   ],
+   [
+    "ADI 6849/PR",
+    "Dir. Previdenciário",
+    "Termo inicial do pagamento de aposentadoria no RPPS estadual."
+   ]
+  ]
+ },
+ {
+  "inf": 1160,
+  "rows": [
+   [
+    "ADI 3581/ES",
+    "Dir. Administrativo",
+    "Gratificação a policiais civis pela guarda de presos."
+   ],
+   [
+    "ARE 1249095/SP (Tema 1086)",
+    "Dir. Constitucional",
+    "Símbolos religiosos em prédios públicos."
+   ],
+   [
+    "RE 678360/RS (Tema 558)",
+    "Dir. Constitucional e Financeiro",
+    "Inconstitucionalidade da compensação de precatórios (art. 100, §§ 9º e 10)."
+   ],
+   [
+    "ARE 1491413/SP (Tema 1360)",
+    "Dir. Constitucional e Financeiro",
+    "Hipóteses de precatório complementar ou suplementar."
+   ],
+   [
+    "ADI 6664/DF",
+    "Dir. Administrativo",
+    "Estabilidade como requisito para carreira e cargos de direção."
+   ],
+   [
+    "RE 1505031/SC (Tema 1361)",
+    "Dir. Processual Civil",
+    "Coisa julgada e índice superveniente de juros e correção."
+   ]
+  ]
+ },
+ {
+  "inf": 1161,
+  "rows": [
+   [
+    "ADI 7174/DF",
+    "Dir. Tributário e Econômico",
+    "Marco regulatório das Zonas de Processamento de Exportação."
+   ],
+   [
+    "ARE 1495711/SP",
+    "Dir. da Criança e do Adolescente",
+    "Lei municipal de combate à alienação parental."
+   ]
+  ]
+ },
+ {
+  "inf": 1162,
+  "rows": [
+   [
+    "ADI 7057/CE",
+    "Dir. Administrativo",
+    "Contratação temporária: exigência de lei complementar e requisitos."
+   ],
+   [
+    "ADI 7519/AC, ADI 7526/MS, ADI 7533/PI, ADI 7538/DF e ADI 7541/BA",
+    "Dir. Administrativo",
+    "Licenças maternidade e paternidade de servidores estaduais e distritais."
+   ],
+   [
+    "ADI 5157/DF",
+    "Dir. Constitucional",
+    "Porte de arma por servidores de segurança do Judiciário e do MP; proteção pessoal de magistrados."
+   ]
+  ]
+ }
+];
+
+/* ---------- armazenamento local ---------- */
+var KEY = "stf-2024-s2-v1";
+var state = {done:{}, turma:{}};
+try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); state.done = p.done || {}; state.turma = p.turma || {}; } } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {} }
+
+/* ---------- utilidades ---------- */
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function fid(i){ return "f" + (i+1); }
+function showT(i){ return state.turma[fid(i)] !== false; }
+function idParts(f, withT){
+  var head = f.seg ? "em segredo de justiça" : (f.tipo + " n. " + f.num);
+  return {head:head, rel:f.rel + " " + f.cargo + " ", nome:f.nome, t: withT ? f.turma + ", " : "", tail:"j. " + f.data + ", ", inf:"n. " + f.inf};
+}
+function idText(f, withT){ var p = idParts(f, withT); return "(" + p.head + ", " + p.rel + p.nome + ", " + p.t + p.tail + "Informativo " + p.inf + ")"; }
+function idHTML(f, withT, inline){
+  var p = idParts(f, withT);
+  var sc = inline ? '<span style="font-variant:small-caps">' : '<span class="sc">';
+  return "(" + esc(p.head) + ", " + esc(p.rel) + sc + esc(p.nome) + "</span>, " + esc(p.t) + esc(p.tail) + "<b>Informativo</b> " + esc(p.inf) + ")";
+}
+function fichaText(f, i){
+  return [f.title, "", "Identificação: " + idText(f, showT(i)), "Disciplina e assunto: " + f.disc, f.lab + ": " + f.tese, "Contexto: " + f.ctx.join("\n\n")].join("\n");
+}
+function fichaHTML(f, i){
+  return '<p><b>' + esc(f.title) + '</b></p>' +
+    '<p><b>Identificação:</b> ' + idHTML(f, showT(i), true) + '</p>' +
+    '<p><b>Disciplina e assunto:</b> ' + esc(f.disc) + '</p>' +
+    '<p><b>' + esc(f.lab) + ':</b> ' + (f.lit ? '<i>' + esc(f.tese) + '</i>' : esc(f.tese)) + '</p>' +
+    '<p><b>Contexto:</b> ' + f.ctx.map(esc).join('</p><p>') + '</p>';
+}
+function flash(btn, msg){
+  btn.classList.add("copied");
+  var lab = btn.querySelector("[data-l]");
+  if (lab) { if (!lab.getAttribute("data-o")) lab.setAttribute("data-o", lab.textContent); lab.textContent = msg; }
+  btn.setAttribute("title", msg);
+  clearTimeout(btn._t);
+  btn._t = setTimeout(function(){ btn.classList.remove("copied"); if (lab) lab.textContent = lab.getAttribute("data-o"); btn.setAttribute("title", btn.getAttribute("aria-label") || ""); }, 1600);
+}
+function legacyCopy(text){
+  var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly","");
+  ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+  var ok = false; try { ok = document.execCommand("copy"); } catch(e) {}
+  document.body.removeChild(ta); return ok;
+}
+function copy(html, text, btn, selectEl){
+  function fail(){
+    if (legacyCopy(text)) { flash(btn, "Copiado"); return; }
+    if (selectEl) { var r = document.createRange(); r.selectNodeContents(selectEl); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+    flash(btn, "Selecionado: use Ctrl+C");
+  }
+  try {
+    if (navigator.clipboard && window.ClipboardItem && navigator.clipboard.write) {
+      var item = new ClipboardItem({"text/html": new Blob([html], {type:"text/html"}), "text/plain": new Blob([text], {type:"text/plain"})});
+      navigator.clipboard.write([item]).then(function(){ flash(btn, "Copiado"); }, function(){
+        navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+      });
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+    } else { fail(); }
+  } catch(e) { fail(); }
+}
+
+/* ---------- ícones ---------- */
+var IC = {
+  copy:'<svg class="i-cp" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>',
+  ok:'<svg class="i-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>',
+  doc:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg>',
+  chk:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>'
+};
+
+/* ---------- renderização ---------- */
+var order = ["I","II","III","IV"];
+var groupsEl = document.getElementById("groups");
+var indexEl = document.getElementById("index");
+var C = {I:0,II:0,III:0,IV:0}; F.forEach(function(f){ C[f.g]++; });
+
+/* gráfico: selecionados / examinados por mês de divulgação (dados contados na triagem) */
+var MONTHS = [["jul",[]],["ago",[1143,1144,1145,1146,1147]],["set",[1148,1149,1150,1151]],["out",[1152,1153,1154,1155]],["nov",[1156,1157,1158,1159]],["dez",[1160,1161,1162]]];
+var EXAM = {1143:10,1144:6,1145:4,1146:9,1147:4,1148:3,1149:9,1150:6,1151:5,1152:7,1153:7,1154:5,1155:10,1156:6,1157:4,1158:7,1159:4,1160:6,1161:3,1162:4};
+var SELI = {}; F.forEach(function(f){ SELI[f.inf] = (SELI[f.inf] || 0) + 1; });
+var MROWS = MONTHS.map(function(m){ var e = 0, s = 0; m[1].forEach(function(n){ e += EXAM[n] || 0; s += SELI[n] || 0; }); return {lab:m[0], e:e, s:s, n:m[1]}; });
+var MAXE = Math.max.apply(null, MROWS.map(function(r){ return r.e; }));
+document.getElementById("bars").innerHTML = MROWS.map(function(r){
+  var we = (r.e / MAXE * 100).toFixed(2), ws = (r.s / MAXE * 100).toFixed(2);
+  var aria = r.n.length ? (r.lab + "/2024: " + r.s + " de " + r.e + " selecionados, informativos " + r.n[0] + (r.n.length > 1 ? " a " + r.n[r.n.length - 1] : "")) : (r.lab + "/2024: sem edição no acervo");
+  return '<div class="bar-row"><span class="lab">' + r.lab + '</span><div class="track" role="img" aria-label="' + aria + '">' + (r.e ? '<span class="ex hatch" style="width:' + we + '%"></span>' : '') + (r.s ? '<span class="se" style="width:' + ws + '%"></span>' : '') + '</div><span class="val">' + (r.e ? '<b>' + r.s + '</b> / ' + r.e : 'sem edição') + '</span></div>';
+}).join("");
+
+document.getElementById("chips").innerHTML =
+  '<button type="button" class="chip" data-g="all" aria-pressed="true">Todos <span class="cap">' + F.length + '</span></button>' +
+  order.map(function(g){
+    return '<button type="button" class="chip" data-g="' + g + '" aria-pressed="false"><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + ' <span class="cap">' + C[g] + '</span></button>';
+  }).join("");
+
+var html = "", idx = '<details open><summary><span>Índice das fichas</span><span class="cap">' + F.length + '</span></summary><div><div class="i-head"><b>Índice</b><span>' + F.length + ' fichas</span></div>';
+var n = 0;
+order.forEach(function(g){
+  var items = []; F.forEach(function(f, i){ if (f.g === g) items.push(i); });
+  if (!items.length) return;
+  html += '<section class="group" data-g="' + g + '" id="grupo-' + g + '"><div class="group-head"><div class="ttl"><span class="roman">' + GROUPS[g].roman + '</span><h2>' + GROUPS[g].name + ' <span class="cap">' + items.length + '</span></h2></div><p>' + GROUPS[g].desc + '</p></div>';
+  idx += '<h3><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + '<span class="cap">' + items.length + '</span></h3><ol>';
+  items.forEach(function(i){
+    var f = F[i]; n++; var id = fid(i), nn = String(n).padStart(2,"0");
+    var tags = '<span class="f-num">Ficha ' + nn + '</span>' +
+      '<span class="tag ' + (g === "I" ? "g-I" : "") + '"><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + '</span>' +
+      (f.tema ? '<span class="tag rep">Repercussão geral · ' + (f.tema.indexOf(" e ") > -1 ? "Temas " : "Tema ") + f.tema + '</span>' : '') +
+      '<span class="tag">Inf. ' + f.inf + '</span>' +
+      '<span class="tag ok" data-ok hidden>' + IC.chk + 'conferida</span>';
+    html += '<article class="ficha" id="' + id + '" data-i="' + i + '" data-g="' + g + '">' +
+      '<div class="f-head">' + tags + '</div>' +
+      '<h3>' + esc(f.title) + '</h3>' +
+      '<div class="blk"><span class="lbl">Identificação</span><div class="idbox"><div class="id" data-id>' + idHTML(f, showT(i)) + '</div>' +
+        '<div class="id-tools"><label class="switch" title="Incluir ou suprimir a sigla do órgão julgador"><input type="checkbox" id="sw-' + id + '"' + (showT(i) ? " checked" : "") + '> ' + esc(f.turma) + '</label>' +
+        '<button type="button" class="ibtn" data-copy-id aria-label="Copiar identificação" title="Copiar identificação">' + IC.copy + IC.ok + '</button></div></div></div>' +
+      '<div class="blk"><span class="lbl">Disciplina e assunto</span><p class="disc">' + esc(f.disc) + '</p></div>' +
+      '<div class="blk"><span class="lbl">' + esc(f.lab) + '</span><p class="tese' + (f.lit ? " lit" : "") + '">' + esc(f.tese) + '</p></div>' +
+      '<div class="blk ctx"><span class="lbl">Contexto</span>' + f.ctx.map(function(p){ return "<p>" + esc(p) + "</p>"; }).join("") + '</div>' +
+      '<div class="f-foot"><button type="button" class="btn" data-copy-f aria-label="Copiar ficha">' + IC.doc + '<span data-l>Copiar ficha</span></button>' +
+      '<button type="button" class="btn-conf" data-conf aria-pressed="false"><span class="ring">' + IC.chk + '</span><span>Marcar como conferida</span></button></div>' +
+      '</article>';
+    idx += '<li><a href="#' + id + '" data-ix="' + i + '"><span class="num">' + nn + '</span><span class="t">' + esc(f.title) + '</span><span class="ck" aria-hidden="true"></span></a></li>';
+  });
+  html += '</section>';
+  idx += '</ol>';
+});
+idx += '</div></details>';
+groupsEl.innerHTML = html;
+indexEl.innerHTML = idx;
+
+document.getElementById("appendix").innerHTML = DISCARD.map(function(b){
+  return '<h3>Informativo n. ' + b.inf + ' <span class="cap">' + b.rows.length + '</span></h3><div class="tbl-wrap"><table><thead><tr><th>Processo</th><th>Ramo</th><th>Matéria</th></tr></thead><tbody>' +
+    b.rows.map(function(r){ return '<tr><td class="proc">' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>'; }).join("") + '</tbody></table></div>';
+}).join("");
+
+/* ---------- estado visual ---------- */
+function paint(i){
+  var id = fid(i), el = document.getElementById(id), done = !!state.done[id];
+  el.classList.toggle("done", done);
+  el.querySelector("[data-ok]").hidden = !done;
+  var b = el.querySelector("[data-conf]");
+  b.setAttribute("aria-pressed", done ? "true" : "false");
+  b.lastChild.textContent = done ? "Conferida · desmarcar" : "Marcar como conferida";
+  var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("done", done);
+}
+function progress(){
+  var d = F.filter(function(f, i){ return state.done[fid(i)]; }).length, t = F.length, pct = Math.round(100 * d / t);
+  document.getElementById("pDone").textContent = d;
+  document.getElementById("pTot").textContent = t;
+  document.getElementById("barFill").style.width = pct + "%";
+  document.getElementById("gVal").setAttribute("stroke-dashoffset", String(100 - 100 * d / t));
+  document.getElementById("gVal").style.opacity = d ? "1" : "0";
+  document.getElementById("gNum").textContent = d + "/" + t;
+  document.getElementById("gPct").textContent = pct + "%";
+  document.getElementById("gTxt").textContent = d === 0 ? "Nenhuma ficha conferida" : d === t ? "Todas as fichas conferidas" : (t - d) + (t - d === 1 ? " ficha pendente" : " fichas pendentes");
+}
+F.forEach(function(f, i){ paint(i); });
+progress();
+
+/* ---------- filtros ---------- */
+var fGroup = "all", fStatus = "all", fQuery = "";
+function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[.\-\/]/g,""); }
+var hay = F.map(function(f){
+  return norm([f.title, f.disc, f.tese, f.ctx.join(" "), idText(f, true), f.tipo || "", f.num || "", f.nome, f.tema ? "tema " + f.tema : "", f.kw || ""].join(" "));
+});
+function apply(){
+  var q = norm(fQuery).trim(), terms = q ? q.split(/\s+/) : [], shown = 0;
+  F.forEach(function(f, i){
+    var id = fid(i), done = !!state.done[id];
+    var ok = (fGroup === "all" || f.g === fGroup) &&
+             (fStatus === "all" || (fStatus === "done" ? done : !done)) &&
+             terms.every(function(t){ return hay[i].indexOf(t) !== -1; });
+    document.getElementById(id).hidden = !ok;
+    var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("off", !ok);
+    if (ok) shown++;
+  });
+  groupsEl.querySelectorAll(".group").forEach(function(s){ s.hidden = !s.querySelector(".ficha:not([hidden])"); });
+  document.getElementById("empty").hidden = shown > 0;
+}
+document.getElementById("q").addEventListener("input", function(e){ fQuery = e.target.value; apply(); });
+document.getElementById("chips").addEventListener("click", function(e){
+  var b = e.target.closest(".chip"); if (!b) return;
+  fGroup = b.getAttribute("data-g");
+  this.querySelectorAll(".chip").forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+  apply();
+});
+document.querySelector(".seg").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  fStatus = b.getAttribute("data-st");
+  this.querySelectorAll("button").forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+  apply();
+});
+
+/* ---------- ações das fichas ---------- */
+groupsEl.addEventListener("click", function(e){
+  var art = e.target.closest(".ficha"); if (!art) return;
+  var i = +art.getAttribute("data-i"), f = F[i], id = fid(i), b;
+  if ((b = e.target.closest("[data-copy-id]"))) { copy(idHTML(f, showT(i), true), idText(f, showT(i)), b, art.querySelector("[data-id]")); }
+  else if ((b = e.target.closest("[data-copy-f]"))) { copy(fichaHTML(f, i), fichaText(f, i), b, art); }
+  else if ((b = e.target.closest("[data-conf]"))) {
+    if (state.done[id]) delete state.done[id]; else state.done[id] = true;
+    save(); paint(i); progress(); apply();
+  }
+});
+groupsEl.addEventListener("change", function(e){
+  if (!e.target.matches(".switch input")) return;
+  var art = e.target.closest(".ficha"), i = +art.getAttribute("data-i"), id = fid(i);
+  state.turma[id] = e.target.checked; save();
+  art.querySelector("[data-id]").innerHTML = idHTML(F[i], showT(i));
+});
+
+/* ---------- limpar marcações (confirmação na própria página) ---------- */
+var clearWrap = document.getElementById("clearWrap");
+function clearIdle(){ clearWrap.innerHTML = '<button type="button" class="btn danger" id="clearBtn">Limpar<span class="lg"> marcações</span></button>'; }
+clearWrap.addEventListener("click", function(e){
+  var t = e.target.closest("button"); if (!t) return;
+  if (t.id === "clearBtn") {
+    clearWrap.innerHTML = '<span class="confirm">Desmarcar todas? <button type="button" class="btn danger" id="clearYes">Desmarcar</button><button type="button" class="btn" id="clearNo">Cancelar</button></span>';
+    document.getElementById("clearNo").focus();
+  } else if (t.id === "clearYes") {
+    state.done = {}; save(); F.forEach(function(f, i){ paint(i); }); progress(); apply(); clearIdle();
+  } else if (t.id === "clearNo") { clearIdle(); }
+});
+
+/* ---------- altura da barra para o índice e as âncoras ---------- */
+var tb = document.getElementById("toolbar");
+function setTb(){ document.documentElement.style.setProperty("--tb-h", tb.offsetHeight + "px"); }
+setTb();
+if (window.ResizeObserver) new ResizeObserver(setTb).observe(tb); else window.addEventListener("resize", setTb);
+
+/* índice recolhido em telas estreitas */
+if (window.matchMedia) {
+  var mq = window.matchMedia("(max-width:900px)"), det = indexEl.querySelector("details");
+  var syncDet = function(){ if (det) det.open = !mq.matches; };
+  syncDet();
+  if (mq.addEventListener) mq.addEventListener("change", syncDet); else if (mq.addListener) mq.addListener(syncDet);
+}
+
+apply();
+})();
+</script>
+
+
+<script type="application/json" id="radar-meta">
+{
+  "slug": "stf-2024-s2",
+  "titulo": "Jurisprudência do STF — 2º semestre de 2024",
+  "orgao": "STF",
+  "tipo": "jurisprudencia",
+  "inicio": "2024-07",
+  "fim": "2024-12",
+  "periodo": "2º semestre de 2024",
+  "fonte": "Informativos 1143 a 1162",
+  "fichas": 11,
+  "produzido": "2026-10-13"
+}
+</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice. */
+(function(){
+  var SLUG = "stf-2024-s2";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+</body>
+</html>

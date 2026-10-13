@@ -6,7 +6,7 @@
 > atualize as seções afetadas e acrescente uma linha ao *Histórico*.
 > Um documento desatualizado é pior que nenhum.
 
-Última atualização: 2026-10-05
+Última atualização: 2026-10-13
 
 ---
 
@@ -157,10 +157,11 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (13 relatórios, 327 fichas)
+## 5. Acervo atual (14 relatórios, 338 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
+| stf-2024-s2 | STF | 2024-07 → 2024-12 | Inf. 1143–1162 | 11 |
 | stf-2025-s1 | STF | 2025-01 → 2025-06 | Inf. 1163–1182 | 39 |
 | stf-2025-s2 | STF | 2025-07 → 2025-12 | Inf. 1183–1202 | 45 |
 | stf-2026-s1 | STF | 2026-01 → 2026-06 | Inf. 1203–1222 | 42 |
@@ -181,7 +182,7 @@ especificação; os demais têm farol injetado.
 **Lacunas (o que pedir em seguida):**
 - **STJ — a mais grave:** 2024 inteiro, 2025·S1, 3º trimestre de 2025
   (jul–set), 2026·S1, julho de 2026.
-- **STF:** 2024 inteiro, 2026·S2.
+- **STF:** 2024·S1, 2026·S2.
 - **CNJ:** 2024 inteiro, out–dez de 2026.
 - **Kollemata:** ago e set/2026 cobertos; meses seguintes (e antes de ago/2026).
 
@@ -286,3 +287,7 @@ especificação; os demais têm farol injetado.
 - **2026-10-05** — `kollemata-2026-09`: os interruptores da sigla da turma passam a
   ser vinculados (mudar um liga/desliga os 48, e o estado é gravado em todos).
   Alteração feita só nesse relatório; os demais mantêm interruptor por ficha.
+- **2026-10-13** — Acrescentado `stf-2024-s2` (Inf. 1143–1162, 2º sem./2024, 11
+  fichas). Veio com `radar-meta` e farol próprios, sem favicon e sem botão de
+  voltar: favicon injetado, botão feito à mão (pílula de vidro, como
+  `stj-2026-inf-900-903`). Lacuna do STF em 2024 cai para só o 1º semestre.
