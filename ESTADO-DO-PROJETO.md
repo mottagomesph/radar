@@ -6,7 +6,7 @@
 > atualize as seções afetadas e acrescente uma linha ao *Histórico*.
 > Um documento desatualizado é pior que nenhum.
 
-Última atualização: 2026-10-13
+Última atualização: 2026-10-16
 
 ---
 
@@ -157,7 +157,7 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (14 relatórios, 340 fichas)
+## 5. Acervo atual (15 relatórios, 361 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
@@ -168,6 +168,7 @@ Radar/
 | stj-2025-t4 | STJ | 2025-10 → 2025-12 | Inf. 865–874 | 33 |
 | stj-2026-inf-898-899 | STJ | 2026-08 → 2026-09 | Inf. 898–899 | 21 |
 | stj-2026-inf-900-903 | STJ | 2026-09 | Inf. 900–903 | 10 |
+| cnj-2024-s2 | CNJ | 2024-07 → 2024-12 | Inf. 9–18/2024 | 21 |
 | cnj-2025-s1 | CNJ | 2025-01 → 2025-06 | Inf. 1/2025–9/2025 | 9 |
 | cnj-2025-s2 | CNJ | 2025-07 → 2025-12 | Inf. 10–17/2025 | 25 |
 | cnj-2026-jan-ago | CNJ | 2026-01 → 2026-08 | Inf. 01–11/2026 | 22 |
@@ -176,14 +177,15 @@ Radar/
 | kollemata-2026-09 | Kollemata | 2026-09 | seleção de set/2026 | 48 |
 | cnj-res-696-2026 | CNJ (normativo) | — | Res. 696/2026 | 0 |
 
-Só `cnj-2025-s1`, `cnj-2026-set` e `kollemata-2026-09` nasceram conforme a
-especificação; os demais têm farol injetado.
+Nasceram conforme a especificação: `cnj-2025-s1`, `cnj-2026-set`,
+`kollemata-2026-09`, `stf-2024-s2` e `cnj-2024-s2` (este último já com botão de
+voltar próprio, o primeiro a vir assim); os demais têm farol injetado.
 
 **Lacunas (o que pedir em seguida):**
 - **STJ — a mais grave:** 2024 inteiro, 2025·S1, 3º trimestre de 2025
   (jul–set), 2026·S1, julho de 2026.
 - **STF:** 2024·S1, 2026·S2.
-- **CNJ:** 2024 inteiro, out–dez de 2026.
+- **CNJ:** 2024·S1, out–dez de 2026.
 - **Kollemata:** ago e set/2026 cobertos; meses seguintes (e antes de ago/2026).
 
 ## 6. Decisões tomadas (não reabrir sem motivo)
@@ -295,3 +297,7 @@ especificação; os demais têm farol injetado.
   fichas). A substituição apaga o botão de voltar feito à mão: refeito (mesma
   pílula de vidro). Lição: ao trocar um relatório, reaplicar o botão e rodar o
   injetor; contar fichas de novo e atualizar `fichas` em `reports.json`.
+- **2026-10-16** — Acrescentado `cnj-2024-s2` (Inf. 9–18/2024, 2º sem./2024, 21
+  fichas). Veio completo: `radar-meta`, farol e botão de voltar próprios (feito
+  pelo gerador conforme o contrato); só o favicon foi injetado. Lacuna do CNJ em
+  2024 cai para o 1º semestre.

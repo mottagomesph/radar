@@ -1,0 +1,1182 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>CNJ · 2º semestre de 2024</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Triagem dos Informativos de Jurisprudência do CNJ n. 9 a 18/2024 (2º semestre de 2024) para concursos de outorga de delegações de notas e de registro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Exa:wght@200;300;400&family=Lexend:wght@300;400;500;600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,500;1,7..72,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+
+/* Layout (somente tema claro): painel analítico em vidro fosco sobre fundo menta; cabeçalho com KPIs, gráfico hachurado e medidor de conferência; barra flutuante fixa; índice lateral em vidro + coluna de leitura de ~68ch. */
+:root{
+  --bg-1:#E3ECEA; --bg-2:#F3F7F6; --blob-1:rgba(255,255,255,.95); --blob-2:rgba(170,212,204,.55);
+  --glass:rgba(255,255,255,.58); --glass-strong:rgba(255,255,255,.80); --glass-line:rgba(19,38,58,.08); --hi:rgba(255,255,255,.75);
+  --ink:#13263A; --ink-2:#34485A; --muted:#6B7D8C; --line:#D2DCDA;
+  --accent:#17324A; --accent-ink:#FFFFFF; --accent-soft:rgba(23,50,74,.07);
+  --teal:#3D8A8C;
+  --violet:#5653DE; --violet-soft:rgba(86,83,222,.10); --violet-glow:rgba(104,96,255,.30);
+  --ok:#0D936A; --ok-soft:rgba(13,147,106,.11);
+  --hatch:rgba(19,38,58,.26);
+  --shadow:0 18px 50px -28px rgba(19,38,58,.35);
+  --display:"Lexend Exa","Lexend",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --sans:"Lexend",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --serif:"Literata",Georgia,"Times New Roman",serif;
+  --mono:"DM Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  --measure:68ch; --tb-h:96px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(var(--tb-h) + 24px)}
+body{margin:0;color:var(--ink);font-family:var(--serif);font-size:17px;line-height:1.62;-webkit-font-smoothing:antialiased;
+  background-color:var(--bg-1);
+  background-image:radial-gradient(1100px 620px at 88% -8%,var(--blob-1),transparent 62%),radial-gradient(900px 600px at -12% 28%,var(--blob-2),transparent 60%),linear-gradient(180deg,var(--bg-2),var(--bg-1));
+  background-attachment:fixed}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--violet);outline-offset:2px;border-radius:8px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(24px,env(safe-area-inset-left,0px));padding-right:max(24px,env(safe-area-inset-right,0px))}
+.glass{background:var(--glass);-webkit-backdrop-filter:blur(18px) saturate(1.35);backdrop-filter:blur(18px) saturate(1.35);border:1px solid var(--glass-line);border-radius:24px;box-shadow:inset 0 1px 0 var(--hi),var(--shadow)}
+.hatch{background-image:repeating-linear-gradient(-55deg,var(--hatch) 0 1.2px,transparent 1.2px 6px)}
+.cap{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:22px;padding:0 8px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-family:var(--sans);font-size:11.5px;font-weight:500;font-variant-numeric:tabular-nums;line-height:1}
+
+/* Cabeçalho */
+.masthead{padding-block:40px 18px}
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 320px;gap:24px;align-items:end}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--ink-2);padding:6px 12px 6px 8px;border-radius:999px;background:var(--glass-strong);border:1px solid var(--glass-line);margin:0 0 18px}
+.eyebrow i{width:8px;height:8px;border-radius:50%;background:var(--violet);box-shadow:0 0 0 4px var(--violet-soft)}
+.masthead h1{font-family:var(--display);font-weight:200;font-size:clamp(30px,5.2vw,60px);line-height:1.04;letter-spacing:-.045em;margin:0 0 14px;text-wrap:balance}
+.masthead h1 em{font-style:normal;font-weight:300;color:var(--muted)}
+.masthead .sub{font-family:var(--sans);font-weight:300;font-size:17px;line-height:1.55;color:var(--ink-2);margin:0;max-width:56ch}
+
+.gauge{padding:20px 22px 18px;display:flex;flex-direction:column;gap:2px}
+.card-t{font-family:var(--sans);font-size:15px;font-weight:500;letter-spacing:-.01em;margin:0}
+.card-s{font-family:var(--sans);font-size:12.5px;font-weight:300;color:var(--muted);font-style:italic;margin:0}
+.gauge svg{width:100%;height:auto;display:block;margin-top:6px}
+.gauge .g-num{font-family:var(--display);font-weight:200;font-size:44px;letter-spacing:-.05em;fill:var(--ink)}
+.gauge .g-lbl{font-family:var(--sans);font-size:11px;fill:var(--muted)}
+.gauge .trk{stroke:url(#hatchP);}
+.gauge .val{stroke:var(--ok);transition:stroke-dashoffset .6s cubic-bezier(.2,.8,.2,1)}
+.gauge-foot{display:flex;justify-content:space-between;align-items:center;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.gauge-foot .cap{background:var(--ok);color:#fff}
+
+.kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr)) minmax(0,1.9fr);gap:14px;margin-top:22px}
+.kpi{padding:18px 20px;display:flex;flex-direction:column;gap:6px;min-width:0}
+.kpi .k-n{font-family:var(--display);font-weight:200;font-size:clamp(40px,5vw,62px);line-height:1;letter-spacing:-.06em;font-variant-numeric:tabular-nums;margin-top:auto}
+.kpi.sel .k-n{color:var(--accent)}
+.kpi .k-row{display:flex;justify-content:space-between;align-items:center;gap:8px}
+.chart{padding:18px 20px;min-width:0}
+.bars{display:flex;flex-direction:column;gap:9px;margin-top:12px}
+.bar-row{display:grid;grid-template-columns:52px minmax(0,1fr) 54px;align-items:center;gap:10px;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.bar-row .lab{font-family:var(--mono);font-size:12px;color:var(--ink-2)}
+.bar-row .val{text-align:right;font-variant-numeric:tabular-nums;color:var(--ink-2)}
+.bar-row .val b{color:var(--ink);font-weight:500}
+.track{position:relative;height:16px}
+.track .ex{position:absolute;inset:0 auto 0 0;border-radius:6px;border:1px solid var(--glass-line)}
+.track .se{position:absolute;inset:0 auto 0 0;border-radius:6px;background:var(--accent)}
+.chart-legend{display:flex;gap:14px;margin-top:12px;font-family:var(--sans);font-size:11.5px;color:var(--muted)}
+.chart-legend span{display:inline-flex;align-items:center;gap:6px}
+.chart-legend i{display:inline-block;width:14px;height:9px;border-radius:3px}
+
+/* Barra de ferramentas flutuante */
+.toolbar{position:sticky;top:calc(env(safe-area-inset-top,0px) + 10px);z-index:20;margin-top:8px}
+.toolbar .tb{display:flex;flex-wrap:wrap;align-items:center;gap:10px;padding:10px 12px;border-radius:22px;background:var(--glass-strong)}
+.search{flex:1 1 440px;min-width:0;position:relative}
+.search input{width:100%;font-family:var(--sans);font-weight:300;font-size:14.5px;padding:10px 14px 10px 40px;border-radius:999px;border:1px solid var(--glass-line);background:var(--accent-soft);color:var(--ink)}
+.search input::placeholder{color:var(--muted)}
+.search svg{position:absolute;left:15px;top:50%;transform:translateY(-50%);width:16px;height:16px;stroke:var(--muted);fill:none;stroke-width:1.8}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-family:var(--sans);font-size:13px;font-weight:400;padding:5px 6px 5px 13px;border-radius:999px;border:1px solid var(--glass-line);background:var(--accent-soft);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;transition:background .2s,color .2s}
+.chip:hover{border-color:var(--accent)}
+.chip .dot{width:7px;height:7px;border-radius:50%}
+.chip .cap{height:20px;min-width:22px;font-size:11px;background:var(--glass-strong);color:var(--ink);border:1px solid var(--glass-line)}
+.chip[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.chip[aria-pressed="true"] .cap{background:var(--accent-ink);color:var(--accent);border-color:transparent}
+.chip[data-g="all"]{padding-left:13px}
+.seg{display:inline-flex;border:1px solid var(--glass-line);border-radius:999px;background:var(--accent-soft);padding:3px}
+.seg button{font-family:var(--sans);font-size:13px;font-weight:400;border:0;background:transparent;color:var(--muted);padding:5px 13px;border-radius:999px;cursor:pointer}
+.seg button[aria-pressed="true"]{background:var(--glass-strong);color:var(--ink);box-shadow:0 1px 3px rgba(19,38,58,.14)}
+.progress{display:flex;align-items:center;gap:10px;flex:1 1 200px;min-width:0;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.bar{flex:1;height:8px;border-radius:999px;overflow:hidden;min-width:70px;border:1px solid var(--glass-line)}
+.bar > i{display:block;height:100%;width:0;background:var(--ok);border-radius:999px;transition:width .4s ease}
+.progress b{color:var(--ink);font-variant-numeric:tabular-nums;font-weight:500}
+.progress .sm{display:none}
+.btn{font-family:var(--sans);font-size:13px;font-weight:400;padding:8px 14px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass-strong);color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:7px;white-space:nowrap;transition:border-color .2s,color .2s}
+.btn:hover{border-color:var(--accent)}
+.btn svg{width:15px;height:15px;stroke:currentColor;fill:none;stroke-width:1.8}
+.btn.danger:hover{border-color:#C2412D;color:#C2412D}
+.confirm{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12.5px;color:var(--muted)}
+.ibtn{width:38px;height:38px;border-radius:50%;border:1px solid var(--glass-line);background:var(--glass-strong);color:var(--ink);display:inline-grid;place-items:center;cursor:pointer;flex:none;transition:border-color .2s,color .2s,background .2s}
+.ibtn:hover{border-color:var(--accent)}
+.ibtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+.ibtn .i-ok{display:none}
+.ibtn.copied{color:var(--ok);border-color:var(--ok)}
+.ibtn.copied .i-cp{display:none}
+.ibtn.copied .i-ok{display:block}
+.copied{color:var(--ok)!important;border-color:var(--ok)!important}
+
+/* Grade principal */
+.layout{display:grid;grid-template-columns:268px minmax(0,1fr);gap:36px;padding-block:28px 72px}
+.index{position:sticky;top:calc(var(--tb-h) + 22px);align-self:start;max-height:calc(100vh - var(--tb-h) - 40px);overflow:auto;font-family:var(--sans);font-size:13px;padding:18px 12px 14px;border-radius:24px}
+.index .i-head{display:flex;justify-content:space-between;align-items:center;padding:0 8px 6px}
+.index .i-head b{font-size:15px;font-weight:500;letter-spacing:-.01em}
+.index .i-head span{font-size:12px;color:var(--muted);font-style:italic;font-weight:300}
+.index h3{font-size:12.5px;font-weight:400;color:var(--ink-2);margin:14px 8px 6px;display:flex;align-items:center;gap:8px}
+.index h3 .dot{width:7px;height:7px;border-radius:50%}
+.index h3 .cap{margin-left:auto;height:19px;min-width:20px;font-size:10.5px}
+.index ol{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:1px}
+.index a{display:grid;grid-template-columns:22px minmax(0,1fr) 18px;gap:8px;align-items:start;padding:7px 8px;border-radius:12px;color:var(--ink);text-decoration:none;line-height:1.35;font-weight:300}
+.index a:hover{background:var(--accent-soft)}
+.index a .num{font-family:var(--mono);font-size:11.5px;color:var(--muted);padding-top:1px}
+.index a .ck{width:18px;height:18px;border-radius:50%;border:1.5px dashed var(--line);display:grid;place-items:center;margin-top:-1px}
+.index a.done .ck{background:var(--ok);border:1.5px solid var(--ok)}
+.index a.done .ck::after{content:"";width:7px;height:4px;border:2px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.index a.done .t{color:var(--muted)}
+.index a.off{opacity:.35}
+.index details summary{display:none}
+
+main{min-width:0}
+.group{margin-bottom:44px}
+.group-head{max-width:calc(var(--measure) + 68px);margin-bottom:16px;display:flex;flex-wrap:wrap;align-items:flex-end;gap:6px 14px;padding-inline:4px}
+.group-head .ttl{flex:1 1 auto;min-width:0}
+.group-head .roman{font-family:var(--sans);font-size:12.5px;font-weight:300;font-style:italic;color:var(--muted)}
+.group-head h2{font-family:var(--display);font-weight:200;font-size:clamp(24px,3vw,32px);letter-spacing:-.04em;line-height:1.15;margin:2px 0 4px;text-wrap:balance;display:flex;align-items:center;gap:12px}
+.group-head h2 .cap{font-family:var(--sans);letter-spacing:0}
+.group-head p{flex-basis:100%;margin:0;font-family:var(--sans);font-weight:300;font-size:14px;color:var(--muted)}
+.group[data-g="I"] .group-head h2 .cap{background:var(--violet);color:#fff;box-shadow:0 0 0 5px var(--violet-soft)}
+
+/* Ficha */
+.ficha{position:relative;max-width:calc(var(--measure) + 68px);background:var(--glass-strong);border:1px solid var(--glass-line);border-radius:26px;padding:28px 34px 22px;margin-bottom:18px;box-shadow:inset 0 1px 0 var(--hi),var(--shadow);transition:background .3s ease,box-shadow .3s ease;overflow:hidden}
+.ficha::before{content:"";position:absolute;left:0;top:26px;bottom:26px;width:4px;border-radius:0 4px 4px 0;background:transparent;transition:background .3s}
+.ficha[data-g="I"]{box-shadow:inset 0 1px 0 var(--hi),0 26px 70px -34px var(--violet-glow)}
+.ficha[data-g="I"]::after{content:"";position:absolute;right:-90px;top:-110px;width:280px;height:280px;border-radius:50%;background:radial-gradient(closest-side,var(--violet-glow),transparent);pointer-events:none}
+.ficha.done{background:linear-gradient(var(--ok-soft),var(--ok-soft)),var(--glass-strong)}
+.ficha.done::before{background:var(--ok)}
+.ficha > *{position:relative;z-index:1}
+.f-head{display:flex;flex-wrap:wrap;align-items:center;gap:7px;margin-bottom:8px;font-family:var(--sans);font-size:12px}
+.f-num{font-family:var(--mono);color:var(--muted);margin-right:4px}
+.tag{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 10px;border-radius:999px;font-weight:400;border:1px solid var(--glass-line);color:var(--ink-2);background:var(--accent-soft)}
+.tag .dot{width:6px;height:6px;border-radius:50%}
+.tag.g-I{background:var(--violet-soft);color:var(--violet);border-color:transparent}
+.tag.rep{background:var(--accent);color:var(--accent-ink);border-color:transparent}
+.tag.ok{background:var(--ok);color:#fff;border-color:transparent;font-weight:500;margin-left:auto}
+.tag.ok svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.6}
+.ficha h3{font-family:var(--sans);font-size:22px;line-height:1.3;font-weight:500;letter-spacing:-.015em;margin:6px 0 20px;text-wrap:balance}
+.blk{margin:0 0 18px}
+.lbl{display:flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--muted);margin-bottom:7px}
+.lbl::before{content:"";width:5px;height:5px;border-radius:50%;background:currentColor;opacity:.6}
+.idbox{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.id{flex:1 1 320px;min-width:0;font-family:var(--mono);font-size:13.5px;line-height:1.6;background:var(--accent-soft);border:1px solid var(--glass-line);border-radius:16px;padding:11px 15px;overflow-wrap:anywhere;color:var(--ink)}
+.id .sc{font-variant:small-caps;font-variant-caps:small-caps;letter-spacing:.02em}
+.id b{font-weight:500}
+.id-tools{display:flex;align-items:center;gap:10px}
+.switch{display:inline-flex;align-items:center;gap:8px;font-family:var(--mono);font-size:12px;color:var(--muted);cursor:pointer;user-select:none;padding:6px 10px 6px 6px;border-radius:999px;border:1px solid var(--glass-line);background:var(--glass-strong)}
+.switch input{appearance:none;-webkit-appearance:none;width:30px;height:18px;border-radius:999px;background:var(--line);position:relative;cursor:pointer;margin:0;transition:background .2s}
+.switch input::after{content:"";position:absolute;top:2px;left:2px;width:14px;height:14px;border-radius:50%;background:#fff;box-shadow:0 1px 2px rgba(0,0,0,.2);transition:transform .2s}
+.switch input:checked{background:var(--accent)}
+.switch input:checked::after{transform:translateX(12px)}
+.disc{margin:0;font-family:var(--sans);font-weight:300;font-size:15px;line-height:1.55;color:var(--ink-2)}
+.tese{margin:0;padding:2px 0 2px 20px;border-left:3px solid var(--accent);font-size:18.5px;line-height:1.56;font-weight:500;color:var(--ink)}
+.ficha[data-g="I"] .tese{border-left-color:var(--violet)}
+.tese.lit{font-style:italic;font-weight:400}
+.ctx p{margin:0 0 10px;font-size:16.5px;color:var(--ink-2)}
+.ctx p:last-child{margin-bottom:0}
+.f-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;margin-top:22px;padding-top:16px;border-top:1px dashed var(--line)}
+.btn-conf{font-family:var(--sans);font-size:13.5px;font-weight:400;padding:10px 18px 10px 14px;border-radius:999px;border:0;background:var(--accent);color:var(--accent-ink);cursor:pointer;display:inline-flex;align-items:center;gap:9px;transition:background .25s,transform .15s}
+.btn-conf:active{transform:scale(.98)}
+.btn-conf .ring{width:18px;height:18px;border-radius:50%;border:1.5px dashed currentColor;display:grid;place-items:center;opacity:.85}
+.btn-conf svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.8;opacity:0}
+.ficha.done .btn-conf{background:var(--ok);color:#fff}
+.ficha.done .btn-conf .ring{border-style:solid;background:rgba(255,255,255,.18)}
+.ficha.done .btn-conf svg{opacity:1}
+mark{background:var(--violet-soft);color:inherit;border-radius:3px;padding:0 1px}
+.empty{max-width:var(--measure);font-family:var(--sans);font-weight:300;color:var(--muted);border:1.5px dashed var(--line);border-radius:24px;padding:28px;text-align:center}
+
+/* Nota e apêndice */
+.notes{max-width:calc(var(--measure) + 68px);padding:30px 34px;margin-top:56px;border-radius:26px}
+.notes .ttl-s{font-family:var(--sans);font-size:12.5px;font-weight:300;font-style:italic;color:var(--muted);margin:0}
+.notes h2{font-family:var(--display);font-weight:200;font-size:clamp(24px,3vw,30px);letter-spacing:-.04em;margin:2px 0 16px}
+.notes p,.notes li{font-size:16px;color:var(--ink-2)}
+.notes p b{font-family:var(--sans);font-weight:500;color:var(--ink);font-size:14.5px}
+.notes ul{padding-left:20px;margin:0 0 12px}
+.notes li{margin-bottom:4px}
+.notes hr{border:0;border-top:1px dashed var(--line);margin:32px 0 26px}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--glass-line);border-radius:18px;background:var(--glass-strong);margin:10px 0 22px}
+table{border-collapse:collapse;width:100%;font-family:var(--sans);font-weight:300;font-size:13px;line-height:1.45}
+th,td{text-align:left;padding:10px 14px;border-bottom:1px solid var(--glass-line);vertical-align:top}
+th{font-size:12px;color:var(--muted);font-weight:400;background:var(--accent-soft)}
+tr:last-child td{border-bottom:0}
+td.proc{font-family:var(--mono);font-size:12px;white-space:nowrap;color:var(--ink)}
+.notes h3{font-family:var(--sans);font-size:14px;font-weight:500;margin:24px 0 4px;display:flex;align-items:center;gap:8px}
+
+@media (max-width:1060px){
+  .hero{grid-template-columns:minmax(0,1fr)}
+  .gauge{max-width:420px}
+  .kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .chart{grid-column:1 / -1}
+}
+@media (max-width:900px){
+  .layout{grid-template-columns:minmax(0,1fr);gap:20px}
+  .index{position:static;max-height:none;padding:6px 12px}
+  .index details summary{display:flex;justify-content:space-between;align-items:center;cursor:pointer;padding:10px 8px;font-weight:500;font-size:14px;list-style:none}
+  .index details summary::-webkit-details-marker{display:none}
+  .index details > div{padding-bottom:10px}
+  .index .i-head{display:none}
+}
+@media (max-width:560px){
+  .wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+  .masthead{padding-block:28px 10px}
+  .kpis{gap:8px}
+  .kpi{padding:14px 12px;border-radius:20px}
+  .kpi .card-t{font-size:12.5px}
+  .kpi .k-row .cap{display:none}
+  .toolbar .tb{gap:8px;padding:9px;border-radius:20px}
+  .search{flex-basis:100%}
+  .search input{padding-block:8px;font-size:14px}
+  .chips{order:3;flex:1 1 100%;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:2px}
+  .chips::-webkit-scrollbar{display:none}
+  .seg{order:4}
+  .seg button{padding:4px 10px}
+  .progress{order:5;flex:1 1 60px}
+  .progress .lg,.clear .lg{display:none}
+  .progress .sm{display:inline}
+  .clear{order:6}
+  .clear .btn{padding:7px 11px}
+  .ficha{padding:22px 18px 18px;border-radius:22px}
+  .ficha h3{font-size:19.5px}
+  .tese{font-size:17.5px;padding-left:16px}
+  .notes{padding:22px 18px}
+  body{font-size:16.5px}
+}
+@media print{
+  :root{--bg-1:#fff;--bg-2:#fff;--glass:#fff;--glass-strong:#fff;--glass-line:#ccc;--hi:transparent;--ink:#000;--ink-2:#222;--muted:#555;--line:#bbb;--accent:#17324A;--accent-soft:#f3f5f6;--violet:#4a47c8;--ok:#0b7a57;--ok-soft:#e8f4ee;--shadow:none;--violet-glow:transparent}
+  body{font-size:11pt;background:#fff!important}
+  .toolbar,.index,.id-tools,.f-foot .btn,.btn-conf,.gauge,.chart,.chart-legend{display:none!important}
+  .glass{-webkit-backdrop-filter:none;backdrop-filter:none;box-shadow:none}
+  .kpis{grid-template-columns:repeat(3,1fr)}
+  .layout{display:block;padding:0}
+  .ficha{break-inside:avoid;box-shadow:none;max-width:none;border-radius:10px}
+  .ficha[data-g="I"]::after{display:none}
+  .ficha.done,.ficha.done::before,.tag.ok,.tag.rep,.cap{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .f-foot{border-top:0;margin-top:4px;padding-top:0}
+}
+
+/* Acréscimos deste relatório */
+.topline{display:flex;flex-wrap:wrap;align-items:center;gap:10px;margin:0 0 18px}
+.topline .eyebrow{margin:0}
+.radar-voltar{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:12.5px;font-weight:400;color:var(--ink-2);text-decoration:none;padding:6px 12px;border-radius:999px;background:var(--accent-soft);border:1px solid var(--glass-line);transition:border-color .2s,color .2s}
+.radar-voltar:hover{border-color:var(--accent);color:var(--ink)}
+.pts ul{margin:0;padding-left:20px;display:flex;flex-direction:column;gap:8px}
+.pts li{font-size:16px;line-height:1.55;color:var(--ink-2)}
+.pts li::marker{color:var(--accent)}
+.ficha[data-g="I"] .pts li::marker{color:var(--violet)}
+.f-acts{display:flex;flex-wrap:wrap;gap:8px}
+a.btn{text-decoration:none}
+.kpis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.kpis .chart{grid-column:1 / -1}
+.kpi .k-n{margin-top:14px}
+.bars{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:28px}
+@media (max-width:700px){.bars{grid-template-columns:minmax(0,1fr)}}
+.bars{gap:6px}
+.track{height:12px}
+@media print{.radar-voltar,.f-acts{display:none!important}}
+
+</style>
+<!-- radar:icone --><link rel="icon" type="image/png" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAMAAACdt4HsAAABCGlDQ1BJQ0MgUHJvZmlsZQAAeJxjYGA8wQAELAYMDLl5JUVB7k4KEZFRCuwPGBiBEAwSk4sLGHADoKpv1yBqL+viUYcLcKakFicD6Q9ArFIEtBxopAiQLZIOYWuA2EkQtg2IXV5SUAJkB4DYRSFBzkB2CpCtkY7ETkJiJxcUgdT3ANk2uTmlyQh3M/Ck5oUGA2kOIJZhKGYIYnBncAL5H6IkfxEDg8VXBgbmCQixpJkMDNtbGRgkbiHEVBYwMPC3MDBsO48QQ4RJQWJRIliIBYiZ0tIYGD4tZ2DgjWRgEL7AwMAVDQsIHG5TALvNnSEfCNMZchhSgSKeDHkMyQx6QJYRgwGDIYMZAKbWPz9HbOBQAAABIFBMVEVkoVuW3ZFzlGJm0FkYUx5dZy1wlmB3j2NPZDlGljuaxpVoc02O4HWn66YtkzRUckhacUWOr4wpXkKay5iPt4o6p0tSaT0+dzxbcUZ//3////+WoWdOaTqDrHeJuYYIJxg2NikA/wD//wBxODiHrXnT/6ldGV1////c/8iCvICNcVV/0IwAAAAVVTEQRypOl1JHiU0OOyQwZzVkqW5ttXQEKBFcomhVmmQ2dkYKNRlUplWJyI8saEYwdjclWTAZZTBKeUeR1JkQRho5hUg0hTl3uoRJajds1ms4lkh/f31NtFR6xYcBGwSa2KJwxXCW9YpVqlWq+JRntluj3KNVVVWo5KeqqqpLcz3K/LF25XB/v38eXEAbcyyJ6XdTx1i2+qWl2bk8AAAAYHRSTlP07mD//xiaK1r/Yxr/FP/epSj/o03/oAVtAgES0I6u/wcBAQRg/wQC//8J/wD///7+//3+/v/+/v7///z//v7//f7////+/P//A/////7//wP///4D/wP+//8E//////+5oFHXAAAIOklEQVR42o2XB3fbOBaFqeYStyR2MmmbOrM7s0sCYBNJSCAlkrKq5Vjujsv//xd7H0A5iZOZExwfWSJ5P9z38Ihi2T9pZ1v0+e8nW49023uySr+vzn72rPXjpa1XEG892q31+8enp6fHx/1ObXd3b0y3fgFA3Wzt1oz0+OCg3z+gBsruXnX7nwAvX9nvH5H6+KDfedBgZO+T/Z9X/wSAxUe109MDUgdoPrXAp68DzajtPTTxLWD8yn6ye9yHeAot51yIsiyFwDfpE2UAyttV++pvACA/6vd13z4XpfLSZp4keZI3U1WC0vYN4vfvcvkVcIXutXWoC5XmSYg2a6azcDabhbmnKgQRzn4CgL4G+QBy5eXQJs0UTfC02/XSPATjHvEv++zDQ8CVvdcx3RckTyCjlnKexnExkrJIYafknJIBwtYDwJn9pEPdR0I5Yeg+7XaXAOnEmtAYzlUYqnvC1XeAl/d6L58lT3vdbhx36SOWVlxowMQa3gxV2BwhDP8bggaMX76udQYUvpfMmjs9CLtxEaErK1hIjJ8lAWgMb46CpCL8VbfHXwFX9tu+0YdhuoOeu93I95FMD0l0kP/JfDhvNIbD2lEtzQ0hWLU/LwFnSOBA+4dehy4CrtL0qU5ippQqR5PNmyEAtbu7tMk1wRq//GgA41dPKn1S6X1fOSaPHgCUgmdyAvVl7fDw4qJZEVZ0OVhk4C2GLxJxMmMkigOeZXH3K6DQObwdQn54dPfncaILwvd1EBY+XqN42yJ2kH+YjoPymvPYEBzOnetiBAAycHl0dHR3cTHMwpK3QbAwejZ9vJ0GVQKeGv3mxZHUgLhoS8hHzyYAXF6if9zZLsMcFoCo269t67O9OlgGkKZeNyid0dHRZgNRRG3JJf4wjJNbGEAAF7Xt6yxzUFARABaG0rqyV6Y+GZiFKH0nwrCVjUZjO4vaceowDKMq5RwjcLl5eHcxb5TQO4m2EFEWLHsj0AZyMuDEgeN4WbldZlI4zPniCAwjImjc3Nwc3t1NrvnEcRzGQiWjKPJX7CvLrge+yQDDrXbpdL3MYRn32JenXzSgGE1ub+H/TtufKIYWOgSIrP8iiSuB345EOkugjyXGHx49CT2aQwAYuEUCLobbGW6VkgBJwtsEqBtAFBWJNoBB62ZO5kSKdUlOObgeaf1RQyJ4NIkIXDdUyEFkrdjWhk8OYhOBVA4ZKDiFr5vgChm4PKxtZ7hJSB5rgCcB4ACsoqQirsIEAE86TqY5zKlawctnt8PDeQnzXANKjhDcMCeAsDYsnUPuzQhQSC3ypHPfpBw9a1xOYKuZ6cvMoyS4JgnCWq0AacgY+dUGKALTvM5pf357u11F7+E6q5KQcJ8A9QqA9wBcXpKSjfCPUs0c6DvB/Do3baTwkMuk4yIHIQ8weKJurRgHucLMHyw4tUAKrClCFHwTRdZul4XQPy1eoIlAYMaKmbgHYDx4mq6v0xKkn9T/er1eLCy9PKnqqjS3JV/Hw00DWLHq6KIdpe8wlYdKJeROeWFCLUzweIyL1U+V6i8l00vO9wAvdBGz0NljsUki4k0V5sU8YSapPNWJqSppmYO6jxczUhoQLwfKjAFVbLMZ6hKhy6YOHEl6N5FBm/eWgDZPCOBN9HgxWbCKEDbZLKl+iEL/U9wF4B2jWYwAq5YGGJ+o1oyeWVR1wNzYWwaQySxTWcaKkgBhOqdJoLeKWmwTwaNKYtxUkiP5klDEy6LiZTavbZaOTDVAEKDXe423UcdQmBgWeBepLQpn6XsZAG/yPzAjKm5S0MY6HPce43Wu+5jffIkSgwV0nalgc6QWotIJPTDQ50xu3txsc1VFQBN57wUAqxYBfKVj8BZeNv/j4ubas2RGFwjAWBaJnDnZemO95LlLtcKnNI31NmzrwyeUG1lItAUurzc3bxol3qwFjw0g5tIzQ4FFKdW1xuYUwfnOpw+YlevaQkAWgFjw9UZjncYiXZdmWucqd82o5lzXKhlABB4iaFljxCCI0NZpRBAjVZpyAA6Lq8NwQ1cQva5Gz6ZYy3sUwZiWthUuMMsHRVgRyty5rwMhqjogvRSJAfjTABk4fwyxZZ+QBUHbp1QH4XoL9Lok6CQaP167rPS9/gBDQAZO9PJurwBA+xGmPbgOX8SMfTuMkDsCmXS1Pv3flAKAgRO9vJOFnrbQTt7pKJiyZKwnJVes6yuYLkVe6dm0QwHAwIex2aEgC0IT5jx8pwFurqTFYw8OML15BcdCl1ABQe/OqwBe6D0OAVrjDaunCVMe6jzQtJueYwyBoYkIc4LLjJ4FRr+/c3K/RwKpviS03YpAM3eS50LlOaXOyBH/FHokwNvZMNs0s09s2SvWORGCKcbCZcvmhjHmKv1by8O4X+kRwMm3O9XXSIPSHgZT4X5FuIKmciPH8unXKH+x1v/23Vb348fWjiZE/qA/j92qW5pQQteYDxnvHyz1j5f6+8322G7t9DwgIoTRDwTDbp961YCEdt9RH7vZttbrEny43QfhMWKLhUBJTbEgCQ95DFMWJm7ajaYHB3ovDTn1P/7JgWNsv3/c2ycEVeWgg8PLVB+agg4d3PD6RBz6dH9/rcrfwyNPy7Zf9M5B6MEF6nIw7RCFTm8DvYuh7tPzndZ9/D+c2j5TGGQippeDNnK60V4Eax3J9/efv/9O/+DYh1svds6BMD70iqgXxJjUHuQt+1v/Px48W8jE2ptzwyAr1Mz3fcjX7K/p/7ujL/HXnuPpirEU779ZQ+/j8S8cvgnRWnv+/M3+fXvznNT2+OSXTu9AaJ+tVmtNt5bJ2m+tnz37f2zaIHOJeenjAAAAAElFTkSuQmCC"><!-- radar:icone-fim -->
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <pattern id="hatchP" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(35)">
+      <rect width="6" height="6" fill="transparent"></rect>
+      <line x1="0" y1="0" x2="0" y2="6" style="stroke:var(--hatch)" stroke-width="2.2"></line>
+    </pattern>
+  </defs>
+</svg>
+
+<header class="masthead">
+  <div class="wrap">
+    <div class="topline">
+      <a class="radar-voltar" href="../index.html" aria-label="Voltar ao índice do Radar Extrajudicial">← Voltar ao Radar</a>
+      <p class="eyebrow"><i></i>Conselho Nacional de Justiça · Informativos de Jurisprudência</p>
+    </div>
+    <div class="hero">
+      <div>
+        <h1>Informativos 09 a 18/2024 <em>para concursos de serventias extrajudiciais</em></h1>
+        <p class="sub">Triagem dos julgados do Plenário e dos atos normativos divulgados entre 1º de julho e 20 de dezembro de 2024, com fichas de revisão para o caderno de direito notarial e registral e matérias correlatas.</p>
+      </div>
+      <div class="glass gauge" aria-live="polite">
+        <p class="card-t">Conferência</p>
+        <p class="card-s">Fichas revisadas para o caderno</p>
+        <svg viewBox="0 0 240 132" role="img" aria-labelledby="gTitle">
+          <title id="gTitle">Fichas conferidas</title>
+          <path class="trk" d="M 20 112 A 100 100 0 0 1 220 112" fill="none" stroke-width="18" stroke-linecap="round"></path>
+          <path class="val" id="gVal" d="M 20 112 A 100 100 0 0 1 220 112" fill="none" stroke-width="18" stroke-linecap="round" pathLength="100" stroke-dasharray="100 100" stroke-dashoffset="100"></path>
+          <text class="g-num" id="gNum" x="120" y="100" text-anchor="middle">0/21</text>
+          <text class="g-lbl" x="20" y="130" text-anchor="middle">0</text>
+          <text class="g-lbl" x="220" y="130" text-anchor="middle" id="gMax">21</text>
+        </svg>
+        <div class="gauge-foot"><span id="gTxt">Nenhuma ficha conferida</span><span class="cap" id="gPct">0%</span></div>
+      </div>
+    </div>
+
+    <div class="kpis">
+      <div class="glass kpi"><div class="k-row"><p class="card-t">Informativos</p><span class="cap">n. 09–18</span></div><p class="card-s">analisados</p><div class="k-n">10</div></div>
+      <div class="glass kpi"><div class="k-row"><p class="card-t">Julgados e atos</p><span class="cap">104 proc.</span></div><p class="card-s">examinados</p><div class="k-n">100</div></div>
+      <div class="glass kpi sel"><div class="k-row"><p class="card-t">Selecionados</p><span class="cap" id="cPct">21%</span></div><p class="card-s">com pertinência ao edital</p><div class="k-n" id="cSel">21</div></div>
+      <div class="glass chart">
+        <div class="k-row" style="display:flex;justify-content:space-between;align-items:center;gap:8px"><p class="card-t">Seleção por informativo</p><span class="card-s">selecionados / examinados</span></div>
+        <div class="bars" id="bars"></div>
+        <div class="chart-legend"><span><i class="hatch" style="border:1px solid var(--glass-line)"></i>examinados</span><span><i style="background:var(--accent)"></i>selecionados</span></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <div class="wrap">
+    <div class="tb glass">
+      <label class="search" for="q">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="q" type="search" placeholder="Buscar por tese, processo, relator ou dispositivo legal" autocomplete="off">
+      </label>
+      <div class="seg" role="group" aria-label="Situação">
+        <button type="button" data-st="all" aria-pressed="true">Todas</button>
+        <button type="button" data-st="pending" aria-pressed="false">Pendentes</button>
+        <button type="button" data-st="done" aria-pressed="false">Conferidas</button>
+      </div>
+      <div class="chips" id="chips" role="group" aria-label="Grupo temático"></div>
+      <div class="progress" aria-live="polite">
+        <div class="bar hatch" aria-hidden="true"><i id="barFill"></i></div>
+        <span><b id="pDone">0</b><span class="lg"> de </span><span class="sm">/</span><b id="pTot">21</b><span class="lg"> conferidas</span></span>
+      </div>
+      <span id="clearWrap" class="clear"><button type="button" class="btn danger" id="clearBtn">Limpar<span class="lg"> marcações</span></button></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap layout">
+  <nav class="index glass" id="index" aria-label="Índice das fichas"></nav>
+  <main id="main">
+    <div id="groups"></div>
+    <p class="empty" id="empty" hidden>Nenhuma ficha corresponde à busca e aos filtros selecionados.</p>
+
+    <section class="notes glass" id="nota">
+      <p class="ttl-s">Nota metodológica</p>
+      <h2>Período, critério e cobertura</h2>
+      <p><b>Período coberto.</b> Informativos de Jurisprudência do CNJ n. 09/2024 (01/07/2024), 10/2024 (22/08/2024), 11/2024 (05/09/2024), 12/2024 (16/09/2024), 13/2024 (01/10/2024), 14/2024 (23/10/2024), 15/2024 (08/11/2024), 16/2024 (22/11/2024), 17/2024 (29/11/2024) e 18/2024 (20/12/2024).</p>
+      <p><b>Critério temporal.</b> Data de publicação do informativo, e não data da sessão de julgamento. Por isso constam deliberações tomadas entre 25/06/2024 (8ª Sessão Ordinária, Informativo n. 09/2024) e 10/12/2024 (16ª Sessão Ordinária).</p>
+      <p><b>Universo examinado.</b> 100 julgados e atos normativos, contados por destaque do informativo, que correspondem a 104 processos: 4 no n. 09, 11 no n. 10, 12 no n. 11, 9 no n. 12, 11 no n. 13, 11 no n. 14, 11 no n. 15, 11 no n. 16, 7 no n. 17 e 13 no n. 18. Destaques que reúnem processos julgados em conjunto foram contados uma vez. O ATO n. 0004931-36.2024.2.00.0000 (ENAC) gerou destaques nos Informativos n. 11 e 15 e foi contado em cada um.</p>
+      <p><b>Seleção.</b> 21 fichas: 3 destaques, 13 de direito notarial e registral, 2 de outras matérias e 3 tangenciais. Os 79 itens restantes constam do apêndice. A filtragem seguiu o documento “Filtro de pertinência”; as etiquetas “Nível A” e “Nível B” indicam a classificação nele prevista. Nenhum informativo superou o teto de alerta de cinco itens de nível A.</p>
+      <p><b>Identificação.</b> Os informativos do CNJ resumem decisões do Plenário; por isso a sigla do órgão é sempre “Plenário”. O tipo indica a classe processual (ATO, PP, PCA, Cons); “RA no PP” designa recurso administrativo julgado em pedido de providências. O cargo “min.” foi usado para o Presidente, indicado no informativo como “Conselheiro Ministro”; para os demais, “cons.”. Nos julgamentos conjuntos, a linha de identificação aponta o primeiro processo, e os demais aparecem na ficha. Os resumos do CNJ não são oficiais; a conformidade depende da publicação do acórdão no DJe.</p>
+      <p><b>Temas sem julgados no período.</b> Não houve julgados ou atos sobre:</p>
+      <ul>
+        <li>atos de tabelionato de notas fora do inventário, da partilha e do divórcio (procurações, atas notariais, testamentos, escrituras em geral);</li>
+        <li>tabelionato de protesto em sentido estrito (o protesto aparece apenas como providência prévia à execução fiscal, na ficha da Resolução CNJ n. 547/2024);</li>
+        <li>registro de imóveis (qualificação, alienação fiduciária, usucapião e adjudicação extrajudiciais, condomínio, REURB);</li>
+        <li>registro de títulos e documentos e registro civil das pessoas jurídicas;</li>
+        <li>emolumentos (natureza, tabelas, isenções), salvo gratuidade e ressarcimento nas fichas do extrateto e dos assentos de óbito;</li>
+        <li>responsabilidade civil e tributária de notários e registradores, e perda da delegação;</li>
+        <li>tributos incidentes sobre atos notariais e registrais (ITBI, ITCMD e ISS).</li>
+      </ul>
+      <hr>
+      <p class="ttl-s">Apêndice</p>
+      <h2>Matérias examinadas e descartadas</h2>
+      <p>Itens lidos integralmente e descartados por impertinência com o edital dos concursos de outorga de delegações. Predominam processos disciplinares contra magistrados e políticas judiciárias sem reflexo na atividade notarial e registral.</p>
+      <div id="appendix"></div>
+    </section>
+  </main>
+</div>
+
+<script>
+(function(){
+"use strict";
+var GROUPS = {
+  I:   {roman:"Grupo I",   name:"Destaques", short:"Destaques", color:"var(--violet)", desc:"Julgados e atos de maior relevância para o concurso, que devem ser dominados e memorizados."},
+  II:  {roman:"Grupo II",  name:"Direito Notarial e Registral", short:"Notarial e Registral", color:"var(--accent)", desc:"Julgados e atos com repercussão objetiva ou subjetiva na atividade notarial e registral e na vida funcional das serventias."},
+  III: {roman:"Grupo III", name:"Outras matérias", short:"Outras matérias", color:"var(--teal)", desc:"Julgados e atos de outras disciplinas do edital com relevância direta para o concurso."},
+  IV:  {roman:"Grupo IV",  name:"Julgamentos e atos tangenciais", short:"Tangenciais", color:"var(--muted)", desc:"Relevância indireta, para leitura rápida."}
+};
+var BASE = "https://www.cnj.jus.br/InfojurisI2/Jurisprudencia.seam?jurisprudenciaIdJuris=";
+
+var F = [
+/* ===================== I · DESTAQUES ===================== */
+{
+  g:"I", norm:true, niv:"A",
+  title:"Exame Nacional dos Cartórios: aprovação passa a ser requisito de inscrição nos concursos de provimento e de remoção",
+  tipo:"ATO", num:"0004931-36.2024.2.00.0000", cargo:"min.", nome:"luís roberto barroso", data:"20/08/2024", infn:11, link:"55250",
+  disc:"Direito Notarial e Registral. Concurso público de outorga de delegações, Resolução CNJ n. 81/2009 e Exame Nacional dos Cartórios (ENAC).",
+  sint:"O Plenário alterou a Resolução CNJ n. 81/2009 e instituiu o Exame Nacional dos Cartórios. A aprovação no exame passa a ser requisito para a inscrição nos concursos públicos de provimento e de remoção dos serviços notariais e de registro.",
+  caso:[
+   "O exame é uma prova objetiva de 100 questões, elaboradas para privilegiar o raciocínio e a resolução de problemas. Na redação original, abrangia conhecimentos gerais, Língua Portuguesa, Registros Públicos, Direito Constitucional, Direito Administrativo, Direito Tributário, Direito Civil, Direito Processual Civil, Direito Penal, Direito Processual Penal e Direito Comercial.",
+   "A prova é apenas eliminatória, como já ocorre na etapa objetiva dos concursos de serventias. Na redação original, aprovavam-se os candidatos de ampla concorrência com ao menos 70% de acertos e os autodeclarados pessoas com deficiência, negros ou indígenas com ao menos 50%, como no Exame Nacional da Magistratura (Enam). O edital do concurso pode prever a substituição da prova objetiva seletiva pelo exame.",
+   "O exame é coordenado pela Corregedoria Nacional de Justiça e realizado ao menos duas vezes por ano, em atenção ao prazo de seis meses do art. 236, § 3º, da Constituição Federal e do art. 2º da Resolução CNJ n. 81/2009. Na redação original, a aprovação valia por quatro anos, contados da divulgação do resultado definitivo."
+  ],
+  pontos:[
+   "Regra de transição: a exigência não se aplica aos concursos com editais já publicados na data de vigência da resolução. Fica vedada a publicação de novos editais até que a Corregedoria Nacional de Justiça regulamente o exame.",
+   "O Informativo n. 15/2024 identifica o ato como Resolução CNJ n. 575/2024.",
+   "As regras foram alteradas pouco depois: nota mínima de 60%, validade de seis anos, novas denominações das disciplinas, supressão de Língua Portuguesa e presidência da comissão pelo Corregedor Nacional de Justiça (fichas do Grupo II, Informativos n. 15/2024 e 17/2024)."
+  ],
+  kw:"ENAC exame nacional dos cartórios Resolução 81/2009 Resolução 575/2024 concurso provimento remoção art. 236 § 3º eliminatória 70% 50% cotas Enam validade"
+},
+{
+  g:"I", norm:true, niv:"A",
+  title:"Reforma da Resolução CNJ n. 35/2007: inventário por escritura com testamento ou com incapazes e divórcio com filhos menores",
+  tipo:"PP", num:"0001596-43.2023.2.00.0000", cargo:"cons.", nome:"luis felipe salomão", data:"20/08/2024", infn:11, link:"55246",
+  disc:"Direito Notarial e Registral; Direito Civil (Família e Sucessões). Inventário, partilha, divórcio e extinção consensual de união estável por escritura pública.",
+  sint:"O Plenário reformou a Resolução CNJ n. 35/2007. Passam a ser admitidos por escritura pública o inventário com testamento previamente homologado em juízo, o inventário com herdeiros menores ou incapazes e o divórcio consensual com filhos menores ou incapazes, observadas cautelas próprias. A separação extrajudicial deixa de existir.",
+  caso:[
+   "Inventário com testamento: admitido quando houver prévia homologação judicial do testamento e consenso entre os envolvidos.",
+   "Inventário com herdeiros menores ou incapazes: exige consenso, partilha em fração ideal e anuência do Ministério Público.",
+   "Divórcio com filhos menores ou incapazes: admitido se houver consenso. A regulamentação da convivência familiar com os filhos e a fixação dos alimentos continuam reservadas à via judicial.",
+   "União estável: o art. 18 da resolução foi ajustado para afastar tratamento diferenciado no inventário extrajudicial em união estável, especialmente quando o companheiro sobrevivente for o único herdeiro. O fundamento é a declaração de inconstitucionalidade do art. 1790 do Código Civil pelo STF.",
+   "Separação: eliminou-se o instituto da separação extrajudicial. A separação de fato consensual passa a ser reconhecida como marco temporal de efeitos jurídicos relevantes, como a extinção do regime de bens e dos direitos e deveres do vínculo conjugal."
+  ],
+  pontos:[
+   "Fundamentos invocados: simplificação dos procedimentos e ampliação dos meios extrajudiciais (EC n. 45/2004 e art. 5º, LXXVIII, da Constituição Federal), jurisprudência do STJ, enunciados de jornadas e práticas já adotadas por corregedorias locais.",
+   "Contraste útil em prova: o art. 610, caput, do CPC prevê o inventário judicial quando houver testamento ou interessado incapaz. O informativo não enfrenta o dispositivo; a reforma se apoia nas cautelas descritas (homologação do testamento, partilha em fração ideal e anuência do Ministério Público).",
+   "A mesma lógica foi estendida às partilhas pré-processuais nos CEJUSCs, com remissão expressa a esta reforma (Cons n. 0002599-04.2021.2.00.0000, Informativo n. 12/2024, Grupo III).",
+   "O informativo não indica o número da resolução resultante. O ato foi publicado como Resolução CNJ n. 571/2024."
+  ],
+  kw:"Resolução 35/2007 Resolução 571/2024 inventário extrajudicial testamento homologação incapaz menor fração ideal Ministério Público divórcio filhos menores separação extrajudicial separação de fato art. 1790 união estável companheiro art. 610 CPC escritura pública"
+},
+{
+  g:"I", niv:"A",
+  title:"Substituto não concursado: interinidade limitada a seis meses, prazo esgotado em 19/04/2024 (ADI 1183)",
+  tipo:"RA no PP", num:"0000715-32.2024.2.00.0000", cargo:"cons.", nome:"joão paulo schoucair", data:"05/11/2024", infn:16, link:"55435",
+  disc:"Direito Notarial e Registral. Vacância, interinidade, art. 20 da Lei n. 8935/1994 e efeitos da ADI 1183/DF.",
+  sint:"O substituto não concursado só pode responder por serventia vaga pelo prazo máximo de seis meses. Como o STF concluiu o julgamento dos embargos de declaração na ADI 1183/DF em 19/10/2023, com efeitos modulados a partir dessa data, o prazo expirou em 19/04/2024. Não há direito de permanência por período superior.",
+  caso:[
+   "O recorrente, substituto não concursado no exercício da interinidade, pretendia permanecer na função por seis meses contados da publicação do acórdão do STF, e não da conclusão do julgamento. O Plenário negou provimento ao recurso administrativo, por unanimidade."
+  ],
+  pontos:[
+   "O prazo de seis meses é o termo final da troca, e não o seu termo inicial. A substituição dos interinos não concursados por titulares concursados pode ocorrer antes de esgotado o prazo.",
+   "A limitação incide apenas na hipótese de vacância e decorre da interpretação dada pelo STF ao art. 20 da Lei n. 8935/1994.",
+   "Segundo o Informativo n. 15/2024, a ADI 1183/DF também determinou que, após esse prazo, os tribunais designem substitutos concursados e, não havendo interessados entre os titulares concursados, substitutos ad hoc (ficha dos oficiais distribuidores do Paraná, Grupo II)."
+  ],
+  kw:"interino interinidade substituto não concursado vacância seis meses ADI 1183 modulação embargos de declaração art. 20 Lei 8935/1994 19/10/2023 19/04/2024 recurso administrativo"
+},
+
+/* ===================== II · NOTARIAL E REGISTRAL ===================== */
+{
+  g:"II", niv:"B",
+  title:"Delegatário que responde a PAD: homologação da renúncia pode ser sobrestada, o que impede o exercício em nova delegação",
+  tipo:"PCA", num:"0004533-89.2024.2.00.0000", cargo:"cons.", nome:"daiane nogueira de lira", data:"20/08/2024", infn:11, link:"55249",
+  disc:"Direito Notarial e Registral. Renúncia à delegação, processo administrativo disciplinar pendente e entrada em exercício em serventia obtida em concurso de outro Estado.",
+  sint:"Não é ilegal a decisão da corregedoria que sobrestá o pedido de renúncia de delegatário que responde a processo administrativo disciplinar. Também não é ilegal a exigência, pelo tribunal de destino, de homologação da renúncia para a entrada em exercício na serventia escolhida. O Plenário indeferiu os pedidos liminares por ausência de probabilidade do direito.",
+  caso:[
+   "O requerente, delegatário no Rio de Janeiro, foi aprovado no 2º concurso de Goiás. Para entrar em exercício, precisava comprovar que não exercia cargo, emprego ou função pública nem atividade privada e, em caso de renúncia, a respectiva homologação. A Corregedoria-Geral da Justiça do Rio de Janeiro não homologou a renúncia, com base no art. 33 de seu Código de Normas, porque o delegatário respondia a dois PADs por fatos graves, com suspensão preventiva e proibição de frequentar a serventia. Os PADs estavam em razões finais, sem demora desarrazoada.",
+   "O prazo para entrada em exercício em Goiás terminava em 20/08/2024. A relatora concedeu medida acauteladora parcial (art. 25, XI, do RICNJ) apenas para permitir o debate no Plenário, que indeferiu as liminares por unanimidade."
+  ],
+  pontos:[
+   "A norma estadual foi considerada compatível com a Lei n. 8935/1994 e simétrica a outros regimes: art. 172 da Lei n. 8112/1990 (exoneração a pedido e aposentadoria voluntária só após a conclusão do processo disciplinar), art. 27 da Resolução CNJ n. 135/2011 (aposentadoria voluntária do magistrado só após o PAD) e ADI 6591/DF, em que o STF declarou constitucional lei estadual com regra análoga para servidores.",
+   "A exigência de homologação constava do item 12 do edital da audiência de escolha e do art. 36 do Código de Normas e Procedimentos do Foro Extrajudicial do TJGO.",
+   "Há divergência entre tribunais sobre exigir a homologação ou apenas o protocolo do pedido de renúncia. Os autos foram remetidos à Corregedoria Nacional de Justiça para avaliar a uniformização.",
+   "Decisão em medida liminar, proferida por relatora em substituição."
+  ],
+  kw:"renúncia delegação homologação PAD processo administrativo disciplinar entrada em exercício concurso Goiás Rio de Janeiro Código de Normas art. 33 art. 172 Lei 8112/1990 art. 27 Resolução 135/2011 ADI 6591 liminar"
+},
+{
+  g:"II", niv:"A",
+  title:"Direito de opção do art. 29, I, da Lei n. 8935/1994 não alcança escrivão de paz nem convalida delegação sem concurso",
+  tipo:"RA no PP", num:"0005143-91.2023.2.00.0000", cargo:"cons.", nome:"mauro campbell marques", data:"03/09/2024", infn:12, link:"55392",
+  disc:"Direito Notarial e Registral; Direito Constitucional. Ingresso na atividade (art. 236, § 3º, da Constituição Federal), direito de opção, escrivão de paz e decadência administrativa.",
+  sint:"O direito de opção aplica-se apenas ao tabelião ou oficial titular de serventia desmembrada ou desdobrada (art. 29, I, da Lei n. 8935/1994). Não alcança o escrivão de paz, servidor público de cargo criado por lei estadual, nem legitima delegação feita por portaria sem concurso público. O prazo do art. 54 da Lei n. 9784/1999 não se aplica a investiduras inconstitucionais.",
+  caso:[
+   "A recorrente foi aprovada em concurso e empossada no cargo efetivo de escrivã de paz em Vargem Bonita/SC. Depois, por opção e mediante portaria, recebeu a delegação do registro civil de Catanduvas/SC, ao qual estava anexo o registro de imóveis e hipotecas. Pretendia permanecer como titular efetiva. A Resolução CNJ n. 80/2009 havia declarado a vacância das serventias ocupadas sem concurso. O Plenário negou provimento ao recurso, por unanimidade."
+  ],
+  pontos:[
+   "O escrivão de paz não integra as categorias da Lei n. 8935/1994. Sua função notarial e registral é supletiva e limitada (arts. 128 e 129 da Lei Estadual n. 5624/1979 de Santa Catarina). A denominação dada pela lei estadual é irrelevante.",
+   "O art. 236, caput e § 3º, da Constituição Federal é autoaplicável. São inconstitucionais as investiduras sem concurso, de provimento ou de remoção, ainda que conformes à lei estadual e anteriores à Lei n. 8935/1994.",
+   "A anulação não viola direito adquirido nem segurança jurídica. O princípio da confiança não socorre a recorrente, pois se liga à boa-fé, inaplicável diante da inconstitucionalidade. Mesmo em situações irregulares de longa data, a delegação por opção não produz eficácia nem limita a autotutela."
+  ],
+  kw:"direito de opção art. 29 I Lei 8935/1994 desmembramento desdobramento escrivão de paz Santa Catarina portaria concurso público art. 236 § 3º autoaplicável Resolução 80/2009 vacância art. 54 Lei 9784/1999 decadência direito adquirido segurança jurídica"
+},
+{
+  g:"II", niv:"B",
+  title:"Reestruturação das serventias extrajudiciais depende de lei de organização judiciária de iniciativa do tribunal",
+  tipo:"RA no PP", num:"0008602-72.2021.2.00.0000", cargo:"cons.", nome:"mauro campbell marques", data:"03/09/2024", infn:12, link:"55302",
+  disc:"Direito Notarial e Registral; Direito Constitucional. Organização e divisão judiciária, autonomia dos tribunais e reorganização das serventias.",
+  sint:"Cabe ao tribunal de justiça propor ao Poder Legislativo a alteração da organização e divisão judiciária do Estado, inclusive para reestruturar os serviços extrajudiciais. Encaminhado o projeto de lei pelo tribunal, o CNJ não anula nem reforma a opção adotada.",
+  caso:[
+   "O TJMA encaminhou projeto de lei complementar à Assembleia Legislativa sobre a reestruturação das serventias extrajudiciais do Estado, deixando o debate aos parlamentares. Os recorrentes pretendiam reestruturação diversa. O CNJ não constatou atraso significativo injustificado no cumprimento de determinação anterior do Conselho e negou provimento ao recurso, por unanimidade."
+  ],
+  pontos:[
+   "A lei de organização judiciária é de iniciativa do tribunal. A Constituição do Maranhão (arts. 72 a 78, em especial art. 76) atribui ao tribunal competência privativa para propor mudanças na organização e divisão judiciária.",
+   "Não havia lei que assegurasse a reestruturação pretendida pelos recorrentes.",
+   "O informativo cita o art. 98 da Constituição Federal para a autonomia dos tribunais. No texto constitucional, a autonomia administrativa e financeira está no art. 99, e a organização da justiça estadual, no art. 125."
+  ],
+  kw:"reestruturação serventias organização judiciária iniciativa tribunal projeto de lei complementar Maranhão TJMA autonomia art. 99 art. 125 Constituição"
+},
+{
+  g:"II", niv:"A",
+  title:"Corregedoria local não pode exigir das serventias a transferência de dados pessoais dos usuários para formar banco de dados próprio",
+  tipo:"PCA", num:"0005595-38.2022.2.00.0000", cargo:"cons.", nome:"joão paulo schoucair", data:"08/10/2024", infn:14, link:"55365",
+  disc:"Direito Notarial e Registral. Proteção de dados pessoais nas serventias, fiscalização pelas corregedorias e art. 102 do CNN/CN/CNJ.",
+  sint:"As corregedorias não podem exigir a transferência das informações dos atos notariais e de registro para formar banco de dados próprio. O compartilhamento por transferência exige interesse público específico, que não se configura para os fins fiscalizatórios. Admite-se o compartilhamento por acesso, sem formação de banco paralelo, e o compartilhamento de dados que não sejam pessoais.",
+  caso:[
+   "A Corregedoria-Geral da Justiça do Tocantins exigia dos tabelionatos de notas a transferência de dados pessoais dos usuários dos atos notariais e de registro, para centralizar e controlar as informações. O Plenário julgou procedente o pedido, por unanimidade, e determinou que a corregedoria não implemente a coleta para formar banco de dados próprio, ressalvado o compartilhamento por acesso."
+  ],
+  pontos:[
+   "O entendimento se apoia em parecer da Comissão de Proteção de Dados da Corregedoria Nacional de Justiça e no art. 102 do CNN/CN/CNJ.",
+   "Distinção central: compartilhamento por transferência, que forma banco de dados e exige interesse público específico, e compartilhamento por acesso, permitido à corregedoria sem formação de banco paralelo.",
+   "A atividade fiscalizatória da corregedoria local, por si só, não configura o interesse público específico exigido para a transferência de dados pessoais."
+  ],
+  kw:"LGPD proteção de dados pessoais banco de dados corregedoria Tocantins transferência compartilhamento por acesso interesse público específico art. 102 Provimento 149/2023 CNN fiscalização tabelionato"
+},
+{
+  g:"II", niv:"A",
+  title:"Excedente ao teto das serventias vagas fica à disposição do tribunal e não se vincula ao ressarcimento de atos gratuitos",
+  tipo:"PCA", num:"0000339-51.2021.2.00.0000", cargo:"cons.", nome:"guilherme feliciano", data:"08/10/2024", infn:14, link:"55360",
+  disc:"Direito Notarial e Registral. Interinidade, teto remuneratório, receita excedente das serventias vagas, ressarcimento de atos gratuitos e Programa Renda Mínima.",
+  sint:"A renda líquida que excede o teto nas serventias vagas fica à disposição do tribunal (arts. 70 e 194 do CNN/CN/CNJ). Nem as normas da Corregedoria Nacional nem as estaduais a vinculam ao ressarcimento dos atos gratuitos do registro civil das pessoas naturais. O extrateto deve custear o Programa Renda Mínima, além de outros usos.",
+  caso:[
+   "A remuneração dos interinos corresponde a 90,25% do teto constitucional. No TJRJ, a receita líquida superior é repassada ao fundo especial do tribunal. A associação dos registradores civis das pessoas naturais do Rio de Janeiro (Arpen/RJ) alegou desvio de finalidade e pediu a suspensão dos repasses. O Plenário não viu ilegalidade e julgou o pedido improcedente, por unanimidade."
+  ],
+  pontos:[
+   "Ressarcimento de atos gratuitos e Renda Mínima não se confundem. O ressarcimento reembolsa todas as serventias de registro civil das pessoas naturais pelos atos gratuitos praticados. A Renda Mínima é paga ao delegatário ou ao interino apenas das serventias deficitárias, quando o serviço não atinge o valor mínimo fixado pelo tribunal (art. 3º do Provimento CNJ n. 81/2018).",
+   "No Rio de Janeiro, as fontes de custeio são distintas: os atos gratuitos são ressarcidos pelo Funarpen/RJ (Lei Estadual n. 10234/2023), e a Renda Mínima é paga pelo Fundo Especial do Tribunal de Justiça, que recebe o excedente das serventias vagas.",
+   "O tribunal pode usar o extrateto também na gestão de crises em emergências e calamidades que atinjam serventias, como incêndios e enchentes."
+  ],
+  kw:"extrateto teto remuneratório interino 90,25% serventia vaga renda líquida excedente fundo especial tribunal ressarcimento atos gratuitos registro civil Renda Mínima Provimento 81/2018 arts. 70 194 CNN Funarpen Arpen"
+},
+{
+  g:"II", niv:"A",
+  title:"Serventias renunciadas após a escolha podem ser ofertadas em audiência de reescolha durante a validade do concurso",
+  tipo:"Cons", num:"0003910-59.2023.2.00.0000", cargo:"cons.", nome:"joão paulo schoucair", data:"22/10/2024", infn:15, link:"55420",
+  disc:"Direito Notarial e Registral. Concurso de provimento e remoção, audiência de reescolha e art. 2º, § 4º, da Resolução CNJ n. 81/2009.",
+  sint:"As serventias que constavam do edital de abertura, foram escolhidas na primeira sessão e voltaram a vagar por renúncia do candidato habilitado podem ser ofertadas em audiência de reescolha, durante o período de validade do concurso. Ficam excluídas apenas as que não constavam do edital, por terem vagado após sua publicação ou por outro motivo.",
+  caso:[
+   "O consulente indagou se as serventias renunciadas pelos candidatos com direito de escolha na sessão anterior deveriam ser ofertadas em nova sessão ou destinadas a novo concurso. O Plenário respondeu à consulta, por unanimidade, com base em parecer técnico da Coordenadoria de Gestão de Serviços Notariais e de Registro (CORN), aprovado pelo Corregedor Nacional de Justiça."
+  ],
+  pontos:[
+   "Conceito adotado: há renúncia quando o delegatário entra em exercício, mas desiste da delegação antes da conclusão do mesmo concurso.",
+   "Fundamentos: interesse público, economicidade, demora na conclusão dos concursos e mandamento constitucional de que as serventias não fiquem vagas por mais de seis meses (art. 236, § 3º, da Constituição Federal).",
+   "Limites: período de validade do concurso e autonomia dos tribunais."
+  ],
+  kw:"concurso reescolha audiência de escolha serventia renunciada renúncia edital art. 2º § 4º Resolução 81/2009 validade concurso art. 236 § 3º seis meses CORN consulta"
+},
+{
+  g:"II", niv:"A",
+  title:"Oficiais distribuidores judiciais não podem participar de remoção para serventias extrajudiciais nem assumi-las como interinos",
+  tipo:"PCA", num:"0000189-65.2024.2.00.0000", cargo:"cons.", nome:"alexandre teixeira", data:"22/10/2024", infn:15, link:"55423",
+  extra:[["PP 0007755-36.2022.2.00.0000","55424"],["PP 0002508-06.2024.2.00.0000","55425"]],
+  disc:"Direito Notarial e Registral; Direito Constitucional. Remoção, serventias judiciais e extrajudiciais, ADI 3748/PR, ADI 1183/DF e designação de interinos.",
+  sint:"Os oficiais distribuidores judiciais do Paraná não podem participar de concursos de remoção para serventias extrajudiciais, pois sua situação funcional não se confunde com a dos delegatários extrajudiciais que tiveram as remoções anuladas. Nem uns nem outros podem ser designados interinos nas serventias escolhidas: a designação deve observar o CNN/CN/CNJ e o Provimento CNJ n. 77/2018.",
+  caso:[
+   "Foram julgados três procedimentos. No primeiro, a Associação Nacional de Defesa dos Concursos para Cartórios (Andecc) impugnou ato da Corregedoria-Geral da Justiça do Paraná que admitiu oficiais distribuidores na audiência de escolha de 26/01/2024. O pedido foi julgado procedente: os distribuidores foram excluídos da audiência e incluídos no plano de estatização das serventias judiciais, com nova audiência após o julgamento de outros dois PCAs.",
+   "No segundo, uma distribuidora pedia para participar das escolhas. O pedido foi julgado improcedente, com a mesma exclusão e inclusão no plano de estatização. No terceiro, a Andecc noticiou que a corregedoria autorizara os oficiais com remoções anuladas a assumir provisoriamente as serventias escolhidas. O pedido foi julgado procedente para impor a observância do CNN/CN/CNJ na designação dos interinos. Todas as decisões foram unânimes."
+  ],
+  pontos:[
+   "Na ADI 3748/PR, o STF exigiu diploma de bacharel em direito para a carreira notarial e de registro, requisito ausente nos concursos dos distribuidores, e considerou irregular a remoção de agentes de serventias judiciais para serventias extrajudiciais.",
+   "O art. 6º, parágrafo único, da Lei Estadual n. 14594/2004 do Paraná, que admitia ocupantes de serventias mistas nas remoções, deve ser interpretado de modo a abranger apenas os delegatários do serviço notarial e de registro, sob pena de burla ao art. 37, II, e ao art. 236, § 3º, da Constituição Federal. O Código de Organização Judiciária do Estado qualifica o distribuidor como serventuário do foro judicial.",
+   "Os distribuidores não recebem o tratamento dado aos delegatários extrajudiciais com permutas anuladas, situação denominada “limbo funcional”.",
+   "Conforme a ADI 1183/DF: substitutos não concursados respondem pela serventia por no máximo seis meses; depois, os tribunais designam substitutos concursados; sem interessados entre os titulares concursados, admitem-se substitutos ad hoc.",
+   "Julgados em conjunto: PP n. 0007755-36.2022.2.00.0000 e PP n. 0002508-06.2024.2.00.0000."
+  ],
+  kw:"oficial distribuidor serventia judicial remoção serventia extrajudicial Paraná TJPR ADI 3748 bacharel em direito estatização interino ADI 1183 Provimento 77/2018 Provimento 149/2023 Andecc limbo funcional Lei 14594/2004 art. 37 II art. 236 § 3º"
+},
+{
+  g:"II", niv:"B",
+  title:"Paraíba: registros civis de distritos e municípios-termo mantêm atribuição notarial até a primeira vacância após a criação de comarca",
+  tipo:"PCA", num:"0006875-78.2021.2.00.0000", cargo:"cons.", nome:"luiz fernando bandeira de mello", data:"05/11/2024", infn:16, link:"55441",
+  disc:"Direito Notarial e Registral. Acumulação e desacumulação de serviços, registro civil das pessoas naturais com atribuição notarial e interpretação de lei estadual.",
+  sint:"A desacumulação das atribuições de registro civil das pessoas naturais e de notas só deve ocorrer após a primeira vacância, quando o município-termo ou o distrito for transformado em comarca (art. 18, §§ 3º e 4º, da Lei Estadual n. 6402/1996 da Paraíba). Até lá, os registradores civis dessas localidades praticam atos notariais sem restrições além das previstas em lei para os tabelionatos de notas.",
+  caso:[
+   "O Colégio Notarial do Brasil, seção da Paraíba, impugnou decisão da Corregedoria-Geral da Justiça em consulta administrativa que autorizou registradores civis das pessoas naturais de municípios-termo e de distritos a praticar atos notariais sem limitação de ato ou de tempo de exercício. O Plenário julgou o pedido parcialmente procedente, por unanimidade, apenas para fixar a interpretação da lei estadual, e manteve a decisão da corregedoria."
+  ],
+  pontos:[
+   "Desde 1959, os registros civis distritais da Paraíba têm atribuições de notas, em razão do baixo volume de serviço e de receita, muitas vezes restrita a nascimentos e óbitos.",
+   "A acumulação é excepcional e visa à sustentabilidade econômica do registro civil das pessoas naturais. A desacumulação tornaria inviável o serviço registral em localidades afastadas.",
+   "A atribuição atípica decorre de lei local e das normas gerais editadas pela União. A expressão “até que ocorra a primeira vacância” refere-se exclusivamente aos registros civis em municípios transformados em comarca."
+  ],
+  kw:"acumulação desacumulação registro civil das pessoas naturais atos notariais tabelionato de notas município-termo distrito comarca primeira vacância Paraíba Lei 6402/1996 art. 18 Colégio Notarial"
+},
+{
+  g:"II", norm:true, niv:"A",
+  title:"ENAC: nota mínima de 60%, validade de seis anos e exigência transitória apenas para a prova oral",
+  tipo:"ATO", num:"0004931-36.2024.2.00.0000", cargo:"min.", nome:"luís roberto barroso", data:"22/10/2024", infn:15, link:"55399",
+  disc:"Direito Notarial e Registral. Concurso público de outorga de delegações, Resolução CNJ n. 81/2009 e Exame Nacional dos Cartórios (ENAC).",
+  sint:"O Plenário alterou novamente a Resolução CNJ n. 81/2009 e ajustou o Exame Nacional dos Cartórios, instituído pela Resolução CNJ n. 575/2024. A nota mínima cai de 70% para 60%, e a validade da aprovação sobe de quatro para seis anos.",
+  caso:[
+   "Nota mínima: 60% na ampla concorrência, para aumentar o número de aprovados diante da quantidade de serventias de baixa remuneração no país. Mantém-se 50% para candidatos autodeclarados pessoas com deficiência, negros ou indígenas.",
+   "Disciplinas: “registros públicos” passa a “direito notarial e registral”, e “direito comercial” passa a “direito empresarial”. Como a prova é objetiva, o exame deixa de exigir língua portuguesa.",
+   "Entrevista pessoal: eliminada, como já ocorre nos concursos da magistratura, para evitar favorecimentos indevidos.",
+   "Validade: seis anos, porque o exame serve tanto ao provimento quanto à remoção."
+  ],
+  pontos:[
+   "Regra de transição: para editais abertos até o fim do 1º semestre de 2025, a aprovação no ENAC não é exigida na inscrição preliminar, mas para a prova oral. O comprovante é apresentado com os demais documentos dos aprovados na prova escrita e prática.",
+   "O processo (ATO n. 0004931-36.2024.2.00.0000) é o mesmo da criação do exame (Informativo n. 11/2024, Grupo I)."
+  ],
+  kw:"ENAC exame nacional dos cartórios Resolução 81/2009 Resolução 575/2024 nota mínima 60% validade seis anos direito notarial e registral direito empresarial língua portuguesa entrevista pessoal prova oral transição"
+},
+{
+  g:"II", norm:true, niv:"B",
+  title:"Corregedor Nacional de Justiça passa a presidir a comissão do ENAC",
+  tipo:"ATO", num:"0007487-11.2024.2.00.0000", cargo:"min.", nome:"luís roberto barroso", data:"19/11/2024", infn:17, link:"55462",
+  disc:"Direito Notarial e Registral. Concurso público de outorga de delegações e organização do Exame Nacional dos Cartórios.",
+  sint:"O Plenário alterou o art. 1º-A, § 2º, da Resolução CNJ n. 81/2009 para atribuir ao Corregedor ou à Corregedora Nacional de Justiça a presidência da comissão de concurso responsável pelo Exame Nacional dos Cartórios.",
+  caso:[
+   "A redação anterior definia os integrantes da comissão responsável pela organização do exame, mas não indicava a autoridade encarregada de presidi-la."
+  ],
+  pontos:[
+   "A presidência guarda coerência com a coordenação do exame pela Corregedoria Nacional de Justiça, prevista desde sua criação (Informativo n. 11/2024)."
+  ],
+  kw:"ENAC comissão presidência Corregedor Nacional de Justiça art. 1º-A § 2º Resolução 81/2009"
+},
+{
+  g:"II", norm:true, niv:"B",
+  title:"Corregedorias podem convocar juiz auxiliar exclusivo para o foro extrajudicial, fora do limite geral de convocações",
+  tipo:"ATO", num:"0007488-93.2024.2.00.0000", cargo:"min.", nome:"luís roberto barroso", data:"19/11/2024", infn:17, link:"55463",
+  disc:"Direito Notarial e Registral. Fiscalização das serventias pelo Poder Judiciário e convocação de magistrados (Resolução CNJ n. 72/2009).",
+  sint:"Nos tribunais em que não há corregedoria do foro extrajudicial, a corregedoria local pode convocar mais um juiz de primeiro grau para atuar exclusivamente na orientação, controle e fiscalização das serventias extrajudiciais. A convocação independe do limite geral da Resolução CNJ n. 72/2009.",
+  caso:[
+   "A Resolução CNJ n. 72/2009 já permitia convocar magistrados, em caráter excepcional, para auxiliar nas atividades jurisdicionais e administrativas em caso de acúmulo de serviço. Para os trabalhos correcionais, o limite é de um juiz para cada 100 juízes efetivos; acima de seis convocados, o tribunal deve justificar e submeter ao referendo do CNJ."
+  ],
+  pontos:[
+   "Justificativa do ato: necessidade de especialização e eficiência na fiscalização dos serviços notariais e de registro.",
+   "A convocação adicional é exclusiva para o foro extrajudicial e só cabe onde não houver corregedoria própria para esse foro."
+  ],
+  kw:"juiz auxiliar corregedoria foro extrajudicial fiscalização serventias convocação Resolução 72/2009 limite 1 para 100"
+},
+{
+  g:"II", norm:true, niv:"A",
+  title:"Registro civil: lavratura e retificação dos assentos de óbito de mortos e desaparecidos políticos da ditadura militar",
+  tipo:"ATO", num:"0005496-97.2024.2.00.0000", cargo:"min.", nome:"luís roberto barroso", data:"10/12/2024", infn:18, link:"55492",
+  disc:"Direito Notarial e Registral. Registro civil das pessoas naturais, assento e retificação de óbito, Lei n. 9140/1995 e gratuidade.",
+  sint:"Resolução do CNJ determina às serventias de registro civil das pessoas naturais que lavrem os assentos de óbito das pessoas desaparecidas durante a ditadura militar (1964 a 1985) e retifiquem a causa da morte nos assentos existentes, com base no Relatório Final da Comissão Nacional da Verdade (CNV).",
+  caso:[
+   "Causa da morte a ser lançada: “não natural, violenta, causada pelo Estado brasileiro no contexto da perseguição sistemática à população identificada como dissidente política do regime ditatorial instaurado em 1964”. A Comissão Especial sobre Mortos e Desaparecidos Políticos (CEMDP) consta como atestante.",
+   "Os registros são atualizados mesmo na ausência de informações completas. As certidões de óbito são entregues às famílias e interessados, de preferência em ocasião solene.",
+   "Os atos são praticados sem custo para as vítimas e suas famílias, e as serventias são ressarcidas pelos fundos de compensação locais."
+  ],
+  pontos:[
+   "Procedimento: o Operador Nacional do Registro Civil de Pessoas Naturais (ONRCPN) remete a determinação às serventias relacionadas no relatório da CNV, que têm 30 dias para fazer as correções. A recusa da serventia é comunicada ao corregedor local.",
+   "Base legal: Lei n. 9140/1995, que reconhece como mortas as pessoas desaparecidas em razão de participação, ou acusação de participação, em atividades políticas entre 02/09/1961 e 15/08/1979.",
+   "Dado do informativo: a CNV apontou 434 casos de mortes e desaparecimentos, e apenas 10 assentos haviam sido corrigidos administrativamente."
+  ],
+  kw:"registro civil óbito assento retificação causa da morte ditadura militar desaparecidos políticos Comissão Nacional da Verdade CEMDP atestante Lei 9140/1995 ONRCPN 30 dias gratuidade fundo de compensação"
+},
+{
+  g:"II", norm:true, niv:"A",
+  title:"Registro civil de pessoas indígenas: retificação extrajudicial, etnia como sobrenome e fim da exigência do RANI",
+  tipo:"ATO", num:"0007754-80.2024.2.00.0000", cargo:"cons.", nome:"daniela madeira", data:"10/12/2024", infn:18, link:"55493",
+  disc:"Direito Notarial e Registral. Registro civil das pessoas naturais, nome, registro tardio e Resolução Conjunta CNJ/CNMP n. 3/2012.",
+  sint:"O Plenário alterou a Resolução Conjunta CNJ/CNMP n. 3/2012 para alinhá-la à Lei n. 14382/2022 e às especificidades culturais indígenas. A retificação do registro de nascimento da pessoa indígena passa a ser possível pela via extrajudicial, e o Registro Administrativo de Nascimento Indígena (RANI) deixa de ser requisito do registro tardio.",
+  caso:[
+   "Nome: admite-se lançar a etnia, o grupo, o clã ou a família indígena como sobrenome, e não apenas a informação dos pais, como previa o texto anterior. Os dados podem constar na língua indígena, com consulta a pessoa que domine o idioma em caso de dúvida sobre a grafia.",
+   "Averbação: a alteração é averbada à margem do registro de nascimento, e todas as certidões devem trazer o inteiro teor da averbação, com indicação do nome anterior, para segurança jurídica e salvaguarda de terceiros.",
+   "Registro tardio: quando não houver Declaração de Nascido Vivo (DNV), deixa de ser exigido o RANI, assim como a presença de representante da Funai. Havendo dúvida ou suspeita, o registrador pode exigir documentos, em dúvida fundamentada; persistindo a dúvida, o caso é levado ao juízo competente.",
+   "Via judicial: quando necessária, observam-se os benefícios da gratuidade previstos na Lei n. 1060/1950, considerada a situação sociocultural da pessoa indígena."
+  ],
+  pontos:[
+   "Fundamento legal invocado: a Lei n. 14382/2022 alterou os arts. 56 e 57 da LRP e passou a permitir a alteração de prenome e sobrenome independentemente de autorização judicial.",
+   "Terminologia: foram suprimidas as categorias “integrado” e “não integrado”, oriundas do Estatuto do Índio de 1973, por incompatíveis com a capacidade civil plena reconhecida pela Constituição Federal de 1988. O texto passa a usar “pessoa indígena” e destaca a autodeterminação quanto à opção pelo registro civil.",
+   "A exigência do RANI vinha sendo interpretada de forma diversa entre os Estados e foi considerada obstáculo ao direito ao registro."
+  ],
+  kw:"registro civil indígena pessoa indígena Resolução Conjunta 3/2012 CNMP etnia sobrenome nome retificação extrajudicial averbação certidão inteiro teor registro tardio RANI DNV Funai Lei 14382/2022 arts. 56 57 LRP Estatuto do Índio integrado"
+},
+
+/* ===================== III · OUTRAS MATÉRIAS ===================== */
+{
+  g:"III", niv:"B",
+  title:"Partilha de bens em CEJUSC na fase pré-processual, inclusive com menores ou incapazes e com testamento",
+  tipo:"Cons", num:"0002599-04.2021.2.00.0000", cargo:"cons.", nome:"pablo coutinho barreto", data:"03/09/2024", infn:12, link:"55268",
+  disc:"Direito Civil (Sucessões e Família); Direito Processual Civil. Métodos consensuais, CEJUSC, partilha e inventário.",
+  sint:"Os CEJUSCs podem realizar, na fase pré-processual, acordos que envolvam partilha de bens, inclusive com menores ou incapazes, desde que haja consenso, partilha em fração ideal (vedada disposição sem autorização judicial) e anuência do Ministério Público. Se houver testamento, a partilha é possível sem litígio, com partes capazes e concordes e testamento previamente registrado ou autorizado judicialmente.",
+  caso:[
+   "Consulta respondida pelo Plenário, por unanimidade. O Conselho partiu da inexistência de proibição legal, do caráter disponível do direito patrimonial entre capazes e do estímulo legal aos meios consensuais (arts. 3º e 165 do CPC; art. 3º da Lei n. 13140/2015)."
+  ],
+  pontos:[
+   "Paralelo expresso com a via extrajudicial: se o inventário pode ser feito por escritura com menores ou incapazes (reforma da Resolução CNJ n. 35/2007, Grupo I), não há óbice à partilha pré-processual nos centros judiciários. O Conselho invocou ainda precedente do STJ segundo o qual a existência de testamento, por si só, não impede o inventário extrajudicial quando todos forem capazes e concordes.",
+   "Com menores ou incapazes, observam-se as cautelas dos arts. 178, II, e 279 do CPC.",
+   "Vedações: litígios de alta complexidade, como herdeiros desconhecidos ou disputa de paternidade post mortem.",
+   "Em matéria sucessória e de família, as partes devem estar acompanhadas de advogado ou defensor público (arts. 3º e 11 da Resolução CNJ n. 125/2010 e art. 334 do CPC)."
+  ],
+  kw:"CEJUSC partilha pré-processual inventário mediação conciliação menores incapazes fração ideal Ministério Público testamento Lei 13140/2015 Resolução 125/2010 arts. 3º 165 178 279 334 CPC"
+},
+{
+  g:"III", niv:"B",
+  title:"Execução fiscal: Resolução CNJ n. 547/2024 alcança conselhos profissionais e exige conciliação e protesto antes do ajuizamento",
+  tipo:"Cons", num:"0002087-16.2024.2.00.0000", cargo:"cons.", nome:"daiane nogueira de lira", data:"05/11/2024", infn:16, link:"55429",
+  extra:[["Cons 0005858-02.2024.2.00.0000","55430"]],
+  disc:"Direito Tributário; Direito Processual Civil; Direito Notarial e Registral (protesto). Execução fiscal, protesto prévio do título e Tema 1184/STF.",
+  sint:"A Resolução CNJ n. 547/2024 aplica-se a todas as execuções fiscais, inclusive às dos conselhos de fiscalização profissional. O valor de R$ 10 mil não é piso para o ajuizamento, mas critério para extinguir execuções já ajuizadas sem movimentação útil há mais de um ano e sem bens penhorados. Novas execuções de qualquer valor podem ser propostas, desde que precedidas de tentativa de conciliação ou solução administrativa e de protesto do título.",
+  caso:[
+   "Consultas formuladas pelo Conselho Regional de Medicina Veterinária de Goiás e pelo Conselho Regional de Enfermagem do Rio Grande do Norte, respondidas pelo Plenário por unanimidade."
+  ],
+  pontos:[
+   "Para o tabelionato de protesto, interessa a confirmação de que a resolução, editada com base no Tema 1184 da repercussão geral do STF, prevê o protesto do título como providência prévia ao ajuizamento da execução fiscal.",
+   "Movimentação útil: efetiva citação, intimação do devedor ou constrição de bens penhoráveis (art. 921, § 4º-A, do CPC).",
+   "Localizados bens, a execução extinta pode ser ajuizada novamente, se não houver prescrição (art. 1º, § 3º, da resolução). O piso de ajuizamento é o fixado por cada ente; para os conselhos, o do art. 8º da Lei n. 12514/2011.",
+   "Julgado em conjunto: Cons n. 0005858-02.2024.2.00.0000."
+  ],
+  kw:"execução fiscal Resolução 547/2024 Tema 1184 STF protesto CDA certidão de dívida ativa conciliação conselhos profissionais anuidade Lei 12514/2011 R$ 10 mil extinção movimentação útil art. 921 § 4º-A CPC"
+},
+
+/* ===================== IV · TANGENCIAIS ===================== */
+{
+  g:"IV",
+  title:"Resoluções do CNJ são atos normativos primários e vinculam todos os tribunais, exceto o STF",
+  tipo:"Cons", num:"0002969-75.2024.2.00.0000", cargo:"cons.", nome:"josé rotondano", data:"08/10/2024", infn:14, link:"55361",
+  disc:"Direito Constitucional. Natureza das resoluções do CNJ; promoção por merecimento de magistrados.",
+  sint:"Ao responder consulta sobre desempate na promoção por merecimento, o Plenário afirmou que as resoluções do CNJ são atos de natureza primária, que retiram seu fundamento de validade da própria Constituição Federal. Por seu caráter cogente, são de observância obrigatória por todos os tribunais, exceto o STF, que não podem adotar critérios locais distintos.",
+  caso:[
+   "A Associação dos Magistrados de Sergipe consultou sobre os critérios de desempate do art. 11-A, § 7º, da Resolução CNJ n. 106/2010 (antiguidade na carreira e, persistindo o empate, idade). Resposta: aplicam-se a todos os escrutínios da lista tríplice, inclusive ao que define o promovido, e o empate se refere à pontuação, não aos votos."
+  ],
+  pontos:[
+   "Interesse indireto: a natureza primária das resoluções do CNJ é premissa para o seu controle direto de constitucionalidade, inclusive das resoluções que regulam concursos e serventias."
+  ],
+  kw:"resolução CNJ ato normativo primário fundamento de validade Constituição observância obrigatória STF Resolução 106/2010 desempate promoção merecimento lista tríplice"
+},
+{
+  g:"IV", norm:true,
+  title:"Ordens judiciais de pesquisa, restrição e bloqueio de bens passam a ser obrigatoriamente eletrônicas",
+  tipo:"ATO", num:"0003336-02.2024.2.00.0000", cargo:"min.", nome:"luís roberto barroso", data:"17/09/2024", infn:13, link:"55328",
+  disc:"Direito Processual Civil. Constrição patrimonial e sistemas eletrônicos do CNJ.",
+  sint:"Resolução do CNJ obriga os magistrados a usar exclusivamente os sistemas eletrônicos oferecidos pelo Conselho para pesquisa de dados e para busca, restrição e bloqueio de bens destinados a garantir o cumprimento de dívida ou obrigação. A transmissão de ordens em desacordo pode gerar responsabilidade funcional do magistrado.",
+  caso:[
+   "Exceções: ordem não prevista entre as funcionalidades do sistema; indisponibilidade temporária em caso urgente; impossibilidade de aguardar os prazos de resposta, por urgência ou risco de perecimento do direito. A medida partiu de ofício do Banco Central sobre o volume de ordens de bloqueio ainda enviadas por ofício."
+  ],
+  pontos:[
+   "O informativo menciona expressamente o Sisbajud e o Renajud e se refere aos demais sistemas de forma genérica."
+  ],
+  kw:"constrição eletrônica bloqueio restrição pesquisa de bens Sisbajud Renajud sistemas do CNJ ofício papel responsabilidade funcional"
+},
+{
+  g:"IV", norm:true,
+  title:"Oficiais de justiça passam a ter acesso direto ao Sisbajud e aos sistemas de pesquisa e constrição patrimonial",
+  tipo:"ATO", num:"0007876-93.2024.2.00.0000", cargo:"min.", nome:"luís roberto barroso", data:"10/12/2024", infn:18, link:"55497",
+  disc:"Direito Processual Civil. Cumprimento de mandados, penhora e sistemas eletrônicos (Resolução CNJ n. 600/2024).",
+  sint:"A Resolução CNJ n. 600/2024 permite aos oficiais de justiça acessar diretamente, por login e senha, os sistemas eletrônicos de pesquisa e constrição patrimonial do Poder Judiciário, nos limites e para as finalidades do mandado, inclusive para lançar ordens de bloqueio de valores no Sisbajud.",
+  caso:[
+   "Os tribunais cadastram os oficiais ativos no perfil “oficial de justiça”, com delimitação da comarca, seção judiciária ou vara. Recomenda-se que a ordem de penhora já conste do mandado de execução, para cumprimento logo após certificado o decurso do prazo de pagamento, sem retorno à conclusão (art. 829, § 1º, do CPC; art. 7º, II, da Lei n. 6830/1980).",
+   "Desbloqueio e retirada de restrições não integram o perfil e só podem ser atribuídos por delegação do magistrado, no perfil “servidor assessor”. O acesso não alcança processos sob sigilo ou segredo de justiça, salvo se o mandado deles se originar ou a eles se destinar."
+  ],
+  pontos:[
+   "Interesse indireto: execução e penhora, com reflexo nas ordens de constrição que chegam às serventias."
+  ],
+  kw:"oficial de justiça Sisbajud Resolução 600/2024 penhora bloqueio mandado constrição art. 829 § 1º CPC Lei 6830/1980 execução fiscal"
+}
+];
+
+var EXAM = {9:4, 10:11, 11:12, 12:9, 13:11, 14:11, 15:11, 16:11, 17:7, 18:13};
+var INFDATE = {9:"01/07/2024", 10:"22/08/2024", 11:"05/09/2024", 12:"16/09/2024", 13:"01/10/2024", 14:"23/10/2024", 15:"08/11/2024", 16:"22/11/2024", 17:"29/11/2024", 18:"20/12/2024"};
+
+var DISCARD = [
+ {inf:9, rows:[
+  ["ATO 0000927-53.2024.2.00.0000","Organização judiciária","Prazo de 180 dias para políticas de lotação em comarcas de difícil provimento (Resolução CNJ n. 557/2024)."],
+  ["PP 0000026-05.2022.2.00.0405","Disciplinar (magistratura)","Assédio sexual: afastamento e revisão disciplinar para rever pena de censura."],
+  ["PAD 0006209-09.2023.2.00.0000","Disciplinar (magistratura)","Manifestação político-partidária em grupo privado de WhatsApp: censura."],
+  ["RevDis 0007871-42.2022.2.00.0000","Disciplinar (magistratura)","Uso ostensivo de arma em condomínios: aposentadoria compulsória mantida."]
+ ]},
+ {inf:10, rows:[
+  ["ATO 0004612-68.2024.2.00.0000","Concurso da magistratura","Enam como 1ª etapa dos concursos (Resolução CNJ n. 75/2009)."],
+  ["ATO 0004748-65.2024.2.00.0000","Gestão judiciária","Modelo padronizado de ementa (Recomendação CNJ n. 154/2024)."],
+  ["ATO 0003753-52.2024.2.00.0000","Processo civil","Domicílio Judicial Eletrônico e DJEN (Resolução CNJ n. 455/2022)."],
+  ["ATO 0003606-26.2024.2.00.0000","Previdenciário","Criação do Fonassp."],
+  ["ATO 0004645-58.2024.2.00.0000","Infância e juventude","Aprendizagem para adolescentes do sistema socioeducativo."],
+  ["CONS 0002117-56.2021.2.00.0000","Magistratura","Desistência de consulta sobre férias de juiz eleitoral."],
+  ["PP 0001201-61.2023.2.00.0805","Disciplinar (magistratura)","PAD: súmula genérica para inclusão em pauta e cessão de token."],
+  ["PP 0000813-95.2023.2.00.0826","Disciplinar (magistratura)","PAD por descumprimento reiterado de decisão do STJ."],
+  ["PP 0004637-81.2024.2.00.0000","Orçamento","Proposta orçamentária do CNJ para 2025."],
+  ["PCA 0002156-48.2024.2.00.0000","Tribunais","Quinto constitucional: voto secreto; pedido prejudicado."],
+  ["RD 0000695-41.2024.2.00.0000","Disciplinar (magistratura)","PAD: nomeação de perito sem formação contábil."]
+ ]},
+ {inf:11, rows:[
+  ["ATO 0004795-39.2024.2.00.0000","Saúde","Semana Nacional da Saúde (Resolução CNJ n. 107/2010)."],
+  ["ATO 0004379-71.2024.2.00.0000","Execução penal","Política antimanicomial: prorrogação de prazos (Resolução CNJ n. 487/2023)."],
+  ["Avocat 0001282-25.2008.2.00.0000","Disciplinar e previdenciário","Aposentadoria compulsória não se converte em aposentadoria por invalidez."],
+  ["PP 0007817-76.2022.2.00.0000","Disciplinar (magistratura)","Venda de bens apreendidos: PAD contra juiz e oficial de justiça."],
+  ["PAD 0002094-42.2023.2.00.0000","Disciplinar (magistratura)","TAC só antes do PAD; disponibilidade por postagens em rede social."],
+  ["PAD 0007066-94.2019.2.00.0000","Disciplinar (magistratura)","Sucessivas cessões de crédito em execução provisória: disponibilidade."],
+  ["PP 0000380-13.2024.2.00.0000","Servidores","Ponto facultativo no aniversário: portaria inválida."],
+  ["RevDis 0001753-16.2023.2.00.0000","Disciplinar (magistratura)","Perspectiva de gênero: aposentadoria convertida em disponibilidade."],
+  ["RevDis 0002574-25.2020.2.00.0000","Disciplinar (magistratura)","Prescrição do PAD contada da ciência da autoridade competente."]
+ ]},
+ {inf:12, rows:[
+  ["ATO 0005292-53.2024.2.00.0000","Regimento do CNJ","Distribuição a gabinetes vagos (art. 45-A do RICNJ)."],
+  ["ATO 0005028-36.2024.2.00.0000","Gestão judiciária","Plano Nacional de Inovação (Resolução CNJ n. 395/2021)."],
+  ["PAD 0006208-24.2023.2.00.0000","Disciplinar (magistratura)","Juiz eleitoral em evento político-partidário: advertência."],
+  ["PAD 0002232-77.2021.2.00.0000","Disciplinar (magistratura)","Exposição de dados por pen drive: disponibilidade."],
+  ["PCA 0004786-82.2021.2.00.0000","Advocacia","Tabela da OAB para honorários de dativos não vincula."],
+  ["RevDis 0002230-39.2023.2.00.0000","Disciplinar (magistratura)","Remoção e disponibilidade no mesmo PAD: pena única."]
+ ]},
+ {inf:13, rows:[
+  ["ATO 0005419-88.2024.2.00.0000","Direitos humanos","Fórum LGBTQIA+ e Formulário Rogéria (Resolução CNJ n. 582/2024)."],
+  ["ATO 0007812-20.2023.2.00.0000","Infância","Plano Nacional da Primeira Infância (Resolução CNJ n. 470/2022)."],
+  ["ATO 0003971-80.2024.2.00.0000","Família","Depoimento especial em ações com alienação parental."],
+  ["ATO 0005977-94.2023.2.00.0000","Ambiental","Parâmetros para quantificar danos climáticos (Recomendação CNJ n. 145/2023)."],
+  ["PAM 0004742-58.2024.2.00.0000","Orçamento","Propostas orçamentárias do Judiciário da União."],
+  ["PCA 0003135-10.2024.2.00.0000","Magistratura","Promoção por merecimento: fundamentação das notas."],
+  ["PAD 0002421-84.2023.2.00.0000","Disciplinar (magistratura)","Venda de decisões e lavagem de dinheiro: aposentadoria compulsória."],
+  ["PAD 0002598-14.2024.2.00.0000","Disciplinar (magistratura)","Prorrogação do prazo de instrução do PAD."],
+  ["RevDis 0002103-72.2021.2.00.0000","Disciplinar (magistratura)","Erro no quórum de maioria absoluta; nova pena pelo CNJ."],
+  ["RevDis 0005416-07.2022.2.00.0000","Disciplinar (magistratura)","Censura por custódia indevida em instituto psiquiátrico."]
+ ]},
+ {inf:14, rows:[
+  ["ATO 0003048-54.2024.2.00.0000","Gestão judiciária","Protocolo de crises cibernéticas em calamidades."],
+  ["ATO 0005677-98.2024.2.00.0000","Saúde","Comitê Gestor Nacional do e-NatJus."],
+  ["ATO 0009144-90.2021.2.00.0000","Advocacia","Nomeação e pagamento de advogados dativos."],
+  ["PCA 0003085-52.2022.2.00.0000 e PCA 0002890-96.2024.2.00.0000","Magistratura","Magistrado afastado não recebe verbas temporárias ou indenizatórias."],
+  ["PCA 0002205-26.2023.2.00.0000","Magistratura","Promoção de juízes federais: perda do objeto."],
+  ["PCA 0003661-11.2023.2.00.0000","Processo eletrônico","PJeCor no TJSE."],
+  ["PP 0001567-56.2024.2.00.0000","Competência do CNJ","Ato jurisdicional não é revisável pelo CNJ."],
+  ["REP 0002439-71.2024.2.00.0000","Disciplinar (magistratura)","Excesso de prazo: arquivamento por perda do objeto."]
+ ]},
+ {inf:15, rows:[
+  ["ATO 0006309-27.2024.2.00.0000","Processo civil","Litigância abusiva: identificação e tratamento (recomendação)."],
+  ["ATO 0006693-87.2024.2.00.0000","Processo","Julgamento virtual (Resolução CNJ n. 591/2024)."],
+  ["ATO 0006689-50.2024.2.00.0000","Justiça restaurativa","Extensão às Justiças do Trabalho, Eleitoral e Militar."],
+  ["RD 0006488-58.2024.2.00.0000","Disciplinar (magistratura)","Afastamento cautelar por indícios de venda de decisões."],
+  ["PP 0005263-37.2023.2.00.0000","Precatórios","Conceito de verba alimentar (art. 100, § 1º, da Constituição Federal)."],
+  ["PP 0004201-98.2019.2.00.0000","Certidões judiciais","Grupo de trabalho sobre a Resolução CNJ n. 121/2010."],
+  ["RevDis 0002769-39.2022.2.00.0000","Disciplinar (magistratura)","Atos ordinatórios com conteúdo decisório: disponibilidade."],
+  ["RevDis 0002567-62.2022.2.00.0000","Disciplinar (magistratura)","Quebra de sigilo fiscal sem fundamentação: disponibilidade."]
+ ]},
+ {inf:16, rows:[
+  ["ATO 0007029-91.2024.2.00.0000","Sustentabilidade","Programa Justiça Carbono Zero."],
+  ["ATO 0004380-56.2024.2.00.0000","Execução penal","Inspeções judiciais em unidades prisionais."],
+  ["PAD 0002958-80.2023.2.00.0000","Disciplinar (magistratura)","Interação social não prova parcialidade: improcedência."],
+  ["PP 0004420-38.2024.2.00.0000","Processo eletrônico","Peticionamento eletrônico no TJBA."],
+  ["PP 0002665-76.2024.2.00.0000","Processo eletrônico","Publicações na Central de Processamento Eletrônico do TJMS."],
+  ["PP 0007580-08.2023.2.00.0000","Advocacia","Gravação do atendimento de advogados por juízes."],
+  ["RD 0001686-17.2024.2.00.0000","Disciplinar (magistratura)","Linguagem discriminatória em julgamento: PAD."],
+  ["RevDis 0008383-59.2021.2.00.0000","Disciplinar (magistratura)","Favorecimento a clientes da namorada: aposentadoria mantida."]
+ ]},
+ {inf:17, rows:[
+  ["ATO 0007486-26.2024.2.00.0000","Previdenciário","Teleperícia e quesitação unificada (Resolução CNJ n. 595/2024)."],
+  ["ATO 0007307-92.2024.2.00.0000","Direitos humanos","Protocolo de julgamento com perspectiva racial (Resolução CNJ n. 598/2024)."],
+  ["Cons 0003519-07.2023.2.00.0000","Precatórios","Consulta sobre caso concreto: não conhecida."],
+  ["PAD 0005357-19.2022.2.00.0000","Disciplinar (magistratura)","Interferência dos filhos nas decisões: aposentadoria compulsória."],
+  ["RevDis 0003603-42.2022.2.00.0000","Disciplinar (magistratura)","Desídia reiterada: aposentadoria compulsória mantida."]
+ ]},
+ {inf:18, rows:[
+  ["ATO 0000962-13.2024.2.00.0000","Regimento do CNJ","Sessões virtuais do Plenário."],
+  ["ATO 0008059-64.2024.2.00.0000","Magistratura","Permuta entre tribunais de justiça (Resolução CNJ n. 603/2024)."],
+  ["ATO 0007991-17.2024.2.00.0000","Organização judiciária","Critérios para criação de cargos e unidades (Resolução CNJ n. 184/2013)."],
+  ["ATO 0007479-34.2024.2.00.0000","Direitos humanos","Política de atenção às comunidades quilombolas (Resolução CNJ n. 599/2024)."],
+  ["ATO 0007818-90.2024.2.00.0000","Direitos humanos","Política para pessoas em situação de rua (Resolução CNJ n. 425/2021)."],
+  ["PP 0004972-03.2024.2.00.0000","Precatórios","Diferenças retroativas e anualidade orçamentária: liminar."],
+  ["PAD 0005326-96.2022.2.00.0000","Disciplinar (magistratura)","Repasse salarial de assessores: aposentadoria compulsória."],
+  ["PAD 0007765-80.2022.2.00.0000","Disciplinar (magistratura)","Pedido de nomeação de familiares: disponibilidade."],
+  ["RD 0002124-43.2024.2.00.0000","Disciplinar (magistratura)","Sigilo interno absoluto de provas e cadeia de custódia: PAD."],
+  ["RevDis 0008032-86.2021.2.00.0000","Disciplinar (magistratura)","Ausências irregulares e cessão de token: disponibilidade."]
+ ]}
+];
+
+
+/* ---------- armazenamento local ---------- */
+var KEY = "cnj-2024-s2-v1";
+var state = {done:{}, turma:{}};
+try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); state.done = p.done || {}; state.turma = p.turma || {}; } } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {} }
+
+/* ---------- utilidades ---------- */
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function pad(n){ return (n < 10 ? "0" : "") + n; }
+function infTxt(f){ return "n. " + pad(f.infn) + "/2024"; }
+function fid(i){ return "f" + (i+1); }
+function showT(i){ return state.turma[fid(i)] !== false; }
+F.forEach(function(f){ f.turma = "Plenário"; });
+function idParts(f, withT){
+  return {head:f.tipo + " n. " + f.num, rel:"rel. " + f.cargo + " ", nome:f.nome, t: withT ? f.turma + ", " : "", tail:"j. " + f.data + ", ", inf:infTxt(f)};
+}
+function idText(f, withT){ var p = idParts(f, withT); return "(" + p.head + ", " + p.rel + p.nome + ", " + p.t + p.tail + "Informativo " + p.inf + ")"; }
+function idHTML(f, withT, inline){
+  var p = idParts(f, withT);
+  var sc = inline ? '<span style="font-variant:small-caps">' : '<span class="sc">';
+  return "(" + esc(p.head) + ", " + esc(p.rel) + sc + esc(p.nome) + "</span>, " + esc(p.t) + esc(p.tail) + "<b>Informativo</b> " + esc(p.inf) + ")";
+}
+function labCaso(f){ return f.norm ? "Resumo do ato normativo" : "Caso concreto"; }
+function links(f){
+  var a = [{t:"Inteiro teor", u:BASE + f.link}];
+  (f.extra || []).forEach(function(x){ a.push({t:x[0], u:BASE + x[1]}); });
+  return a;
+}
+function fichaText(f, i){
+  return [f.title, "",
+    "Identificação: " + idText(f, showT(i)),
+    "Assunto: " + f.disc,
+    "Síntese executiva: " + f.sint,
+    labCaso(f) + ": " + f.caso.join("\n"),
+    "Pontos de destaque:\n" + f.pontos.map(function(p){ return "- " + p; }).join("\n"),
+    "Inteiro teor: " + links(f).map(function(l){ return l.u; }).join(" ; ")
+  ].join("\n");
+}
+function fichaHTML(f, i){
+  return '<p><b>' + esc(f.title) + '</b></p>' +
+    '<p><b>Identificação:</b> ' + idHTML(f, showT(i), true) + '</p>' +
+    '<p><b>Assunto:</b> ' + esc(f.disc) + '</p>' +
+    '<p><b>Síntese executiva:</b> ' + esc(f.sint) + '</p>' +
+    '<p><b>' + labCaso(f) + ':</b> ' + f.caso.map(esc).join('</p><p>') + '</p>' +
+    '<p><b>Pontos de destaque:</b></p><ul>' + f.pontos.map(function(p){ return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>';
+}
+function flash(btn, msg){
+  btn.classList.add("copied");
+  var lab = btn.querySelector("[data-l]");
+  if (lab) { if (!lab.getAttribute("data-o")) lab.setAttribute("data-o", lab.textContent); lab.textContent = msg; }
+  btn.setAttribute("title", msg);
+  clearTimeout(btn._t);
+  btn._t = setTimeout(function(){ btn.classList.remove("copied"); if (lab) lab.textContent = lab.getAttribute("data-o"); btn.setAttribute("title", btn.getAttribute("aria-label") || ""); }, 1600);
+}
+function legacyCopy(text){
+  var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly","");
+  ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+  var ok = false; try { ok = document.execCommand("copy"); } catch(e) {}
+  document.body.removeChild(ta); return ok;
+}
+function copy(html, text, btn, selectEl){
+  function fail(){
+    if (legacyCopy(text)) { flash(btn, "Copiado"); return; }
+    if (selectEl) { var r = document.createRange(); r.selectNodeContents(selectEl); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+    flash(btn, "Selecionado: use Ctrl+C");
+  }
+  try {
+    if (navigator.clipboard && window.ClipboardItem && navigator.clipboard.write) {
+      var item = new ClipboardItem({"text/html": new Blob([html], {type:"text/html"}), "text/plain": new Blob([text], {type:"text/plain"})});
+      navigator.clipboard.write([item]).then(function(){ flash(btn, "Copiado"); }, function(){
+        navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+      });
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+    } else { fail(); }
+  } catch(e) { fail(); }
+}
+
+/* ---------- ícones ---------- */
+var IC = {
+  copy:'<svg class="i-cp" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12" rx="3"></rect><path d="M16 8V6a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h2"></path></svg>',
+  ok:'<svg class="i-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>',
+  doc:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v11a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"></path><path d="M14 3v5h5M9 13h6M9 17h6"></path></svg>',
+  ext:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4"></path></svg>',
+  chk:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>'
+};
+
+/* ---------- renderização ---------- */
+var order = ["I","II","III","IV"];
+var groupsEl = document.getElementById("groups");
+var indexEl = document.getElementById("index");
+var C = {I:0,II:0,III:0,IV:0}; F.forEach(function(f){ C[f.g]++; });
+
+var INFS = [9,10,11,12,13,14,15,16,17,18], SEL = {}, MAXE = 0;
+INFS.forEach(function(n){ SEL[n] = 0; if (EXAM[n] > MAXE) MAXE = EXAM[n]; });
+F.forEach(function(f){ SEL[f.infn]++; });
+document.getElementById("bars").innerHTML = INFS.map(function(n){
+  var we = (EXAM[n] / MAXE * 100).toFixed(2), ws = (SEL[n] / MAXE * 100).toFixed(2);
+  return '<div class="bar-row"><span class="lab">n. ' + pad(n) + '</span><div class="track" role="img" aria-label="Informativo ' + pad(n) + ': ' + SEL[n] + ' de ' + EXAM[n] + ' selecionados"><span class="ex hatch" style="width:' + we + '%"></span>' + (SEL[n] ? '<span class="se" style="width:' + ws + '%"></span>' : '') + '</div><span class="val"><b>' + SEL[n] + '</b> / ' + EXAM[n] + '</span></div>';
+}).join("");
+
+document.getElementById("chips").innerHTML =
+  '<button type="button" class="chip" data-g="all" aria-pressed="true">Todos <span class="cap">' + F.length + '</span></button>' +
+  order.map(function(g){
+    return '<button type="button" class="chip" data-g="' + g + '" aria-pressed="false"><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + ' <span class="cap">' + C[g] + '</span></button>';
+  }).join("");
+
+var html = "", idx = '<details open><summary><span>Índice das fichas</span><span class="cap">' + F.length + '</span></summary><div><div class="i-head"><b>Índice</b><span>' + F.length + ' fichas</span></div>';
+var n = 0;
+order.forEach(function(g){
+  var items = []; F.forEach(function(f, i){ if (f.g === g) items.push(i); });
+  if (!items.length) return;
+  html += '<section class="group" data-g="' + g + '" id="grupo-' + g + '"><div class="group-head"><div class="ttl"><span class="roman">' + GROUPS[g].roman + '</span><h2>' + GROUPS[g].name + ' <span class="cap">' + items.length + '</span></h2></div><p>' + GROUPS[g].desc + '</p></div>';
+  idx += '<h3><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + '<span class="cap">' + items.length + '</span></h3><ol>';
+  items.forEach(function(i){
+    var f = F[i]; n++; var id = fid(i), nn = pad(n);
+    var tags = '<span class="f-num">Ficha ' + nn + '</span>' +
+      '<span class="tag ' + (g === "I" ? "g-I" : "") + '"><span class="dot" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + '</span>' +
+      (f.norm ? '<span class="tag rep">Ato normativo</span>' : '') +
+      (f.niv ? '<span class="tag">Nível ' + f.niv + '</span>' : '') +
+      '<span class="tag">Inf. ' + pad(f.infn) + '/2024</span>' +
+      '<span class="tag ok" data-ok hidden>' + IC.chk + 'conferida</span>';
+    html += '<article class="ficha" id="' + id + '" data-i="' + i + '" data-g="' + g + '">' +
+      '<div class="f-head">' + tags + '</div>' +
+      '<h3>' + esc(f.title) + '</h3>' +
+      '<div class="blk"><span class="lbl">Identificação</span><div class="idbox"><div class="id" data-id>' + idHTML(f, showT(i)) + '</div>' +
+        '<div class="id-tools"><label class="switch" title="Incluir ou suprimir a sigla do órgão julgador"><input type="checkbox" id="sw-' + id + '"' + (showT(i) ? " checked" : "") + '> Plenário</label>' +
+        '<button type="button" class="ibtn" data-copy-id aria-label="Copiar identificação" title="Copiar identificação">' + IC.copy + IC.ok + '</button></div></div></div>' +
+      '<div class="blk"><span class="lbl">Assunto</span><p class="disc">' + esc(f.disc) + '</p></div>' +
+      '<div class="blk"><span class="lbl">Síntese executiva</span><p class="tese">' + esc(f.sint) + '</p></div>' +
+      '<div class="blk ctx"><span class="lbl">' + labCaso(f) + '</span>' + f.caso.map(function(p){ return "<p>" + esc(p) + "</p>"; }).join("") + '</div>' +
+      '<div class="blk pts"><span class="lbl">Pontos de destaque</span><ul>' + f.pontos.map(function(p){ return "<li>" + esc(p) + "</li>"; }).join("") + '</ul></div>' +
+      '<div class="f-foot"><div class="f-acts"><button type="button" class="btn" data-copy-f aria-label="Copiar ficha">' + IC.doc + '<span data-l>Copiar ficha</span></button>' +
+        links(f).map(function(l){ return '<a class="btn" href="' + esc(l.u) + '" target="_blank" rel="noopener">' + IC.ext + esc(l.t) + '</a>'; }).join("") + '</div>' +
+      '<button type="button" class="btn-conf" data-conf aria-pressed="false"><span class="ring">' + IC.chk + '</span><span>Marcar como conferida</span></button></div>' +
+      '</article>';
+    idx += '<li><a href="#' + id + '" data-ix="' + i + '"><span class="num">' + nn + '</span><span class="t">' + esc(f.title) + '</span><span class="ck" aria-hidden="true"></span></a></li>';
+  });
+  html += '</section>';
+  idx += '</ol>';
+});
+idx += '</div></details>';
+groupsEl.innerHTML = html;
+indexEl.innerHTML = idx;
+
+document.getElementById("appendix").innerHTML = DISCARD.map(function(b){
+  return '<h3>Informativo n. ' + pad(b.inf) + '/2024 <span class="cap">' + b.rows.length + '</span></h3><div class="tbl-wrap"><table><thead><tr><th>Processo</th><th>Ramo</th><th>Matéria</th></tr></thead><tbody>' +
+    b.rows.map(function(r){ return '<tr><td class="proc">' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>'; }).join("") + '</tbody></table></div>';
+}).join("");
+
+/* ---------- estado visual ---------- */
+function paint(i){
+  var id = fid(i), el = document.getElementById(id), done = !!state.done[id];
+  el.classList.toggle("done", done);
+  el.setAttribute("data-done", done ? "true" : "false");
+  el.querySelector("[data-ok]").hidden = !done;
+  var b = el.querySelector("[data-conf]");
+  b.setAttribute("aria-pressed", done ? "true" : "false");
+  b.lastChild.textContent = done ? "Conferida · desmarcar" : "Marcar como conferida";
+  var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("done", done);
+}
+function progress(){
+  var d = F.filter(function(f, i){ return state.done[fid(i)]; }).length, t = F.length, pct = Math.round(100 * d / t);
+  document.getElementById("pDone").textContent = d;
+  document.getElementById("pTot").textContent = t;
+  document.getElementById("barFill").style.width = pct + "%";
+  document.getElementById("gVal").setAttribute("stroke-dashoffset", String(100 - 100 * d / t));
+  document.getElementById("gVal").style.opacity = d ? "1" : "0";
+  document.getElementById("gNum").textContent = d + "/" + t;
+  document.getElementById("gMax").textContent = t;
+  document.getElementById("gPct").textContent = pct + "%";
+  document.getElementById("gTxt").textContent = d === 0 ? "Nenhuma ficha conferida" : d === t ? "Todas as fichas conferidas" : (t - d) + (t - d === 1 ? " ficha pendente" : " fichas pendentes");
+}
+F.forEach(function(f, i){ paint(i); });
+progress();
+
+/* ---------- filtros ---------- */
+var fGroup = "all", fStatus = "all", fQuery = "";
+function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[.\-\/]/g,""); }
+var hay = F.map(function(f){
+  return norm([f.title, f.disc, f.sint, f.caso.join(" "), f.pontos.join(" "), idText(f, true), f.tipo, f.num, f.nome, (f.extra || []).map(function(x){ return x[0]; }).join(" "), f.kw || ""].join(" "));
+});
+function apply(){
+  var q = norm(fQuery).trim(), terms = q ? q.split(/\s+/) : [], shown = 0;
+  F.forEach(function(f, i){
+    var id = fid(i), done = !!state.done[id];
+    var ok = (fGroup === "all" || f.g === fGroup) &&
+             (fStatus === "all" || (fStatus === "done" ? done : !done)) &&
+             terms.every(function(t){ return hay[i].indexOf(t) !== -1; });
+    document.getElementById(id).hidden = !ok;
+    var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("off", !ok);
+    if (ok) shown++;
+  });
+  groupsEl.querySelectorAll(".group").forEach(function(s){ s.hidden = !s.querySelector(".ficha:not([hidden])"); });
+  document.getElementById("empty").hidden = shown > 0;
+}
+document.getElementById("q").addEventListener("input", function(e){ fQuery = e.target.value; apply(); });
+document.getElementById("chips").addEventListener("click", function(e){
+  var b = e.target.closest(".chip"); if (!b) return;
+  fGroup = b.getAttribute("data-g");
+  this.querySelectorAll(".chip").forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+  apply();
+});
+document.querySelector(".seg").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  fStatus = b.getAttribute("data-st");
+  this.querySelectorAll("button").forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+  apply();
+});
+
+/* ---------- ações das fichas ---------- */
+groupsEl.addEventListener("click", function(e){
+  var art = e.target.closest(".ficha"); if (!art) return;
+  var i = +art.getAttribute("data-i"), f = F[i], id = fid(i), b;
+  if ((b = e.target.closest("[data-copy-id]"))) { copy(idHTML(f, showT(i), true), idText(f, showT(i)), b, art.querySelector("[data-id]")); }
+  else if ((b = e.target.closest("[data-copy-f]"))) { copy(fichaHTML(f, i), fichaText(f, i), b, art); }
+  else if ((b = e.target.closest("[data-conf]"))) {
+    if (state.done[id]) delete state.done[id]; else state.done[id] = true;
+    save(); paint(i); progress(); apply();
+  }
+});
+groupsEl.addEventListener("change", function(e){
+  if (!e.target.matches(".switch input")) return;
+  var art = e.target.closest(".ficha"), i = +art.getAttribute("data-i"), id = fid(i);
+  state.turma[id] = e.target.checked; save();
+  art.querySelector("[data-id]").innerHTML = idHTML(F[i], showT(i));
+});
+
+/* ---------- limpar marcações ---------- */
+var clearWrap = document.getElementById("clearWrap");
+function clearIdle(){ clearWrap.innerHTML = '<button type="button" class="btn danger" id="clearBtn">Limpar<span class="lg"> marcações</span></button>'; }
+clearWrap.addEventListener("click", function(e){
+  var t = e.target.closest("button"); if (!t) return;
+  if (t.id === "clearBtn") {
+    clearWrap.innerHTML = '<span class="confirm">Desmarcar todas? <button type="button" class="btn danger" id="clearYes">Desmarcar</button><button type="button" class="btn" id="clearNo">Cancelar</button></span>';
+    document.getElementById("clearNo").focus();
+  } else if (t.id === "clearYes") {
+    state.done = {}; save(); F.forEach(function(f, i){ paint(i); }); progress(); apply(); clearIdle();
+  } else if (t.id === "clearNo") { clearIdle(); }
+});
+
+/* ---------- altura da barra ---------- */
+var tb = document.getElementById("toolbar");
+function setTb(){ document.documentElement.style.setProperty("--tb-h", tb.offsetHeight + "px"); }
+setTb();
+if (window.ResizeObserver) new ResizeObserver(setTb).observe(tb); else window.addEventListener("resize", setTb);
+
+if (window.matchMedia) {
+  var mq = window.matchMedia("(max-width:900px)"), det = indexEl.querySelector("details");
+  var syncDet = function(){ if (det) det.open = !mq.matches; };
+  syncDet();
+  if (mq.addEventListener) mq.addEventListener("change", syncDet); else if (mq.addListener) mq.addListener(syncDet);
+}
+
+apply();
+})();
+</script>
+
+<script type="application/json" id="radar-meta">
+{
+  "slug": "cnj-2024-s2",
+  "titulo": "Jurisprudência do CNJ — 2º semestre de 2024",
+  "orgao": "CNJ",
+  "tipo": "jurisprudencia",
+  "inicio": "2024-07",
+  "fim": "2024-12",
+  "periodo": "2º semestre de 2024",
+  "fonte": "Informativos 9 a 18/2024",
+  "fichas": 21,
+  "produzido": "2026-10-16"
+}
+</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice. */
+(function(){
+  var SLUG = "cnj-2024-s2";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+
+</body>
+</html>
