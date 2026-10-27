@@ -1,7 +1,7 @@
 /* Gerado por ferramentas/injetar-farol.py a partir de reports.json.
    Nao edite aqui: edite reports.json e rode o script. */
 window.RADAR = {
-  "atualizado": "2026-10-16",
+  "atualizado": "2026-10-26",
   "github": {
     "usuario": "mottagomesph",
     "repo": "radar",
@@ -69,6 +69,20 @@ window.RADAR = {
       "fichas": 42,
       "produzido": "2026-09-02",
       "descricao": "Seleção comentada dos julgados do STF do primeiro semestre de 2026 relevantes para concursos de outorga de delegação de serventias extrajudiciais."
+    },
+    {
+      "slug": "stj-2025-t3",
+      "arquivo": "relatorios/stj-2025-t3.html",
+      "titulo": "Jurisprudência do STJ — 3º trimestre de 2025",
+      "orgao": "STJ",
+      "tipo": "jurisprudencia",
+      "inicio": "2025-07",
+      "fim": "2025-09",
+      "periodo": "3º trimestre de 2025",
+      "fonte": "Informativos 855 a 864",
+      "fichas": 22,
+      "produzido": "2026-10-26",
+      "descricao": "Triagem dos Informativos de Jurisprudência do STJ n. 855 a 864 (3º trimestre de 2025) para concursos de outorga de delegações de notas e de registro."
     },
     {
       "slug": "stj-2025-t4",
