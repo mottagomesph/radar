@@ -157,7 +157,7 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (17 relatórios, 391 fichas)
+## 5. Acervo atual (18 relatórios, 395 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
@@ -175,18 +175,19 @@ Radar/
 | cnj-2025-s2 | CNJ | 2025-07 → 2025-12 | Inf. 10–17/2025 | 25 |
 | cnj-2026-jan-ago | CNJ | 2026-01 → 2026-08 | Inf. 01–11/2026 | 22 |
 | cnj-2026-set | CNJ | 2026-09 | Inf. 12–13/2026 | 5 |
+| cnj-2026-out | CNJ | 2026-10 | Inf. 14–15/2026 | 4 |
 | kollemata-2026-001 | Kollemata | 2026-08 | n. 001 | 28 |
 | kollemata-2026-09 | Kollemata | 2026-09 | seleção de set/2026 | 48 |
 | cnj-res-696-2026 | CNJ (normativo) | — | Res. 696/2026 | 0 |
 
 Nasceram conforme a especificação: `cnj-2025-s1`, `cnj-2026-set`,
 `kollemata-2026-09`, `stf-2024-s2`, `cnj-2024-s2`, `stj-2025-t3` e
-`stj-2026-out` (os três últimos já com botão de voltar próprio); os demais têm farol injetado.
+`stj-2026-out` e `cnj-2026-out` (os quatro últimos já com botão de voltar próprio); os demais têm farol injetado.
 
 **Lacunas (o que pedir em seguida):**
 - **STJ — a mais grave:** 2024 inteiro, 2025·S1, 2026·S1, julho de 2026.
 - **STF:** 2024·S1, 2026·S2.
-- **CNJ:** 2024·S1, out–dez de 2026.
+- **CNJ:** 2024·S1, nov–dez de 2026.
 - **Kollemata:** ago e set/2026 cobertos; meses seguintes (e antes de ago/2026).
 
 ## 6. Decisões tomadas (não reabrir sem motivo)
@@ -308,3 +309,8 @@ Nasceram conforme a especificação: `cnj-2025-s1`, `cnj-2026-set`,
 - **2026-11-02** — Acrescentado `stj-2026-out` (Inf. 904–907, out/2026, 8 fichas).
   Veio completo (meta, farol e botão de voltar próprios); só o favicon foi
   injetado. Slug por mês, como `kollemata-2026-09`.
+- **2026-11-02** — Acrescentado `cnj-2026-out` (Inf. 14–15/2026, out/2026, 4
+  fichas). Veio completo, mas com os 4 números de processo só em dígitos: formatados
+  no padrão CNJ (regra da seção 4) e a busca do relatório passou a aceitar também
+  os dígitos soltos. Lacuna do CNJ em 2026 agora só nov–dez. **Atenção:** o gerador
+  ainda pode entregar `num` sem pontuação; conferir sempre (20 dígitos corridos).

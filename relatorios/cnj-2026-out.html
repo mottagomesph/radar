@@ -1,0 +1,847 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CNJ outubro 2026 · Serventias</title>
+<meta name="description" content="Triagem dos Informativos de Jurisprudência do CNJ n. 14/2026 e 15/2026 (outubro de 2026) para concursos de outorga de delegações de notas e de registro.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&family=IBM+Plex+Mono:wght@400;500;600&display=swap">
+<style>
+/* Linguagem visual inspirada em Habitra (Wolfpixel): grade editorial suíça, creme quente, laranja-vermelho, painéis pretos, filetes de 1px, cantos retos e cartões chanfrados. Somente tema claro, por ora. */
+:root{
+  color-scheme:light;
+  --paper:#F4F2EE; --paper-2:#EAE7E1; --white:#FBFAF8;
+  --ink:#151515; --ink-2:#3B3A38; --muted:#7A766F; --line:#D6D1C8; --line-2:#BDB7AC;
+  --night:#161616; --night-2:#232323; --night-line:#3A3A3A; --night-ink:#EDEAE4; --night-muted:#9A958C;
+  --accent:#FF5B45; --accent-ink:#151515; --accent-soft:#FFE7E2; --accent-deep:#D9412D;
+  --hl:#3D47D9; --hl-soft:#E6E8FB;          /* reservado ao grupo de destaques */
+  --ok:#1E8A5A; --ok-soft:#E3F1E8;          /* exclusivo do estado conferida */
+  --sans:"Inter Tight","Helvetica Neue",Arial,system-ui,sans-serif;
+  --serif:"Newsreader",Georgia,"Times New Roman",serif;
+  --mono:"IBM Plex Mono",ui-monospace,Menlo,Consolas,monospace;
+  --measure:68ch; --tb-h:64px; --cut:22px;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-padding-top:calc(var(--tb-h) + 20px)}
+@media (prefers-reduced-motion:no-preference){html{scroll-behavior:smooth}}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+a{color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1280px;margin:0 auto;padding-inline:28px}
+.mono{font-family:var(--mono)}
+.up{text-transform:uppercase;letter-spacing:.08em}
+
+/* ---------- barra superior ---------- */
+.topbar{border-bottom:1px solid var(--line)}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:58px}
+.brand{display:flex;align-items:center;gap:10px;font-family:var(--sans);font-weight:700;font-size:14px;letter-spacing:.06em;text-transform:uppercase}
+.brand svg{width:20px;height:20px}
+.topbar nav{display:flex;align-items:center;gap:22px;font-family:var(--sans);font-size:13px;color:var(--ink-2)}
+.topbar nav a{text-decoration:none}
+.topbar nav a:hover{color:var(--accent-deep)}
+.radar-voltar{display:inline-flex;align-items:center;gap:6px;font-family:var(--sans);font-size:13px;font-weight:500;text-decoration:none;color:var(--ink);border:1px solid var(--ink);padding:6px 12px}
+.radar-voltar:hover{background:var(--ink);color:var(--paper)}
+
+/* ---------- herói ---------- */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) 340px;border:1px solid var(--line);border-top:0;margin-bottom:0}
+.hero-main{background:var(--accent);color:var(--accent-ink);padding:34px 36px 30px;display:flex;flex-direction:column;justify-content:space-between;min-height:360px}
+.hero-kicker{display:flex;justify-content:space-between;gap:16px;font-family:var(--sans);font-size:12.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase}
+.hero h1{font-family:var(--sans);font-weight:600;font-size:clamp(44px,7.4vw,104px);line-height:.9;letter-spacing:-.045em;text-transform:uppercase;margin:46px 0 0}
+.hero h1 .row{display:flex;align-items:center;gap:.22em;flex-wrap:wrap}
+.hero h1 .dash{display:inline-block;width:1.25em;height:.075em;background:currentColor;margin-top:.08em}
+.hero h1 .aside{font-size:13.5px;line-height:1.35;letter-spacing:0;text-transform:none;font-weight:400;max-width:22ch;align-self:center}
+.hero-side{display:grid;grid-template-rows:auto 1fr auto;border-left:1px solid var(--line)}
+.side-intro{margin:0;background:var(--white);padding:26px 24px;font-family:var(--sans);font-size:14.5px;line-height:1.45;color:var(--ink-2);border-bottom:1px solid var(--line)}
+.overview{background:var(--night-2);color:var(--night-ink);padding:18px 24px 20px;font-family:var(--sans)}
+.overview h2{font-size:13px;font-weight:500;margin:0 0 10px;padding-bottom:10px;border-bottom:1px solid var(--night-line);letter-spacing:.02em}
+.overview dl{display:grid;grid-template-columns:96px 1fr;gap:8px 10px;margin:0;font-size:12.5px}
+.overview dt{color:var(--night-muted)}
+.overview dd{margin:0}
+.go{display:flex;flex-direction:column;justify-content:space-between;background:var(--accent);color:var(--ink);padding:18px 24px 16px;min-height:150px;text-decoration:none;border-top:1px solid var(--accent-deep)}
+.go svg{width:58px;height:58px;stroke:currentColor;stroke-width:5;fill:none;align-self:flex-end;transition:transform .25s}
+.go:hover svg{transform:translate(4px,-4px)}
+.go-foot{display:flex;justify-content:space-between;align-items:flex-end;border-top:1px solid var(--ink);padding-top:8px;font-family:var(--sans);font-size:13px}
+.go-foot b{font-family:var(--mono);font-weight:500;font-size:13px}
+
+/* ---------- declaração e indicadores ---------- */
+.statement{background:var(--white);border:1px solid var(--line);border-top:0;padding:40px 36px 36px}
+.statement p{font-family:var(--sans);font-weight:500;font-size:clamp(20px,2.3vw,28px);line-height:1.28;letter-spacing:-.015em;margin:0 0 34px;max-width:46ch}
+.kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.kpi{position:relative;background:var(--line-2);padding:1px;clip-path:polygon(var(--cut) 0,100% 0,100% calc(100% - var(--cut)),calc(100% - var(--cut)) 100%,0 100%,0 var(--cut))}
+.kpi-in{background:var(--white);height:100%;padding:18px 18px 16px;min-height:150px;display:flex;flex-direction:column;justify-content:space-between;clip-path:polygon(calc(var(--cut) - .4px) 0,100% 0,100% calc(100% - var(--cut) + .4px),calc(100% - var(--cut) + .4px) 100%,0 100%,0 calc(var(--cut) - .4px))}
+.kpi.hot{background:var(--accent)}
+.kpi.hot .kpi-in{background:var(--accent)}
+.kpi .k-t{font-family:var(--sans);font-size:15px;font-weight:500;line-height:1.2;margin:0}
+.kpi .k-n{font-family:var(--sans);font-weight:500;font-size:46px;line-height:1;letter-spacing:-.04em;margin:14px 0 10px;font-variant-numeric:tabular-nums}
+.kpi .k-s{font-family:var(--sans);font-size:11.5px;text-decoration:underline;text-underline-offset:3px;color:var(--ink-2)}
+.kpi.hot .k-s{color:var(--ink)}
+.kpi .k-bar{height:4px;background:var(--paper-2);margin-top:4px}
+.kpi .k-bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .4s}
+
+/* ---------- "o que o relatório oferece": grupos ---------- */
+.offer{border:1px solid var(--line);border-top:0;background:var(--paper)}
+.offer-h{display:flex;justify-content:space-between;align-items:end;gap:16px;padding:30px 36px 20px}
+.offer-h h2{font-family:var(--sans);font-weight:500;font-size:30px;letter-spacing:-.025em;margin:0}
+.offer-h p{font-family:var(--sans);font-size:13px;color:var(--muted);margin:0;max-width:42ch;text-align:right}
+.offer-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line)}
+.cell{appearance:none;border:0;border-right:1px solid var(--line);background:transparent;text-align:left;padding:26px 28px 22px;cursor:pointer;color:var(--ink);font:inherit;display:flex;flex-direction:column;gap:12px;transition:background .2s}
+.cell:last-child{border-right:0}
+.cell:hover{background:var(--white)}
+.cell[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.cell[aria-pressed="true"] .c-d{color:var(--night-muted)}
+.cell svg{width:64px;height:64px;stroke:currentColor;stroke-width:1.2;fill:none;margin-bottom:6px}
+.c-t{display:flex;justify-content:space-between;align-items:baseline;font-family:var(--sans);font-size:16px;font-weight:500}
+.c-t span{font-family:var(--mono);font-size:13px}
+.c-d{font-family:var(--sans);font-size:12.5px;line-height:1.45;color:var(--muted)}
+
+/* ---------- barra de ferramentas ---------- */
+.toolbar{position:sticky;top:0;z-index:30;background:var(--paper);border-bottom:1px solid var(--ink);margin-top:34px}
+.tb{display:grid;grid-template-columns:minmax(0,1fr) auto auto;grid-template-areas:"search prog clear" "chips chips seg";border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.search{grid-area:search}.progress{grid-area:prog}.clear{grid-area:clear}.chips{grid-area:chips;border-top:1px solid var(--line)}.seg{grid-area:seg;border-top:1px solid var(--line)}
+.chips,.seg{min-height:44px}
+.tb > *{border-right:1px solid var(--line)}
+.tb > *:last-child{border-right:0}
+.search{display:flex;align-items:center;gap:10px;padding:0 16px;min-height:52px}
+.search svg{width:16px;height:16px;stroke:var(--ink);fill:none;stroke-width:1.8;flex:none}
+.search input{flex:1;min-width:0;border:0;background:transparent;font-family:var(--sans);font-size:14.5px;color:var(--ink);padding:14px 0}
+.search input::placeholder{color:var(--muted)}
+.search input:focus{outline:none}
+.search:focus-within{background:var(--white)}
+.chips,.seg{display:flex;align-items:stretch}
+.chip,.seg button{appearance:none;border:0;border-right:1px solid var(--line);background:transparent;font-family:var(--sans);font-size:13px;color:var(--ink-2);padding:0 14px;cursor:pointer;display:flex;align-items:center;gap:7px;white-space:nowrap}
+.chips .chip:last-child,.seg button:last-child{border-right:0}
+.chip:hover,.seg button:hover{background:var(--white)}
+.chip[aria-pressed="true"],.seg button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+.chip .n{font-family:var(--mono);font-size:11.5px;opacity:.75}
+.sq{width:8px;height:8px;flex:none}
+.progress{display:flex;align-items:center;gap:10px;padding:0 16px;font-family:var(--sans);font-size:12.5px;color:var(--muted);min-width:190px}
+.bar{flex:1;height:6px;background:var(--paper-2);min-width:60px;border:1px solid var(--line)}
+.bar i{display:block;height:100%;width:0;background:var(--ok);transition:width .4s}
+.progress b{font-family:var(--mono);font-weight:500;color:var(--ink)}
+.clear{display:flex;align-items:center;padding:0 10px}
+.btn{appearance:none;font-family:var(--sans);font-size:13px;font-weight:500;padding:8px 13px;border:1px solid var(--ink);background:transparent;color:var(--ink);cursor:pointer;display:inline-flex;align-items:center;gap:8px;white-space:nowrap;text-decoration:none;border-radius:0}
+.btn:hover{background:var(--ink);color:var(--paper)}
+.btn svg{width:14px;height:14px;stroke:currentColor;fill:none;stroke-width:1.8}
+.btn.danger{border-color:var(--line-2);color:var(--ink-2)}
+.btn.danger:hover{background:var(--accent-deep);border-color:var(--accent-deep);color:#fff}
+.btn.copied{background:var(--ok);border-color:var(--ok);color:#fff}
+.confirm{display:inline-flex;align-items:center;gap:8px;font-family:var(--sans);font-size:12.5px}
+
+/* ---------- corpo: índice + fichas ---------- */
+.layout{display:grid;grid-template-columns:290px minmax(0,1fr);gap:0;border-left:1px solid var(--line);border-right:1px solid var(--line)}
+.index{position:sticky;top:calc(var(--tb-h) + 1px);align-self:start;max-height:calc(100vh - var(--tb-h) - 1px);overflow:auto;border-right:1px solid var(--line);font-family:var(--sans)}
+.index summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;padding:18px 20px;font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;border-bottom:1px solid var(--line)}
+.index summary::-webkit-details-marker{display:none}
+.index h3{display:flex;align-items:center;gap:8px;margin:0;padding:14px 20px 8px;font-size:11.5px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.index ol{list-style:none;margin:0;padding:0}
+.index a{display:grid;grid-template-columns:30px 1fr 16px;gap:8px;align-items:start;padding:12px 20px;text-decoration:none;font-size:13.5px;line-height:1.35;border-bottom:1px solid var(--line);transition:background .2s}
+.index a:hover{background:var(--white)}
+.index a .num{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:1px}
+.index a .ck{width:14px;height:14px;border:1px solid var(--line-2);margin-top:2px;display:grid;place-items:center}
+.index a.done .ck{background:var(--ok);border-color:var(--ok)}
+.index a.done .ck::after{content:"";width:6px;height:3px;border:1.6px solid #fff;border-top:0;border-right:0;transform:rotate(-45deg) translate(1px,-1px)}
+.index a.done .t{color:var(--muted)}
+.index a.off{opacity:.35}
+.index .i-empty{padding:10px 20px 14px;font-size:12.5px;color:var(--muted);border-bottom:1px solid var(--line)}
+
+main{min-width:0}
+.group{border-bottom:1px solid var(--line)}
+.group-head{display:grid;grid-template-columns:auto 1fr;gap:6px 22px;align-items:end;padding:34px 40px 22px;border-bottom:1px solid var(--line)}
+.group-head .roman{grid-row:span 2;font-family:var(--mono);font-size:13px;color:var(--muted);align-self:start;padding-top:10px}
+.group-head h2{font-family:var(--sans);font-weight:500;font-size:30px;line-height:1.1;letter-spacing:-.025em;margin:0;display:flex;align-items:baseline;gap:12px}
+.group-head h2 .n{font-family:var(--mono);font-size:14px;font-weight:400;color:var(--muted)}
+.group-head p{margin:0;font-family:var(--sans);font-size:13.5px;color:var(--muted);max-width:62ch}
+.group-empty{margin:0;padding:22px 40px 26px;font-family:var(--sans);font-size:14px;color:var(--muted)}
+
+.ficha{position:relative;padding:34px 40px 26px;border-bottom:1px solid var(--line);background:var(--paper);transition:background .3s}
+.ficha:last-child{border-bottom:0}
+.ficha::before{content:"";position:absolute;left:0;top:0;bottom:0;width:5px;background:transparent;transition:background .3s}
+.ficha.done{background:var(--ok-soft)}
+.ficha.done::before{background:var(--ok)}
+.ficha[data-g="D"]::before{background:var(--hl)}
+.ficha-in{max-width:calc(var(--measure) + 2px)}
+.f-top{display:flex;align-items:flex-start;gap:18px;margin-bottom:14px}
+.f-no{font-family:var(--sans);font-weight:500;font-size:42px;line-height:.9;letter-spacing:-.04em;color:var(--accent)}
+.ficha.done .f-no{color:var(--ok)}
+.f-meta{display:flex;flex-wrap:wrap;gap:6px;padding-top:4px;flex:1}
+.tag{display:inline-flex;align-items:center;gap:6px;height:24px;padding:0 9px;border:1px solid var(--line-2);font-family:var(--sans);font-size:11.5px;font-weight:500;letter-spacing:.04em;text-transform:uppercase;color:var(--ink-2);background:var(--white)}
+.tag.lvl{font-family:var(--mono);text-transform:none;letter-spacing:0}
+.tag.g-D{background:var(--hl);border-color:var(--hl);color:#fff}
+.tag.ok{background:var(--ok);border-color:var(--ok);color:#fff;margin-left:auto}
+.tag.ok svg{width:12px;height:12px;stroke:currentColor;fill:none;stroke-width:2.6}
+.ficha h3{font-family:var(--sans);font-weight:500;font-size:25px;line-height:1.2;letter-spacing:-.02em;margin:0 0 22px;text-wrap:balance}
+.blk{border-top:1px solid var(--line);padding:14px 0 16px}
+.lbl{display:block;font-family:var(--sans);font-size:11px;font-weight:500;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.idbox{display:flex;align-items:stretch;gap:0;border:1px solid var(--ink);background:var(--white)}
+.id{flex:1 1 auto;min-width:0;font-family:var(--mono);font-size:13.5px;line-height:1.6;padding:11px 14px;overflow-wrap:anywhere}
+.id .sc{font-variant:small-caps;font-variant-caps:small-caps;letter-spacing:.02em}
+.id b{font-weight:600}
+.id-tools{display:flex;align-items:stretch;border-left:1px solid var(--ink)}
+.switch{display:flex;align-items:center;gap:8px;padding:0 12px;font-family:var(--mono);font-size:12px;color:var(--ink-2);cursor:pointer;user-select:none;border-right:1px solid var(--ink)}
+.switch input{appearance:none;-webkit-appearance:none;width:28px;height:16px;background:var(--line-2);position:relative;cursor:pointer;margin:0;transition:background .2s}
+.switch input::after{content:"";position:absolute;top:2px;left:2px;width:12px;height:12px;background:#fff;transition:transform .2s}
+.switch input:checked{background:var(--accent)}
+.switch input:checked::after{transform:translateX(12px)}
+.ibtn{appearance:none;border:0;background:transparent;width:44px;cursor:pointer;display:grid;place-items:center;color:var(--ink)}
+.ibtn:hover{background:var(--ink);color:var(--paper)}
+.ibtn svg{width:16px;height:16px;stroke:currentColor;fill:none;stroke-width:1.8}
+.ibtn .i-ok{display:none}
+.ibtn.copied{background:var(--ok);color:#fff}
+.ibtn.copied .i-ok{display:block}.ibtn.copied .i-cp{display:none}
+.disc{margin:0;font-family:var(--sans);font-size:14.5px;line-height:1.5;color:var(--ink-2)}
+.sint{margin:0;padding-left:18px;border-left:3px solid var(--accent);font-size:19px;line-height:1.55;font-weight:500;color:var(--ink)}
+.ficha[data-g="D"] .sint{border-left-color:var(--hl)}
+.ctx p{margin:0 0 11px;color:var(--ink-2)}
+.ctx p:last-child{margin-bottom:0}
+.pts{list-style:none;margin:0;padding:0;counter-reset:p}
+.pts li{counter-increment:p;display:grid;grid-template-columns:34px 1fr;gap:4px;padding:9px 0;border-bottom:1px dashed var(--line);color:var(--ink-2)}
+.pts li:last-child{border-bottom:0}
+.pts li::before{content:counter(p,decimal-leading-zero);font-family:var(--mono);font-size:12px;color:var(--accent-deep);padding-top:4px}
+.pert{margin:0;font-family:var(--sans);font-size:13px;line-height:1.5;color:var(--muted)}
+.f-foot{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;border-top:1px solid var(--ink);padding-top:16px;margin-top:4px}
+.lnks{display:flex;flex-wrap:wrap;gap:8px}
+.btn-conf{appearance:none;border:1px solid var(--ink);background:var(--ink);color:var(--paper);font-family:var(--sans);font-size:13.5px;font-weight:500;padding:10px 16px;cursor:pointer;display:inline-flex;align-items:center;gap:10px}
+.btn-conf .ring{width:16px;height:16px;border:1.5px solid currentColor;display:grid;place-items:center}
+.btn-conf svg{width:11px;height:11px;stroke:currentColor;fill:none;stroke-width:2.8;opacity:0}
+.btn-conf:hover{background:var(--accent);border-color:var(--accent);color:var(--ink)}
+.ficha.done .btn-conf{background:var(--ok);border-color:var(--ok);color:#fff}
+.ficha.done .btn-conf svg{opacity:1}
+.empty{padding:30px 40px;font-family:var(--sans);color:var(--muted)}
+
+/* ---------- nota metodológica (painel escuro) ---------- */
+.notes{background:var(--night);color:var(--night-ink);margin-top:0;border:1px solid var(--night)}
+.notes-in{display:grid;grid-template-columns:290px minmax(0,1fr)}
+.notes-side{padding:40px 28px;border-right:1px solid var(--night-line);font-family:var(--sans)}
+.notes-side .ttl-s{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--accent);margin:0 0 10px}
+.notes-side h2{font-weight:500;font-size:30px;line-height:1.1;letter-spacing:-.025em;margin:0}
+.notes-body{padding:40px 40px 44px;max-width:calc(var(--measure) + 80px);font-size:16.5px}
+.notes-body p{margin:0 0 14px;color:#D8D4CC}
+.notes-body b{font-family:var(--sans);font-weight:600;color:#fff}
+.notes-body ul{margin:0 0 14px;padding-left:20px;color:#D8D4CC}
+.notes-body li{margin-bottom:5px}
+.notes-body li::marker{color:var(--accent)}
+.notes hr{border:0;border-top:1px solid var(--night-line);margin:0}
+.notes-body h3{font-family:var(--sans);font-weight:500;font-size:15px;margin:26px 0 10px;color:#fff;display:flex;gap:10px;align-items:baseline}
+.notes-body h3 .n{font-family:var(--mono);font-size:12px;color:var(--night-muted)}
+.tbl-wrap{overflow-x:auto;border:1px solid var(--night-line)}
+table{width:100%;border-collapse:collapse;font-family:var(--sans);font-size:13px}
+th{text-align:left;font-weight:500;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--night-muted);padding:10px 12px;border-bottom:1px solid var(--night-line);background:var(--night-2)}
+td{padding:10px 12px;border-bottom:1px solid var(--night-line);vertical-align:top;color:#D8D4CC}
+tr:last-child td{border-bottom:0}
+th:nth-child(2),td:nth-child(2){width:130px}
+td.proc{font-family:var(--mono);font-size:12px;white-space:nowrap;color:#fff}
+.foot{font-family:var(--sans);font-size:12px;color:var(--muted);padding:20px 0 40px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+
+/* ---------- responsivo ---------- */
+@media (max-width:1060px){
+  .hero{grid-template-columns:1fr}
+  .hero-side{border-left:0;border-top:1px solid var(--line);grid-template-columns:1fr 1fr;grid-template-rows:auto auto}
+  .side-intro{grid-column:1/-1}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .layout,.notes-in{grid-template-columns:1fr}
+  .index{position:static;max-height:none;border-right:0;border-bottom:1px solid var(--line)}
+  .notes-side{border-right:0;border-bottom:1px solid var(--night-line)}
+}
+@media (max-width:720px){
+  .wrap{padding-inline:12px}
+  body{font-size:17px}
+  .topbar nav .opt{display:none}
+  .hero-main{padding:24px 20px;min-height:0}
+  .hero h1{margin-top:30px}
+  .hero h1 .aside{display:none}
+  .hero-kicker{flex-direction:column;gap:4px}
+  .hero-side{grid-template-columns:1fr}
+  .statement,.offer-h{padding:26px 20px}
+  .offer-h{flex-direction:column;align-items:start}.offer-h p{text-align:left}
+  .offer-grid{grid-template-columns:1fr}
+  .cell{border-right:0;border-bottom:1px solid var(--line)}
+  .kpi .k-n{font-size:36px}
+  .tb{grid-template-columns:minmax(0,1fr) auto;grid-template-areas:"search clear" "chips chips" "seg prog"}
+  .progress .bar,.progress .w,.clear .w{display:none}
+  .progress{min-width:0;justify-content:flex-end;border-top:1px solid var(--line)}
+  .tb > *{border-right:0}
+  .search{border-right:1px solid var(--line)}
+  .chips{overflow-x:auto}
+  .seg button,.chip{padding:12px 12px}
+  .clear{padding:0 8px}
+  .clear .btn{padding:6px 10px}
+  .seg button{padding:0 10px}
+  .group-head,.ficha{padding-left:18px;padding-right:18px}
+  .group-empty{padding-inline:18px}
+  .ficha h3{font-size:21px}
+  .f-no{font-size:34px}
+  .idbox{flex-direction:column}
+  .id-tools{border-left:0;border-top:1px solid var(--ink);height:40px}
+  .notes-body,.notes-side{padding:28px 18px}
+}
+
+/* ---------- impressão ---------- */
+@media print{
+  body{background:#fff;font-size:11pt}
+  .topbar nav,.radar-voltar,.toolbar,.index,.id-tools,.f-foot,.go,.offer,.kpi .k-s{display:none!important}
+  .hero{grid-template-columns:1fr}
+  .hero-main,.overview,.kpi.hot,.kpi.hot .kpi-in,.ficha.done,.ficha.done::before,.tag.ok,.tag.g-D,.notes,th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  .layout{display:block;border:0}
+  .ficha{break-inside:avoid;padding:18px 0}
+  .ficha:not(.done){background:#fff}
+  .group-head{padding:24px 0 14px}
+  .ficha.done::before{left:-10px}
+  .notes-in{display:block}
+}
+</style>
+<!-- radar:icone --><link rel="icon" type="image/png" href="data:image/png;base64,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"><!-- radar:icone-fim -->
+</head>
+<body>
+
+<div class="topbar">
+  <div class="wrap">
+    <div class="brand"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M2 18V8l8-6 8 6v10h-6v-6H8v6z" fill="currentColor"/></svg>Radar Extrajudicial</div>
+    <nav aria-label="Navegação da página">
+      <a class="opt" href="#grupo-I">Fichas</a>
+      <a class="opt" href="#nota">Nota metodológica</a>
+      <a class="opt" href="#apendice">Apêndice</a>
+      <a class="radar-voltar" href="../index.html" aria-label="Voltar ao índice do Radar Extrajudicial">← Voltar ao Radar</a>
+    </nav>
+  </div>
+</div>
+
+<header class="wrap">
+  <div class="hero">
+    <div class="hero-main">
+      <div class="hero-kicker"><span>Conselho Nacional de Justiça</span><span>Informativos n. 14 e 15/2026</span></div>
+      <h1>
+        <span class="row">CNJ <span class="dash" aria-hidden="true"></span> <span class="aside">Jurisprudência do Plenário publicada em outubro de 2026, triada para o edital.</span></span>
+        <span class="row">Outubro 2026</span>
+      </h1>
+    </div>
+    <div class="hero-side">
+      <p class="side-intro">Triagem dos Informativos de Jurisprudência do CNJ n. 14/2026 e 15/2026, publicados em 13 e 29 de outubro de 2026, com fichas de revisão para o caderno de direito notarial e registral e matérias correlatas.</p>
+      <div class="overview">
+        <h2>Visão geral</h2>
+        <dl>
+          <dt>Período</dt><dd>Outubro de 2026</dd>
+          <dt>Fonte</dt><dd>Informativos 14/2026 e 15/2026</dd>
+          <dt>Órgão</dt><dd>Plenário do CNJ</dd>
+          <dt>Atos normativos</dt><dd>Nenhum no período</dd>
+          <dt>Produzido</dt><dd>02/11/2026</dd>
+        </dl>
+      </div>
+      <a class="go" href="#grupo-I" aria-label="Ir para as fichas">
+        <svg viewBox="0 0 60 60" aria-hidden="true"><path d="M12 48L48 12M20 12h28v28"/></svg>
+        <span class="go-foot"><span>Ir para as fichas</span><b id="goCount">0/4 conferidas</b></span>
+      </a>
+    </div>
+  </div>
+
+  <section class="statement" aria-label="Resumo">
+    <p>Dois informativos, onze julgados do Plenário e quatro fichas: um julgado sobre o regime jurídico da delegação e três de leitura tangencial.</p>
+    <div class="kpis">
+      <div class="kpi"><div class="kpi-in"><p class="k-t">Informativos<br>analisados</p><div><div class="k-n">2</div><span class="k-s">n. 14/2026 e 15/2026</span></div></div></div>
+      <div class="kpi"><div class="kpi-in"><p class="k-t">Julgados<br>examinados</p><div><div class="k-n">11</div><span class="k-s">5 + 6 destaques</span></div></div></div>
+      <div class="kpi hot"><div class="kpi-in"><p class="k-t">Julgados<br>selecionados</p><div><div class="k-n">4</div><span class="k-s">36% do universo</span></div></div></div>
+      <div class="kpi"><div class="kpi-in"><p class="k-t">Fichas<br>conferidas</p><div><div class="k-n" id="kDone">0/4</div><div class="k-bar" aria-hidden="true"><i id="kBar"></i></div></div></div></div>
+    </div>
+  </section>
+
+  <section class="offer" aria-label="Grupos temáticos">
+    <div class="offer-h"><h2>Grupos do relatório</h2><p>Clique em um grupo para filtrar as fichas. Nenhum julgado atingiu o nível A, por isso não há grupo de destaques.</p></div>
+    <div class="offer-grid" id="cells"></div>
+  </section>
+</header>
+
+<div class="toolbar" id="toolbar">
+  <div class="wrap">
+    <div class="tb">
+      <label class="search" for="q">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+        <input id="q" type="search" placeholder="Buscar por tese, processo, relator ou dispositivo legal" autocomplete="off">
+      </label>
+      <div class="chips" id="chips" role="group" aria-label="Grupo temático"></div>
+      <div class="seg" role="group" aria-label="Situação">
+        <button type="button" data-st="all" aria-pressed="true">Todas</button>
+        <button type="button" data-st="pending" aria-pressed="false">Pendentes</button>
+        <button type="button" data-st="done" aria-pressed="false">Conferidas</button>
+      </div>
+      <div class="progress" aria-live="polite">
+        <div class="bar" aria-hidden="true"><i id="barFill"></i></div>
+        <span><b id="pDone">0</b>/<b id="pTot">4</b><span class="w"> conferidas</span></span>
+      </div>
+      <span id="clearWrap" class="clear"><button type="button" class="btn danger" id="clearBtn">Limpar<span class="w"> marcações</span></button></span>
+    </div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="layout">
+    <nav class="index" id="index" aria-label="Índice das fichas"></nav>
+    <main id="main">
+      <div id="groups"></div>
+      <p class="empty" id="empty" hidden>Nenhuma ficha corresponde à busca e aos filtros selecionados.</p>
+    </main>
+  </div>
+
+  <section class="notes" id="nota">
+    <div class="notes-in">
+      <div class="notes-side"><p class="ttl-s">Nota metodológica</p><h2>Período, critério e cobertura</h2></div>
+      <div class="notes-body">
+        <p><b>Período coberto.</b> Outubro de 2026: Informativos de Jurisprudência do CNJ n. 14/2026 (13/10/2026) e n. 15/2026 (29/10/2026), que divulgam teses firmadas pelo Plenário nas sessões presenciais.</p>
+        <p><b>Critério temporal.</b> Data de publicação do informativo, e não data do julgamento. Por isso constam julgados realizados entre 18/08/2026 e 20/10/2026, inclusive o acórdão de mérito do PP 0000118-92.2026.2.00.0000, de 18/08/2026, retomado no n. 14/2026 com a questão de ordem de 29/09/2026.</p>
+        <p><b>Universo examinado.</b> 11 julgados, contados por destaque do informativo: 5 no n. 14/2026 e 6 no n. 15/2026. Os PCAs 0003296-49.2026 e 0003421-17.2026, julgados em conjunto sob um mesmo destaque, foram contados uma vez. O acórdão de mérito e a questão de ordem do PP 0000118-92.2026, apresentados num só destaque, também foram contados uma vez.</p>
+        <p><b>Seleção.</b> 4 julgados: 1 de direito notarial e registral e 3 tangenciais. Nenhum atingiu o nível A do filtro de pertinência, razão pela qual não há grupo de destaques. Não houve julgado classificável no grupo de outras matérias. Os 7 restantes constam do apêndice.</p>
+        <p><b>Atos normativos.</b> A pasta do período contém apenas os dois informativos, e nenhum deles noticia ato normativo. Não há, portanto, fichas de atos normativos neste relatório.</p>
+        <p><b>Identificação.</b> Os números de processo foram reduzidos aos dígitos, conforme o padrão adotado. No julgamento conjunto, a linha de identificação aponta o primeiro processo indicado no informativo, e o outro aparece no contexto. Na questão de ordem, a identificação aponta o relator e a data da sessão em que ela foi julgada. Os botões de inteiro teor remetem às ligações do próprio informativo para o sistema de jurisprudência do CNJ.</p>
+        <p><b>Temas sem julgados no período.</b> Não houve julgados sobre:</p>
+        <ul>
+          <li>tabelionato de notas, tabelionato de protesto de títulos e registro de imóveis (atos, qualificação e títulos registráveis);</li>
+          <li>registro civil das pessoas naturais, registro de títulos e documentos e registro civil das pessoas jurídicas;</li>
+          <li>emolumentos, selos e fundos de compensação de atos gratuitos;</li>
+          <li>concursos de ingresso e de remoção nas serventias extrajudiciais;</li>
+          <li>interinos, teto remuneratório, acumulação e desacumulação de serventias;</li>
+          <li>responsabilidade civil e disciplinar de notários e registradores (Lei n. 8935/1994);</li>
+          <li>controle de atos normativos estaduais sobre serventias e alterações do CNN/CN/CNJ.</li>
+        </ul>
+      </div>
+    </div>
+    <hr>
+    <div class="notes-in" id="apendice">
+      <div class="notes-side"><p class="ttl-s">Apêndice</p><h2>Matérias examinadas e descartadas</h2></div>
+      <div class="notes-body">
+        <p>Julgados lidos integralmente e descartados por impertinência com o edital dos concursos de outorga de delegações. Todos tratam da carreira, da disciplina ou da organização administrativa da magistratura e do próprio CNJ, sem tese aplicável a notários e registradores.</p>
+        <div id="appendix"></div>
+      </div>
+    </div>
+  </section>
+  <div class="foot"><span>Radar Extrajudicial · CNJ · outubro de 2026</span><span>Produzido em 02/11/2026</span></div>
+</div>
+
+<script>
+(function(){
+"use strict";
+
+var GROUPS = {
+  D:   {roman:"00", name:"Destaques", short:"Destaques", color:"var(--hl)", desc:"Julgamentos de maior relevância para o concurso."},
+  I:   {roman:"I",  name:"Direito Notarial e Registral", short:"Notarial e Registral", color:"var(--accent)", desc:"Julgamentos e atos com repercussão objetiva ou subjetiva na atividade notarial e registral e na vida funcional de notários, registradores e serventias.",
+        icon:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M6 30L32 8l26 22"/><path d="M12 25v31h40V25"/><path d="M24 56V38h16v18"/><path d="M18 30l14-12 14 12"/><path d="M2 56h60"/></svg>'},
+  II:  {roman:"II", name:"Outras matérias", short:"Outras matérias", color:"var(--ink)", desc:"Julgamentos e atos de outras disciplinas do edital com relevância direta para o concurso.",
+        icon:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M10 14h18v42H10z"/><path d="M28 22h14v34H28z"/><path d="M42 30h12v26H42z"/><path d="M10 14l6-6h18l-6 6"/><path d="M28 22l6-6h14l-6 6"/><path d="M42 30l6-6h12l-6 6"/><path d="M54 30v26l6-6V24"/></svg>'},
+  III: {roman:"III", name:"Julgamentos e atos tangenciais", short:"Tangenciais", color:"var(--line-2)", desc:"Julgamentos de relevância indireta, para leitura rápida.",
+        icon:'<svg viewBox="0 0 64 64" aria-hidden="true"><path d="M14 8h36v48H14z"/><path d="M14 8l8 8v48"/><path d="M22 16h28"/><path d="M28 26v22M36 26v22"/><path d="M22 64h28"/></svg>'}
+};
+var EMPTY = {II:"Nenhum julgado ou ato do período se enquadrou neste grupo."};
+
+var F = [
+{
+  g:"I", title:"Servidor que optou pela titularidade de serventia extrajudicial não readquire o vínculo estatutário com a vacância da serventia",
+  tipo:"PCA", num:"0007894-80.2025.2.00.0000", rel:"rel.", cargo:"cons.", nome:"kátia magalhães arruda", turma:"Pleno", data:"29/09/2026", inf:"14/2026",
+  url:"https://www.cnj.jus.br/InfojurisI2/Jurisprudencia.seam?jurisprudenciaIdJuris=56799",
+  nivel:"B",
+  pert:"P1 (b): regime jurídico da delegação (titularidade, vacância e efeitos sobre vínculo anterior com o tribunal). P2: Plenário do CNJ, decisão por maioria aplicada a caso concreto. P3: permite questão binária sobre a delimitação do chamado limbo funcional.",
+  disc:"Direito Notarial e Registral; Direito Administrativo. Regime jurídico da delegação, vacância de serventia extrajudicial, reaproveitamento funcional, prescrição quinquenal e limbo funcional.",
+  sint:"O servidor que, diante das opções oferecidas por norma de transição de reorganização judiciária, deixa de escolher alguma delas e assume a titularidade de serventia extrajudicial rompe o vínculo estatutário que possuía com o tribunal. A posterior declaração de vacância da serventia pelo CNJ não faz renascer o direito ao aproveitamento originário, que se exauriu com a opção. O pedido de reaproveitamento funcional contra a Administração Pública submete-se ao prazo prescricional de cinco anos do Decreto n. 20910/1932.",
+  caso:[
+   "A requerente ocupava, por concurso público, escrivania judicial extinta em 1994. A Lei Estadual n. 12342/1994, que reorganizou o Poder Judiciário do Ceará, ofereceu aos ocupantes três alternativas: aproveitamento em outras funções no tribunal, na diretoria do fórum ou em secretarias de varas; aposentadoria com vencimentos proporcionais; ou disponibilidade remunerada. A requerente não escolheu nenhuma delas e passou a exercer a titularidade de serventia extrajudicial.",
+   "Em 2009, o CNJ declarou a vacância da serventia, um registro de imóveis. Somente em 2022 a requerente pediu ao Tribunal de Justiça do Ceará o reaproveitamento no cargo efetivo de analista judiciário, bem como a regularização de sua situação no órgão previdenciário estadual. Indeferido o pedido, instaurou procedimento de controle administrativo.",
+   "O Plenário, por maioria, conheceu do pedido e extinguiu o feito pela prescrição. Ficaram vencidos os conselheiros Carlos Vinícius Alves Ribeiro, Marcello Terto e Rodrigo Badaró, que julgavam o pedido parcialmente procedente e determinavam ao tribunal a recomposição da situação funcional da requerente."
+  ],
+  pontos:[
+   "O reaproveitamento funcional pretendido não se enquadra em nenhuma das hipóteses constitucionais de provimento originário ou derivado de cargo público.",
+   "O CNJ delimitou a situação de limbo funcional: ela se aplica exclusivamente a notários e registradores que ingressaram mediante concurso público específico para serventias extrajudiciais e ficaram impossibilitados de retornar à serventia de origem após a anulação de remoções ou permutas inconstitucionais.",
+   "As ações originárias no STF ajuizadas pela requerente versavam apenas sobre a manutenção da outorga da serventia e mantiveram a vacância decretada pelo CNJ. Por veicularem pretensão diversa, não suspenderam nem interromperam a prescrição do pedido de aproveitamento, pois a interrupção exige identidade de pedidos.",
+   "O vínculo estatutário foi extinto por fato jurídico perfeito, e sua reconstituição foi afastada com base nos princípios da legalidade administrativa, da segurança jurídica e da proteção da confiança legítima."
+  ],
+  kw:"serventia extrajudicial vacância titularidade outorga delegação escrivania judicial reorganização judiciária reaproveitamento aproveitamento vínculo estatutário limbo funcional remoção permuta inconstitucional prescrição quinquenal Decreto 20910/1932 Lei Estadual 12342/1994 TJCE registro de imóveis provimento derivado"
+},
+{
+  g:"III", title:"Concurso público: publicidade prévia da comissão examinadora e uso apenas acessório de inteligência artificial na correção",
+  tipo:"PCA", num:"0003296-49.2026.2.00.0000", rel:"rel.", cargo:"cons.", nome:"daiane nogueira de lira", turma:"Pleno", data:"20/10/2026", inf:"15/2026",
+  url:"https://www.cnj.jus.br/InfojurisI2/Jurisprudencia.seam?jurisprudenciaIdJuris=56876",
+  nivel:"B",
+  pert:"Relevância indireta: teses gerais de controle de concurso público (Tema 485/STF, publicidade da comissão examinadora, inteligência artificial na correção), firmadas em concurso da magistratura, e não em concurso de serventias extrajudiciais.",
+  disc:"Direito Administrativo. Concurso público, controle dos critérios de correção, espelho de prova, composição da comissão examinadora e uso de inteligência artificial.",
+  sint:"Não cabe ao CNJ substituir os critérios de correção da banca examinadora (Tema 485 da repercussão geral). A publicidade prévia da composição da comissão examinadora é pressuposto do controle da imparcialidade e do direito de arguir impedimento ou suspeição (arts. 13, VI, e 20 da Resolução CNJ n. 75/2009), mas sua falta, sem prejuízo demonstrado, não invalida a correção das provas (pas de nullité sans grief e art. 20 da LINDB).",
+  caso:[
+   "Os procedimentos impugnavam a correção da prova prática de sentença criminal do concurso para ingresso na magistratura do Ceará (Edital TJCE n. 91/2025). Os requerentes alegavam espelho inicial sintético e genérico, possível uso de inteligência artificial na correção e falta de publicidade prévia da substituição do examinador responsável pela elaboração e correção da prova.",
+   "O tribunal divulgou posteriormente espelho analítico, com fundamentos jurídicos, orientações jurisprudenciais, dispositivos legais e distribuição da pontuação, e reabriu integralmente o prazo recursal. Na instrução, constatou-se que o nome do examinador da matéria penal não constava da composição previamente publicada e que a substituição só foi publicada após a instauração dos procedimentos no CNJ e a suspensão do concurso.",
+   "Após o voto do Corregedor Nacional e a reformulação do voto da relatora, o Plenário, por unanimidade, julgou improcedentes os pedidos e determinou a remessa do acórdão aos tribunais, com orientação para assegurar, nos concursos da magistratura, a formalização e a publicação prévia das alterações na composição das comissões examinadoras. Foi julgado em conjunto o PCA 0003421-17.2026.2.00.0000, da mesma relatora."
+  ],
+  pontos:[
+   "O CNJ registrou que o Comitê Nacional de Inteligência Artificial do Judiciário não recomenda o uso de inteligência artificial para corrigir avaliações subjetivas. O uso dessas ferramentas deve ser acessório, excepcional e expressamente previsto no edital, com supervisão humana efetiva, e não meramente homologatória.",
+   "A divulgação do espelho analítico, acompanhada da reabertura integral do prazo recursal, assegurou aos candidatos elementos suficientes para compreender e impugnar as notas.",
+   "Os metadados da versão em PDF do espelho, considerados isoladamente, não comprovam que seu conteúdo foi elaborado após a atribuição das notas.",
+   "Anular a correção de cerca de 500 provas, em estágio avançado do concurso e sem prova de prejuízo concreto, foi considerado medida desproporcional, nos termos do art. 20 da LINDB."
+  ],
+  kw:"concurso público banca examinadora comissão examinadora publicidade prévia impedimento suspeição espelho de correção prova prática inteligência artificial IA supervisão humana Tema 485 STF Resolução CNJ 75/2009 art. 13 VI art. 20 LINDB pas de nullité sans grief PCA 0003421-17.2026"
+},
+{
+  g:"III", title:"Quarentena constitucional: alcança todos os órgãos do tribunal e, no primeiro grau, toda a comarca ou seção judiciária",
+  tipo:"QO no PP", num:"0000118-92.2026.2.00.0000", rel:"rel.", cargo:"cons.", nome:"benedito gonçalves", turma:"Pleno", data:"29/09/2026", inf:"14/2026",
+  url:"https://www.cnj.jus.br/InfojurisI2/Jurisprudencia.seam?jurisprudenciaIdJuris=56787",
+  url2:"https://www.cnj.jus.br/InfojurisI2/Jurisprudencia.seam?jurisprudenciaIdJuris=56694",
+  nivel:"B",
+  pert:"Relevância indireta: Direito Constitucional, alcance da vedação do art. 95, parágrafo único, V, da Constituição Federal, sem conexão com a atividade notarial e registral.",
+  disc:"Direito Constitucional. Vedações da magistratura, quarentena de três anos para o exercício da advocacia e limites da questão de ordem.",
+  sint:"Magistrados aposentados ou exonerados não podem advogar no juízo ou tribunal do qual se afastaram antes de decorridos três anos (art. 95, parágrafo único, V, da Constituição Federal), norma de eficácia plena e aplicabilidade imediata. Para desembargadores, a vedação alcança todos os órgãos jurisdicionais e administrativos do tribunal que integravam, e não apenas o órgão de sua última atuação. Para juízes de primeiro grau, abrange todas as unidades jurisdicionais da comarca ou seção judiciária a que estavam vinculados. A questão de ordem não pode acrescentar conteúdo normativo novo a julgamento já proclamado.",
+  caso:[
+   "Na 12ª Sessão Ordinária (18/08/2026), sob relatoria do conselheiro Mauro Campbell Marques, o Plenário julgou procedente, por unanimidade, pedido de providências e determinou ao Tribunal de Justiça de Goiás que impedisse seu ex-presidente, desembargador recém-aposentado, e todos os que estivessem em curso de quarentena de advogar em qualquer órgão jurisdicional ou administrativo da Corte antes de completados os três anos. Determinou também que juízes aposentados ou exonerados fossem impedidos de advogar em todas as unidades jurisdicionais da comarca onde exerceram jurisdição. O acórdão trouxe recomendação a todos os tribunais do país.",
+   "Posteriormente, o conselheiro Marcello Terto suscitou questão de ordem para atribuir à expressão órgãos jurisdicionais e administrativos do tribunal alcance territorial mais amplo, abrangendo toda a base de jurisdição do tribunal, inclusive as unidades de primeiro grau a ele vinculadas. Na 15ª Sessão Ordinária, o Plenário rejeitou a questão de ordem por unanimidade e manteve integralmente o acórdão de 18/08/2026."
+  ],
+  pontos:[
+   "Segundo o CNJ, a quarentena protege a imparcialidade da Justiça, a isonomia entre os jurisdicionados e a confiança da sociedade no Poder Judiciário, e deve ser exigida sem interpretações restritivas.",
+   "A ampliação proposta foi qualificada como acréscimo de conteúdo normativo novo, e não como mero esclarecimento, por estender a restrição profissional além dos limites objetivos do julgamento.",
+   "O Plenário ressalvou que a extensão territorial da quarentena pode ser apreciada especificamente pelo Conselho, por instrumento adequado e com debate colegiado próprio."
+  ],
+  kw:"quarentena advocacia magistrado aposentado exonerado desembargador art. 95 parágrafo único V Constituição Federal eficácia plena questão de ordem TJGO comarca seção judiciária PP 0000118-92.2026 Mauro Campbell Marques"
+},
+{
+  g:"III", title:"Processo administrativo disciplinar: prazo impróprio, portaria sem descrição exaustiva e prescrição penal para a falta que também é crime",
+  tipo:"PADMag", num:"0001002-92.2024.2.00.0000", rel:"rel.", cargo:"cons.", nome:"kátia magalhães arruda", turma:"Pleno", data:"20/10/2026", inf:"15/2026",
+  url:"https://www.cnj.jus.br/InfojurisI2/Jurisprudencia.seam?jurisprudenciaIdJuris=56871",
+  nivel:"B",
+  pert:"Relevância indireta: Direito Administrativo, teses gerais de processo administrativo disciplinar firmadas em PAD contra magistrado.",
+  disc:"Direito Administrativo. Processo administrativo disciplinar, prazo de conclusão, portaria inaugural, fase preliminar, prescrição e detração do afastamento cautelar.",
+  sint:"O prazo para conclusão do processo administrativo disciplinar é impróprio: sua inobservância não acarreta, por si só, nulidade, e admite prorrogações retroativas e sucessivas sem prejuízo à defesa. A portaria inaugural não exige descrição exaustiva dos fatos nem tipificação definitiva, bastando delimitar as imputações (Súmula 641/STJ). Quando a falta corresponde a tipo penal, aplica-se o prazo prescricional penal em abstrato. O afastamento cautelar é computado na execução da pena.",
+  caso:[
+   "O processo foi instaurado contra desembargador federal para apurar falhas na gestão do acervo, relacionamento com servidores e magistrados, recusa de submissão a procedimento obrigatório de segurança em aeroporto internacional e residência fora da sede do tribunal sem autorização. Em correição extraordinária, foram encontrados 2.878 processos conclusos, 7.311 em triagem e 663 acórdãos não assinados.",
+   "Ficaram comprovadas a baixa produtividade contínua e a conduta agressiva e desrespeitosa com outros desembargadores, com violação do art. 35, I, II e VIII, da Loman e de dispositivos do Código de Ética da Magistratura Nacional. Não ficaram comprovados o assédio moral contra servidores nem a residência irregular. Quanto ao episódio do aeroporto, em que o magistrado invocou sua condição funcional, a conduta corresponde ao art. 33, parágrafo único, da Lei n. 13869/2019 (Lei de Abuso de Autoridade), e a pretensão punitiva foi declarada prescrita pela aplicação do prazo penal em abstrato, considerada a idade de 70 anos do magistrado.",
+   "O Plenário, por unanimidade, prorrogou retroativamente a instrução, rejeitou as preliminares e aplicou a pena de disponibilidade por 120 dias, com detração integral do afastamento cautelar. Como o afastamento cautelar havia superado a pena, determinou a recondução do magistrado, independentemente do procedimento de aproveitamento (art. 6º, § 4º, da Resolução CNJ n. 135/2011)."
+  ],
+  pontos:[
+   "A insuficiência de servidores, desafio estrutural do Poder Judiciário, não justifica por si só a deficiência verificada, sobretudo quando unidades nas mesmas condições têm desempenho superior.",
+   "A fase preliminar de apuração dispensa o contraditório pleno, assegurado no processo administrativo disciplinar. A instauração de reclamação disciplinar de ofício pelo Corregedor Nacional, de natureza preparatória, não viola por si só a imparcialidade.",
+   "A ausência de comunicação prévia da correição e as entrevistas preliminares com servidores têm amparo nas normas da Corregedoria Nacional de Justiça.",
+   "As infrações foram enquadradas como de gravidade intermediária, que autoriza censura ou disponibilidade, sem atingir a gravidade exigida para a sanção máxima."
+  ],
+  kw:"processo administrativo disciplinar PAD prazo impróprio prorrogação retroativa portaria inaugural Súmula 641 STJ prescrição prazo penal abuso de autoridade Lei 13869/2019 art. 33 detração afastamento cautelar disponibilidade Resolução CNJ 135/2011 correição reclamação disciplinar Loman art. 35"
+}
+];
+
+var DISCARD = [
+ {inf:"14/2026", date:"13/10/2026", rows:[
+  ["PP 0000110-52.2025.2.00.0000","Disciplinar da magistratura","Justa causa para PAD contra desembargadora aposentada por idade (indícios de tráfico de influência e favorecimento em embargos de terceiro); independência das instâncias penal e administrativa; aplicabilidade da Resolução CNJ n. 693/2026 aos procedimentos em curso."],
+  ["PCA 0004765-33.2026.2.00.0000","Carreira da magistratura","Classificação de juiz substituto na entrância inicial como provimento inicial (art. 81 da Loman); precedência da remoção simples prevista em norma do TJRS."],
+  ["PADMag 0006258-50.2023.2.00.0000","Disciplinar da magistratura","PAD avocado por falta de quórum na origem (art. 79 do Regimento Interno do CNJ); disponibilidade com proposta de perda do cargo a juiz já apenado com aposentadoria compulsória."]
+ ]},
+ {inf:"15/2026", date:"29/10/2026", rows:[
+  ["PCA 0008250-41.2026.2.00.0000","Carreira da magistratura","Ratificação de liminar para a conclusão de promoção por merecimento ao TRT da 6ª Região (Resolução CNJ n. 106/2010)."],
+  ["PAM 0000676-64.2026.2.00.0000","Organização administrativa do CNJ","Parecer de mérito sobre anteprojeto de lei de cargos e funções para o Departamento de Monitoramento e Fiscalização das Decisões dos Sistemas Internacionais de Direitos Humanos (Lei n. 15434/2026)."],
+  ["PP 0003184-80.2026.2.00.0000","Carreira da magistratura","TAC disciplinar (Provimento n. 162/2024 da Corregedoria Nacional) como instrumento não punitivo, inapto a fundamentar recusa à promoção por antiguidade; anulação da recusa no TJRN."],
+  ["PCA 0001385-02.2026.2.00.0000","Carreira da magistratura","Recusa do juiz mais antigo fundada em procedimentos disciplinares em curso viola a presunção de inocência; dispositivos mantidos para remoções e movimentação horizontal."]
+ ]}
+];
+
+
+/* ---------- armazenamento local ---------- */
+var KEY = "cnj-2026-out-v1";
+var state = {done:{}, turma:{}};
+try { var raw = localStorage.getItem(KEY); if (raw) { var p = JSON.parse(raw); state.done = p.done || {}; state.turma = p.turma || {}; } } catch(e) {}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(state)); } catch(e) {} }
+
+/* ---------- utilidades ---------- */
+function esc(s){ return String(s).replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;").replace(/"/g,"&quot;"); }
+function fid(i){ return "f" + (i+1); }
+function showT(i){ return state.turma[fid(i)] !== false; }
+function idParts(f, withT){
+  var head = f.seg ? "em segredo de justiça" : (f.tipo + " n. " + f.num);
+  return {head:head, rel:f.rel + " " + f.cargo + " ", nome:f.nome, t: withT ? f.turma + ", " : "", tail:"j. " + f.data + ", ", inf:"n. " + f.inf};
+}
+function idText(f, withT){ var p = idParts(f, withT); return "(" + p.head + ", " + p.rel + p.nome + ", " + p.t + p.tail + "Informativo " + p.inf + ")"; }
+function idHTML(f, withT, inline){
+  var p = idParts(f, withT);
+  var sc = inline ? '<span style="font-variant:small-caps">' : '<span class="sc">';
+  return "(" + esc(p.head) + ", " + esc(p.rel) + sc + esc(p.nome) + "</span>, " + esc(p.t) + esc(p.tail) + "<b>Informativo</b> " + esc(p.inf) + ")";
+}
+function fichaText(f, i){
+  return [f.title, "",
+    "Identificação: " + idText(f, showT(i)),
+    "Informativo: Informativo de Jurisprudência do CNJ n. " + f.inf,
+    "Disciplina e assunto: " + f.disc,
+    "Síntese executiva: " + f.sint,
+    "Caso concreto: " + f.caso.join("\n\n"),
+    "Pontos de atenção:\n" + f.pontos.map(function(p){ return "- " + p; }).join("\n"),
+    "Inteiro teor: " + f.url
+  ].join("\n");
+}
+function fichaHTML(f, i){
+  return '<p><b>' + esc(f.title) + '</b></p>' +
+    '<p><b>Identificação:</b> ' + idHTML(f, showT(i), true) + '</p>' +
+    '<p><b>Informativo:</b> Informativo de Jurisprudência do CNJ n. ' + esc(f.inf) + '</p>' +
+    '<p><b>Disciplina e assunto:</b> ' + esc(f.disc) + '</p>' +
+    '<p><b>Síntese executiva:</b> ' + esc(f.sint) + '</p>' +
+    '<p><b>Caso concreto:</b> ' + f.caso.map(esc).join('</p><p>') + '</p>' +
+    '<p><b>Pontos de atenção:</b></p><ul>' + f.pontos.map(function(p){ return '<li>' + esc(p) + '</li>'; }).join('') + '</ul>' +
+    '<p><b>Inteiro teor:</b> <a href="' + esc(f.url) + '">' + esc(f.url) + '</a></p>';
+}
+function flash(btn, msg){
+  btn.classList.add("copied");
+  var lab = btn.querySelector("[data-l]");
+  if (lab) { if (!lab.getAttribute("data-o")) lab.setAttribute("data-o", lab.textContent); lab.textContent = msg; }
+  btn.setAttribute("title", msg);
+  clearTimeout(btn._t);
+  btn._t = setTimeout(function(){ btn.classList.remove("copied"); if (lab) lab.textContent = lab.getAttribute("data-o"); btn.setAttribute("title", btn.getAttribute("aria-label") || ""); }, 1600);
+}
+function legacyCopy(text){
+  var ta = document.createElement("textarea"); ta.value = text; ta.setAttribute("readonly","");
+  ta.style.position = "fixed"; ta.style.opacity = "0"; document.body.appendChild(ta); ta.select();
+  var ok = false; try { ok = document.execCommand("copy"); } catch(e) {}
+  document.body.removeChild(ta); return ok;
+}
+function copy(html, text, btn, selectEl){
+  function fail(){
+    if (legacyCopy(text)) { flash(btn, "Copiado"); return; }
+    if (selectEl) { var r = document.createRange(); r.selectNodeContents(selectEl); var s = window.getSelection(); s.removeAllRanges(); s.addRange(r); }
+    flash(btn, "Selecionado: use Ctrl+C");
+  }
+  try {
+    if (navigator.clipboard && window.ClipboardItem && navigator.clipboard.write) {
+      var item = new ClipboardItem({"text/html": new Blob([html], {type:"text/html"}), "text/plain": new Blob([text], {type:"text/plain"})});
+      navigator.clipboard.write([item]).then(function(){ flash(btn, "Copiado"); }, function(){
+        navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+      });
+    } else if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function(){ flash(btn, "Copiado"); }, fail);
+    } else { fail(); }
+  } catch(e) { fail(); }
+}
+
+/* ---------- ícones ---------- */
+
+
+/* ---------- ícones ---------- */
+var IC = {
+  copy:'<svg class="i-cp" viewBox="0 0 24 24" aria-hidden="true"><rect x="8" y="8" width="12" height="12"></rect><path d="M16 8V4H4v12h4"></path></svg>',
+  ok:'<svg class="i-ok" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>',
+  doc:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"></path><path d="M14 3v5h5M9 13h7M9 17h7"></path></svg>',
+  ext:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"></path></svg>',
+  chk:'<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>'
+};
+
+/* ---------- renderização ---------- */
+var order = ["D","I","II","III"], visibleGroups = ["I","II","III"];
+var groupsEl = document.getElementById("groups");
+var indexEl = document.getElementById("index");
+var C = {D:0,I:0,II:0,III:0}; F.forEach(function(f){ C[f.g]++; });
+
+document.getElementById("cells").innerHTML = visibleGroups.map(function(g){
+  return '<button type="button" class="cell" data-g="' + g + '" aria-pressed="false">' + GROUPS[g].icon +
+    '<span class="c-t">' + GROUPS[g].short + '<span>' + String(C[g]).padStart(2,"0") + '</span></span>' +
+    '<span class="c-d">' + GROUPS[g].desc + '</span></button>';
+}).join("");
+
+document.getElementById("chips").innerHTML =
+  '<button type="button" class="chip" data-g="all" aria-pressed="true">Todos <span class="n">' + F.length + '</span></button>' +
+  visibleGroups.map(function(g){
+    return '<button type="button" class="chip" data-g="' + g + '" aria-pressed="false"><span class="sq" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + ' <span class="n">' + C[g] + '</span></button>';
+  }).join("");
+
+var html = "", idx = '<details open><summary><span>Índice das fichas</span><span class="mono">' + String(F.length).padStart(2,"0") + '</span></summary>';
+var n = 0;
+order.forEach(function(g){
+  var items = []; F.forEach(function(f, i){ if (f.g === g) items.push(i); });
+  if (!items.length && !EMPTY[g]) return;
+  html += '<section class="group" data-g="' + g + '" id="grupo-' + g + '"' + (items.length ? '' : ' data-empty="1"') + '><div class="group-head"><span class="roman">' + GROUPS[g].roman + '</span><h2>' + GROUPS[g].name + ' <span class="n">(' + String(items.length).padStart(2,"0") + ')</span></h2><p>' + GROUPS[g].desc + '</p></div>';
+  idx += '<h3><span class="sq" style="background:' + GROUPS[g].color + '"></span>' + GROUPS[g].short + '</h3>';
+  if (!items.length) { html += '<p class="group-empty">' + esc(EMPTY[g]) + '</p></section>'; idx += '<p class="i-empty">Sem fichas no período.</p>'; return; }
+  idx += '<ol>';
+  items.forEach(function(i){
+    var f = F[i]; n++; var id = fid(i), nn = String(n).padStart(2,"0");
+    var tags = '<span class="tag' + (g === "D" ? " g-D" : "") + '">' + GROUPS[g].short + '</span>' +
+      '<span class="tag">Inf. ' + esc(f.inf) + '</span>' +
+      '<span class="tag lvl" title="Nível no filtro de pertinência">Nível ' + esc(f.nivel) + '</span>' +
+      '<span class="tag ok" data-ok hidden>' + IC.chk + 'conferida</span>';
+    var links = '<a class="btn" href="' + esc(f.url) + '" target="_blank" rel="noopener">Inteiro teor' + IC.ext + '</a>' +
+      (f.url2 ? '<a class="btn" href="' + esc(f.url2) + '" target="_blank" rel="noopener">Acórdão de mérito' + IC.ext + '</a>' : '');
+    html += '<article class="ficha" id="' + id + '" data-i="' + i + '" data-g="' + g + '"><div class="ficha-in">' +
+      '<div class="f-top"><span class="f-no">' + nn + '</span><div class="f-meta">' + tags + '</div></div>' +
+      '<h3>' + esc(f.title) + '</h3>' +
+      '<div class="blk"><span class="lbl">Identificação</span><div class="idbox"><div class="id" data-id>' + idHTML(f, showT(i)) + '</div>' +
+        '<div class="id-tools"><label class="switch" title="Incluir ou suprimir a sigla do órgão julgador"><input type="checkbox" id="sw-' + id + '"' + (showT(i) ? " checked" : "") + '> ' + esc(f.turma) + '</label>' +
+        '<button type="button" class="ibtn" data-copy-id aria-label="Copiar identificação" title="Copiar identificação">' + IC.copy + IC.ok + '</button></div></div></div>' +
+      '<div class="blk"><span class="lbl">Disciplina e assunto</span><p class="disc">' + esc(f.disc) + '</p></div>' +
+      '<div class="blk"><span class="lbl">Síntese executiva</span><p class="sint">' + esc(f.sint) + '</p></div>' +
+      '<div class="blk ctx"><span class="lbl">Caso concreto</span>' + f.caso.map(function(p){ return "<p>" + esc(p) + "</p>"; }).join("") + '</div>' +
+      '<div class="blk"><span class="lbl">Pontos de atenção</span><ol class="pts">' + f.pontos.map(function(p){ return "<li><span>" + esc(p) + "</span></li>"; }).join("") + '</ol></div>' +
+      '<div class="blk"><span class="lbl">Pertinência</span><p class="pert">' + esc(f.pert) + '</p></div>' +
+      '<div class="f-foot"><div class="lnks"><button type="button" class="btn" data-copy-f aria-label="Copiar ficha">' + IC.doc + '<span data-l>Copiar ficha</span></button>' + links + '</div>' +
+      '<button type="button" class="btn-conf" data-conf aria-pressed="false"><span class="ring">' + IC.chk + '</span><span>Marcar como conferida</span></button></div>' +
+      '</div></article>';
+    idx += '<li><a href="#' + id + '" data-ix="' + i + '"><span class="num">' + nn + '</span><span class="t">' + esc(f.title) + '</span><span class="ck" aria-hidden="true"></span></a></li>';
+  });
+  html += '</section>';
+  idx += '</ol>';
+});
+idx += '</details>';
+groupsEl.innerHTML = html;
+indexEl.innerHTML = idx;
+
+document.getElementById("appendix").innerHTML = DISCARD.map(function(b){
+  return '<h3>Informativo n. ' + esc(b.inf) + ' <span class="n">' + esc(b.date) + ' · ' + b.rows.length + ' julgados</span></h3><div class="tbl-wrap"><table><thead><tr><th>Processo</th><th>Ramo</th><th>Matéria</th></tr></thead><tbody>' +
+    b.rows.map(function(r){ return '<tr><td class="proc">' + esc(r[0]) + '</td><td>' + esc(r[1]) + '</td><td>' + esc(r[2]) + '</td></tr>'; }).join("") + '</tbody></table></div>';
+}).join("");
+
+/* ---------- estado visual ---------- */
+function paint(i){
+  var id = fid(i), el = document.getElementById(id), done = !!state.done[id];
+  el.classList.toggle("done", done);
+  if (done) el.setAttribute("data-done", "true"); else el.removeAttribute("data-done");
+  el.querySelector("[data-ok]").hidden = !done;
+  var b = el.querySelector("[data-conf]");
+  b.setAttribute("aria-pressed", done ? "true" : "false");
+  b.lastChild.textContent = done ? "Conferida · desmarcar" : "Marcar como conferida";
+  var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("done", done);
+}
+function progress(){
+  var d = F.filter(function(f, i){ return state.done[fid(i)]; }).length, t = F.length, pct = Math.round(100 * d / t);
+  document.getElementById("pDone").textContent = d;
+  document.getElementById("pTot").textContent = t;
+  document.getElementById("barFill").style.width = pct + "%";
+  document.getElementById("kBar").style.width = pct + "%";
+  document.getElementById("kDone").textContent = d + "/" + t;
+  document.getElementById("goCount").textContent = d + "/" + t + " conferidas";
+}
+F.forEach(function(f, i){ paint(i); });
+progress();
+
+/* ---------- filtros ---------- */
+var fGroup = "all", fStatus = "all", fQuery = "";
+function norm(s){ return String(s).toLowerCase().normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[.\-\/]/g,""); }
+var hay = F.map(function(f){
+  return norm([f.title, f.disc, f.sint, f.caso.join(" "), f.pontos.join(" "), idText(f, true), f.tipo || "", f.num || "", String(f.num || "").replace(/\D/g, ""), f.nome, f.kw || ""].join(" "));
+});
+function syncGroupButtons(){
+  document.querySelectorAll("#chips .chip").forEach(function(c){ c.setAttribute("aria-pressed", c.getAttribute("data-g") === fGroup ? "true" : "false"); });
+  document.querySelectorAll("#cells .cell").forEach(function(c){ c.setAttribute("aria-pressed", c.getAttribute("data-g") === fGroup ? "true" : "false"); });
+}
+function apply(){
+  var q = norm(fQuery).trim(), terms = q ? q.split(/\s+/) : [], shown = 0;
+  F.forEach(function(f, i){
+    var id = fid(i), done = !!state.done[id];
+    var ok = (fGroup === "all" || f.g === fGroup) &&
+             (fStatus === "all" || (fStatus === "done" ? done : !done)) &&
+             terms.every(function(t){ return hay[i].indexOf(t) !== -1; });
+    document.getElementById(id).hidden = !ok;
+    var a = indexEl.querySelector('a[data-ix="' + i + '"]'); if (a) a.classList.toggle("off", !ok);
+    if (ok) shown++;
+  });
+  groupsEl.querySelectorAll(".group").forEach(function(s){
+    if (s.getAttribute("data-empty")) { s.hidden = !(fGroup === s.getAttribute("data-g") || (fGroup === "all" && !terms.length && fStatus === "all")); return; }
+    s.hidden = !s.querySelector(".ficha:not([hidden])");
+  });
+  document.getElementById("empty").hidden = shown > 0 || !!groupsEl.querySelector(".group[data-empty]:not([hidden])");
+}
+function setGroup(g){ fGroup = g; syncGroupButtons(); apply(); }
+document.getElementById("q").addEventListener("input", function(e){ fQuery = e.target.value; apply(); });
+document.getElementById("chips").addEventListener("click", function(e){
+  var b = e.target.closest(".chip"); if (b) setGroup(b.getAttribute("data-g"));
+});
+document.getElementById("cells").addEventListener("click", function(e){
+  var b = e.target.closest(".cell"); if (!b) return;
+  var g = b.getAttribute("data-g");
+  setGroup(fGroup === g ? "all" : g);
+  document.getElementById("toolbar").scrollIntoView();
+});
+document.querySelector(".seg").addEventListener("click", function(e){
+  var b = e.target.closest("button"); if (!b) return;
+  fStatus = b.getAttribute("data-st");
+  this.querySelectorAll("button").forEach(function(c){ c.setAttribute("aria-pressed", c === b ? "true" : "false"); });
+  apply();
+});
+
+/* ---------- ações das fichas ---------- */
+groupsEl.addEventListener("click", function(e){
+  var art = e.target.closest(".ficha"); if (!art) return;
+  var i = +art.getAttribute("data-i"), f = F[i], id = fid(i), b;
+  if ((b = e.target.closest("[data-copy-id]"))) { copy(idHTML(f, showT(i), true), idText(f, showT(i)), b, art.querySelector("[data-id]")); }
+  else if ((b = e.target.closest("[data-copy-f]"))) { copy(fichaHTML(f, i), fichaText(f, i), b, art); }
+  else if ((b = e.target.closest("[data-conf]"))) {
+    if (state.done[id]) delete state.done[id]; else state.done[id] = true;
+    save(); paint(i); progress(); apply();
+  }
+});
+groupsEl.addEventListener("change", function(e){
+  if (!e.target.matches(".switch input")) return;
+  var art = e.target.closest(".ficha"), i = +art.getAttribute("data-i"), id = fid(i);
+  state.turma[id] = e.target.checked; save();
+  art.querySelector("[data-id]").innerHTML = idHTML(F[i], showT(i));
+});
+
+/* ---------- limpar marcações ---------- */
+var clearWrap = document.getElementById("clearWrap");
+function clearIdle(){ clearWrap.innerHTML = '<button type="button" class="btn danger" id="clearBtn">Limpar<span class="w"> marcações</span></button>'; }
+clearWrap.addEventListener("click", function(e){
+  var t = e.target.closest("button"); if (!t) return;
+  if (t.id === "clearBtn") {
+    clearWrap.innerHTML = '<span class="confirm">Desmarcar todas? <button type="button" class="btn danger" id="clearYes">Sim</button><button type="button" class="btn" id="clearNo">Não</button></span>';
+    document.getElementById("clearNo").focus();
+  } else if (t.id === "clearYes") {
+    state.done = {}; save(); F.forEach(function(f, i){ paint(i); }); progress(); apply(); clearIdle();
+  } else if (t.id === "clearNo") { clearIdle(); }
+});
+
+/* ---------- altura da barra ---------- */
+var tb = document.getElementById("toolbar");
+function setTb(){ document.documentElement.style.setProperty("--tb-h", tb.offsetHeight + "px"); }
+setTb();
+if (window.ResizeObserver) new ResizeObserver(setTb).observe(tb); else window.addEventListener("resize", setTb);
+
+if (window.matchMedia) {
+  var mq = window.matchMedia("(max-width:1060px)"), det = indexEl.querySelector("details");
+  var syncDet = function(){ if (det) det.open = !mq.matches; };
+  syncDet();
+  if (mq.addEventListener) mq.addEventListener("change", syncDet); else if (mq.addListener) mq.addListener(syncDet);
+}
+
+apply();
+})();
+</script>
+
+<script type="application/json" id="radar-meta">
+{
+  "slug": "cnj-2026-out",
+  "titulo": "Jurisprudência do CNJ — outubro de 2026",
+  "orgao": "CNJ",
+  "tipo": "jurisprudencia",
+  "inicio": "2026-10",
+  "fim": "2026-10",
+  "periodo": "outubro de 2026",
+  "fonte": "Informativos 14/2026 e 15/2026",
+  "fichas": 4,
+  "produzido": "2026-11-02"
+}
+</script>
+<script>
+/* Radar Extrajudicial - publica o progresso desta pagina para o indice. */
+(function(){
+  var SLUG = "cnj-2026-out";
+  var FICHA = ".ficha";
+  var FEITA = ".ficha.done,.ficha.feita,.ficha.feito,.ficha.is-done,.ficha.conferida,.ficha[data-done='true']";
+  var t;
+  function publicar(){
+    try{
+      var total = document.querySelectorAll(FICHA).length;
+      if(!total) return;
+      var feitas = document.querySelectorAll(FEITA).length;
+      localStorage.setItem("radar:progresso:" + SLUG, JSON.stringify({
+        feitas: feitas, total: total, visto: Date.now()
+      }));
+    }catch(e){}
+  }
+  function agendar(){ clearTimeout(t); t = setTimeout(publicar, 200); }
+  function iniciar(){
+    agendar();
+    try{
+      new MutationObserver(agendar).observe(document.body, {
+        subtree: true, childList: true,
+        attributes: true, attributeFilter: ["class", "data-done"]
+      });
+    }catch(e){}
+  }
+  if(document.readyState === "loading"){
+    document.addEventListener("DOMContentLoaded", iniciar);
+  } else { iniciar(); }
+})();
+</script>
+</body>
+</html>

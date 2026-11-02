@@ -197,6 +197,20 @@ window.RADAR = {
       "descricao": "Julgados e atos normativos do CNJ divulgados nos Informativos 12/2026 e 13/2026, selecionados e fichados para concursos de outorga de delegações de notas e de registro."
     },
     {
+      "slug": "cnj-2026-out",
+      "arquivo": "relatorios/cnj-2026-out.html",
+      "titulo": "Jurisprudência do CNJ — outubro de 2026",
+      "orgao": "CNJ",
+      "tipo": "jurisprudencia",
+      "inicio": "2026-10",
+      "fim": "2026-10",
+      "periodo": "outubro de 2026",
+      "fonte": "Informativos 14/2026 e 15/2026",
+      "fichas": 4,
+      "produzido": "2026-11-02",
+      "descricao": "Triagem dos Informativos de Jurisprudência do CNJ n. 14/2026 e 15/2026 (outubro de 2026) para concursos de outorga de delegações de notas e de registro."
+    },
+    {
       "slug": "cnj-2026-jan-ago",
       "arquivo": "relatorios/cnj-2026-jan-ago.html",
       "titulo": "Jurisprudência e atos normativos do CNJ — 2026, até agosto",
