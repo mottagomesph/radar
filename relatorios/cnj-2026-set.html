@@ -256,7 +256,7 @@ a.radar-voltar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
             <div class="idline plain">Resolução CNJ n. 696, de 26/08/2026 (DJe/CNJ n. 206/2026, de 28/08/2026, p. 2-33). Vigência na data da publicação.</div>
           </div>
           <div class="idbox">
-            <div class="idline">(Ato Normativo n. 00045514220262000000, rel. cons. rodrigo badaró<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
+            <div class="idline">(Ato Normativo n. 0004551-42.2026.2.00.0000, rel. cons. rodrigo badaró<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
             <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
           </div>
 
@@ -347,7 +347,7 @@ a.radar-voltar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
         <div class="f-body"><div class="copy-src">
           <h2 class="f-title">Escritura de inventário e partilha não se condiciona ao prévio recolhimento do ITCMD; o tabelião consigna a situação fiscal e comunica ao Fisco</h2>
           <div class="idbox">
-            <div class="idline">(PP n. 00086222420252000000, rel. cons. mauro campbell marques<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
+            <div class="idline">(PP n. 0008622-24.2025.2.00.0000, rel. cons. mauro campbell marques<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
             <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
           </div>
 
@@ -399,7 +399,7 @@ a.radar-voltar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
         <div class="f-body"><div class="copy-src">
           <h2 class="f-title">O CNJ pode deixar de aplicar, no caso concreto, lei estadual materialmente incompatível com a Constituição que fundamenta ato administrativo de tribunal, sem exercer controle concentrado de constitucionalidade</h2>
           <div class="idbox">
-            <div class="idline">(RA no PCA n. 00081713320242000000, rel. cons. kátia magalhães arruda<span class="sigla">, Pleno</span>, j. 01/09/2026, Informativo n. 13/2026)</div>
+            <div class="idline">(RA no PCA n. 0008171-33.2024.2.00.0000, rel. cons. kátia magalhães arruda<span class="sigla">, Pleno</span>, j. 01/09/2026, Informativo n. 13/2026)</div>
             <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
           </div>
 
@@ -444,7 +444,7 @@ a.radar-voltar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
         <div class="f-body"><div class="copy-src">
           <h2 class="f-title">Revisão disciplinar: prazo de um ano contado do trânsito em julgado do PAD; prescrição contada da ciência do CNJ; responsabilização independe de dolo ou favorecimento</h2>
           <div class="idbox">
-            <div class="idline">(RevDis n. 00024410720252000000, rel. cons. marcello terto<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
+            <div class="idline">(RevDis n. 0002441-07.2025.2.00.0000, rel. cons. marcello terto<span class="sigla">, Pleno</span>, j. 18/08/2026, Informativo n. 12/2026)</div>
             <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
           </div>
           <div class="sec">
@@ -472,7 +472,7 @@ a.radar-voltar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
         <div class="f-body"><div class="copy-src">
           <h2 class="f-title">Aposentadoria superveniente não acarreta perda de objeto do PAD; a pena é aplicada e registrada nos assentamentos funcionais, embora não executada</h2>
           <div class="idbox">
-            <div class="idline">(PAD n. 00018732520242000000, rel. cons. noemia porto<span class="sigla">, Pleno</span>, j. 01/09/2026, Informativo n. 13/2026)</div>
+            <div class="idline">(PAD n. 0001873-25.2024.2.00.0000, rel. cons. noemia porto<span class="sigla">, Pleno</span>, j. 01/09/2026, Informativo n. 13/2026)</div>
             <div class="idctl"><label class="sw"><input type="checkbox" checked aria-label="Exibir sigla do órgão">Pleno</label><button type="button" class="btn-copy" data-copy="id">Copiar identificação</button></div>
           </div>
           <div class="sec">
@@ -551,7 +551,7 @@ a.radar-voltar:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
       var okG = state.g === "all" || f.getAttribute("data-grp") === state.g;
       var done = f.classList.contains("conferida");
       var okS = state.s === "all" || (state.s === "done" ? done : !done);
-      var okQ = !q || norm(f.getAttribute("data-search") + " " + f.textContent).indexOf(q) > -1;
+      var okQ = !q || norm(f.getAttribute("data-search") + " " + f.textContent + " " + (f.textContent.match(/\d{7}-\d{2}\.\d{4}\.\d\.\d{2}\.\d{4}/g) || []).join(" ").replace(/\D/g, "")).indexOf(q) > -1;
       var vis = okG && okS && okQ;
       f.classList.toggle("hide", !vis);
       var li = document.querySelector('.side li[data-for="'+f.id+'"]');

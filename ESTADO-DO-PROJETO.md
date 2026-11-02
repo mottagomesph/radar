@@ -314,3 +314,7 @@ Nasceram conforme a especificação: `cnj-2025-s1`, `cnj-2026-set`,
   no padrão CNJ (regra da seção 4) e a busca do relatório passou a aceitar também
   os dígitos soltos. Lacuna do CNJ em 2026 agora só nov–dez. **Atenção:** o gerador
   ainda pode entregar `num` sem pontuação; conferir sempre (20 dígitos corridos).
+- **2026-11-02** — `cnj-2026-set`: 5 números de processo estavam só em dígitos
+  (nas linhas de identificação); formatados no padrão CNJ e busca do relatório
+  passou a aceitar dígitos soltos. Varredura em todos os 18 relatórios: não resta
+  número de 20 dígitos corridos em nenhum.
