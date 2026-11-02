@@ -6,7 +6,7 @@
 > atualize as seções afetadas e acrescente uma linha ao *Histórico*.
 > Um documento desatualizado é pior que nenhum.
 
-Última atualização: 2026-10-26
+Última atualização: 2026-11-02
 
 ---
 
@@ -157,7 +157,7 @@ Radar/
   "Lei n. NNNN/AAAA"; artigos acima de mil sem ponto; LRP; CNN/CN/CNJ;
   "serventias" em vez de "cartórios"; especialidades por extenso.
 
-## 5. Acervo atual (16 relatórios, 383 fichas)
+## 5. Acervo atual (17 relatórios, 391 fichas)
 
 | slug | órgão | recorte | fonte | fichas |
 |---|---|---|---|---|
@@ -169,6 +169,7 @@ Radar/
 | stj-2025-t4 | STJ | 2025-10 → 2025-12 | Inf. 865–874 | 33 |
 | stj-2026-inf-898-899 | STJ | 2026-08 → 2026-09 | Inf. 898–899 | 21 |
 | stj-2026-inf-900-903 | STJ | 2026-09 | Inf. 900–903 | 10 |
+| stj-2026-out | STJ | 2026-10 | Inf. 904–907 | 8 |
 | cnj-2024-s2 | CNJ | 2024-07 → 2024-12 | Inf. 9–18/2024 | 21 |
 | cnj-2025-s1 | CNJ | 2025-01 → 2025-06 | Inf. 1/2025–9/2025 | 9 |
 | cnj-2025-s2 | CNJ | 2025-07 → 2025-12 | Inf. 10–17/2025 | 25 |
@@ -179,8 +180,8 @@ Radar/
 | cnj-res-696-2026 | CNJ (normativo) | — | Res. 696/2026 | 0 |
 
 Nasceram conforme a especificação: `cnj-2025-s1`, `cnj-2026-set`,
-`kollemata-2026-09`, `stf-2024-s2`, `cnj-2024-s2` e `stj-2025-t3` (os dois
-últimos já com botão de voltar próprio); os demais têm farol injetado.
+`kollemata-2026-09`, `stf-2024-s2`, `cnj-2024-s2`, `stj-2025-t3` e
+`stj-2026-out` (os três últimos já com botão de voltar próprio); os demais têm farol injetado.
 
 **Lacunas (o que pedir em seguida):**
 - **STJ — a mais grave:** 2024 inteiro, 2025·S1, 2026·S1, julho de 2026.
@@ -304,3 +305,6 @@ Nasceram conforme a especificação: `cnj-2025-s1`, `cnj-2026-set`,
 - **2026-10-26** — Acrescentado `stj-2025-t3` (Inf. 855–864, 3º tri./2025, 22
   fichas). Veio completo (meta, farol e botão de voltar próprios); só o favicon
   foi injetado. Lacuna do STJ em jul–set/2025 fechada.
+- **2026-11-02** — Acrescentado `stj-2026-out` (Inf. 904–907, out/2026, 8 fichas).
+  Veio completo (meta, farol e botão de voltar próprios); só o favicon foi
+  injetado. Slug por mês, como `kollemata-2026-09`.

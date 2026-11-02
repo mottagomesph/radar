@@ -1,7 +1,7 @@
 /* Gerado por ferramentas/injetar-farol.py a partir de reports.json.
    Nao edite aqui: edite reports.json e rode o script. */
 window.RADAR = {
-  "atualizado": "2026-10-26",
+  "atualizado": "2026-11-02",
   "github": {
     "usuario": "mottagomesph",
     "repo": "radar",
@@ -125,6 +125,20 @@ window.RADAR = {
       "fichas": 10,
       "produzido": "2026-10-02",
       "descricao": "Triagem dos Informativos de Jurisprudência do STJ n. 900 a 903 para concursos de outorga de delegações de notas e de registro."
+    },
+    {
+      "slug": "stj-2026-out",
+      "arquivo": "relatorios/stj-2026-out.html",
+      "titulo": "Jurisprudência do STJ — outubro de 2026",
+      "orgao": "STJ",
+      "tipo": "jurisprudencia",
+      "inicio": "2026-10",
+      "fim": "2026-10",
+      "periodo": "outubro de 2026",
+      "fonte": "Informativos 904 a 907",
+      "fichas": 8,
+      "produzido": "2026-11-02",
+      "descricao": "Triagem dos Informativos de Jurisprudência do STJ n. 904 a 907 (outubro de 2026) para concursos de outorga de delegações de notas e de registro."
     },
     {
       "slug": "cnj-2024-s2",
