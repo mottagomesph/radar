@@ -1,5 +1,5 @@
 {
-  "atualizado": "2026-11-02",
+  "atualizado": "2026-11-04",
   "github": {
     "usuario": "mottagomesph",
     "repo": "radar",
@@ -249,6 +249,20 @@
       "fichas": 48,
       "produzido": "2026-10-05",
       "descricao": "Fichas de revisão dos 48 julgados de direito notarial e registral selecionados do Kollemata em setembro de 2026, agrupados por órgão julgador, para concursos de outorga de delegações de notas e de registro."
+    },
+    {
+      "slug": "kollemata-2026-10",
+      "arquivo": "relatorios/kollemata-2026-10.html",
+      "titulo": "Jurisprudência notarial e registral (Kollemata) — outubro de 2026",
+      "orgao": "Kollemata",
+      "tipo": "jurisprudencia",
+      "inicio": "2026-10",
+      "fim": "2026-10",
+      "periodo": "outubro de 2026",
+      "fonte": "Kollemata — julgados do CNJ, CSMSP, CGJSP, 1VRPSP e 2VRPSP publicados em outubro de 2026",
+      "fichas": 58,
+      "produzido": "2026-11-04",
+      "descricao": "Fichas de revisão dos julgados de direito notarial e registral selecionados no Kollemata e publicados em outubro de 2026 (CNJ, CSMSP, CGJSP, 1ª e 2ª Varas de Registros Públicos de São Paulo), para concursos de outorga de delegações."
     },
     {
       "slug": "cnj-res-696-2026",
